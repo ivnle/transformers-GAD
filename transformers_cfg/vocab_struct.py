@@ -8,6 +8,55 @@ import re
 LEAF = -1
 
 
+def get_substitution(tokenizer):
+    print(f"tokenizer type: {tokenizer.__class__.__name__}")
+    if "gpt2" in tokenizer.__class__.__name__.lower():
+        return BPESubstitution(tokenizer)
+    elif (
+        "llama" in tokenizer.__class__.__name__.lower()
+        or "t5" in tokenizer.__class__.__name__.lower()
+        or "bloom" in tokenizer.__class__.__name__.lower()
+        or "phi" in tokenizer.__class__.__name__.lower()
+    ):
+        return Substitution(tokenizer)
+
+
+class Substitution:
+    def __init__(self, tokenizer):
+        self.eos_token_id = tokenizer.eos_token_id
+        self.tokenizer = tokenizer
+
+    def __len__(self):
+        return len(self.tokenizer.get_vocab())
+
+    def map(self, token_id: int) -> bytes:
+        # if token_id is tensor, convert it to int
+        if hasattr(token_id, "item"):
+            token_id = token_id.item()
+        raw_token = self.tokenizer.convert_ids_to_tokens(token_id)
+        # if the token is hex, token is a string like "<0x00>"
+        # first 256 tokens are hex
+        if raw_token.startswith("<0x"):
+            hex_value = raw_token[4:-1]
+            raw_token = chr(int(hex_value, 16))
+        raw_token = raw_token.replace("▁", " ")
+        return bytes(raw_token, "utf-8")
+
+
+class BPESubstitution(Substitution):
+    def __init__(self, tokenizer):
+        super().__init__(tokenizer)
+        self.special = tokenizer.additional_special_tokens_ids
+
+    def map(self, token_id: int) -> bytes:
+        if token_id in self.special:
+            return None
+        return bytes(
+            self.tokenizer.decode([token_id], clean_up_tokenization_spaces=False),
+            "utf-8",
+        )
+
+
 class TokenTrie:
     def __init__(self, tokenizer):
         self.eos_token_id = tokenizer.eos_token_id
@@ -78,8 +127,34 @@ class TokenTrie:
         current[LEAF] = token_id
 
 
+
+
 if __name__ == "__main__":
     from transformers import AutoTokenizer
 
-    tokenizer = AutoTokenizer.from_pretrained("gpt2")
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", cache_dir="/nobackup2/yf/mila/GD_caches")
     token_trie = TokenTrie(tokenizer)
+    # Encode the string "00"
+    encoded_input = tokenizer.encode("00", add_special_tokens=False)  # Returns a list of token IDs
+    # encoded_input = tokenizer.encode("0 0", add_special_tokens=False)
+
+    # "00"
+    # token id: [29871, 29900, 29900]
+    # token: ['▁', '0', '0']
+    # Decoded string: 00
+
+    # "0 0"
+    # token id: [29871, 29900, 29871, 29900]
+    # token: ['▁', '0', '▁', '0']
+    # Decoded string: 0 0
+
+    tokens = tokenizer.convert_ids_to_tokens(encoded_input)
+    decoded_string = tokenizer.decode(encoded_input)
+
+    # Print the results
+    print("Token IDs:", encoded_input)
+    print("Tokens:", tokens)
+    print("Decoded string:", decoded_string)
+
+    # print(separate_zero, attached_zero)
+    # print(f"token_trie.tokens: {token_trie.tokens}")

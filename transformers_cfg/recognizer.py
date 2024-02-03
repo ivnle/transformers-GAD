@@ -3,7 +3,7 @@ import logging
 from functools import lru_cache
 from typing import List, Tuple, Dict
 
-from transformers_cfg.parser import (
+from .parser import (
     END_OF_RULE_MARKER,
     END_OF_ALTERNATE_MARKER,
     parse_ebnf,
@@ -191,7 +191,7 @@ if __name__ == "__main__":
     # set logging level
     logging.basicConfig(level=logging.DEBUG)
 
-    with open("examples/grammars/debug/plus.ebnf", "r") as file:
+    with open("/nobackup2/yf/mila/GD/examples/grammars/string_01.ebnf", "r") as file:
         input_text = file.read()
     parsed_grammar = parse_ebnf(input_text)
     parsed_grammar.print()

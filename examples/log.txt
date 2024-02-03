@@ -1,0 +1,30 @@
+2024-02-01 22:49:14,843:ERROR:An unexpected error occurred: 'dict' object has no attribute 'strip'
+2024-02-01 22:50:41,983:ERROR:An unexpected error occurred: 'dict' object has no attribute 'strip'
+2024-02-01 22:51:55,256:ERROR:An unexpected error occurred: 'dict' object has no attribute 'strip'
+2024-02-01 22:54:30,554:ERROR:An unexpected error occurred: 'dict' object has no attribute 'strip'
+2024-02-01 22:55:10,628:ERROR:An unexpected error occurred: 'dict' object has no attribute 'strip'
+2024-02-01 22:58:49,789:ERROR:An unexpected error occurred: 'dict' object has no attribute 'strip'
+2024-02-01 23:03:40,285:ERROR:An unexpected error occurred: 'dict' object has no attribute 'strip'
+2024-02-01 23:09:20,402:ERROR:An unexpected error occurred: 'dict' object has no attribute 'strip'
+2024-02-02 00:39:15,419:INFO:Output: {'0': 0, '1': 0, '00': 0, '01': 0, '000': 0, '001': 0, '010': 0, '011': 0, '10': 0, '11': 0, '100': 0, '101': 0, '110': 0, '111': 0, 'other': 1}
+2024-02-02 00:39:15,420:INFO:Faithful: {'0': 0, '1': 0, '00': 0, '01': 0, '000': 0, '001': 0, '010': 0, '011': 0, '10': 0, '11': 0, '100': 0, '101': 0, '110': 0, '111': 0, '0000000000000000000000000000000000000': 1}
+2024-02-02 00:41:41,127:INFO:{"0": 0, "1": 0, "00": 0, "01": 0, "000": 0, "001": 0, "010": 0, "011": 0, "10": 0, "11": 0, "100": 0, "101": 0, "110": 0, "111": 0, "other": 5}
+Model: meta-llama/Llama-2-7b-hf
+Prompt: Randomly generate a binary string of length at most 4?
+Iter = 5
+Do we sample when decoding? False
+All outputs:
+{"0": 0, "1": 0, "00": 0, "01": 0, "000": 0, "001": 0, "010": 0, "011": 0, "10": 0, "11": 0, "100": 0, "101": 0, "110": 0, "111": 0, "0000000000000000000000000000000000000": 5}Classified to others if not in the ideal set:
+{"0": 0, "1": 0, "00": 0, "01": 0, "000": 0, "001": 0, "010": 0, "011": 0, "10": 0, "11": 0, "100": 0, "101": 0, "110": 0, "111": 0, "other": 5}Idea distribution:
+{"0": 0, "1": 0, "00": 0, "01": 0, "000": 0, "001": 0, "010": 0, "011": 0, "10": 0, "11": 0, "100": 0, "101": 0, "110": 0, "111": 0, "other": 0}
+2024-02-02 01:05:44,981:INFO:Output: {'0': 0, '1': 0, '00': 0, '01': 0, '000': 0, '001': 0, '010': 0, '011': 0, '10': 0, '11': 0, '100': 0, '101': 0, '110': 0, '111': 0, 'other': 1}
+2024-02-02 01:05:44,981:INFO:Faithful: {'0': 0, '1': 0, '00': 0, '01': 0, '000': 0, '001': 0, '010': 0, '011': 0, '10': 0, '11': 0, '100': 0, '101': 0, '110': 0, '111': 0, '0000000000000000000000000000000000000': 1}
+2024-02-02 01:08:22,167:INFO:{"0": 0, "1": 0, "00": 0, "01": 0, "000": 0, "001": 0, "010": 0, "011": 0, "10": 0, "11": 0, "100": 0, "101": 0, "110": 0, "111": 0, "other": 5}
+Model: meta-llama/Llama-2-7b-hf
+Prompt: Randomly generate a binary string of length at most 4?
+Iterations: 5
+Do we sample when decoding? False
+All outputs:
+{"0": 0, "1": 0, "00": 0, "01": 0, "000": 0, "001": 0, "010": 0, "011": 0, "10": 0, "11": 0, "100": 0, "101": 0, "110": 0, "111": 0, "0000000000000000000000000000000000000": 5}Classified to others if not in the ideal set:
+{"0": 0, "1": 0, "00": 0, "01": 0, "000": 0, "001": 0, "010": 0, "011": 0, "10": 0, "11": 0, "100": 0, "101": 0, "110": 0, "111": 0, "other": 5}Idea distribution:
+{"0": 0, "1": 0, "00": 0, "01": 0, "000": 0, "001": 0, "010": 0, "011": 0, "10": 0, "11": 0, "100": 0, "101": 0, "110": 0, "111": 0, "other": 0}

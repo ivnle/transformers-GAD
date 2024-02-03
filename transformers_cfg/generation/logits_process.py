@@ -1,3 +1,4 @@
+import copy
 import math
 import os
 import pprint
@@ -65,7 +66,9 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
         # we dynamically create stacks at the first call, so that we know the batch size and beam size
         if self.batch_stacks is None:
             self.batch_stacks = [
-                self.grammar_constraint.init_stacks() for _ in range(len(input_ids))
+                # self.grammar_constraint.init_stacks()
+                copy.deepcopy(self.grammar_constraint.grammar.stacks)
+                for _ in range(len(input_ids))
             ]
 
         if os.getenv("DEBUG_MODE") == "True":
@@ -92,3 +95,29 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
         self, input_ids: torch.LongTensor, scores: torch.FloatTensor
     ) -> torch.FloatTensor:
         return self.process_logits(input_ids, scores)
+
+if __name__ == "__main__":
+    from transformers import AutoTokenizer
+    import sys
+    import os
+
+    sys.path.append('/nobackup2/yf/mila/GD/transformers_cfg')
+    os.environ["DEBUG_MODE"] = "True"
+    from transformers_cfg.grammar_utils import IncrementalGrammarConstraint
+
+    # set logging level
+    logging.basicConfig(level=logging.DEBUG)
+
+    test_file = "/nobackup2/yf/mila/GD/examples/grammars/string_01.ebnf"
+
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", cache_dir="/nobackup2/yf/mila/GD_caches")
+
+    # Load grammar
+    with open(test_file, "r") as file:
+        grammar_str = file.read()
+
+    grammar = IncrementalGrammarConstraint(grammar_str, "root", tokenizer)
+    grammar_processor = GrammarConstrainedLogitsProcessor(grammar)
+
+    print(f"grammar_processor: {grammar_processor}")
+
