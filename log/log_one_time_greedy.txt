@@ -1,0 +1,364 @@
+2024-02-04 17:10:03,574:INFO:Elapsed time: 41.25602054595947 seconds
+2024-02-04 17:10:03,575:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:10:03,575:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:10:03,575:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:10:03,575:INFO:Iterations: 1
+2024-02-04 17:10:03,575:INFO:Do we sample when decoding? True
+2024-02-04 17:10:03,576:INFO:Repetition penalty: 0.5
+2024-02-04 17:10:03,576:INFO:max_new_tokens: 20
+2024-02-04 17:10:03,576:INFO:Top_p: 0.95
+
+2024-02-04 17:10:03,576:INFO:Temperature: 1.1
+
+2024-02-04 17:10:03,576:INFO:Generations: ['Generate a random binary string of length 5? 5 5 5 5 5 5 5 5 5 5']
+2024-02-04 17:10:42,705:INFO:Elapsed time: 36.845316886901855 seconds
+2024-02-04 17:10:42,705:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:10:42,705:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:10:42,705:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:10:42,705:INFO:Iterations: 1
+2024-02-04 17:10:42,705:INFO:Do we sample when decoding? True
+2024-02-04 17:10:42,705:INFO:Repetition penalty: 0.5
+2024-02-04 17:10:42,705:INFO:max_new_tokens: 20
+2024-02-04 17:10:42,705:INFO:Top_p: 0.95
+
+2024-02-04 17:10:42,706:INFO:Temperature: 0.8
+
+2024-02-04 17:10:42,706:INFO:Generations: ['Generate a random binary string of length 5? 5 5 5 5 5 5 5 5 5 5']
+2024-02-04 17:11:25,681:INFO:Elapsed time: 40.601754665374756 seconds
+2024-02-04 17:11:25,682:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:11:25,682:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:11:25,682:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:11:25,682:INFO:Iterations: 1
+2024-02-04 17:11:25,682:INFO:Do we sample when decoding? True
+2024-02-04 17:11:25,682:INFO:Repetition penalty: 0.5
+2024-02-04 17:11:25,682:INFO:max_new_tokens: 20
+2024-02-04 17:11:25,682:INFO:Top_p: 0.95
+
+2024-02-04 17:11:25,682:INFO:Temperature: 1.5
+
+2024-02-04 17:11:25,682:INFO:Generations: ['Generate a random binary string of length 5? You 555555555555555555']
+2024-02-04 17:12:06,861:INFO:Elapsed time: 38.874162912368774 seconds
+2024-02-04 17:12:06,862:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:12:06,862:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:12:06,862:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:12:06,862:INFO:Iterations: 1
+2024-02-04 17:12:06,862:INFO:Do we sample when decoding? True
+2024-02-04 17:12:06,862:INFO:Repetition penalty: 0.5
+2024-02-04 17:12:06,862:INFO:max_new_tokens: 20
+2024-02-04 17:12:06,862:INFO:Top_p: 0.95
+
+2024-02-04 17:12:06,862:INFO:Temperature: 0.6
+
+2024-02-04 17:12:06,862:INFO:Generations: ['Generate a random binary string of length 5? 5 5 5 5 5 5 5 5 5 5']
+2024-02-04 17:12:46,035:INFO:Elapsed time: 36.89947032928467 seconds
+2024-02-04 17:12:46,036:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:12:46,036:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:12:46,036:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:12:46,036:INFO:Iterations: 1
+2024-02-04 17:12:46,036:INFO:Do we sample when decoding? True
+2024-02-04 17:12:46,036:INFO:Repetition penalty: 1.0
+2024-02-04 17:12:46,036:INFO:max_new_tokens: 20
+2024-02-04 17:12:46,036:INFO:Top_p: 0.95
+
+2024-02-04 17:12:46,036:INFO:Temperature: 1.1
+
+2024-02-04 17:12:46,036:INFO:Generations: ['Generate a random binary string of length 5?\n\nI want to generate a random binary string of length 5 so my algorithm needs to generate']
+2024-02-04 17:13:28,549:INFO:Elapsed time: 40.15162920951843 seconds
+2024-02-04 17:13:28,549:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:13:28,549:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:13:28,549:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:13:28,549:INFO:Iterations: 1
+2024-02-04 17:13:28,549:INFO:Do we sample when decoding? True
+2024-02-04 17:13:28,549:INFO:Repetition penalty: 1.0
+2024-02-04 17:13:28,549:INFO:max_new_tokens: 20
+2024-02-04 17:13:28,549:INFO:Top_p: 0.95
+
+2024-02-04 17:13:28,549:INFO:Temperature: 0.8
+
+2024-02-04 17:13:28,549:INFO:Generations: ["Generate a random binary string of length 5?\n\n\\begin{code}\nconst rand = require('crypto-random');\nconst"]
+2024-02-04 17:14:14,051:INFO:Elapsed time: 43.194119691848755 seconds
+2024-02-04 17:14:14,052:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:14:14,052:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:14:14,052:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:14:14,052:INFO:Iterations: 1
+2024-02-04 17:14:14,052:INFO:Do we sample when decoding? True
+2024-02-04 17:14:14,052:INFO:Repetition penalty: 1.0
+2024-02-04 17:14:14,052:INFO:max_new_tokens: 20
+2024-02-04 17:14:14,052:INFO:Top_p: 0.95
+
+2024-02-04 17:14:14,052:INFO:Temperature: 1.5
+
+2024-02-04 17:14:14,052:INFO:Generations: ['Generate a random binary string of length 5?\n\nGenerate two different and independent streams of entropy from random.GetNext(rngSource']
+2024-02-04 17:14:56,391:INFO:Elapsed time: 40.0423047542572 seconds
+2024-02-04 17:14:56,391:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:14:56,391:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:14:56,391:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:14:56,392:INFO:Iterations: 1
+2024-02-04 17:14:56,392:INFO:Do we sample when decoding? True
+2024-02-04 17:14:56,392:INFO:Repetition penalty: 1.0
+2024-02-04 17:14:56,392:INFO:max_new_tokens: 20
+2024-02-04 17:14:56,392:INFO:Top_p: 0.95
+
+2024-02-04 17:14:56,392:INFO:Temperature: 0.6
+
+2024-02-04 17:14:56,392:INFO:Generations: ["Generate a random binary string of length 5?\n\nI'm trying to create a random binary string of length 5.\n\nI"]
+2024-02-04 17:15:42,822:INFO:Elapsed time: 44.0752489566803 seconds
+2024-02-04 17:15:42,822:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:15:42,822:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:15:42,822:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:15:42,823:INFO:Iterations: 1
+2024-02-04 17:15:42,823:INFO:Do we sample when decoding? True
+2024-02-04 17:15:42,823:INFO:Repetition penalty: 1.5
+2024-02-04 17:15:42,823:INFO:max_new_tokens: 20
+2024-02-04 17:15:42,823:INFO:Top_p: 0.95
+
+2024-02-04 17:15:42,823:INFO:Temperature: 1.1
+
+2024-02-04 17:15:42,823:INFO:Generations: ['Generate a random binary string of length 5?\n# In [2]: import hashlib as hl # Set the digest method to S']
+2024-02-04 17:16:24,061:INFO:Elapsed time: 38.88762617111206 seconds
+2024-02-04 17:16:24,061:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:16:24,061:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:16:24,061:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:16:24,061:INFO:Iterations: 1
+2024-02-04 17:16:24,061:INFO:Do we sample when decoding? True
+2024-02-04 17:16:24,061:INFO:Repetition penalty: 1.5
+2024-02-04 17:16:24,061:INFO:max_new_tokens: 20
+2024-02-04 17:16:24,061:INFO:Top_p: 0.95
+
+2024-02-04 17:16:24,061:INFO:Temperature: 0.8
+
+2024-02-04 17:16:24,061:INFO:Generations: ['Generate a random binary string of length 5?\nNext message: [HACKERS] Backwards compatibilty for the new format_type']
+2024-02-04 17:17:13,864:INFO:Elapsed time: 47.54749894142151 seconds
+2024-02-04 17:17:13,865:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:17:13,866:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:17:13,866:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:17:13,866:INFO:Iterations: 1
+2024-02-04 17:17:13,866:INFO:Do we sample when decoding? True
+2024-02-04 17:17:13,866:INFO:Repetition penalty: 1.5
+2024-02-04 17:17:13,866:INFO:max_new_tokens: 20
+2024-02-04 17:17:13,866:INFO:Top_p: 0.95
+
+2024-02-04 17:17:13,866:INFO:Temperature: 1.5
+
+2024-02-04 17:17:13,866:INFO:Generations: ["Generate a random binary string of length 5? The solution seems to be very complicated, yet I'm trying for hours\n                         and only"]
+2024-02-04 17:17:54,416:INFO:Elapsed time: 38.253398418426514 seconds
+2024-02-04 17:17:54,417:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:17:54,417:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:17:54,417:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:17:54,417:INFO:Iterations: 1
+2024-02-04 17:17:54,417:INFO:Do we sample when decoding? True
+2024-02-04 17:17:54,417:INFO:Repetition penalty: 1.5
+2024-02-04 17:17:54,417:INFO:max_new_tokens: 20
+2024-02-04 17:17:54,417:INFO:Top_p: 0.95
+
+2024-02-04 17:17:54,417:INFO:Temperature: 0.6
+
+2024-02-04 17:17:54,417:INFO:Generations: ['Generate a random binary string of length 5?\n#import <CommonCrypto/CCRandomNumbers.h> // For CCRandomNumber']
+2024-02-04 17:18:35,141:INFO:Elapsed time: 38.338109731674194 seconds
+2024-02-04 17:18:35,142:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:18:35,142:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:18:35,142:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:18:35,142:INFO:Iterations: 1
+2024-02-04 17:18:35,142:INFO:Do we sample when decoding? True
+2024-02-04 17:18:35,142:INFO:Repetition penalty: 0.5
+2024-02-04 17:18:35,142:INFO:max_new_tokens: 20
+2024-02-04 17:18:35,142:INFO:Top_p: 0.95
+
+2024-02-04 17:18:35,142:INFO:Temperature: 1.1
+
+2024-02-04 17:18:35,142:INFO:Generations: ['Generate a random binary string of length 5? 5555555555555555555']
+2024-02-04 17:19:14,877:INFO:Elapsed time: 37.436172008514404 seconds
+2024-02-04 17:19:14,878:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:19:14,878:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:19:14,878:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:19:14,878:INFO:Iterations: 1
+2024-02-04 17:19:14,878:INFO:Do we sample when decoding? True
+2024-02-04 17:19:14,878:INFO:Repetition penalty: 0.5
+2024-02-04 17:19:14,878:INFO:max_new_tokens: 20
+2024-02-04 17:19:14,878:INFO:Top_p: 0.95
+
+2024-02-04 17:19:14,878:INFO:Temperature: 0.8
+
+2024-02-04 17:19:14,878:INFO:Generations: ['Generate a random binary string of length 5? 5 5 5 5 5 5 5 5 5 5']
+2024-02-04 17:19:57,675:INFO:Elapsed time: 40.43622922897339 seconds
+2024-02-04 17:19:57,676:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:19:57,676:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:19:57,676:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:19:57,676:INFO:Iterations: 1
+2024-02-04 17:19:57,676:INFO:Do we sample when decoding? True
+2024-02-04 17:19:57,676:INFO:Repetition penalty: 0.5
+2024-02-04 17:19:57,676:INFO:max_new_tokens: 20
+2024-02-04 17:19:57,676:INFO:Top_p: 0.95
+
+2024-02-04 17:19:57,676:INFO:Temperature: 1.5
+
+2024-02-04 17:19:57,676:INFO:Generations: ['Generate a random binary string of length 5?", 5 random 5 5 5 5 5 5 5 5']
+2024-02-04 17:20:38,674:INFO:Elapsed time: 38.69375514984131 seconds
+2024-02-04 17:20:38,674:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:20:38,674:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:20:38,674:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:20:38,675:INFO:Iterations: 1
+2024-02-04 17:20:38,675:INFO:Do we sample when decoding? True
+2024-02-04 17:20:38,675:INFO:Repetition penalty: 0.5
+2024-02-04 17:20:38,675:INFO:max_new_tokens: 20
+2024-02-04 17:20:38,675:INFO:Top_p: 0.95
+
+2024-02-04 17:20:38,675:INFO:Temperature: 0.6
+
+2024-02-04 17:20:38,675:INFO:Generations: ['Generate a random binary string of length 5? 5 5 5 5 5 5 5 5 5 5']
+2024-02-04 17:21:27,903:INFO:Elapsed time: 46.90431475639343 seconds
+2024-02-04 17:21:27,903:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:21:27,903:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:21:27,903:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:21:27,903:INFO:Iterations: 1
+2024-02-04 17:21:27,903:INFO:Do we sample when decoding? True
+2024-02-04 17:21:27,903:INFO:Repetition penalty: 2.0
+2024-02-04 17:21:27,903:INFO:max_new_tokens: 20
+2024-02-04 17:21:27,903:INFO:Top_p: 0.95
+
+2024-02-04 17:21:27,904:INFO:Temperature: 1.1
+
+2024-02-04 17:21:27,904:INFO:Generations: ["Generate a random binary string of length 5? How much does it cost to have servers in one's house or other datacenter for Minecraft"]
+2024-02-04 17:22:11,072:INFO:Elapsed time: 40.76034188270569 seconds
+2024-02-04 17:22:11,072:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:22:11,072:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:22:11,072:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:22:11,072:INFO:Iterations: 1
+2024-02-04 17:22:11,072:INFO:Do we sample when decoding? True
+2024-02-04 17:22:11,072:INFO:Repetition penalty: 2.0
+2024-02-04 17:22:11,072:INFO:max_new_tokens: 20
+2024-02-04 17:22:11,072:INFO:Top_p: 0.95
+
+2024-02-04 17:22:11,072:INFO:Temperature: 0.8
+
+2024-02-04 17:22:11,072:INFO:Generations: ['Generate a random binary string of length 5?\n    # How much time do you need to solve this problem if the algorithm is O(1']
+2024-02-04 17:22:52,416:INFO:Elapsed time: 39.05992388725281 seconds
+2024-02-04 17:22:52,417:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:22:52,417:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:22:52,417:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:22:52,417:INFO:Iterations: 1
+2024-02-04 17:22:52,417:INFO:Do we sample when decoding? True
+2024-02-04 17:22:52,417:INFO:Repetition penalty: 2.0
+2024-02-04 17:22:52,417:INFO:max_new_tokens: 20
+2024-02-04 17:22:52,417:INFO:Top_p: 0.95
+
+2024-02-04 17:22:52,417:INFO:Temperature: 1.5
+
+2024-02-04 17:22:52,417:INFO:Generations: ['Generate a random binary string of length 5?\n *@function: test/bench(T)(x,r);    randbits_']
+2024-02-04 17:23:25,009:INFO:Elapsed time: 30.355635166168213 seconds
+2024-02-04 17:23:25,010:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:23:25,010:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:23:25,010:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:23:25,010:INFO:Iterations: 1
+2024-02-04 17:23:25,010:INFO:Do we sample when decoding? True
+2024-02-04 17:23:25,010:INFO:Repetition penalty: 2.0
+2024-02-04 17:23:25,010:INFO:max_new_tokens: 20
+2024-02-04 17:23:25,010:INFO:Top_p: 0.95
+
+2024-02-04 17:23:25,010:INFO:Temperature: 0.6
+
+2024-02-04 17:23:25,010:INFO:Generations: ['Generate a random binary string of length 5?\nAnswer: Use the below code to generate and print such type.']
+2024-02-04 17:24:09,577:INFO:Elapsed time: 42.23440337181091 seconds
+2024-02-04 17:24:09,578:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:24:09,578:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:24:09,578:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:24:09,578:INFO:Iterations: 1
+2024-02-04 17:24:09,578:INFO:Do we sample when decoding? True
+2024-02-04 17:24:09,578:INFO:Repetition penalty: 5.0
+2024-02-04 17:24:09,578:INFO:max_new_tokens: 20
+2024-02-04 17:24:09,579:INFO:Top_p: 0.95
+
+2024-02-04 17:24:09,579:INFO:Temperature: 1.1
+
+2024-02-04 17:24:09,579:INFO:Generations: ['Generate a random binary string of length 5? Then compare your answer to the other answers by converting both strings into hexadecimal digits: "']
+2024-02-04 17:24:35,299:INFO:Elapsed time: 23.405436992645264 seconds
+2024-02-04 17:24:35,300:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:24:35,300:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:24:35,300:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:24:35,300:INFO:Iterations: 1
+2024-02-04 17:24:35,300:INFO:Do we sample when decoding? True
+2024-02-04 17:24:35,300:INFO:Repetition penalty: 5.0
+2024-02-04 17:24:35,300:INFO:max_new_tokens: 20
+2024-02-04 17:24:35,300:INFO:Top_p: 0.95
+
+2024-02-04 17:24:35,301:INFO:Temperature: 0.8
+
+2024-02-04 17:24:35,301:INFO:Generations: ['Generate a random binary string of length 5?\nasked Jan,19 by anonymous']
+2024-02-04 17:25:18,760:INFO:Elapsed time: 41.11156105995178 seconds
+2024-02-04 17:25:18,761:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:25:18,761:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:25:18,761:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:25:18,761:INFO:Iterations: 1
+2024-02-04 17:25:18,761:INFO:Do we sample when decoding? True
+2024-02-04 17:25:18,761:INFO:Repetition penalty: 5.0
+2024-02-04 17:25:18,761:INFO:max_new_tokens: 20
+2024-02-04 17:25:18,761:INFO:Top_p: 0.95
+
+2024-02-04 17:25:18,761:INFO:Temperature: 1.5
+
+2024-02-04 17:25:18,761:INFO:Generations: ['Generate a random binary string of length 5?\n        # @return [::String, nil] returns null if no password (e.g']
+2024-02-04 17:26:00,428:INFO:Elapsed time: 39.37880778312683 seconds
+2024-02-04 17:26:00,429:INFO:Model: meta-llama/Llama-2-7b-hf
+2024-02-04 17:26:00,429:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:26:00,429:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:26:00,429:INFO:Iterations: 1
+2024-02-04 17:26:00,429:INFO:Do we sample when decoding? True
+2024-02-04 17:26:00,429:INFO:Repetition penalty: 5.0
+2024-02-04 17:26:00,429:INFO:max_new_tokens: 20
+2024-02-04 17:26:00,429:INFO:Top_p: 0.95
+
+2024-02-04 17:26:00,429:INFO:Temperature: 0.6
+
+2024-02-04 17:26:00,429:INFO:Generations: ['Generate a random binary string of length 5?\n   * @returns {string} A randomly generated bit array. */ })(this, function']
+2024-02-04 17:27:23,355:INFO:Elapsed time: 80.58181548118591 seconds
+2024-02-04 17:27:23,355:INFO:Model: meta-llama/Llama-2-13b-hf
+2024-02-04 17:27:23,356:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:27:23,356:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:27:23,356:INFO:Iterations: 1
+2024-02-04 17:27:23,356:INFO:Do we sample when decoding? True
+2024-02-04 17:27:23,356:INFO:Repetition penalty: 0.5
+2024-02-04 17:27:23,356:INFO:max_new_tokens: 20
+2024-02-04 17:27:23,356:INFO:Top_p: 0.95
+
+2024-02-04 17:27:23,356:INFO:Temperature: 1.1
+
+2024-02-04 17:27:23,356:INFO:Generations: ['Generate a random binary string of length 5? 5 5 5 5 5 5 5 5 5 5']
+2024-02-04 17:28:40,458:INFO:Elapsed time: 74.84159731864929 seconds
+2024-02-04 17:28:40,459:INFO:Model: meta-llama/Llama-2-13b-hf
+2024-02-04 17:28:40,459:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:28:40,459:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:28:40,459:INFO:Iterations: 1
+2024-02-04 17:28:40,459:INFO:Do we sample when decoding? True
+2024-02-04 17:28:40,459:INFO:Repetition penalty: 0.5
+2024-02-04 17:28:40,459:INFO:max_new_tokens: 20
+2024-02-04 17:28:40,459:INFO:Top_p: 0.95
+
+2024-02-04 17:28:40,459:INFO:Temperature: 0.8
+
+2024-02-04 17:28:40,459:INFO:Generations: ['Generate a random binary string of length 5? 5555555555555555555']
+2024-02-04 17:30:03,657:INFO:Elapsed time: 80.94367671012878 seconds
+2024-02-04 17:30:03,658:INFO:Model: meta-llama/Llama-2-13b-hf
+2024-02-04 17:30:03,658:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:30:03,658:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:30:03,658:INFO:Iterations: 1
+2024-02-04 17:30:03,658:INFO:Do we sample when decoding? True
+2024-02-04 17:30:03,658:INFO:Repetition penalty: 0.5
+2024-02-04 17:30:03,658:INFO:max_new_tokens: 20
+2024-02-04 17:30:03,658:INFO:Top_p: 0.95
+
+2024-02-04 17:30:03,658:INFO:Temperature: 1.5
+
+2024-02-04 17:30:03,658:INFO:Generations: ['Generate a random binary string of length 5? 55555 55555 55555 5']
+2024-02-04 17:31:26,852:INFO:Elapsed time: 80.7892165184021 seconds
+2024-02-04 17:31:26,853:INFO:Model: meta-llama/Llama-2-13b-hf
+2024-02-04 17:31:26,853:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 17:31:26,853:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 17:31:26,853:INFO:Iterations: 1
+2024-02-04 17:31:26,853:INFO:Do we sample when decoding? True
+2024-02-04 17:31:26,853:INFO:Repetition penalty: 0.5
+2024-02-04 17:31:26,853:INFO:max_new_tokens: 20
+2024-02-04 17:31:26,853:INFO:Top_p: 0.95
+
+2024-02-04 17:31:26,853:INFO:Temperature: 0.6
+
+2024-02-04 17:31:26,853:INFO:Generations: ['Generate a random binary string of length 5? 5 random binary string of length 5? 5 random binary string of length 5?']

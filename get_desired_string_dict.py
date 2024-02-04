@@ -30,26 +30,39 @@ def generate_strings(cfg, k):
     return expand(start_symbol, 0) # ['0', '1', '00', '01', '000', '001', '010', '011', '10', '11', '100', '101', '110', '111']
 
 def generate_strings_len_k(cfg, k):
-    def expand(symbol, current_length):
+    """
+    Generate all unique strings of exact length k from the given context-free grammar.
+    :param cfg: Context-free grammar as a dictionary
+    :param k: Target length of strings to generate
+    :return: A list of all unique possible strings of length k
+    """
+    def expand(symbol, target_length):
+        # Base case: return the symbol if it's terminal and matches the target length
         if symbol not in cfg:
-            return [symbol] if current_length == k else []
+            return {symbol} if len(symbol) == target_length else set()
 
-        result = []
+        # Recursive case: explore all production rules
+        results = set()
         for production in cfg[symbol]:
-            # This initial check might not be necessary with the new logic
-            if len(production) + current_length <= k:  # Adjust to ensure we're not exceeding length prematurely
-                combinations = ['']
-                for prod_symbol in production:
-                    new_combinations = []
-                    for string in combinations:
-                        expanded = expand(prod_symbol, current_length + len(string))
-                        new_combinations.extend([string + exp for exp in expanded])
-                    combinations = new_combinations
-                result.extend(combinations)
-        return result
+            if len(production.replace('s', '')) > target_length:
+                # Skip productions that are already too long
+                continue
 
-    start_symbol = list(cfg.keys())[0]
-    return [s for s in expand(start_symbol, 0) if len(s) == k]
+            if 's' not in production:  # Direct terminal string production
+                if len(production) == target_length:
+                    results.add(production)
+            else:
+                # Calculate needed length for recursive expansions
+                fixed_length = len(production.replace('s', ''))
+                for i in range(1, target_length - fixed_length + 1):
+                    for part in expand('s', i):
+                        new_prod = production.replace('s', part, 1)
+                        if len(new_prod) == target_length:
+                            results.add(new_prod)
+        return results
+
+    # Start expansion from the root symbol
+    return list(expand('root', k))
 
 def convert_grammar(input_grammar):
     grammar = {}
@@ -79,14 +92,20 @@ def stringsofLenk_max(input_grammar, k):
 def stringsofLenk(input_grammar, k):
     # TODO: fix to return the specific length k of strings
     converted_grammar_dict = convert_grammar(input_grammar)
-    lstStrings = generate_strings(converted_grammar_dict, k)
-    return lstStrings
+    lstStrings = generate_strings_len_k(converted_grammar_dict, k)
+    Stringdict = {}
+    for i in lstStrings:
+        Stringdict[i] = 0
+    return Stringdict
 
 if __name__ == "__main__":
     f = open('./examples/grammars/string_start_w_1_all_0.ebnf')
     input_grammar = f.read()
     f.close()
     converted_grammar_dict = convert_grammar(input_grammar)
-    # print(f"converted_grammar_dict: {converted_grammar_dict}")
-    print(f"generate_strings: {generate_strings_len_k(converted_grammar_dict, 5)}")
+    print(f"converted_grammar_dict: {converted_grammar_dict}")
+    # print(f"generated_strings: {generate_strings(converted_grammar_dict, 5)}")
+    result = generate_strings_len_k(converted_grammar_dict, 5)
+    print(f"generated_strings_of_length_k: {result}")
     # print(f"string of len k: {stringsofLenk_max(input_grammar, 5)}")
+    print(f"string of len k: {stringsofLenk(input_grammar, 5)}")

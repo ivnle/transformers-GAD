@@ -4,17 +4,18 @@
 CACHE_DIR="/nobackup2/yf/mila/GD_caches"
 BASE_GRAMMAR_DIR="/nobackup2/yf/mila/GD/examples/grammars/"
 #GRAMMAR_FILE="string_01.ebnf"
-GRAMMAR_FILES=("string_01.ebnf" "string_0.ebnf" "string_1.ebnf")
-NUM_BEAMS=3
-REPETITION_PENALTIES=(1 1.5 2 5 10 20)
+#GRAMMAR_FILES=("string_01.ebnf" "string_0.ebnf" "string_1.ebnf")
+GRAMMAR_FILES=("string_start_w_1_all_0.ebnf")
+NUM_BEAMS=5
+REPETITION_PENALTIES=(0.5 1 1.5 0.5 2 5)
 #REPETITION_PENALTIES=(1)
-STRING_LENGTHS=(3)
-TOP_PS=(0.9 0.95)
-TEMPERATURES=(1.5 2 1.0 5 10 100)
+STRING_LENGTHS=(5)
+TOP_PS=(0.95)
+TEMPERATURES=(1.1 0.8 1.5 0.6 2 5)
 #TEMPERATURES=(1)
-ITER=100
+ITER=1
 
-PROMPT="Generate a random binary string of length at most ${STRING_LENGTH}?"
+#PROMPT="Generate a random binary string of length ${STRING_LENGTHS}?"
 
 # Models to test
 #models=("meta-llama/Llama-2-7b-hf"
@@ -23,6 +24,7 @@ PROMPT="Generate a random binary string of length at most ${STRING_LENGTH}?"
 #"mistralai/Mixtral-8x7B-Instruct-v0.1")
 
 models=("meta-llama/Llama-2-7b-hf" "meta-llama/Llama-2-13b-hf" "meta-llama/Llama-2-70b-hf")
+#models=("meta-llama/Llama-2-13b-hf")
 
 # Iteration
 for MODEL_ID in "${models[@]}"; do
@@ -31,7 +33,7 @@ for MODEL_ID in "${models[@]}"; do
             for REPETITION_PENALTY in "${REPETITION_PENALTIES[@]}"; do
                 for TEMPERATURE in "${TEMPERATURES[@]}"; do
                     for TOP_P in "${TOP_PS[@]}"; do  # Assuming you want to loop over TOP_PS
-                        PROMPT="Generate a random binary string of length at most ${STRING_LENGTH}?"
+                        PROMPT="Generate a random binary string of length ${STRING_LENGTH}?"
                         python run_inference_grammar_constrained.py \
                             --model_id "$MODEL_ID" \
                             --cache_dir "$CACHE_DIR" \
@@ -47,7 +49,7 @@ for MODEL_ID in "${models[@]}"; do
                             --temperature $TEMPERATURE \
                             --iter $ITER \
                             --do_sample \
-                            --log_file \
+                            --log_file '/nobackup2/yf/mila/GD/log/log_one_time_greedy.txt'\
                             --max_new_tokens 20
                     done  # top_p
                 done  # temperature
