@@ -29,6 +29,28 @@ def generate_strings(cfg, k):
     start_symbol = list(cfg.keys())[0]  # Assuming the first key is the start symbol
     return expand(start_symbol, 0) # ['0', '1', '00', '01', '000', '001', '010', '011', '10', '11', '100', '101', '110', '111']
 
+def generate_strings_len_k(cfg, k):
+    def expand(symbol, current_length):
+        if symbol not in cfg:
+            return [symbol] if current_length == k else []
+
+        result = []
+        for production in cfg[symbol]:
+            # This initial check might not be necessary with the new logic
+            if len(production) + current_length <= k:  # Adjust to ensure we're not exceeding length prematurely
+                combinations = ['']
+                for prod_symbol in production:
+                    new_combinations = []
+                    for string in combinations:
+                        expanded = expand(prod_symbol, current_length + len(string))
+                        new_combinations.extend([string + exp for exp in expanded])
+                    combinations = new_combinations
+                result.extend(combinations)
+        return result
+
+    start_symbol = list(cfg.keys())[0]
+    return [s for s in expand(start_symbol, 0) if len(s) == k]
+
 def convert_grammar(input_grammar):
     grammar = {}
     lines = input_grammar.strip().split('\n')
@@ -46,7 +68,7 @@ def convert_grammar(input_grammar):
 
     return grammar # {'root': ['s'], 's': ['x', 'xs'], 'x': ['0', '1']}
 
-def stringsofLenk(input_grammar, k):
+def stringsofLenk_max(input_grammar, k):
     converted_grammar_dict = convert_grammar(input_grammar)
     lstStrings = generate_strings(converted_grammar_dict, k)
     Stringdict = {}
@@ -54,11 +76,17 @@ def stringsofLenk(input_grammar, k):
         Stringdict[i] = 0
     return Stringdict # {'0': 0, '1': 0, '00': 0, '01': 0, '000': 0, '001': 0, '010': 0, '011': 0, '10': 0, '11': 0, '100': 0, '101': 0, '110': 0, '111': 0}
 
+def stringsofLenk(input_grammar, k):
+    # TODO: fix to return the specific length k of strings
+    converted_grammar_dict = convert_grammar(input_grammar)
+    lstStrings = generate_strings(converted_grammar_dict, k)
+    return lstStrings
+
 if __name__ == "__main__":
-    f = open('./examples/grammars/string_01.ebnf')
+    f = open('./examples/grammars/string_start_w_1_all_0.ebnf')
     input_grammar = f.read()
     f.close()
     converted_grammar_dict = convert_grammar(input_grammar)
-    print(f"converted_grammar_dict: {converted_grammar_dict}")
-    print(f"generate_strings: {generate_strings(converted_grammar_dict, 3)}")
-    print(f"string of len k: {stringsofLenk(input_grammar, 3)}")
+    # print(f"converted_grammar_dict: {converted_grammar_dict}")
+    print(f"generate_strings: {generate_strings_len_k(converted_grammar_dict, 5)}")
+    # print(f"string of len k: {stringsofLenk_max(input_grammar, 5)}")

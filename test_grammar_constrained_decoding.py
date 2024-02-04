@@ -20,6 +20,7 @@ s      ::= "0" | "1" | "0"s | "1"s
 
     """
 
+
     for model_id in MODEL_IDS:
 
         model = AutoModelForCausalLM.from_pretrained(model_id, cache_dir="/nobackup2/yf/mila/GD_caches")
@@ -42,12 +43,13 @@ s      ::= "0" | "1" | "0"s | "1"s
             do_sample=True,
             pad_token_id=tokenizer.eos_token_id,
             eos_token_id=tokenizer.eos_token_id,
-            num_beams=5,
+            num_beams=10,
             max_new_tokens=40,
-            top_p=0.92,
-            top_k=50,
+            top_p=0.6,
+            # top_k=50,
             logits_processor=[grammar_processor],
-            repetition_penalty=5.0,
+            repetition_penalty=3.0,
+            temperature=100.0,
             early_stopping=True,
         )
 
@@ -91,10 +93,10 @@ def test_grammar_constrained_decoding_greedy_w_balanced_parenthesis_grammar():
             eos_token_id=tokenizer.eos_token_id,
             num_beams=1,
             max_new_tokens=40,
-            top_p=0.92,
-            top_k=5,
+            top_p=0.7,
+            # top_k=5,
             logits_processor=[grammar_processor],
-            repetition_penalty=100.0,
+            repetition_penalty=10.0,
             early_stopping=True,
         )
 
