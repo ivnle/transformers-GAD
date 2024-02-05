@@ -60,7 +60,7 @@ def parse_args():
                         help="Top p for nucleus sampling.")
     # parser.add_argument("--top_k", type=int, default=500,
     #                     help="Top k for sampling.")
-    parser.add_argument("--log_file", type=str, default='/nobackup2/yf/mila/GD/log/log.txt',
+    parser.add_argument("--log_file", type=str, default='/nobackup2/yf/mila/GD/log/test_log.txt',
                         help="Where to store log file.")
     parser.add_argument("--max_new_tokens", type=int, default=20,
                         help="Maximum number of new tokens to generate.")
@@ -122,9 +122,7 @@ def inference_grammar_constrained(args):
     print(f"grammar constrained generations: {generations}")
     return generations
 
-def inference_greedy(args):
-    model, tokenizer = load_model_tokenizer_hf(args)
-    tokenizer.pad_token = tokenizer.eos_token
+def inference_greedy(args, model, tokenizer):
     prompt = args.prompt
     input_ids = tokenizer(
         [prompt], add_special_tokens=False, return_tensors="pt", padding=True
@@ -201,6 +199,8 @@ def run_inference_grammar_constrained(args):
     return output, faithful, ideal, elapsed_time
 
 def run_inference_greedy(args):
+    model, tokenizer = load_model_tokenizer_hf(args)
+    tokenizer.pad_token = tokenizer.eos_token
     logging.basicConfig(filename=args.log_file, level=logging.INFO,
                         format='%(asctime)s:%(levelname)s:%(message)s')
     start_time = time.time()
@@ -219,9 +219,9 @@ def run_inference_greedy(args):
         logging.info(f'Top_p: {args.top_p}')
         # f.write(f'Top_k: {args.top_k}\n')
         logging.info(f'Temperature: {args.temperature}')
-    logging.info(f"Generations: {generations}")
+    logging.info(f"Generations: {generations}\n")
     print(f"end logging...")
-    print(f"generations: {generations}\n")
+    print(f"generations: {generations}")
     return generations
 
 
