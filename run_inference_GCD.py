@@ -182,16 +182,17 @@ def run_inference_grammar_constrained(args):
         result = inference_grammar_constrained(args, model, tokenizer)
         logging.info(f"result: {result}")
         res = result[0].split(".")[2]
-        print(f"res: {res}")
+        # print(f"res: {res}")
         if res in output:
             output[res] += 1
         else:
             output['other'] += 1
 
         faithful[res] = faithful.get(res, 0) + 1 # collect all the outputs instead of classifying to others
-        if i % 5 == 0:
-            print(f"Output: {output}")
-            print(f"Faithful: {faithful}")
+        if i % 10 == 0:
+            logging.info(f"Iteration: {i+1}")
+            logging.info(f"Output: {output}")
+            logging.info(f"Faithful: {faithful}")
     end_time = time.time()
     elapsed_time = end_time - start_time
     logging.info(f"Elapsed time: {elapsed_time} seconds")
@@ -214,7 +215,7 @@ def run_inference_greedy(args):
     start_time = time.time()
     generations = []
     for i in range(args.iter):
-        print(f"iteration: {i}")
+        # print(f"iteration: {i}")
         generation = inference_greedy(args, model, tokenizer)
         generations.append(generation)
         logging.info(f"greedy generations: {generation}")
@@ -305,12 +306,12 @@ def plot_results(args, output, ideal, datetime_string):
 if __name__ == "__main__":
     args = parse_args()
 
-    print(f"model_id: {args.model_id}")
-    print(f"repetition_penalty: {args.repetition_penalty}")
-    # print(f"num_beams: {args.num_beams}")
-    print(f"temperature: {args.temperature}")
-    print(f"top_p: {args.top_p}")
-    print(f"max_new_tokens: {args.max_new_tokens}")
+    # print(f"model_id: {args.model_id}")
+    # print(f"repetition_penalty: {args.repetition_penalty}")
+    # # print(f"num_beams: {args.num_beams}")
+    # print(f"temperature: {args.temperature}")
+    # print(f"top_p: {args.top_p}")
+    # print(f"max_new_tokens: {args.max_new_tokens}")
 
     output, faithful, ideal, elapsed_time = run_inference_grammar_constrained(args)
     # print(f"Output: {output}")

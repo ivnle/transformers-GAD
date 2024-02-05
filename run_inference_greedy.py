@@ -38,12 +38,12 @@ def parse_args():
                         help="Grammar file to test.")
     parser.add_argument("--num_return_sequences", type=int, default=1,
                         help="Number of sequences to return.")
-    parser.add_argument("--max_length", type=int, default=50,
-                        help="Maximum length of generated sequences when do not sample.")
+    # parser.add_argument("--max_length", type=int, default=50,
+    #                     help="Maximum length of generated sequences when do not sample.")
     # parser.add_argument("--seed", type=int, default=42,
     #                     help="Random seed for reproducibility.")
-    parser.add_argument("--num_beams", type=int, default=5,
-                        help="Number of beams for beam search.")
+    # parser.add_argument("--num_beams", type=int, default=5,
+    #                     help="Number of beams for beam search.")
     parser.add_argument("--repetition_penalty", type=float, default=1.0,
                          help="Repetition penalty for greedy decoding.")
     parser.add_argument("--string_length", type=int, default=5,
@@ -52,27 +52,24 @@ def parse_args():
                         help="Prompt for model inference.")
     parser.add_argument("--iter", type=int, default=5,
                         help="Number of iterations for inference.")
-    parser.add_argument("--temperature", type=float, default=1.1,
+    parser.add_argument("--temperature", type=float, default=0.7,
                         help="Temperature for sampling.")
     parser.add_argument("--do_sample", action='store_true',
                         help="Whether to sample from the model.")
-    parser.add_argument("--top_p", type=float, default=0.95,
+    parser.add_argument("--top_p", type=float, default=0.9,
                         help="Top p for nucleus sampling.")
     # parser.add_argument("--top_k", type=int, default=500,
     #                     help="Top k for sampling.")
     parser.add_argument("--log_file", type=str, default='/nobackup2/yf/mila/GD/log/test_log.txt',
                         help="Where to store log file.")
-    parser.add_argument("--max_new_tokens", type=int, default=20,
+    parser.add_argument("--max_new_tokens", type=int, default=30,
                         help="Maximum number of new tokens to generate.")
 
     args = parser.parse_args()
     return args
 
 
-def inference_grammar_constrained(args):
-    # Load model and tokenizer
-    model, tokenizer = load_model_tokenizer_hf(args)
-    tokenizer.pad_token = tokenizer.eos_token
+def inference_grammar_constrained(args, model, tokenizer):
     test_file = get_file(args)
 
     # Load grammar
@@ -142,27 +139,32 @@ def inference_greedy(args, model, tokenizer):
         num_return_sequences=args.num_return_sequences
     )
     generations = tokenizer.batch_decode(output, skip_special_tokens=True)
-    print(f"greedy generations: {generations}")
+    # generations = tokenizer.decode(output[0], skip_special_tokens=True)
+    # print(f"greedy generations: {generations}")
     return generations
 
 def inference_greedy_vllm(args):
     model = LLM(model=args.model_id, download_dir=args.cache_dir)
 
     sampling_params = SamplingParams(
-        max_tokens=args.max_length,
+        max_tokens=args.max_new_tokens,
         temperature=args.temperature,
         top_p=args.top_p,
         repetition_penalty=args.repetition_penalty,
+        stop=["---", "###"],
         # early_stopping=True # set to True when use beam search
     )
 
-    outputs = model.generate(args.prompt, sampling_params)
-    for output in outputs:
-        print(f"vllm generations: \n prompt: {output.prompt}; generated_text: {output.outputs[0].text}")
-    return outputs
+    output = model.generate(args.prompt, sampling_params)
+    print(output)
+    # for output in outputs:
+    #     print(f"vllm generations: \n prompt: {output.prompt}; generated_text: {output.outputs[0].text}")
+    return output
 
 
 def run_inference_grammar_constrained(args):
+    model, tokenizer = load_model_tokenizer_hf(args)
+    tokenizer.pad_token = tokenizer.eos_token
     start_time = time.time()
     with open(get_file(args), 'r') as f:
         input_grammar = f.read()
@@ -182,18 +184,18 @@ def run_inference_grammar_constrained(args):
     ideal['other'] = 0
 
     for i in tqdm(range(args.iter), desc="Running Inference"):
-        result = inference_grammar_constrained(args)
+        result = inference_grammar_constrained(args, model, tokenizer)
         print(f"result: {result}")
-        res = result[0].split("?")[1]
+        res = result[0].split(".")[2]
         if res in output:
             output[res] += 1
         else:
             output['other'] += 1
 
         faithful[res] = faithful.get(res, 0) + 1 # collect all the outputs instead of classifying to others
-        if i % 5 == 0:
-            print(f"Output: {output}")
-            print(f"Faithful: {faithful}")
+        if i % 10 == 0:
+            logging.info(f"Output: {output}")
+            logging.info(f"Faithful: {faithful}")
     end_time = time.time()
     elapsed_time = end_time - start_time
     return output, faithful, ideal, elapsed_time
@@ -204,7 +206,14 @@ def run_inference_greedy(args):
     logging.basicConfig(filename=args.log_file, level=logging.INFO,
                         format='%(asctime)s:%(levelname)s:%(message)s')
     start_time = time.time()
-    generations = inference_greedy(args)
+    generations = []
+    for i in range(args.iter):
+        print(f"iteration: {i}")
+        generation = inference_greedy(args, model, tokenizer)
+        generations.append(generation)
+        logging.info(f"greedy generations: {generation}")
+        print(f"greedy generations: {generation}")
+    # generations = inference_greedy_vllm(args)
     end_time = time.time()
     elapsed_time = end_time - start_time
     logging.info(f"Elapsed time: {elapsed_time} seconds")
@@ -219,13 +228,12 @@ def run_inference_greedy(args):
         logging.info(f'Top_p: {args.top_p}')
         # f.write(f'Top_k: {args.top_k}\n')
         logging.info(f'Temperature: {args.temperature}')
-    logging.info(f"Generations: {generations}\n")
     print(f"end logging...")
-    print(f"generations: {generations}")
     return generations
 
 
 def run_inference_greedy_w_grammar_rejection(args):
+    # TODO: implement this after find a working prompt
     start_time = time.time()
     with open(get_file(args), 'r') as f:
         input_grammar = f.read()
@@ -338,6 +346,6 @@ if __name__ == "__main__":
     # generation = inference_greedy_vllm(args)
     # generation = inference_greedy(args)
     # generation = inference_grammar_constrained(args)
-    generation = run_inference_greedy(args)
+    generations = run_inference_greedy(args)
 
 

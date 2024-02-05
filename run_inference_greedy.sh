@@ -16,7 +16,7 @@ STRING_LENGTHS=(5)
 TOP_PS=(0.9)
 #TEMPERATURES=(1.1 0.8 1.5 0.6 2 5)
 TEMPERATURES=(0.7)
-ITER=220
+ITER=500
 
 #PROMPT="Generate a random binary string of length ${STRING_LENGTHS}?"
 
@@ -40,7 +40,7 @@ for MODEL_ID in "${models[@]}"; do
                     for TOP_P in "${TOP_PS[@]}"; do
                         PROMPT="Be a helpful assistant. Generate a random binary string of length ${STRING_LENGTH}? Directly show the generated string without explanation."
                         gpu=${GPUs[$gpu_counter]}
-                        CUDA_VISIBLE_DEVICES=1 python run_inference_grammar_constrained.py \
+                        CUDA_VISIBLE_DEVICES=1 python run_inference_greedy.py \
                             --model_id "$MODEL_ID" \
                             --cache_dir "$CACHE_DIR" \
                             --base_grammar_dir "$BASE_GRAMMAR_DIR" \
