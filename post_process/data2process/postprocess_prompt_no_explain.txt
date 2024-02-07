@@ -1,177 +1,3 @@
-2024-02-04 22:06:59,310:INFO:Elapsed time: 569.6923131942749 seconds
-2024-02-04 22:06:59,313:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-04 22:06:59,313:INFO:Prompt: Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-04 22:06:59,313:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-04 22:06:59,313:INFO:Iterations: 1
-2024-02-04 22:06:59,313:INFO:Do we sample when decoding? True
-2024-02-04 22:06:59,313:INFO:Repetition penalty: 1.0
-2024-02-04 22:06:59,313:INFO:max_new_tokens: 30
-2024-02-04 22:06:59,313:INFO:Top_p: 0.9
-2024-02-04 22:06:59,313:INFO:Temperature: 0.7
-2024-02-04 22:06:59,313:INFO:Generations: ['Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n01011\n\n### Question: Generate a random binary string of length 100?\n\nDirectly show the']
-
-2024-02-04 22:32:54,308:INFO:Elapsed time: 243.253484249115 seconds
-2024-02-04 22:32:54,309:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-04 22:32:54,309:INFO:Prompt: Be a helpful assistant Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-04 22:32:54,309:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-04 22:32:54,309:INFO:Iterations: 1
-2024-02-04 22:32:54,309:INFO:Do we sample when decoding? True
-2024-02-04 22:32:54,309:INFO:Repetition penalty: 1.0
-2024-02-04 22:32:54,309:INFO:max_new_tokens: 30
-2024-02-04 22:32:54,309:INFO:Top_p: 0.9
-2024-02-04 22:32:54,309:INFO:Temperature: 0.7
-2024-02-04 22:32:54,309:INFO:Generations: ['Be a helpful assistant Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n01101\n\n---\n\n**Prompt:** Be a helpful assistant How many bits are needed to represent the decimal number']
-
-2024-02-04 23:08:44,257:INFO:Elapsed time: 334.6352593898773 seconds
-2024-02-04 23:08:44,257:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-04 23:08:44,257:INFO:Prompt: Be a helpful assistant Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-04 23:08:44,257:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-04 23:08:44,257:INFO:Iterations: 1
-2024-02-04 23:08:44,257:INFO:Do we sample when decoding? True
-2024-02-04 23:08:44,257:INFO:Repetition penalty: 1.0
-2024-02-04 23:08:44,257:INFO:max_new_tokens: 30
-2024-02-04 23:08:44,257:INFO:Top_p: 0.9
-2024-02-04 23:08:44,257:INFO:Temperature: 0.7
-2024-02-04 23:08:44,257:INFO:Generations: Be a helpful assistant Generate a random binary string of length 5? Directly show the generated string without explanation.
-
-10111
-
----
-
-Q: Be a helpful assistant How do I generate a random binary string of length 5
-
-2024-02-05 00:10:43,129:INFO:Elapsed time: 41.03965449333191 seconds
-2024-02-05 00:10:43,129:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 00:10:43,129:INFO:Prompt: Be a helpful assistant Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-05 00:10:43,130:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 00:10:43,130:INFO:Iterations: 1
-2024-02-05 00:10:43,130:INFO:Do we sample when decoding? True
-2024-02-05 00:10:43,130:INFO:Repetition penalty: 1.0
-2024-02-05 00:10:43,130:INFO:max_new_tokens: 10
-2024-02-05 00:10:43,130:INFO:Top_p: 0.9
-2024-02-05 00:10:43,130:INFO:Temperature: 0.7
-2024-02-05 00:10:43,130:INFO:greedy generations: ['Be a helpful assistant Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n10010\n\n###']
-
-2024-02-05 00:22:56,734:INFO:Elapsed time: 79.41731023788452 seconds
-2024-02-05 00:22:56,734:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 00:22:56,734:INFO:Prompt: Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-05 00:22:56,734:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 00:22:56,734:INFO:Iterations: 1
-2024-02-05 00:22:56,734:INFO:Do we sample when decoding? True
-2024-02-05 00:22:56,734:INFO:Repetition penalty: 1.0
-2024-02-05 00:22:56,734:INFO:max_new_tokens: 20
-2024-02-05 00:22:56,734:INFO:Top_p: 0.9
-2024-02-05 00:22:56,734:INFO:Temperature: 0.7
-2024-02-05 00:22:56,734:INFO:greedy generations: ['Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n00111\n\nExplanation:\n\n* `bin` is']
-
-2024-02-05 00:26:33,162:INFO:Elapsed time: 102.28712010383606 seconds
-2024-02-05 00:26:33,164:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 00:26:33,164:INFO:Prompt: Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-05 00:26:33,164:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 00:26:33,164:INFO:Iterations: 1
-2024-02-05 00:26:33,164:INFO:Do we sample when decoding? True
-2024-02-05 00:26:33,164:INFO:Repetition penalty: 1.0
-2024-02-05 00:26:33,164:INFO:max_new_tokens: 20
-2024-02-05 00:26:33,164:INFO:Top_p: 0.9
-2024-02-05 00:26:33,164:INFO:Temperature: 0.7
-2024-02-05 00:26:33,164:INFO:greedy generations: ['Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n00010\n\n## Question 4\n\nWrite a program to generate']
-
-2024-02-05 00:46:14,219:INFO:Elapsed time: 86.74672245979309 seconds
-2024-02-05 00:46:14,219:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 00:46:14,219:INFO:Prompt: Generate a random binary string of length 5? 11111 Generate a random binary string of length 5? 10101 Generate a random binary string of length 5? 11011 Generate a random binary string of length 5?
-2024-02-05 00:46:14,219:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 00:46:14,219:INFO:Iterations: 1
-2024-02-05 00:46:14,219:INFO:Do we sample when decoding? True
-2024-02-05 00:46:14,219:INFO:Repetition penalty: 1.1
-2024-02-05 00:46:14,219:INFO:max_new_tokens: 20
-2024-02-05 00:46:14,219:INFO:Top_p: 0.9
-2024-02-05 00:46:14,219:INFO:Temperature: 0.7
-2024-02-05 00:46:14,220:INFO:greedy generations: ['Generate a random binary string of length 5? 11111 Generate a random binary string of length 5? 10101 Generate a random binary string of length 5? 11011 Generate a random binary string of length 5? 01101\n\\end{lstlisting}\n\nA natural extension to']
-
-2024-02-05 00:50:23,194:INFO:Elapsed time: 35.71397566795349 seconds
-2024-02-05 00:50:23,194:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 00:50:23,194:INFO:Prompt: Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-05 00:50:23,194:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 00:50:23,194:INFO:Iterations: 1
-2024-02-05 00:50:23,194:INFO:Do we sample when decoding? True
-2024-02-05 00:50:23,194:INFO:Repetition penalty: 1.1
-2024-02-05 00:50:23,194:INFO:max_new_tokens: 20
-2024-02-05 00:50:23,194:INFO:Top_p: 0.9
-2024-02-05 00:50:23,194:INFO:Temperature: 0.7
-2024-02-05 00:50:23,194:INFO:greedy generations: ['Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n01110']
-
-2024-02-05 00:55:42,700:INFO:Elapsed time: 144.2994360923767 seconds
-2024-02-05 00:55:42,700:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 00:55:42,700:INFO:Prompt: Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-05 00:55:42,700:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 00:55:42,700:INFO:Iterations: 1
-2024-02-05 00:55:42,700:INFO:Do we sample when decoding? True
-2024-02-05 00:55:42,700:INFO:Repetition penalty: 1.1
-2024-02-05 00:55:42,700:INFO:max_new_tokens: 40
-2024-02-05 00:55:42,700:INFO:Top_p: 0.9
-2024-02-05 00:55:42,700:INFO:Temperature: 0.7
-2024-02-05 00:55:42,700:INFO:greedy generations: ['Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n11010\n\nQuestion: What is the base-2 logarithm (log2) of 8?\n\nAnswer: The base-2 logarithm']
-
-2024-02-05 00:58:04,000:INFO:Elapsed time: 79.88345909118652 seconds
-2024-02-05 00:58:04,000:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 00:58:04,000:INFO:Prompt: Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-05 00:58:04,000:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 00:58:04,000:INFO:Iterations: 1
-2024-02-05 00:58:04,000:INFO:Do we sample when decoding? True
-2024-02-05 00:58:04,000:INFO:Repetition penalty: 1.1
-2024-02-05 00:58:04,000:INFO:max_new_tokens: 20
-2024-02-05 00:58:04,000:INFO:Top_p: 0.9
-2024-02-05 00:58:04,001:INFO:Temperature: 0.7
-2024-02-05 00:58:04,001:INFO:greedy generations: ['Generate a random binary string of length 5? Directly show the generated string without explanation.\n```\n01011\n```\n\n## Question 2: B']
-
-2024-02-05 00:59:51,726:INFO:Elapsed time: 38.59588932991028 seconds
-2024-02-05 00:59:51,727:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 00:59:51,727:INFO:Prompt: Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-05 00:59:51,727:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 00:59:51,727:INFO:Iterations: 1
-2024-02-05 00:59:51,727:INFO:Do we sample when decoding? True
-2024-02-05 00:59:51,727:INFO:Repetition penalty: 1.1
-2024-02-05 00:59:51,727:INFO:max_new_tokens: 10
-2024-02-05 00:59:51,727:INFO:Top_p: 0.9
-2024-02-05 00:59:51,727:INFO:Temperature: 0.7
-2024-02-05 00:59:51,727:INFO:greedy generations: ['Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n10000\n\n###']
-
-2024-02-05 01:01:46,705:INFO:Elapsed time: 33.83180212974548 seconds
-2024-02-05 01:01:46,705:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 01:01:46,705:INFO:Prompt: Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-05 01:01:46,705:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 01:01:46,705:INFO:Iterations: 1
-2024-02-05 01:01:46,705:INFO:Do we sample when decoding? True
-2024-02-05 01:01:46,705:INFO:Repetition penalty: 1.1
-2024-02-05 01:01:46,705:INFO:max_new_tokens: 10
-2024-02-05 01:01:46,705:INFO:Top_p: 0.9
-2024-02-05 01:01:46,706:INFO:Temperature: 0.7
-2024-02-05 01:01:46,706:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n10100']
-
-2024-02-05 01:02:56,871:INFO:Elapsed time: 35.69529461860657 seconds
-2024-02-05 01:02:56,871:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 01:02:56,871:INFO:Prompt: Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-05 01:02:56,871:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 01:02:56,871:INFO:Iterations: 1
-2024-02-05 01:02:56,871:INFO:Do we sample when decoding? True
-2024-02-05 01:02:56,871:INFO:Repetition penalty: 1.1
-2024-02-05 01:02:56,871:INFO:max_new_tokens: 10
-2024-02-05 01:02:56,871:INFO:Top_p: 0.9
-2024-02-05 01:02:56,871:INFO:Temperature: 0.7
-2024-02-05 01:02:56,871:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n01110']
-
-2024-02-05 01:05:54,179:INFO:Elapsed time: 44.40590524673462 seconds
-2024-02-05 01:05:54,179:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 01:05:54,179:INFO:Prompt: Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-05 01:05:54,179:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 01:05:54,179:INFO:Iterations: 10
-2024-02-05 01:05:54,179:INFO:Do we sample when decoding? True
-2024-02-05 01:05:54,180:INFO:Repetition penalty: 1.1
-2024-02-05 01:05:54,180:INFO:max_new_tokens: 10
-2024-02-05 01:05:54,180:INFO:Top_p: 0.9
-2024-02-05 01:05:54,180:INFO:Temperature: 0.7
-2024-02-05 01:05:54,180:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n```\n10110\n']
-
 2024-02-05 01:18:25,091:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n```\n10011\n']
 2024-02-05 01:19:02,805:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n01101']
 2024-02-05 01:19:46,851:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n10011']
@@ -182,16 +8,6 @@ Q: Be a helpful assistant How do I generate a random binary string of length 5
 2024-02-05 01:22:25,273:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n10110']
 2024-02-05 01:22:54,397:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n01011']
 2024-02-05 01:23:28,851:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n```\n10110\n']
-2024-02-05 01:23:28,851:INFO:Elapsed time: 345.83590483665466 seconds
-2024-02-05 01:23:28,852:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 01:23:28,852:INFO:Prompt: Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-05 01:23:28,852:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 01:23:28,852:INFO:Iterations: 10
-2024-02-05 01:23:28,852:INFO:Do we sample when decoding? True
-2024-02-05 01:23:28,852:INFO:Repetition penalty: 1.1
-2024-02-05 01:23:28,852:INFO:max_new_tokens: 10
-2024-02-05 01:23:28,852:INFO:Top_p: 0.9
-2024-02-05 01:23:28,852:INFO:Temperature: 0.7
 2024-02-05 01:52:16,489:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n11011']
 2024-02-05 01:52:53,274:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n10010']
 2024-02-05 01:53:33,063:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n10010']
@@ -771,16 +587,6 @@ Q: Be a helpful assistant How do I generate a random binary string of length 5
 2024-02-05 07:02:14,423:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n01101']
 2024-02-05 07:02:37,340:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n11010']
 2024-02-05 07:02:59,888:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n01110']
-2024-02-05 07:02:59,888:INFO:Elapsed time: 15549.28375673294 seconds
-2024-02-05 07:02:59,888:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-05 07:02:59,889:INFO:Prompt: Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-05 07:02:59,889:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-05 07:02:59,889:INFO:Iterations: 500
-2024-02-05 07:02:59,889:INFO:Do we sample when decoding? True
-2024-02-05 07:02:59,889:INFO:Repetition penalty: 1.1
-2024-02-05 07:02:59,889:INFO:max_new_tokens: 10
-2024-02-05 07:02:59,889:INFO:Top_p: 0.9
-2024-02-05 07:02:59,889:INFO:Temperature: 0.7
 2024-02-06 00:59:59,546:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n01110']
 2024-02-06 01:01:08,045:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n```\n10101\n']
 2024-02-06 01:01:47,334:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n11011']
@@ -981,16 +787,6 @@ Q: Be a helpful assistant How do I generate a random binary string of length 5
 2024-02-06 03:15:33,397:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n01011']
 2024-02-06 03:16:11,880:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n10100']
 2024-02-06 03:16:54,166:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n```\n10110\n']
-2024-02-06 03:16:54,166:INFO:Elapsed time: 8267.44715166092 seconds
-2024-02-06 03:16:54,166:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-06 03:16:54,166:INFO:Prompt: Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-06 03:16:54,166:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-06 03:16:54,166:INFO:Iterations: 200
-2024-02-06 03:16:54,166:INFO:Do we sample when decoding? True
-2024-02-06 03:16:54,166:INFO:Repetition penalty: 1.1
-2024-02-06 03:16:54,166:INFO:max_new_tokens: 10
-2024-02-06 03:16:54,166:INFO:Top_p: 0.9
-2024-02-06 03:16:54,166:INFO:Temperature: 0.7
 2024-02-06 10:24:38,948:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n01110']
 2024-02-06 10:26:09,700:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n```\n10110\n']
 2024-02-06 10:27:28,732:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n10011']
@@ -1191,13 +987,3 @@ Q: Be a helpful assistant How do I generate a random binary string of length 5
 2024-02-06 12:42:47,160:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n```python\n01010']
 2024-02-06 12:43:28,236:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n10010']
 2024-02-06 12:43:55,235:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n01010']
-2024-02-06 12:43:55,235:INFO:Elapsed time: 8424.775480031967 seconds
-2024-02-06 12:43:55,235:INFO:Model: mistralai/Mixtral-8x7B-Instruct-v0.1
-2024-02-06 12:43:55,235:INFO:Prompt: Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.
-2024-02-06 12:43:55,235:INFO:Grammar: string_start_w_1_all_0.ebnf
-2024-02-06 12:43:55,235:INFO:Iterations: 200
-2024-02-06 12:43:55,235:INFO:Do we sample when decoding? True
-2024-02-06 12:43:55,235:INFO:Repetition penalty: 1.1
-2024-02-06 12:43:55,235:INFO:max_new_tokens: 10
-2024-02-06 12:43:55,235:INFO:Top_p: 0.9
-2024-02-06 12:43:55,235:INFO:Temperature: 0.7

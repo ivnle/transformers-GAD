@@ -11,7 +11,7 @@ import subprocess
 import matplotlib.pyplot as plt
 import numpy as np
 import get_desired_string_dict
-from get_desired_string_dict import stringsofLenk_max, stringsofLenk, convert_grammar
+from get_desired_string_dict import stringsofLenk_max, stringsofLenk, convert_grammar, stringsofLenk_01
 import json
 import logging
 from tqdm import tqdm
@@ -172,7 +172,7 @@ def run_inference_grammar_constrained(args):
         input_grammar = f.read()
     logging.info(f"input_grammar: {input_grammar}")
     # output = stringsofLenk_max(input_grammar, args.string_length)
-    output = stringsofLenk(input_grammar, args.string_length)
+    output = stringsofLenk_01(input_grammar, args.string_length)
     ideal = {key: round(args.iter / len(output.keys())) for key in output.keys()}
     faithful = output.copy()
     output['other'] = 0
@@ -189,10 +189,10 @@ def run_inference_grammar_constrained(args):
             output['other'] += 1
 
         faithful[res] = faithful.get(res, 0) + 1 # collect all the outputs instead of classifying to others
-        if i % 10 == 0:
-            logging.info(f"Iteration: {i+1}")
-            logging.info(f"Output: {output}")
-            logging.info(f"Faithful: {faithful}")
+        # if i % 10 == 0:
+        #     logging.info(f"Iteration: {i+1}")
+        #     logging.info(f"Output: {output}")
+        #     logging.info(f"Faithful: {faithful}")
     end_time = time.time()
     elapsed_time = end_time - start_time
     logging.info(f"Elapsed time: {elapsed_time} seconds")

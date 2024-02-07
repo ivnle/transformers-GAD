@@ -49,7 +49,7 @@ for MODEL_ID in "${models[@]}"; do
                             --temperature $TEMPERATURE \
                             --iter $ITER \
                             --do_sample \
-                            --log_file '/nobackup2/yf/mila/GD/log/log_mixtral_GCD.txt'\
+                            --log_file '/nobackup2/yf/mila/GD/log/log_mixtral_GCD_string_start_w_1_all_0.txt'\
                             --max_new_tokens 20
                     done  # top_p
                 done  # temperature

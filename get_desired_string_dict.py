@@ -30,6 +30,7 @@ def generate_strings(cfg, k):
     return expand(start_symbol, 0) # ['0', '1', '00', '01', '000', '001', '010', '011', '10', '11', '100', '101', '110', '111']
 
 def generate_strings_len_k(cfg, k):
+    # TODO: note that only fit for grammar with 's' as the non-terminal symbol
     """
     Generate all unique strings of exact length k from the given context-free grammar.
     :param cfg: Context-free grammar as a dictionary
@@ -98,6 +99,15 @@ def stringsofLenk(input_grammar, k):
         Stringdict[i] = 0
     return Stringdict
 
+def stringsofLenk_01(input_grammar, k):
+    # fit into string_01.ebnf to generate strings of length k
+    converted_grammar_dict = convert_grammar(input_grammar)
+    lstStrings = (generate_strings(converted_grammar_dict, k))
+    filteredStrings = [s for s in lstStrings if len(s) == k]
+    Stringdict = {i: 0 for i in filteredStrings}
+
+    return Stringdict
+
 if __name__ == "__main__":
     f = open('./examples/grammars/string_start_w_1_all_0.ebnf')
     input_grammar = f.read()
@@ -108,4 +118,8 @@ if __name__ == "__main__":
     result = generate_strings_len_k(converted_grammar_dict, 5)
     print(f"generated_strings_of_length_k: {result}")
     # print(f"string of len k: {stringsofLenk_max(input_grammar, 5)}")
-    print(f"string of len k: {stringsofLenk(input_grammar, 5)}")
+    # print(f"string of len k: {stringsofLenk_01(input_grammar, 5)}")
+    # print(f"string of len k: {stringsofLenk(input_grammar, 5)}")
+
+
+

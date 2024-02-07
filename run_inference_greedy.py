@@ -208,7 +208,7 @@ def run_inference_greedy(args):
     start_time = time.time()
     generations = []
     for i in range(args.iter):
-        print(f"iteration: {i}")
+        # print(f"iteration: {i}")
         generation = inference_greedy(args, model, tokenizer)
         generations.append(generation)
         logging.info(f"greedy generations: {generation}")
