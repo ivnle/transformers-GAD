@@ -140,5 +140,21 @@ if __name__ == "__main__":
     #     r"Generate a random binary string of length 5\? Directly show the generated string without explanation\.\s*\\n(\\n)?([01]{5})")
     # pattern = re.compile(
     #     r"Be a helpful assistant\. Generate a random binary string of length 5 following the grammar: root ::= '00000' | '1's; s ::= '0' | '1' | '0's | '1's\? Directly show the generated string without explanation\.\s*\\n(\\n)?([01]{5})"
-    G_star, G_prime, R, total_count = postprocess_greedy_w_no_explain('data2process/postprocess_prompt_no_explain.txt',
-                                                                      'log/postprocess_log_no_explain.txt')
+    # G_star, G_prime, R, total_count = postprocess_greedy_w_no_explain('postprocess_prompt_no_explain.txt', 'postprocess_log_no_explain.txt')
+
+    G_star, G_prime, R, total_count = postprocess_greedy_w_no_explain('data2process/postprocess_prompt_grammar.txt',
+                                                                      'log/postprocess_log_grammar.txt')
+    # def process_log_entry(entry):
+    #     # Check if the entry matches the expected pattern
+    #     match = pattern.search(entry)
+    #     print(f"match: {match}")
+    #     if match:
+    #         # Extract the binary string (handling either group matched)
+    #         binary_string = match.group(1) or match.group(2)
+    #         print(f"binary_string: {binary_string}")
+    #         return binary_string
+    #     return None
+
+    # pattern = re.compile(r'\n\n([01]{5})|\n([01]{5})\b')
+    # line = "2024-02-05 01:52:16,489:INFO:greedy generations: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.\n\n11011']"
+    # binary_string = process_log_entry(line)
