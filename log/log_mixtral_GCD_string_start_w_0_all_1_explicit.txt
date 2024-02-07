@@ -1,0 +1,24 @@
+2024-02-07 15:18:00,887:INFO:input_grammar: root   ::= s
+s      ::= "01010" | "00100" | "01110" | "01111" | "01101" | "00101" | "00110" | "01001" | "00011" | "00000" | "11111" | "01011" | "00111" | "00010" | "01000" | "00001" | "01100"
+2024-02-07 15:19:08,511:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.01011']
+2024-02-07 15:19:08,511:INFO:Iteration: 1
+2024-02-07 15:19:08,511:INFO:Output: {'00101': 0, '01000': 0, '01101': 0, '00000': 0, '00111': 0, '01110': 0, '01010': 0, '00010': 0, '00001': 0, '01100': 0, '01001': 0, '00100': 0, '11111': 0, '01011': 1, '00011': 0, '00110': 0, '01111': 0, 'other': 0}
+2024-02-07 15:19:08,511:INFO:Faithful: {'00101': 0, '01000': 0, '01101': 0, '00000': 0, '00111': 0, '01110': 0, '01010': 0, '00010': 0, '00001': 0, '01100': 0, '01001': 0, '00100': 0, '11111': 0, '01011': 1, '00011': 0, '00110': 0, '01111': 0}
+2024-02-07 15:20:28,872:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
+2024-02-07 15:21:00,573:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
+2024-02-07 15:21:27,409:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.01101']
+2024-02-07 15:21:51,102:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
+2024-02-07 15:22:15,770:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
+2024-02-07 15:22:38,284:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.01101']
+2024-02-07 15:23:03,110:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
+2024-02-07 15:23:26,989:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
+2024-02-07 15:23:49,372:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
+2024-02-07 15:24:13,523:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
+2024-02-07 15:24:13,523:INFO:Iteration: 11
+2024-02-07 15:24:13,524:INFO:Output: {'00101': 0, '01000': 0, '01101': 2, '00000': 0, '00111': 0, '01110': 0, '01010': 0, '00010': 0, '00001': 0, '01100': 0, '01001': 0, '00100': 0, '11111': 8, '01011': 1, '00011': 0, '00110': 0, '01111': 0, 'other': 0}
+2024-02-07 15:24:13,524:INFO:Faithful: {'00101': 0, '01000': 0, '01101': 2, '00000': 0, '00111': 0, '01110': 0, '01010': 0, '00010': 0, '00001': 0, '01100': 0, '01001': 0, '00100': 0, '11111': 8, '01011': 1, '00011': 0, '00110': 0, '01111': 0}
+2024-02-07 15:24:36,769:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
+2024-02-07 15:25:03,185:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
+2024-02-07 15:25:44,002:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
+2024-02-07 15:26:16,855:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
+2024-02-07 15:26:47,192:INFO:result: ['Be a helpful assistant. Generate a random binary string of length 5? Directly show the generated string without explanation.11111']
