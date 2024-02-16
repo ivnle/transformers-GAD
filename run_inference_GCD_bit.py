@@ -190,10 +190,10 @@ def run_inference_grammar_constrained(args):
             output['other'] += 1
 
         faithful[res] = faithful.get(res, 0) + 1 # collect all the outputs instead of classifying to others
-        if i % 10 == 0:
-            logging.info(f"Iteration: {i+1}")
-            logging.info(f"Output: {output}")
-            logging.info(f"Faithful: {faithful}")
+        # if i % 10 == 0:
+        #     logging.info(f"Iteration: {i+1}")
+        #     logging.info(f"Output: {output}")
+        #     logging.info(f"Faithful: {faithful}")
     end_time = time.time()
     elapsed_time = end_time - start_time
     logging.info(f"Elapsed time: {elapsed_time} seconds")

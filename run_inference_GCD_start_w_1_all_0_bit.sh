@@ -14,6 +14,7 @@ TOP_PS=(0.9)
 #TEMPERATURES=(1.1 0.8 1.5 0.6 2 5)
 TEMPERATURES=(0.7)
 ITER=500
+#PROMPT="Give us a bitvector of length ${STRING_LENGTH} that is a power of 2?"
 
 models=("mistralai/Mixtral-8x7B-Instruct-v0.1")
 
@@ -24,7 +25,7 @@ for MODEL_ID in "${models[@]}"; do
             for REPETITION_PENALTY in "${REPETITION_PENALTIES[@]}"; do
                 for TEMPERATURE in "${TEMPERATURES[@]}"; do
                     for TOP_P in "${TOP_PS[@]}"; do  # Assuming you want to loop over TOP_PS
-                        PROMPT="Give us a bitvector of length ${STRING_LENGTH} that is a power of 2?"
+                        PROMPT="Give us a bitvector of length 5 where the last digit should be 1?"
                         CUDA_VISIBLE_DEVICES=3 python run_inference_GCD_bit.py \
                             --model_id "$MODEL_ID" \
                             --cache_dir "$CACHE_DIR" \
