@@ -7,8 +7,8 @@ from typing import Dict, List
 
 import torch
 
-from .vocab_struct import LEAF, TokenTrie
-# from vocab_struct import LEAF, TokenTrie
+# from .vocab_struct import LEAF, TokenTrie # outer call
+from vocab_struct import LEAF, TokenTrie # inner test
 
 logger = logging.getLogger(__name__)
 
@@ -712,7 +712,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
 
     try:
-        with open("../examples/grammars/string_01.ebnf", "r") as file:
+        with open("../examples/grammars/string_start_w_0_all_1.ebnf", "r") as file:
             input_text = file.read()
         state = parse_ebnf(input_text)
         print_grammar(sys.stdout, state)
@@ -743,3 +743,26 @@ if __name__ == "__main__":
     # < 2 > 12[2, 4, 2, 48, 48, 0, 4, 2, 49, 49, 0, 0]
     # symbol_ids:
     # {'root': 0, 's': 1, 'x': 2, 'xs': 3}
+
+    # Grammar Rules:
+    # < 0 > root: := < 2 > [1 - 1] < 5 > [1 - 1] < 8 > [1 - 1] < 11 > [1 - 1] < 14 > [1 - 1] | < 19 > [0 - 0] < 22 > s
+    # < 26 > s: := < 28 > [0 - 0] | < 33 > [1 - 1] | < 38 > [0 - 0] < 41 > s | < 45 > [1 - 1] < 48 > s
+    #
+    # Binary representation:
+    # 0000 0010 0002 0031 0031
+    # 0002 0031 0031 0002 0031
+    # 0031 0002 0031 0031 0002
+    # 0031 0031 0000 0006 0002
+    # 0030 0030 0001 0001 0000
+    # 0000 0001 0004 0002 0030
+    # 0030 0000 0004 0002 0031
+    # 0031 0000 0006 0002 0030
+    # 0030 0001 0001 0000 0006
+    # 0002 0031 0031 0001 0001
+    # 0000 0000 ffff
+
+    # Grammar Rule Sizes:
+    # < 0 > 26[0, 16, 2, 49, 49, 2, 49, 49, 2, 49, 49, 2, 49, 49, 2, 49, 49, 0, 6, 2, 48, 48, 1, 1, 0, 0]
+    # < 1 > 26[1, 4, 2, 48, 48, 0, 4, 2, 49, 49, 0, 6, 2, 48, 48, 1, 1, 0, 6, 2, 49, 49, 1, 1, 0, 0]
+    # symbol_ids:
+    # {'root': 0, 's': 1}
