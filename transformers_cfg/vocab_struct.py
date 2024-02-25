@@ -2,59 +2,12 @@
 # DATA STRUCTURES
 #################
 
-
+import logging
 import re
 
+logger = logging.getLogger(__name__)
+
 LEAF = -1
-
-
-def get_substitution(tokenizer):
-    print(f"tokenizer type: {tokenizer.__class__.__name__}")
-    if "gpt2" in tokenizer.__class__.__name__.lower():
-        return BPESubstitution(tokenizer)
-    elif (
-        "llama" in tokenizer.__class__.__name__.lower()
-        or "t5" in tokenizer.__class__.__name__.lower()
-        or "bloom" in tokenizer.__class__.__name__.lower()
-        or "phi" in tokenizer.__class__.__name__.lower()
-    ):
-        return Substitution(tokenizer)
-
-
-class Substitution:
-    def __init__(self, tokenizer):
-        self.eos_token_id = tokenizer.eos_token_id
-        self.tokenizer = tokenizer
-
-    def __len__(self):
-        return len(self.tokenizer.get_vocab())
-
-    def map(self, token_id: int) -> bytes:
-        # if token_id is tensor, convert it to int
-        if hasattr(token_id, "item"):
-            token_id = token_id.item()
-        raw_token = self.tokenizer.convert_ids_to_tokens(token_id)
-        # if the token is hex, token is a string like "<0x00>"
-        # first 256 tokens are hex
-        if raw_token.startswith("<0x"):
-            hex_value = raw_token[4:-1]
-            raw_token = chr(int(hex_value, 16))
-        raw_token = raw_token.replace("▁", " ")
-        return bytes(raw_token, "utf-8")
-
-
-class BPESubstitution(Substitution):
-    def __init__(self, tokenizer):
-        super().__init__(tokenizer)
-        self.special = tokenizer.additional_special_tokens_ids
-
-    def map(self, token_id: int) -> bytes:
-        if token_id in self.special:
-            return None
-        return bytes(
-            self.tokenizer.decode([token_id], clean_up_tokenization_spaces=False),
-            "utf-8",
-        )
 
 
 class TokenTrie:
@@ -105,7 +58,9 @@ class TokenTrie:
                 return bytes(token, "utf-8")
 
         else:
-            print("Warning: unrecognized tokenizer: using default token formatting")
+            logger.warning(
+                "Warning: unrecognized tokenizer: using default token formatting"
+            )
 
             def fmt_token(id):
                 token = tokenizer.convert_ids_to_tokens(id)
@@ -125,8 +80,6 @@ class TokenTrie:
                 current[byte] = {}
             current = current[byte]
         current[LEAF] = token_id
-
-
 
 
 if __name__ == "__main__":

@@ -13,7 +13,7 @@ STRING_LENGTHS=(5)
 TOP_PS=(0.9)
 #TEMPERATURES=(1.1 0.8 1.5 0.6 2 5)
 TEMPERATURES=(0.7)
-ITER=2000
+ITER=10
 
 #PROMPT="Give us a bitvector of length ${STRING_LENGTH} that is a power of 2?"
 

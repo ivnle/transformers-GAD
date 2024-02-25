@@ -8,7 +8,8 @@ import torch
 
 from transformers_cfg.recognizer import GrammarRecognizer
 from transformers_cfg.parser import parse_ebnf
-from .vocab_struct import LEAF, TokenTrie, get_substitution
+from transformers_cfg.mapping import get_mapping
+from .vocab_struct import LEAF, TokenTrie
 
 logger = logging.getLogger(__name__)
 
@@ -29,17 +30,19 @@ def check_token_acceptance_in_trie(trie, stacks, grammar, eos_token_id, accepts)
             if not stk:
                 continue
 
-            next_rule_pos = stk[-1]
-            num_chars = grammar.grammar_encoding[next_rule_pos]
+            next_element_offset = stk[-1]
+            num_chars = grammar.grammar_encoding[next_element_offset]
 
-            if not grammar.char_acceptance_at_rule_pos(next_rule_pos)[byte]:
+            if not grammar.char_acceptance_at_element(next_element_offset).get(
+                byte, False
+            ):
                 # if the current byte is not accepted by the current rule, we need to try next rule
                 continue
 
-            next_rule_pos += num_chars + 1
+            next_element_offset += num_chars + 1
             new_stack = stk[:-1]
-            if grammar.grammar_encoding[next_rule_pos]:
-                new_stack.append(next_rule_pos)
+            if grammar.grammar_encoding[next_element_offset]:
+                new_stack.append(next_element_offset)
             new_stacks.extend(grammar.advance_stack(tuple(new_stack)))
 
         if new_stacks:
@@ -57,7 +60,7 @@ class AbsTokenGrammarRecognizer(ABC):
         self.start_rule_id = parsed_grammar.symbol_table.get(start_rule_name)
 
         self.eos_token_id = tokenizer.eos_token_id
-        self.mapping = get_substitution(tokenizer)
+        self.mapping = get_mapping(tokenizer)
         self.token_trie = TokenTrie(tokenizer)
         self.tokenizer = tokenizer
         assert len(self.mapping) == len(
@@ -66,6 +69,13 @@ class AbsTokenGrammarRecognizer(ABC):
         self.grammar = GrammarRecognizer(grammar_encoding, self.start_rule_id)
 
     def _consume_token_id(self, token_id: int, stacks: List[List[int]]):
+        if self.grammar._must_stop(stacks):
+            if token_id == self.eos_token_id:
+                return []
+            else:
+                raise ValueError(
+                    f"All stacks are empty, so the only token accepted is EOS, but got {token_id}"
+                )
         if token_id == self.eos_token_id:
             if self.grammar._can_stop(stacks):
                 # if at least one of the stack is empty, we can stop
@@ -77,7 +87,7 @@ class AbsTokenGrammarRecognizer(ABC):
                     f"the stacks are {stacks}"
                 )
         for byte in self.mapping.map(token_id):
-            stacks = self.grammar._consume_char(byte, stacks)
+            stacks = self.grammar._consume_char_code_point(byte, stacks)
             # check updated stacks
             # TODO, I commented this out because it will fail when the stack is empty
             # empty stack means the end of the grammar
@@ -199,8 +209,13 @@ class IncrementalTokenGrammarRecognizer(AbsTokenGrammarRecognizer):
             string = self.tokenizer.decode(token_ids)
             stacks = self.grammar._consume_string(string, stacks)
         else:
-            for token_id in token_ids:
+            for i, token_id in enumerate(token_ids):
                 stacks = self._consume_token_id(token_id, stacks)
+                if len(stacks) > 0:
+                    cur_token_ids = token_ids[: i + 1]
+                    logging.debug(f"{cur_token_ids} is accepted")
+                    decoded_string = self.tokenizer.decode(cur_token_ids)
+                    logging.debug(f"The decoded string is {decoded_string}")
         return stacks
 
 
