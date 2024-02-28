@@ -760,3 +760,39 @@
 2024-02-04 20:07:43,919:INFO:Temperature: 1.5
 2024-02-04 20:07:43,919:INFO:Generations: ['Generate a random binary string of length 5? 5 5 5 5 5 5 5 5 5 5']
 
+2024-02-04 21:27:26,294:INFO:Elapsed time: 76.19825792312622 seconds
+2024-02-04 21:27:26,294:INFO:Model: meta-llama/Llama-2-7b-chat-hf
+2024-02-04 21:27:26,294:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 21:27:26,294:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 21:27:26,294:INFO:Iterations: 1
+2024-02-04 21:27:26,294:INFO:Do we sample when decoding? True
+2024-02-04 21:27:26,294:INFO:Repetition penalty: 1.0
+2024-02-04 21:27:26,294:INFO:max_new_tokens: 20
+2024-02-04 21:27:26,294:INFO:Top_p: 0.95
+2024-02-04 21:27:26,294:INFO:Temperature: 0.8
+2024-02-04 21:27:26,294:INFO:Generations: ['Generate a random binary string of length 5?\n\n    // Generate a random binary string of length 5\n    const result = Array']
+
+2024-02-04 21:35:44,990:INFO:Elapsed time: 119.00257158279419 seconds
+2024-02-04 21:35:44,990:INFO:Model: meta-llama/Llama-2-13b-chat-hf
+2024-02-04 21:35:44,990:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 21:35:44,990:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 21:35:44,990:INFO:Iterations: 1
+2024-02-04 21:35:44,990:INFO:Do we sample when decoding? True
+2024-02-04 21:35:44,991:INFO:Repetition penalty: 1.0
+2024-02-04 21:35:44,991:INFO:max_new_tokens: 20
+2024-02-04 21:35:44,991:INFO:Top_p: 0.95
+2024-02-04 21:35:44,991:INFO:Temperature: 0.8
+2024-02-04 21:35:44,991:INFO:Generations: ["Generate a random binary string of length 5?\n\nI'm looking for a function that takes no arguments and returns a random binary string of"]
+
+2024-02-04 22:14:35,690:INFO:Elapsed time: 404.132107257843 seconds
+2024-02-04 22:14:35,690:INFO:Model: meta-llama/Llama-2-70b-chat-hf
+2024-02-04 22:14:35,690:INFO:Prompt: Generate a random binary string of length 5?
+2024-02-04 22:14:35,690:INFO:Grammar: string_start_w_1_all_0.ebnf
+2024-02-04 22:14:35,690:INFO:Iterations: 1
+2024-02-04 22:14:35,690:INFO:Do we sample when decoding? True
+2024-02-04 22:14:35,690:INFO:Repetition penalty: 1.0
+2024-02-04 22:14:35,690:INFO:max_new_tokens: 20
+2024-02-04 22:14:35,690:INFO:Top_p: 0.95
+2024-02-04 22:14:35,690:INFO:Temperature: 0.8
+2024-02-04 22:14:35,690:INFO:Generations: ['Generate a random binary string of length 5?\n\nI can do this in Python like this:\n\n\\begin{code}\nimport']
+

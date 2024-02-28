@@ -6,14 +6,14 @@ BASE_GRAMMAR_DIR="/nobackup2/yf/mila/GD/examples/grammars/"
 #GRAMMAR_FILE="string_01.ebnf"
 #GRAMMAR_FILES=("string_01.ebnf" "string_0.ebnf" "string_1.ebnf")
 GRAMMAR_FILES=("string_start_w_1_all_0.ebnf")
-#NUM_BEAMS=5
+NUM_BEAMS=(200)
 REPETITION_PENALTIES=(1.1)
 #REPETITION_PENALTIES=(1)
 STRING_LENGTHS=(5)
-TOP_PS=(0.9)
+#TOP_PS=(0.9)
 #TEMPERATURES=(1.1 0.8 1.5 0.6 2 5)
 TEMPERATURES=(0.7)
-ITER=3
+ITER=500
 
 #PROMPT="Generate a random binary string of length ${STRING_LENGTHS}?"
 
@@ -34,9 +34,9 @@ for MODEL_ID in "${models[@]}"; do
         for STRING_LENGTH in "${STRING_LENGTHS[@]}"; do
             for REPETITION_PENALTY in "${REPETITION_PENALTIES[@]}"; do
                 for TEMPERATURE in "${TEMPERATURES[@]}"; do
-                    for TOP_P in "${TOP_PS[@]}"; do  # Assuming you want to loop over TOP_PS
+                    for NUM_BEAM in "${NUM_BEAMS[@]}"; do  # Assuming you want to loop over TOP_PS
                         PROMPT="Be a helpful assistant. Generate a random binary string of length ${STRING_LENGTH}? Directly show the generated string without explanation."
-                        CUDA_VISIBLE_DEVICES=3 python run_inference_GCD.py \
+                        CUDA_VISIBLE_DEVICES=2 python run_inference_GCD_beam.py \
                             --model_id "$MODEL_ID" \
                             --cache_dir "$CACHE_DIR" \
                             --base_grammar_dir "$BASE_GRAMMAR_DIR" \
@@ -45,11 +45,11 @@ for MODEL_ID in "${models[@]}"; do
                             --repetition_penalty $REPETITION_PENALTY \
                             --string_length $STRING_LENGTH \
                             --prompt "$PROMPT" \
-                            --top_p $TOP_P \
+                            --num_beams $NUM_BEAM \
                             --temperature $TEMPERATURE \
                             --iter $ITER \
                             --do_sample \
-                            --log_file '/nobackup2/yf/mila/GD/log/log_mixtral_GCD_string_start_w_1_all_0.txt'\
+                            --log_file '/nobackup2/yf/mila/GD/log/log_mixtral_GCD_string_start_w_1_all_0_beam.txt'\
                             --max_new_tokens 20
                     done  # top_p
                 done  # temperature
