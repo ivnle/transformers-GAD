@@ -3,14 +3,26 @@ import logging
 from functools import lru_cache
 from typing import List, Tuple, Dict
 
-from transformers_cfg.parser import (
+from transformers_gad.parser import (
     END_OF_RULE_MARKER,
     END_OF_ALTERNATE_MARKER,
     parse_ebnf,
     REF_RULE_MARKER,
 )
-from transformers_cfg.utf8_utils import PartialUTF8, decode_utf8
-from transformers_cfg.utils import intervals_intersect
+from transformers_gad.utf8_utils import PartialUTF8, decode_utf8
+from transformers_gad.utils import intervals_intersect
+
+# ## Debug only ##
+# END_OF_ALTERNATE_MARKER = 0
+# END_OF_RULE_MARKER = 0
+# END_OF_GRAMMAR_MARKER = 0xFFFF
+# TO_BE_FILLED_MARKER = 0
+# REF_RULE_MARKER = 1
+# LITERAL_MARKER = 2
+# from utf8_utils import PartialUTF8, decode_utf8
+# from utils import intervals_intersect
+
+
 import logging
 
 logging.basicConfig(level=logging.DEBUG)

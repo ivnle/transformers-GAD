@@ -1,8 +1,8 @@
 import torch
 
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers_cfg.grammar_utils import IncrementalGrammarConstraint
-from transformers_cfg.generation.logits_process import GrammarConstrainedLogitsProcessor
+from transformers_gad.grammar_utils import IncrementalGrammarConstraint
+from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor
 import argparse
 import os
 import random
@@ -327,5 +327,8 @@ if __name__ == "__main__":
     # generation = inference_greedy(args)
     # generation = inference_grammar_constrained(args)
     # generations = run_inference_greedy(args)
+
+    # logging.basicConfig(filename=args.log_file, level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
+    # logging.info(f'test log')
 
 

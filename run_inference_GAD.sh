@@ -36,7 +36,7 @@ for MODEL_ID in "${models[@]}"; do
                 for TEMPERATURE in "${TEMPERATURES[@]}"; do
                     for TOP_P in "${TOP_PS[@]}"; do  # Assuming you want to loop over TOP_PS
                         PROMPT="Be a helpful assistant. Generate a random binary string of length ${STRING_LENGTH}? Directly show the generated string without explanation."
-                        CUDA_VISIBLE_DEVICES=3 python run_inference_GCD.py \
+                        CUDA_VISIBLE_DEVICES=0 python run_inference_GCD.py \
                             --model_id "$MODEL_ID" \
                             --cache_dir "$CACHE_DIR" \
                             --base_grammar_dir "$BASE_GRAMMAR_DIR" \
@@ -49,7 +49,7 @@ for MODEL_ID in "${models[@]}"; do
                             --temperature $TEMPERATURE \
                             --iter $ITER \
                             --do_sample \
-                            --log_file '/nobackup2/yf/mila/GD/log/log_mixtral_GCD_string_start_w_1.txt'\
+                            --log_file '/nobackup2/yf/mila/GD/log_GAD/log_mixtral_GAD_string_start_w_1.log'\
                             --max_new_tokens 20
                     done  # top_p
                 done  # temperature

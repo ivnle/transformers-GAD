@@ -1,6 +1,6 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers_cfg.grammar_utils import IncrementalGrammarConstraint
-from transformers_cfg.generation import GrammarConstrainedLogitsProcessor
+from transformers_gad.grammar_utils import IncrementalGrammarConstraint
+from transformers_gad.generation import GrammarConstrainedLogitsProcessor
 
 # MODEL_IDS = [
 #     "hf-internal-testing/tiny-random-GPTJForCausalLM",

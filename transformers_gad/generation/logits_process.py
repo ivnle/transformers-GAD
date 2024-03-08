@@ -1,7 +1,7 @@
 import copy
 import math
-import os
 import pprint
+import os
 
 import torch
 import logging
@@ -11,15 +11,16 @@ from transformers.generation.logits_process import (
 )
 from transformers.utils import add_start_docstrings
 
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 
 
 class GrammarConstrainedLogitsProcessor(LogitsProcessor):
-    def __init__(self, grammar_constraint, parse_start_index=None):
+    def __init__(self, grammar_constraint, parse_start_index=None, logger=None):
         self.last_size = None
         self.grammar_constraint = grammar_constraint
         self.batch_stacks = None
         self.parse_start_index = None
+        self.logger = logger
 
     def mask_logits(self, logits, device):
         # resolve each stack to a tensor of True/False for each token
@@ -41,8 +42,8 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
             accepted_token_indices = {i: [] for i in range(batch_size)}
             for x, y in zip(accepted_x, accepted_y):
                 accepted_token_indices[x].append(y)
-            logger.debug("Accepted token indices for the current batch:")
-            logger.debug("\n" + pprint.pformat(accepted_token_indices))
+            self.logger.debug("Accepted token indices for the current batch:")
+            self.logger.debug("\n" + pprint.pformat(accepted_token_indices))
             # convert token_ids to tokens
             accepted_tokens = {
                 i: [
@@ -51,8 +52,8 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
                 ]
                 for i, token_ids in accepted_token_indices.items()
             }
-            logger.debug("Accepted tokens for the current batch:")
-            logger.debug("\n" + pprint.pformat(accepted_tokens))
+            self.logger.debug("Accepted tokens for the current batch:")
+            self.logger.debug("\n" + pprint.pformat(accepted_tokens))
         # Logits to -inf where False
         logits[~acceptance] = -math.inf
 
@@ -74,14 +75,14 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
         if os.getenv("DEBUG_MODE") == "True":
             print("-" * 80)
 
-        logger.debug("input_ids: \n" + pprint.pformat(input_ids))
-        # logger.debug("scores: \n" + pprint.pformat(scores))
-        logger.debug("last_size: \n" + pprint.pformat(self.last_size))
-        logger.debug(
-            "num of stacks: \n"
-            + pprint.pformat([len(stack) for stack in self.batch_stacks])
-        )
-        logger.debug("stacks: \n" + pprint.pformat(self.batch_stacks))
+            self.logger.debug("input_ids: \n" + pprint.pformat(input_ids))
+            # logger.debug("scores: \n" + pprint.pformat(scores))
+            self.logger.debug("last_size: \n" + pprint.pformat(self.last_size))
+            self.logger.debug(
+                "num of stacks: \n"
+                + pprint.pformat([len(stack) for stack in self.batch_stacks])
+            )
+            self.logger.debug("stacks: \n" + pprint.pformat(self.batch_stacks))
 
         self.batch_stacks = self.grammar_constraint.advance_token_ids(
             input_ids, self.batch_stacks, self.parse_start_index
@@ -101,16 +102,14 @@ if __name__ == "__main__":
     import sys
     import os
 
-    sys.path.append('/nobackup2/yf/mila/GD/transformers_cfg')
-    os.environ["DEBUG_MODE"] = "True"
-    from transformers_cfg.grammar_utils import IncrementalGrammarConstraint
+    from transformers_gad.grammar_utils import IncrementalGrammarConstraint
 
     # set logging level
-    logging.basicConfig(level=logging.DEBUG)
+    # logging.basicConfig(level=logging.DEBUG)
 
-    test_file = "/nobackup2/yf/mila/GD/examples/grammars/string_01.ebnf"
+    test_file = "/nobackup2/yf/mila/GD/examples/grammars/string_start_w_1_all_0.ebnf"
 
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", cache_dir="/nobackup2/yf/mila/GD_caches")
+    tokenizer = AutoTokenizer.from_pretrained("mistralai/Mixtral-8x7B-Instruct-v0.1", cache_dir="/nobackup2/yf/mila/GD_caches")
 
     # Load grammar
     with open(test_file, "r") as file:

@@ -712,7 +712,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
 
     try:
-        with open("../examples/grammars/string_start_w_0_all_1.ebnf", "r") as file:
+        with open("../examples/grammars/string_start_w_1_all_0.ebnf", "r") as file:
             input_text = file.read()
         state = parse_ebnf(input_text)
         print_grammar(sys.stdout, state)

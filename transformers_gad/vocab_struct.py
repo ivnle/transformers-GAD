@@ -9,6 +9,7 @@ logger = logging.getLogger(__name__)
 
 LEAF = -1
 
+# TokenTrie is a trie that maps token IDs to their byte representations
 
 class TokenTrie:
     def __init__(self, tokenizer):
@@ -55,7 +56,7 @@ class TokenTrie:
                 token = tokenizer.convert_ids_to_tokens(id)
                 token = re.sub(r"<0x([0-9a-fA-F]{2})>", replace_hex, token)
                 token = token.replace("▁", " ")
-                return bytes(token, "utf-8")
+                return bytes(token, "utf-8") # here return bytes representations of the tokens
 
         else:
             logger.warning(

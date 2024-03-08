@@ -1,8 +1,8 @@
 import torch
 
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers_cfg.grammar_utils import IncrementalGrammarConstraint
-from transformers_cfg.generation.logits_process import GrammarConstrainedLogitsProcessor
+from transformers_gad.grammar_utils import IncrementalGrammarConstraint
+from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor
 import argparse
 import os
 import random
@@ -25,6 +25,8 @@ from vllm import LLM, SamplingParams
 #"meta-llama/Llama-2-13b-hf"
 #"meta-llama/Llama-2-70b-hf"
 #"mistralai/Mixtral-8x7B-Instruct-v0.1")
+
+# TODO: fix log file for others
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Inference with grammar constraint decoding.")
@@ -165,52 +167,70 @@ def inference_greedy_vllm(args):
 def run_inference_grammar_constrained(args):
     model, tokenizer = load_model_tokenizer_hf(args)
     tokenizer.pad_token = tokenizer.eos_token
-    logging.basicConfig(filename=args.log_file, level=logging.INFO,
-                        format='%(asctime)s:%(levelname)s:%(message)s')
+
+    def get_current_time_as_string():
+        return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    log_file_path = args.log_file
     start_time = time.time()
+
     with open(get_file(args), 'r') as f:
         input_grammar = f.read()
-    logging.info(f"input_grammar: {input_grammar}")
     # output = stringsofLenk_max(input_grammar, args.string_length)
     output = stringsofLenk(input_grammar, args.string_length)
     ideal = {key: round(args.iter / len(output.keys())) for key in output.keys()}
     faithful = output.copy()
     output['other'] = 0
     ideal['other'] = 0
+    with open(log_file_path, 'a') as log:
+        log.write(f"{get_current_time_as_string()} - input_grammar: {input_grammar}\n")
+        for i in tqdm(range(args.iter), desc="Running Inference"):
+            result = inference_grammar_constrained(args, model, tokenizer)
+            log.write(f"{get_current_time_as_string()} - result: {result}\n")
+            log.flush()
+            # print(f'start logging...')
+            res = result[0].split(".")[2]
+            # print(f"res: {res}")
+            if res in output:
+                output[res] += 1
+            else:
+                output['other'] += 1
 
-    for i in tqdm(range(args.iter), desc="Running Inference"):
-        result = inference_grammar_constrained(args, model, tokenizer)
-        logging.info(f"result: {result}")
-        res = result[0].split(".")[2]
-        # print(f"res: {res}")
-        if res in output:
-            output[res] += 1
-        else:
-            output['other'] += 1
-
-        faithful[res] = faithful.get(res, 0) + 1 # collect all the outputs instead of classifying to others
-        if i % 10 == 0:
-            logging.info(f"Iteration: {i+1}")
-            logging.info(f"Output: {output}")
-            logging.info(f"Faithful: {faithful}")
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    logging.info(f"Elapsed time: {elapsed_time} seconds")
-    logging.info(f"model_id: {args.model_id}")
-    logging.info(f"repetition_penalty: {args.repetition_penalty}")
-    # print(f"num_beams: {args.num_beams}")
-    logging.info(f"temperature: {args.temperature}")
-    logging.info(f"top_p: {args.top_p}")
-    logging.info(f"max_new_tokens: {args.max_new_tokens}")
-    logging.info(f"output: {output}")
-    logging.info(f"faithful: {faithful}")
-    logging.info(f"ideal: {ideal}")
+            faithful[res] = faithful.get(res, 0) + 1 # collect all the outputs instead of classifying to others
+            if i % 10 == 0:
+                log.write(f"{get_current_time_as_string()} - Iteration: {i+1}\n")
+                log.flush()
+                log.write(f"{get_current_time_as_string()} - Output: {output}\n")
+                log.flush()
+                log.write(f"{get_current_time_as_string()} - Faithful: {faithful}\n")
+                log.flush()
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        log.write(f"Elapsed time: {elapsed_time} seconds\n")
+        log.flush()
+        log.write(f"model_id: {args.model_id}\n")
+        log.flush()
+        log.write(f"repetition_penalty: {args.repetition_penalty}\n")
+        log.flush()
+        # print(f"num_beams: {args.num_beams}")
+        log.write(f"temperature: {args.temperature}\n")
+        log.flush()
+        log.write(f"top_p: {args.top_p}\n")
+        log.flush()
+        log.write(f"max_new_tokens: {args.max_new_tokens}\n")
+        log.flush()
+        log.write(f"{get_current_time_as_string()} - output: {output}\n")
+        log.flush()
+        log.write(f"{get_current_time_as_string()} - faithful: {faithful}\n")
+        log.flush()
+        log.write(f"{get_current_time_as_string()} - ideal: {ideal}\n")
+        log.flush()
     return output, faithful, ideal, elapsed_time
 
 def run_inference_greedy(args):
     model, tokenizer = load_model_tokenizer_hf(args)
     tokenizer.pad_token = tokenizer.eos_token
-    logging.basicConfig(filename=args.log_file, level=logging.INFO,
+    logging.basicConfig(filename=args.log_file, level=log.write,
                         format='%(asctime)s:%(levelname)s:%(message)s')
     start_time = time.time()
     generations = []
@@ -218,33 +238,33 @@ def run_inference_greedy(args):
         # print(f"iteration: {i}")
         generation = inference_greedy(args, model, tokenizer)
         generations.append(generation)
-        logging.info(f"greedy generations: {generation}")
+        log.write(f"greedy generations: {generation}")
         print(f"greedy generations: {generation}")
     # generations = inference_greedy_vllm(args)
     end_time = time.time()
     elapsed_time = end_time - start_time
-    logging.info(f"Elapsed time: {elapsed_time} seconds")
-    logging.info(f"Model: {args.model_id}")
-    logging.info(f'Prompt: {args.prompt}')
-    logging.info(f'Grammar: {args.grammar_file}')
-    logging.info(f'Iterations: {args.iter}')
-    logging.info(f'Do we sample when decoding? {args.do_sample}')
-    logging.info(f'Repetition penalty: {args.repetition_penalty}')
-    logging.info(f'max_new_tokens: {args.max_new_tokens}')
+    log.write(f"Elapsed time: {elapsed_time} seconds")
+    log.write(f"Model: {args.model_id}")
+    log.write(f'Prompt: {args.prompt}')
+    log.write(f'Grammar: {args.grammar_file}')
+    log.write(f'Iterations: {args.iter}')
+    log.write(f'Do we sample when decoding? {args.do_sample}')
+    log.write(f'Repetition penalty: {args.repetition_penalty}')
+    log.write(f'max_new_tokens: {args.max_new_tokens}')
     if args.do_sample:
-        logging.info(f'Top_p: {args.top_p}')
+        log.write(f'Top_p: {args.top_p}')
         # f.write(f'Top_k: {args.top_k}\n')
-        logging.info(f'Temperature: {args.temperature}')
+        log.write(f'Temperature: {args.temperature}')
     print(f"end logging...")
     return generations
 
 
 def log_results(args, output, faithful, ideal, elapsed_time):
-    logging.basicConfig(filename=args.log_file, level=logging.INFO,
+    logging.basicConfig(filename=args.log_file, level=log.write,
                         format='%(asctime)s:%(levelname)s:%(message)s')
     current_datetime = datetime.now()
     datetime_string = current_datetime.strftime('%y-%m-%d-%H:%M:%S')
-    logging.info(f"Elapsed time: {elapsed_time} seconds")
+    log.write(f"Elapsed time: {elapsed_time} seconds")
 
     with open(args.log_file, 'a') as f:
         print(f"Start Logging...")
@@ -313,6 +333,7 @@ if __name__ == "__main__":
     print(f"temperature: {args.temperature}")
     print(f"top_p: {args.top_p}")
     print(f"max_new_tokens: {args.max_new_tokens}")
+    print(f"log_file: {args.log_file}")
 
     output, faithful, ideal, elapsed_time = run_inference_grammar_constrained(args)
     # print(f"Output: {output}")

@@ -6,10 +6,20 @@ from typing import List
 
 import torch
 
-from transformers_cfg.recognizer import GrammarRecognizer
-from transformers_cfg.parser import parse_ebnf
-from transformers_cfg.mapping import get_mapping
+# outer call ##
+from transformers_gad.recognizer import GrammarRecognizer
+from transformers_gad.parser import parse_ebnf
+from transformers_gad.mapping import get_mapping
 from .vocab_struct import LEAF, TokenTrie
+
+# ## Debug only ##
+# from recognizer import GrammarRecognizer
+# from parser_cfg import parse_ebnf
+# from mapping import get_mapping
+# from vocab_struct import LEAF, TokenTrie
+
+
+
 
 logger = logging.getLogger(__name__)
 
@@ -265,7 +275,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
 
     try:
-        with open("examples/grammars/json.ebnf", "r") as file:
+        with open("examples/grammars/string_start_w_1_all_0.ebnf", "r") as file:
             input_text = file.read()
         parsed_grammar = parse_ebnf(input_text)
         parsed_grammar.print()

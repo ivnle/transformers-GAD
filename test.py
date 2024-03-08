@@ -1,6 +1,6 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers_cfg.grammar_utils import IncrementalGrammarConstraint
-from transformers_cfg.generation.logits_process import GrammarConstrainedLogitsProcessor
+from transformers_gad.grammar_utils import IncrementalGrammarConstraint
+from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor
 
 
 def generate_strings_len_k(cfg, k):
