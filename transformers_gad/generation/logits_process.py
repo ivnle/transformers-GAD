@@ -1,6 +1,7 @@
 import copy
 import math
 import pprint
+import torch.nn.functional as F
 import os
 
 import torch
@@ -11,7 +12,10 @@ from transformers.generation.logits_process import (
 )
 from transformers.utils import add_start_docstrings
 
-# logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    filename='nobackup2/yf/mila/GD/log_GAD/track_scores_240316',  # Specify the file name here
+                    filemode='w')  # Use 'a' to append to the file if it already exists
 
 
 class GrammarConstrainedLogitsProcessor(LogitsProcessor):
@@ -20,45 +24,46 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
         self.grammar_constraint = grammar_constraint
         self.batch_stacks = None
         self.parse_start_index = None
-        self.logger = logger
+        self.logger = logger if logger is not None else logging.getLogger(__name__)
+        self.accepted_indices_history = []  # To store indices of accepted tokens
+        self.accepted_tokens_history = []
+        self.acceptance_raw_scores_history = []
+        self.acceptance_logits_history = []
+        self.acceptance_details_history = []
 
-    def mask_logits(self, logits, device):
+    def mask_scores(self, scores, device):
         # resolve each stack to a tensor of True/False for each token
         # indicating acceptance
         # acceptance = self.grammar_acceptor.filter_vocab(self.stacks, device)
         acceptance = self.grammar_constraint.batch_filter_vocab(
             self.batch_stacks, device
         )
-        # acceptance is a tensor of shape (batch_size, vocab_size)
-        # get the indices of the accepted tokens
-        # do the following operation only in debug mode
-        if os.getenv("DEBUG_MODE") == "True":
-            # convert acceptance to numpy array
-            batch_size, vocab_size = acceptance.shape
-            acceptance_np = acceptance.cpu().numpy()
-            accepted_x, accepted_y = acceptance_np.nonzero()
-            # dict of {batch_index: [accepted_token_indices]}
-            # initialize the dict with empty list
-            accepted_token_indices = {i: [] for i in range(batch_size)}
-            for x, y in zip(accepted_x, accepted_y):
-                accepted_token_indices[x].append(y)
-            self.logger.debug("Accepted token indices for the current batch:")
-            self.logger.debug("\n" + pprint.pformat(accepted_token_indices))
-            # convert token_ids to tokens
-            accepted_tokens = {
-                i: [
-                    self.grammar_constraint.tokenizer.decode([token_id])
-                    for token_id in token_ids
-                ]
-                for i, token_ids in accepted_token_indices.items()
-            }
-            self.logger.debug("Accepted tokens for the current batch:")
-            self.logger.debug("\n" + pprint.pformat(accepted_tokens))
-        # Logits to -inf where False
-        logits[~acceptance] = -math.inf
+
+        self.get_accepted_tokens(acceptance)
+        self.get_detailed_history(acceptance, scores)
+
+        # store raw scores and logits for acceptance tokens before applying the mask
+        # First, calculate the logits for the entire scores tensor
+        logits = F.softmax(scores, dim=-1)
+
+        # We'll use torch.nonzero to find the indices of accepted tokens
+        # Note: This operation flattens the acceptance mask, so we need to adjust indices accordingly
+        accepted_indices = acceptance.nonzero()
+
+        # For raw scores of accepted tokens
+        accepted_raw_scores = scores[acceptance].clone().detach()
+        self.acceptance_raw_scores_history.append(accepted_raw_scores.cpu())
+
+        # For logits of accepted tokens
+        accepted_logits = logits[acceptance].clone().detach()
+        self.acceptance_logits_history.append(accepted_logits.cpu())
+
+
+        # Scores to -inf where False
+        scores[~acceptance] = -math.inf
 
     # TODO: batching
-    def process_logits(self, input_ids, scores):
+    def process_gcd_scores(self, input_ids, scores):
         """
         :param input_ids:
         :param scores:
@@ -88,14 +93,83 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
             input_ids, self.batch_stacks, self.parse_start_index
         )
 
-        self.mask_logits(scores, scores.device)
+        self.mask_scores(scores, scores.device)
         return scores
 
     @add_start_docstrings(LOGITS_PROCESSOR_INPUTS_DOCSTRING)
     def __call__(
         self, input_ids: torch.LongTensor, scores: torch.FloatTensor
     ) -> torch.FloatTensor:
-        return self.process_logits(input_ids, scores)
+        return self.process_gcd_scores(input_ids, scores)
+
+    def get_accepted_tokens(self, acceptance):
+        """
+        Stores the indices of accepted tokens and their corresponding string values for each item in the batch.
+
+        Parameters:
+        - acceptance (torch.Tensor): A boolean tensor indicating accepted tokens for each item in the batch.
+        """
+        batch_size, vocab_size = acceptance.shape
+        acceptance_np = acceptance.cpu().numpy()
+        accepted_x, accepted_y = acceptance_np.nonzero()
+
+        # Initialize the dictionary with empty lists for indices
+        accepted_token_indices = {i: [] for i in range(batch_size)}
+        for x, y in zip(accepted_x, accepted_y):
+            accepted_token_indices[x].append(y)
+
+        # Store accepted indices for history
+        self.accepted_indices_history.append(accepted_token_indices)
+
+        # Convert token IDs to tokens
+        accepted_tokens = {
+            i: [self.grammar_constraint.tokenizer.decode([token_id]) for token_id in token_ids]
+            for i, token_ids in accepted_token_indices.items()
+        }
+
+        # Store accepted tokens for history
+        self.accepted_tokens_history.append(accepted_tokens)
+
+    def get_detailed_history(self, acceptance, scores):
+        """
+        Processes and stores information for accepted tokens including their IDs, tokens,
+        raw scores, and logits.
+
+        Parameters:
+        - acceptance (torch.Tensor): A boolean tensor indicating accepted tokens for each item in the batch.
+        - scores (torch.Tensor): The raw scores from the model output.
+        """
+        logits = F.softmax(scores, dim=-1)
+
+        # Initializing the list to store detailed information for each step
+        detailed_accepted_info = []
+
+        for batch_index in range(acceptance.size(0)):  # Iterate over batch items
+            accepted_info = []
+            accepted_indices = acceptance[batch_index].nonzero().squeeze(-1)
+
+            for idx in accepted_indices:
+                token_id = idx.item()
+                raw_score = scores[batch_index, idx].item()
+                logit = logits[batch_index, idx].item()
+                token = self.grammar_constraint.tokenizer.decode([token_id])
+
+                # Store detailed information as a dictionary
+                accepted_info.append({
+                    "token_id": token_id,
+                    "token": token,
+                    "raw_score": raw_score,
+                    "logit": logit
+                })
+
+            detailed_accepted_info.append(accepted_info)
+
+        # Store this detailed information in the history
+        self.acceptance_details_history.append(detailed_accepted_info)
+
+    def get_history(self):
+        return (self.accepted_tokens_history, self.accepted_indices_history,
+                self.acceptance_raw_scores_history, self.acceptance_logits_history, self.acceptance_details_history)
 
 if __name__ == "__main__":
     from transformers import AutoTokenizer

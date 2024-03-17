@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define arguments
-CACHE_DIR="/nobackup2/yf/mila/GD_caches"
+CACHE_DIR="/nobackup2/yf/mila/GD_caches/"
 BASE_GRAMMAR_DIR="/nobackup2/yf/mila/GD/examples/grammars/"
 #GRAMMAR_FILE="string_01.ebnf"
 #GRAMMAR_FILES=("string_01.ebnf" "string_0.ebnf" "string_1.ebnf")
