@@ -7,6 +7,7 @@ def load_model_tokenizer_hf(args):
                                               # use_fast=True,
                                               cache_dir=args.cache_dir)
     model = AutoModelForCausalLM.from_pretrained(args.model_id, cache_dir=args.cache_dir)
+    tokenizer.pad_token = tokenizer.eos_token
 
     return model, tokenizer
 

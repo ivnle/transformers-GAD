@@ -1,4 +1,5 @@
 import torch
+import math
 
 
 def get_reweigh_factor():
@@ -88,7 +89,56 @@ def get_reweigh_factor():
         (id_1, id_0, id_0): w_s_T,
         (id_0, id_0, id_0): w_s_Z,
     }
-    return sequence_to_theta, avg_sequence_to_theta, w_s_R, w_s_T, w_s_Z
+    # adjusted_scores = log_p + log weight
+    adj_score_1_1 = math.log(p_1_1) + math.log(w_s_R)
+    adj_score_1_0 = math.log(p_1_0) + math.log(w_s_R)
+    adj_score_2_1_given_1 = math.log(p_2_1_given_1) + math.log(w_s_T)
+    adj_score_2_0_given_1 = math.log(p_2_0_given_1) + math.log(w_s_T)
+    adj_score_2_0_given_0 = math.log(p_2_0_given_0) + math.log(w_s_Z)
+    adj_score_3_1_given_11 = math.log(p_3_1_given_11) + math.log(w_s_T)
+    adj_score_3_0_given_11 = math.log(p_3_0_given_11) + math.log(w_s_T)
+    adj_score_3_1_given_10 = math.log(p_3_1_given_10) + math.log(w_s_T)
+    adj_score_3_0_given_10 = math.log(p_3_0_given_10) + math.log(w_s_T)
+    adj_score_3_0_given_00 = math.log(p_3_0_given_00) + math.log(w_s_Z)
+
+    adj_gt_score_1_1 = math.log(p_1_1) + math.log(theta_1_1)
+    adj_gt_score_1_0 = math.log(p_1_0) + math.log(theta_1_0)
+    adj_gt_score_2_1_given_1 = math.log(p_2_1_given_1) + math.log(theta_2_1_given_1)
+    adj_gt_score_2_0_given_1 = math.log(p_2_0_given_1) + math.log(theta_2_0_given_1)
+    adj_gt_score_2_0_given_0 = math.log(p_2_0_given_0) + math.log(theta_2_0_given_0)
+    adj_gt_score_3_1_given_11 = math.log(p_3_1_given_11) + math.log(theta_3_1_given_11)
+    adj_gt_score_3_0_given_11 = math.log(p_3_0_given_11) + math.log(theta_3_0_given_11)
+    adj_gt_score_3_1_given_10 = math.log(p_3_1_given_10) + math.log(theta_3_1_given_10)
+    adj_gt_score_3_0_given_10 = math.log(p_3_0_given_10) + math.log(theta_3_0_given_10)
+    adj_gt_score_3_0_given_00 = math.log(p_3_0_given_00) + math.log(theta_3_0_given_00)
+
+    adjusted_avg_scores = {
+        (id_1,): adj_score_1_1,
+        (id_0,): adj_score_1_0,
+        (id_1, id_1): adj_score_2_1_given_1,
+        (id_1, id_0): adj_score_2_0_given_1,
+        (id_0, id_0): adj_score_2_0_given_0,
+        (id_1, id_1, id_1): adj_score_3_1_given_11,
+        (id_1, id_1, id_0): adj_score_3_0_given_11,
+        (id_1, id_0, id_1): adj_score_3_1_given_10,
+        (id_1, id_0, id_0): adj_score_3_0_given_10,
+        (id_0, id_0, id_0): adj_score_3_0_given_00,
+    }
+
+    adjusted_gt_scores = {
+        (id_1,): adj_gt_score_1_1,
+        (id_0,): adj_gt_score_1_0,
+        (id_1, id_1): adj_gt_score_2_1_given_1,
+        (id_1, id_0): adj_gt_score_2_0_given_1,
+        (id_0, id_0): adj_gt_score_2_0_given_0,
+        (id_1, id_1, id_1): adj_gt_score_3_1_given_11,
+        (id_1, id_1, id_0): adj_gt_score_3_0_given_11,
+        (id_1, id_0, id_1): adj_gt_score_3_1_given_10,
+        (id_1, id_0, id_0): adj_gt_score_3_0_given_10,
+        (id_0, id_0, id_0): adj_gt_score_3_0_given_00,
+    }
+
+    return sequence_to_theta, avg_sequence_to_theta, w_s_R, w_s_T, w_s_Z, adjusted_avg_scores, adjusted_gt_scores
 
 def get_theta_for_token(input_ids, token_id, w_s_R, w_s_T, w_s_Z):
     # TODO: Implement a method to get theta for a specific token, only apply for 01 strings
@@ -116,10 +166,37 @@ def get_theta_for_token(input_ids, token_id, w_s_R, w_s_T, w_s_Z):
 
     return theta
 
+def get_theta_for_token_ground_truth(input_ids, token_id, sequence_to_theta):
+    # TODO: Implement a method to get theta for a specific token, generalized to a specified tree, now only apply for 01 strings
+    generated_start_idx = 24
+
+    # Extract the generated tokens up to the current token
+    generated_tokens = input_ids[:, generated_start_idx:]
+
+    # Append the current token_id to form the sequence to check
+    sequence_to_check = torch.cat((generated_tokens, torch.tensor([[token_id]])), dim=1)
+    sequence_list = sequence_to_check.squeeze().tolist()
+    # Ensure the list is iterable (important for single-element cases)
+    if isinstance(sequence_list, int):
+        sequence_list = [sequence_list]
+
+    # Convert the list to a tuple for dictionary lookup
+    sequence_tuple = tuple(sequence_list)
+    print(f"sequence_tuple: {sequence_tuple}")
+
+    # Lookup the sequence in the dictionary
+    if sequence_tuple in sequence_to_theta:
+        # print(f"theta: {sequence_to_theta[sequence_tuple]}")
+        return sequence_to_theta[sequence_tuple]
+    elif sequence_tuple[-1] == 2:
+        return 1
+    else:
+        raise ValueError(f"Unexpected sequence: {sequence_tuple}")
+
 if __name__ == "__main__":
     tensor = torch.tensor([[ 1739,   264, 10865, 13892, 28723, 26075,   264,  5509, 10136,  1423,
                302,  3575, 28705, 28770, 28804,  6055,   346,  1347,   272,  7138,
-              1423,  1671, 13268, 28723]])
+              1423,  1671, 13268, 28723, 28740, 28740, 28740]])
 
     # Get the length of the sequence
     length = tensor.size(1)
@@ -128,7 +205,7 @@ if __name__ == "__main__":
 
     print("generated_ids:", generated_ids)
     print("length:", length)
-    sequence_to_theta, avg_sequence_to_theta, w_s_R, w_s_T, w_s_Z = get_reweigh_factor()
+    sequence_to_theta, avg_sequence_to_theta, w_s_R, w_s_T, w_s_Z, adjusted_scores, adjusted_gt_scores = get_reweigh_factor()
     print("sequence_to_theta:", sequence_to_theta)
     print("avg_sequence_to_theta:", avg_sequence_to_theta)
     print("w_s_R:", w_s_R)
@@ -136,7 +213,14 @@ if __name__ == "__main__":
     print("w_s_Z:", w_s_Z)
 
     # Get the theta values for the generated tokens
-    theta = get_theta_for_token(tensor, 28740, w_s_R, w_s_T, w_s_Z)
+    # theta = get_theta_for_token(tensor, 28740, w_s_R, w_s_T, w_s_Z)
+    # print("theta:", theta)
+    # print("adjusted_scores:", adjusted_scores)
+
+    theta = get_theta_for_token_ground_truth(tensor, 2, sequence_to_theta)
     print("theta:", theta)
+    print("adjusted_gt_scores:", adjusted_gt_scores)
+
+
 
 

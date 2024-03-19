@@ -3,6 +3,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
 from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor, GrammarAlignedLogitsProcessor
+from transformers_gad.generation.gad_logits_processor import GrammarAlignedGroundTruthLogitsProcessor
 import argparse
 import os
 import random
@@ -83,7 +84,8 @@ def inference_grammar_aligned_track_full_history(args, model, tokenizer):
         grammar_str = file.read()
     grammar = IncrementalGrammarConstraint(grammar_str, "root", tokenizer)
     grammar_processor = GrammarConstrainedLogitsProcessor(grammar)
-    grammar_aligned_processor = GrammarAlignedLogitsProcessor(grammar)
+    grammar_aligned_processor_fake = GrammarAlignedLogitsProcessor(grammar)
+    grammar_aligned_processor = GrammarAlignedGroundTruthLogitsProcessor(grammar)
 
     # Generate
     prompt = args.prompt
@@ -155,7 +157,7 @@ def inference_grammar_aligned_track_full_history(args, model, tokenizer):
             output.scores,
             generations, accepted_tokens_history, accepted_indices_history, acceptance_raw_scores_history,
             acceptance_logits_history,
-            acceptance_details_history)
+            acceptance_details_history, adjusted_acceptance_detailed_history)
 
 def inference_grammar_aligned(args, model, tokenizer):
     test_file = get_file(args)
@@ -166,7 +168,8 @@ def inference_grammar_aligned(args, model, tokenizer):
         grammar_str = file.read()
     grammar = IncrementalGrammarConstraint(grammar_str, "root", tokenizer)
     grammar_processor = GrammarConstrainedLogitsProcessor(grammar)
-    grammar_aligned_processor = GrammarAlignedLogitsProcessor(grammar)
+    grammar_aligned_processor_fake = GrammarAlignedLogitsProcessor(grammar)
+    grammar_aligned_processor = GrammarAlignedGroundTruthLogitsProcessor(grammar)
 
     # Generate
     prompt = args.prompt
@@ -372,6 +375,7 @@ def run_inference_grammar_aligned(args):
         log.write(f"{get_current_time_as_string()} - input_grammar: {input_grammar}\n")
         for i in tqdm(range(args.iter), desc="Running Inference"):
             sequences, scores, result = inference_grammar_aligned(args, model, tokenizer)
+            print(f"result: {result}")
             log.write(f"{get_current_time_as_string()} - result: {result}\n")
             log.flush()
             # print(f'start logging...')
@@ -495,6 +499,20 @@ if __name__ == "__main__":
     # print(f"sequences: {sequences}")
     # print(f"scores: {scores}")
     # print(f"generations: {generations}")
+    # (sequences,
+    #  scores,
+    #  generations, accepted_tokens_history, accepted_indices_history, acceptance_raw_scores_history,
+    #  acceptance_logits_history,
+    #  acceptance_details_history, adjusted_acceptance_detailed_history) = inference_grammar_aligned_track_full_history(args, model, tokenizer)
+    # print(f"sequences: {sequences}")
+    # print(f"scores: {scores}")
+    # print(f"generations: {generations}")
+    # print(f"accepted_tokens_history: {accepted_tokens_history}")
+    # print(f"accepted_indices_history: {accepted_indices_history}")
+    # print(f"acceptance_raw_scores_history: {acceptance_raw_scores_history}")
+    # print(f"acceptance_logits_history: {acceptance_logits_history}")
+    # print(f"acceptance_details_history: {acceptance_details_history}")
+    # print(f"adjusted_acceptance_detailed_history: {adjusted_acceptance_detailed_history}")
     output, faithful, ideal, elapsed_time = run_inference_grammar_aligned(args)
 
 
