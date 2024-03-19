@@ -47,7 +47,7 @@ for i in range(iterations):
 print(output)
 
 try:
-    f = open('log.txt', 'a')
+    f = open('../log.txt', 'a')
     f.write('Model:{model}\n'.format(model=model))
     f.write('prompt:{p}\n'.format(p=prompt))
     f.write('Number of times experiment was conducted: k = {iter}\n'.format(iter=k))

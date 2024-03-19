@@ -105,7 +105,7 @@ if __name__ == "__main__":
     # print(generations)
 
     # f = open('./examples/grammars/string_start_w_1_all_0.ebnf')
-    f = open('./examples/grammars/string_01.ebnf')
+    f = open('../examples/grammars/string_01.ebnf')
     input_grammar = f.read()
     f.close()
     converted_grammar_dict = convert_grammar(input_grammar)

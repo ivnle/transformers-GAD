@@ -2,7 +2,7 @@ import torch
 
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
-from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor
+from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor, GrammarAlignedLogitsProcessor
 import argparse
 import os
 import random
@@ -26,8 +26,6 @@ from vllm import LLM, SamplingParams
 #"meta-llama/Llama-2-70b-hf"
 #"mistralai/Mixtral-8x7B-Instruct-v0.1"
 # "mistralai/Mistral-7B-Instruct-v0.1")
-
-# TODO: fix log file for others
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Inference with grammar constraint decoding.")
@@ -61,11 +59,11 @@ def parse_args():
                         help="Whether to sample from the model.")
     parser.add_argument("--top_p", type=float, default=1.0,
                         help="Top p for nucleus sampling.")
-    # parser.add_argument("--top_k", type=int, default=500,
-    #                     help="Top k for sampling.")
+    parser.add_argument("--top_k", type=int, default=0,
+                        help="Top k for sampling.")
     parser.add_argument("--log_file", type=str, default='/nobackup2/yf/mila/GD/log_GAD/track_scores_prob2.log',
                         help="Where to store log file.")
-    parser.add_argument("--max_new_tokens", type=int, default=6,
+    parser.add_argument("--max_new_tokens", type=int, default=4,
                         help="Maximum number of new tokens to generate.")
     parser.add_argument("--output_scores", action='store_true',
                         help="Whether to output scores.")
@@ -85,6 +83,7 @@ def inference_grammar_constrained_track_scores(args, model, tokenizer):
         grammar_str = file.read()
     grammar = IncrementalGrammarConstraint(grammar_str, "root", tokenizer)
     grammar_processor = GrammarConstrainedLogitsProcessor(grammar)
+    grammar_aligned_processor = GrammarAlignedLogitsProcessor(grammar)
 
     # Generate
     prompt = args.prompt
@@ -102,9 +101,9 @@ def inference_grammar_constrained_track_scores(args, model, tokenizer):
         # num_beams=args.num_beams,
         max_new_tokens=args.max_new_tokens,
         top_p=args.top_p,
-        # top_k=args.top_k,
+        top_k=args.top_k,
         temperature=args.temperature,
-        logits_processor=[grammar_processor],
+        logits_processor=[grammar_aligned_processor],
         repetition_penalty=args.repetition_penalty,
         # early_stopping=True,
         num_return_sequences=args.num_return_sequences,
@@ -112,18 +111,30 @@ def inference_grammar_constrained_track_scores(args, model, tokenizer):
         output_scores=True
     )
 
+    # (accepted_tokens_history,
+    #  accepted_indices_history,
+    #  acceptance_raw_scores_history,
+    #  acceptance_logits_history,
+    #  acceptance_details_history)\
+    #     = grammar_processor.get_history()
+
     (accepted_tokens_history,
      accepted_indices_history,
      acceptance_raw_scores_history,
      acceptance_logits_history,
-     acceptance_details_history)\
-        = grammar_processor.get_history()
+     acceptance_details_history,
+     adjusted_acceptance_detailed_history) \
+        = grammar_aligned_processor.get_history()
+
+    # input_ids_history = grammar_processor.get_input_ids_history()
 
     print(f"raw_scores_history: {acceptance_raw_scores_history}")
     print(f"softmax_logits_history: {acceptance_logits_history}, length: {len(acceptance_logits_history)}")
     print(f"accepted_tokens_history: {accepted_tokens_history}")
     print(f"accepted_indices_history: {accepted_indices_history}")
     print(f"acceptance_details_history: {acceptance_details_history}")
+    print(f"adjusted_acceptance_detailed_history: {adjusted_acceptance_detailed_history}")
+    # print(f"input_ids_history: {input_ids_history}")
 
     transition_scores = model.compute_transition_scores(
         output.sequences, output.scores, normalize_logits=True
@@ -140,7 +151,11 @@ def inference_grammar_constrained_track_scores(args, model, tokenizer):
     print(f"scores: {output.scores}")
     generations = tokenizer.batch_decode(output[0], skip_special_tokens=True)
     print(f"grammar constrained generations: {generations}")
-    return output.sequences, output.scores, generations
+    return (output.sequences,
+            output.scores,
+            generations, accepted_tokens_history, accepted_indices_history, acceptance_raw_scores_history,
+            acceptance_logits_history,
+            acceptance_details_history)
 
 def softmax(selected_scores, scores):
     exp_selected_scores = torch.exp(selected_scores)
@@ -373,5 +388,8 @@ if __name__ == "__main__":
     # result, non_inf_scores_with_index, output_sequences, elapsed_time = run_inference_grammar_constrained_track_scores(args)
     # result, non_inf_scores_with_index, output_sequences, elapsed_time = run_inference_track_scores(args)
     model, tokenizer = load_model_tokenizer_hf(args)
-    sequences, scores, generations = inference_grammar_constrained_track_scores(args, model, tokenizer)
+    (sequences, scores, generations,
+     accepted_tokens_history, accepted_indices_history, acceptance_raw_scores_history,
+            acceptance_logits_history,
+            acceptance_details_history) = inference_grammar_constrained_track_scores(args, model, tokenizer)
 
