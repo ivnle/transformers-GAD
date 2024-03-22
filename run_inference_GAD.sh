@@ -1,4 +1,5 @@
 #!/bin/bash
+# TODO: change file name, log file name, grammar file name, and model name
 
 # Define arguments
 CACHE_DIR="/nobackup2/yf/mila/GD_caches/"
@@ -36,7 +37,7 @@ for MODEL_ID in "${models[@]}"; do
                 for TEMPERATURE in "${TEMPERATURES[@]}"; do
                     for TOP_P in "${TOP_PS[@]}"; do  # Assuming you want to loop over TOP_PS
                         PROMPT="Be a helpful assistant. Generate a random binary string of length ${STRING_LENGTH}? Directly show the generated string without explanation."
-                        CUDA_VISIBLE_DEVICES=0 python run_inference_gad_get_logits.py \
+                        CUDA_VISIBLE_DEVICES=0 python run_inference_gad_adjust_to_gt.py \
                             --model_id "$MODEL_ID" \
                             --cache_dir "$CACHE_DIR" \
                             --base_grammar_dir "$BASE_GRAMMAR_DIR" \
@@ -49,7 +50,7 @@ for MODEL_ID in "${models[@]}"; do
                             --temperature $TEMPERATURE \
                             --iter $ITER \
                             --do_sample \
-                            --log_file '/nobackup2/yf/mila/GD/log_GAD/log_mistral_7b_gad_gt.log'\
+                            --log_file '/nobackup2/yf/mila/GD/log_GAD/log_mistral_7b_gad_gt_correct.log'\
                             --max_new_tokens 4
                     done  # top_p
                 done  # temperature

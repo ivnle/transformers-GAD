@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# TODO: warning! fix logging file
 # Define arguments
 CACHE_DIR="/nobackup2/yf/mila/GD_caches"
 BASE_GRAMMAR_DIR="/nobackup2/yf/mila/GD/examples/grammars/"

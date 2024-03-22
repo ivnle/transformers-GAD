@@ -1,6 +1,40 @@
 import torch
 import math
 
+def adjust_allocations(P_111, P_110, P_101, P_100, P_000, P):
+    real_Ps = {
+        '111': P_111 / P,
+        '110': P_110 / P,
+        '101': P_101 / P,
+        '100': P_100 / P,
+        '000': P_000 / P,
+    }
+
+    # Step 2: Calculate initial allocations
+    initial_allocations = {key: value * 500 for key, value in real_Ps.items()}
+
+    # Step 3: Round allocations
+    rounded_allocations = {key: int(value) for key, value in initial_allocations.items()}
+
+    # Calculate the rounding error
+    total_rounded = sum(rounded_allocations.values())
+    rounding_error = 500 - total_rounded
+
+    # Step 4: Adjust the allocations
+    # Sort categories by the fractional part of the initial allocation, in descending order
+    fractional_parts = [(key, value - int(value)) for key, value in initial_allocations.items()]
+    fractional_parts.sort(key=lambda x: x[1], reverse=True)
+
+    # Distribute the rounding error
+    for i in range(abs(rounding_error)):
+        key = fractional_parts[i % len(fractional_parts)][0]
+        if rounding_error > 0:
+            rounded_allocations[key] += 1
+        else:
+            rounded_allocations[key] -= 1
+
+    return rounded_allocations
+
 
 def get_reweigh_factor():
     p_1_1 = 3.175825986545533e-05
@@ -20,6 +54,28 @@ def get_reweigh_factor():
     P_101 = p_1_1 * p_2_0_given_1 * p_3_1_given_10
     P_100 = p_1_1 * p_2_0_given_1 * p_3_0_given_10
     P_000 = p_1_0 * p_2_0_given_0 * p_3_0_given_00
+    P = P_111 + P_110 + P_101 + P_100 + P_000
+
+    P_1 = P_111 + P_110 + P_101 + P_100
+    P_0 = P_000
+    ratio_10 = P_1 / P_0
+
+    real_P_111 = P_111 / P
+    real_P_110 = P_110 / P
+    real_P_101 = P_101 / P
+    real_P_100 = P_100 / P
+    real_P_000 = P_000 / P
+
+    allocations = adjust_allocations(P_111, P_110, P_101, P_100, P_000, P)
+    print(allocations)
+
+    print(f"P_111: {P_111}")
+    print(f"P_110: {P_110}")
+    print(f"P_101: {P_101}")
+    print(f"P_100: {P_100}")
+    print(f"P_000: {P_000}")
+
+
 
     # Calculating w^s values
     w_s_r = P_111 + P_110 + P_101 + P_100 + P_000
@@ -138,7 +194,7 @@ def get_reweigh_factor():
         (id_0, id_0, id_0): adj_gt_score_3_0_given_00,
     }
 
-    return sequence_to_theta, avg_sequence_to_theta, w_s_R, w_s_T, w_s_Z, adjusted_avg_scores, adjusted_gt_scores
+    return sequence_to_theta, avg_sequence_to_theta, w_s_R, w_s_T, w_s_Z, adjusted_avg_scores, adjusted_gt_scores, ratio_10
 
 def get_theta_for_token(input_ids, token_id, w_s_R, w_s_T, w_s_Z):
     # TODO: Implement a method to get theta for a specific token, only apply for 01 strings
@@ -205,7 +261,7 @@ if __name__ == "__main__":
 
     print("generated_ids:", generated_ids)
     print("length:", length)
-    sequence_to_theta, avg_sequence_to_theta, w_s_R, w_s_T, w_s_Z, adjusted_scores, adjusted_gt_scores = get_reweigh_factor()
+    sequence_to_theta, avg_sequence_to_theta, w_s_R, w_s_T, w_s_Z, adjusted_scores, adjusted_gt_scores, ratio_10 = get_reweigh_factor()
     print("sequence_to_theta:", sequence_to_theta)
     print("avg_sequence_to_theta:", avg_sequence_to_theta)
     print("w_s_R:", w_s_R)
@@ -220,6 +276,7 @@ if __name__ == "__main__":
     theta = get_theta_for_token_ground_truth(tensor, 2, sequence_to_theta)
     print("theta:", theta)
     print("adjusted_gt_scores:", adjusted_gt_scores)
+    print("ratio_10:", ratio_10)
 
 
 

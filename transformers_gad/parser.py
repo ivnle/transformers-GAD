@@ -512,8 +512,8 @@ if __name__ == "__main__":
         "-g",
         "--grammar-file",
         nargs="?",
-        default="examples/grammars/json.ebnf",
-        help="Path to the grammar file (default: examples/grammars/json.ebnf)",
+        default="examples/grammars/string_start_w_1_all_0_len_3.ebnf",
+        help="Path to the grammar file",
     )
 
     args = parser.parse_args()
@@ -524,7 +524,46 @@ if __name__ == "__main__":
     with open(args.grammar_file, "r") as file:
         input_text = file.read()
     parsed_grammar = parse_ebnf(input_text)
+    print("parse state:")
     parsed_grammar.print()
-    print(f"symbol_ids: \n{parsed_grammar.symbol_table}")
+    # print(f"symbol_ids: \n{parsed_grammar.symbol_table}")
 
-    start_rule_id = parsed_grammar.symbol_table["root"]
+    # start_rule_id = parsed_grammar.symbol_table["root"]
+
+    # DEBUG: __main__:last_parsed_rule: root: := "0"d | "1"a
+    #
+    # DEBUG: __main__:last_parsed_rule: a: := "0"c | "1"b
+    #
+    # DEBUG: __main__:last_parsed_rule: b: := "0" | "1"
+    #
+    # DEBUG: __main__:last_parsed_rule: c: := "0" | "1"
+    #
+    # DEBUG: __main__:last_parsed_rule: d: := "0"e
+    #
+    # parse state:
+    # Grammar Rules:
+    # < 0 > root: := < 2 > [0 - 0] < 5 > d | < 9 > [1 - 1] < 12 > a
+    # < 16 > a: := < 18 > [0 - 0] < 21 > c | < 25 > [1 - 1] < 28 > b
+    # < 32 > b: := < 34 > [0 - 0] | < 39 > [1 - 1]
+    # < 44 > c: := < 46 > [0 - 0] | < 51 > [1 - 1]
+    # < 56 > d: := < 58 > [0 - 0] < 61 > e
+    # < 65 > e: := < 67 > [0 - 0]
+    #
+    # Grammar Hex representation:
+    # 0000 0006 0002 0030 0030 0001 0001 0000
+    # 0006 0002 0031 0031 0001 0002 0000 0000
+    # 0002 0006 0002 0030 0030 0001 0003 0000
+    # 0006 0002 0031 0031 0001 0004 0000 0000
+    # 0004 0004 0002 0030 0030 0000 0004 0002
+    # 0031 0031 0000 0000 0003 0004 0002 0030
+    # 0030 0000 0004 0002 0031 0031 0000 0000
+    # 0001 0006 0002 0030 0030 0001 0005 0000
+    # 0000 0005 0004 0002 0030 0030 0000 0000 ffff
+    #
+    # Rules Decimal representation:
+    # < 0 > [[6, 2, 48, 48, 1, 1, 0], [6, 2, 49, 49, 1, 2, 0]]
+    # < 2 > [[6, 2, 48, 48, 1, 3, 0], [6, 2, 49, 49, 1, 4, 0]]
+    # < 4 > [[4, 2, 48, 48, 0], [4, 2, 49, 49, 0]]
+    # < 3 > [[4, 2, 48, 48, 0], [4, 2, 49, 49, 0]]
+    # < 1 > [[6, 2, 48, 48, 1, 5, 0]]
+    # < 5 > [[4, 2, 48, 48, 0]]

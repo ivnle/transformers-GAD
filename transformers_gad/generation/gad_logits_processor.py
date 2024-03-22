@@ -105,7 +105,7 @@ class GrammarAlignedGroundTruthLogitsProcessor(LogitsProcessor):
 
         # Convert the list to a tuple for dictionary lookup
         sequence_tuple = tuple(sequence_list)
-        print(f"sequence_tuple: {sequence_tuple}")
+        # print(f"sequence_tuple: {sequence_tuple}")
 
         # Lookup the sequence in the dictionary
         if sequence_tuple in sequence_to_theta:
