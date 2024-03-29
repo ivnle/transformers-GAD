@@ -1,0 +1,16 @@
+root ::= "#x0000000000000000" | "#x0000000000000001" | "x" | NotOp | SmolOp | EhadOp | ArbaOp | SheshOp | AndOp | OrOp | XorOp | AddOp | ImOp
+
+NotOp ::= "(bvnot " root ")"
+SmolOp ::= "(smol " root ")"
+EhadOp ::= "(ehad " root ")"
+ArbaOp ::= "(arba " root ")"
+SheshOp ::= "(shesh " root ")"
+
+AndOp ::= "(bvand " root " " root ")"
+OrOp ::= "(bvor " root " " root ")"
+XorOp ::= "(bvxor " root " " root ")"
+AddOp ::= "(bvadd " root " " root ")"
+
+ImOp ::= "(im " root " " root " " root ")"
+
+

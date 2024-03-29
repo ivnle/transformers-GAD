@@ -308,7 +308,7 @@ def parse_simple_rhs(state, rhs: str, rule_name: str, outbuf, is_nested):
                 "\n",
                 "|",
                 ")",
-            ], f"rule should end with newline or '|', but got {remaining_rhs[0]}"
+            ], f"rule should end with newline or '|', but got {remaining_rhs[0]}. remaining_rhs: {remaining_rhs}"
             # we break here so that we call parse_rule again to parse the next rule
             break
         # Here we do not rm newline deliberately so that we know the rhs is ended

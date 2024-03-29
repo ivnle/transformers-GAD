@@ -23,10 +23,11 @@ class GrammarAlignedGroundTruthLogitsProcessor(LogitsProcessor):
         self.accepted_tokens_history = []
         self.acceptance_raw_scores_history = []
         self.acceptance_logits_history = []
-        self.acceptance_details_history = []
+        self.acceptance_details_history = [] # history for building oracle tree
         self.input_ids_history = []
-        self.parse_start_index = None
-        self.adjusted_acceptance_details_history = []
+        self.adjusted_acceptance_details_history = [] # record after applying score adjustment to unbiased distribution
+        # TODO: fix generated tokens
+        self.generated_tokens = []
 
     def mask_scores(self, input_ids, scores, device):
         # resolve each stack to a tensor of True/False for each token

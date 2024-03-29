@@ -118,6 +118,7 @@ class GrammarRecognizer:
         else:
             ref_rule_id = self.grammar_encoding[cur_element_offset + 1]
             # find the offset of the referenced rule
+            # print(f"ref_rule_id: {ref_rule_id}")
             ref_subrule_offset = self.rule_offsets[ref_rule_id] + 1
             new_stacks: List[List[int]] = []
             # Loop over alternates of referenced rule to build new stacks

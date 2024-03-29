@@ -150,6 +150,7 @@ def inference_grammar_aligned_track_full_history(args, model, tokenizer):
 
     # decode output
     print(f"output sequences: {output.sequences}")
+    print(f"generated tokens: {generated_tokens}")
     print(f"scores: {output.scores}")
     generations = tokenizer.batch_decode(output[0], skip_special_tokens=True)
     print(f"grammar constrained generations: {generations}")
@@ -160,6 +161,7 @@ def inference_grammar_aligned_track_full_history(args, model, tokenizer):
             acceptance_details_history, adjusted_acceptance_detailed_history)
 
 def inference_grammar_aligned(args, model, tokenizer):
+    """Clean version of GAD"""
     test_file = get_file(args)
     tokenizer.pad_token = tokenizer.eos_token
 
@@ -499,21 +501,26 @@ if __name__ == "__main__":
     # print(f"sequences: {sequences}")
     # print(f"scores: {scores}")
     # print(f"generations: {generations}")
-    # (sequences,
-    #  scores,
-    #  generations, accepted_tokens_history, accepted_indices_history, acceptance_raw_scores_history,
-    #  acceptance_logits_history,
-    #  acceptance_details_history, adjusted_acceptance_detailed_history) = inference_grammar_aligned_track_full_history(args, model, tokenizer)
-    # print(f"sequences: {sequences}")
-    # print(f"scores: {scores}")
-    # print(f"generations: {generations}")
-    # print(f"accepted_tokens_history: {accepted_tokens_history}")
-    # print(f"accepted_indices_history: {accepted_indices_history}")
-    # print(f"acceptance_raw_scores_history: {acceptance_raw_scores_history}")
-    # print(f"acceptance_logits_history: {acceptance_logits_history}")
-    # print(f"acceptance_details_history: {acceptance_details_history}")
-    # print(f"adjusted_acceptance_detailed_history: {adjusted_acceptance_detailed_history}")
-    output, faithful, ideal, elapsed_time = run_inference_grammar_aligned(args)
+
+    ### run inference_grammar_aligned_track_full_history ###
+    (sequences,
+     scores,
+     generations, accepted_tokens_history, accepted_indices_history, acceptance_raw_scores_history,
+     acceptance_logits_history,
+     acceptance_details_history, adjusted_acceptance_detailed_history) = inference_grammar_aligned_track_full_history(args, model, tokenizer)
+    print(f"sequences: {sequences}")
+    print(f"scores: {scores}")
+    print(f"generations: {generations}")
+    print(f"accepted_tokens_history: {accepted_tokens_history}")
+    print(f"accepted_indices_history: {accepted_indices_history}")
+    print(f"acceptance_raw_scores_history: {acceptance_raw_scores_history}")
+    print(f"acceptance_logits_history: {acceptance_logits_history}")
+    print(f"acceptance_details_history: {acceptance_details_history}")
+    print(f"adjusted_acceptance_detailed_history: {adjusted_acceptance_detailed_history}")
+
+    # ### run gad ###
+    # output, faithful, ideal, elapsed_time = run_inference_grammar_aligned(args)
+
 
 
 
