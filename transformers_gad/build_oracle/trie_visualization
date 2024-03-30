@@ -1,0 +1,13 @@
+// Trie
+digraph {
+	size="10,5"
+	root [label=Root shape=box]
+	"28734_0" [label="Token: 0
+Token ID: 28734
+Raw Logit: 2.0020976080559194e-05" shape=ellipse]
+	root -> "28734_0" [label=""]
+	"28740_1" [label="Token: 1
+Token ID: 28740
+Raw Logit: 3.175825986545533e-05" shape=ellipse]
+	"28734_0" -> "28740_1" [label=""]
+}

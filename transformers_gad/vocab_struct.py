@@ -88,6 +88,8 @@ if __name__ == "__main__":
 
     tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", cache_dir="/nobackup2/yf/mila/GD_caches")
     token_trie = TokenTrie(tokenizer)
+    print(f"tokens: {token_trie.tokens}")
+    print(f"trie: {token_trie.trie}")
     # Encode the string "00"
     encoded_input = tokenizer.encode("00", add_special_tokens=False)  # Returns a list of token IDs
     # encoded_input = tokenizer.encode("0 0", add_special_tokens=False)
