@@ -1,1 +1,1 @@
-from .build_oracle_trie import Trie, TrieNode, run_demo_trie_string_01_len_3
+from .build_oracle_trie import Trie, TrieNode, update_oracle_trie

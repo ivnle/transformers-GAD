@@ -137,6 +137,8 @@ def parse_char(src) -> (str, str):
             return "\n", src[2:]
         elif esc == "t":
             return "\t", src[2:]
+        elif esc == "\\":
+            return "\\", src[2:]
         raise RuntimeError("unknown escape at " + src)
     elif src:
         return src[0], src[1:]
@@ -308,7 +310,7 @@ def parse_simple_rhs(state, rhs: str, rule_name: str, outbuf, is_nested):
                 "\n",
                 "|",
                 ")",
-            ], f"rule should end with newline or '|', but got {remaining_rhs[0]}. remaining_rhs: {remaining_rhs}"
+            ], f"rule should end with newline or '|', but got {remaining_rhs[0]}"
             # we break here so that we call parse_rule again to parse the next rule
             break
         # Here we do not rm newline deliberately so that we know the rhs is ended
@@ -512,7 +514,7 @@ if __name__ == "__main__":
         "-g",
         "--grammar-file",
         nargs="?",
-        default="examples/grammars/string_start_w_1_all_0_len_3.ebnf",
+        default="/nobackup2/yf/mila/GD/examples/sygus/PRE_100_bare.ebnf",
         help="Path to the grammar file",
     )
 
@@ -567,3 +569,5 @@ if __name__ == "__main__":
     # < 3 > [[4, 2, 48, 48, 0], [4, 2, 49, 49, 0]]
     # < 1 > [[6, 2, 48, 48, 1, 5, 0]]
     # < 5 > [[4, 2, 48, 48, 0]]
+
+

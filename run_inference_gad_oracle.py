@@ -1,5 +1,6 @@
 import torch
 import json
+import pickle
 import jsonlines
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
@@ -7,6 +8,7 @@ from transformers_gad.generation.logits_process import GrammarConstrainedLogitsP
 from transformers_gad.generation.gad_logits_processor import GrammarAlignedGroundTruthLogitsProcessor
 from transformers_gad.build_oracle.build_oracle_trie import run_demo_trie_string_01_len_3
 from transformers_gad.generation.gad_logits_processor_oracle import GrammarAlignedOracleLogitsProcessor
+from transformers_gad.build_oracle.build_oracle_trie import Trie, TrieNode
 import argparse
 import os
 import random
@@ -59,8 +61,6 @@ def parse_args():
                         help="Number of iterations for inference.")
     parser.add_argument("--temperature", type=float, default=1.0,
                         help="Temperature for sampling.")
-    parser.add_argument("--do_sample", action='store_true',
-                        help="Whether to sample from the model.")
     parser.add_argument("--top_p", type=float, default=1.0,
                         help="Top p for nucleus sampling.")
     parser.add_argument("--top_k", type=int, default=0,
@@ -69,23 +69,28 @@ def parse_args():
                         help="Where to store log file.")
     parser.add_argument("--max_new_tokens", type=int, default=4,
                         help="Maximum number of new tokens to generate.")
-    parser.add_argument("--output_scores", action='store_true',
-                        help="Whether to output scores.")
-    parser.add_argument("--return_dict_in_generate", action='store_true',
-                        help="Whether to return dict in generate.")
     parser.add_argument("--sygus_prompt_file", type=str, default="/nobackup2/yf/mila/GD/prompts/pre_prompt.jsonl",
                         help="File path to prompts for sygus task.")
-
     parser.add_argument("--prompt_type", type=str, choices=["bare", "completion"], default="bare",
                         help="Prompt type for sygus task.")
 
     args = parser.parse_args()
     return args
 
-def get_oracle_trie():
-    trie = run_demo_trie_string_01_len_3()
+def load_oracle_trie(trie_file):
+    with open(trie_file, 'rb') as f:
+        trie = pickle.load(f)
     return trie
 
+def construct_gad_output_file_path(args):
+    model_name = args.model_id.split("/")[-1]
+    output_file_path = os.path.join(args.output_folder, f"gad_g-pre_100_10_{model_name}_p-{args.prompt_type}_iter-{args.iter}.jsonl")
+    output_directory = os.path.dirname(output_file_path)
+    # Ensure the directory exists
+    if not os.path.exists(output_directory):
+        os.makedirs(output_directory)
+
+    return output_file_path
 
 def get_sygus_prompt(filename, prompt_type):
     with open(filename, 'r') as file:
@@ -562,7 +567,6 @@ def run_inference_track_scores(args):
 
 if __name__ == "__main__":
     args = parse_args()
-    trie = get_oracle_trie()
 
     print(f"model_id: {args.model_id}")
     print(f"repetition_penalty: {args.repetition_penalty}")

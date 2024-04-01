@@ -16,14 +16,15 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
     def __init__(self, grammar_constraint, oracle_trie):
         self.grammar_constraint = grammar_constraint
         self.oracle_trie = oracle_trie
-        self.batch_stacks = None
+        self.last_size = None
+        self.batch_accept_states = None
         self.parse_start_index = None
+        self.generate_start_index = None
         self.accepted_indices_history = []  # To store indices of accepted tokens
         self.accepted_tokens_history = []
         self.acceptance_raw_scores_history = []
         self.acceptance_logits_history = []
         self.acceptance_details_history = [] # history for building oracle tree
-        self.input_ids_history = []
         self.adjusted_acceptance_details_history = [] # record after applying score adjustment to unbiased distribution
         self.generated_tokens = None
 
@@ -32,7 +33,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         # indicating acceptance
         # acceptance = self.grammar_acceptor.filter_vocab(self.stacks, device)
         acceptance = self.grammar_constraint.batch_filter_vocab(
-            self.batch_stacks, device
+            self.batch_accept_states, device
         )
 
         self.get_accepted_tokens(acceptance)
@@ -50,15 +51,11 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         accepted_logits = logits[acceptance].clone().detach()
         self.acceptance_logits_history.append(accepted_logits.cpu())
 
-        # assign score to acceptance tokens with their corresponding log(logits) * theta; groundtruth
-        # sequence_to_theta, avg_sequence_to_theta, w_s_R, w_s_T, w_s_Z = self.get_reweight_factor()
-        # self.apply_theta_adjustments(input_ids, acceptance, scores, sequence_to_theta)
-
         current_parent = self.oracle_trie.search_last_parent(self.generated_tokens)
         self.apply_oracle_adjustments(acceptance, scores, current_parent)
         self.get_adjusted_detailed_history(acceptance, scores)
         # Scores to -inf where False
-        scores[~acceptance] = -math.inf
+        scores[~acceptance] = float('-inf')
 
     def apply_oracle_adjustments(self, acceptance, scores, current_parent):
         logits = F.softmax(scores, dim=-1)
@@ -91,23 +88,23 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
 
     # TODO: batching
     def process_gad_scores(self, input_ids, scores):
-        self.input_ids_history.append(input_ids)
         # we dynamically create stacks at the first call, so that we know the batch size and beam size
-        if self.batch_stacks is None:
-            self.batch_stacks = [
+        if self.batch_accept_states is None:
+            self.batch_accept_states = [
                 # self.grammar_constraint.init_stacks()
-                copy.deepcopy(self.grammar_constraint.grammar.stacks)
+                copy.deepcopy(
+                    self.grammar_constraint.string_recognizer.get_initial_accept_state()
+                )
                 for _ in range(len(input_ids))
             ]
 
-        if self.parse_start_index is None:
-            self.parse_start_index = input_ids.size(1)  # Assuming the initial size is the prompt length
-        self.generated_tokens = input_ids[:, self.parse_start_index:]
+        if self.generate_start_index is None:
+                self.generate_start_index = input_ids.size(1)  # Assuming the initial size is the prompt length
+        self.generated_tokens = input_ids[:, self.generate_start_index:]
 
-        self.batch_stacks = self.grammar_constraint.advance_token_ids(
-            input_ids, self.batch_stacks, self.parse_start_index
+        self.batch_accept_states = self.grammar_constraint.advance_token_ids(
+            input_ids, self.batch_accept_states, self.parse_start_index
         )
-
         self.mask_scores(input_ids, scores, scores.device)
         return scores
 
@@ -172,7 +169,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
                 # Store detailed information as a dictionary
                 accepted_info.append({
                     "token_id": token_id,
-                    "token": token,
+                    "token": str(token),
                     "raw_score": raw_score,
                     "raw_logit": logit
                 })
@@ -201,7 +198,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
                 # Store detailed information as a dictionary
                 accepted_info.append({
                     "token_id": token_id,
-                    "token": token,
+                    "token": str(token),
                     "raw_score": raw_score,
                     "raw_logit": logit
                 })
@@ -215,5 +212,8 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         return (self.accepted_tokens_history, self.accepted_indices_history,
                 self.acceptance_raw_scores_history, self.acceptance_logits_history, self.acceptance_details_history, self.adjusted_acceptance_details_history)
 
-    def get_input_ids_history(self):
-        return self.input_ids_history
+    def acceptance_details_history(self):
+        return self.acceptance_details_history
+
+    def adjusted_acceptance_details_history(self):
+        return self.adjusted_acceptance_details_history

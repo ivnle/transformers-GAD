@@ -59,7 +59,7 @@ class GrammarAlignedGroundTruthLogitsProcessor(LogitsProcessor):
         self.apply_theta_adjustments(input_ids, acceptance, scores, sequence_to_theta)
         self.get_adjusted_detailed_history(acceptance, scores)
         # Scores to -inf where False
-        scores[~acceptance] = -math.inf
+        scores[~acceptance] = float('-inf')
 
     def apply_theta_adjustments(self, input_ids, acceptance, scores, sequence_to_theta):
         logits = F.softmax(scores, dim=-1)

@@ -8,5 +8,4 @@ AndOp ::= "(bvand " root " " root ")"
 OrOp ::= "(bvor " root " " root ")"
 XorOp ::= "(bvxor " root " " root ")"
 AddOp ::= "(bvadd " root " " root ")"
-
 ImOp ::= "(im " root " " root " " root ")"
