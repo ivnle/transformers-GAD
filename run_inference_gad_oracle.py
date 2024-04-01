@@ -1,9 +1,12 @@
 import torch
-
+import json
+import jsonlines
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
 from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor, GrammarAlignedLogitsProcessor
 from transformers_gad.generation.gad_logits_processor import GrammarAlignedGroundTruthLogitsProcessor
+from transformers_gad.build_oracle.build_oracle_trie import run_demo_trie_string_01_len_3
+from transformers_gad.generation.gad_logits_processor_oracle import GrammarAlignedOracleLogitsProcessor
 import argparse
 import os
 import random
@@ -70,9 +73,30 @@ def parse_args():
                         help="Whether to output scores.")
     parser.add_argument("--return_dict_in_generate", action='store_true',
                         help="Whether to return dict in generate.")
+    parser.add_argument("--sygus_prompt_file", type=str, default="/nobackup2/yf/mila/GD/prompts/pre_prompt.jsonl",
+                        help="File path to prompts for sygus task.")
+
+    parser.add_argument("--prompt_type", type=str, choices=["bare", "completion"], default="bare",
+                        help="Prompt type for sygus task.")
 
     args = parser.parse_args()
     return args
+
+def get_oracle_trie():
+    trie = run_demo_trie_string_01_len_3()
+    return trie
+
+
+def get_sygus_prompt(filename, prompt_type):
+    with open(filename, 'r') as file:
+        for line in file:
+            data = json.loads(line)
+
+            if data.get('prompt_type') == prompt_type:
+                return data['prompt']
+
+        raise ValueError(f"Prompt type {prompt_type} not found in file {filename}")
+
 
 def inference_gcd_get_logits_for_oracle(args, model, tokenizer):
     test_file = get_file(args)
@@ -128,7 +152,7 @@ def inference_gcd_get_logits_for_oracle(args, model, tokenizer):
             acceptance_details_history)
 
 
-def inference_grammar_aligned_track_full_history(args, model, tokenizer):
+def inference_grammar_aligned_track_full_history(args, model, tokenizer, trie):
     test_file = get_file(args)
     tokenizer.pad_token = tokenizer.eos_token
 
@@ -139,6 +163,7 @@ def inference_grammar_aligned_track_full_history(args, model, tokenizer):
     grammar_processor = GrammarConstrainedLogitsProcessor(grammar)
     grammar_aligned_processor_fake = GrammarAlignedLogitsProcessor(grammar)
     grammar_aligned_processor = GrammarAlignedGroundTruthLogitsProcessor(grammar)
+    grammar_aligned_oracle_processor = GrammarAlignedOracleLogitsProcessor(grammar, trie)
 
     # Generate
     prompt = args.prompt
@@ -158,7 +183,7 @@ def inference_grammar_aligned_track_full_history(args, model, tokenizer):
         top_p=args.top_p,
         top_k=args.top_k,
         temperature=args.temperature,
-        logits_processor=[grammar_aligned_processor],
+        logits_processor=[grammar_aligned_oracle_processor],
         repetition_penalty=args.repetition_penalty,
         # early_stopping=True,
         num_return_sequences=args.num_return_sequences,
@@ -179,7 +204,7 @@ def inference_grammar_aligned_track_full_history(args, model, tokenizer):
      acceptance_logits_history,
      acceptance_details_history,
      adjusted_acceptance_detailed_history) \
-        = grammar_aligned_processor.get_history()
+        = grammar_aligned_oracle_processor.get_history()
 
     # input_ids_history = grammar_processor.get_input_ids_history()
 
@@ -213,7 +238,7 @@ def inference_grammar_aligned_track_full_history(args, model, tokenizer):
             acceptance_logits_history,
             acceptance_details_history, adjusted_acceptance_detailed_history)
 
-def inference_grammar_aligned(args, model, tokenizer):
+def inference_grammar_aligned(args, model, tokenizer, trie):
     """Clean version of GAD"""
     test_file = get_file(args)
     tokenizer.pad_token = tokenizer.eos_token
@@ -225,6 +250,7 @@ def inference_grammar_aligned(args, model, tokenizer):
     grammar_processor = GrammarConstrainedLogitsProcessor(grammar)
     grammar_aligned_processor_fake = GrammarAlignedLogitsProcessor(grammar)
     grammar_aligned_processor = GrammarAlignedGroundTruthLogitsProcessor(grammar)
+    grammar_aligned_oracle_processor = GrammarAlignedOracleLogitsProcessor(grammar, trie)
 
     # Generate
     prompt = args.prompt
@@ -244,7 +270,7 @@ def inference_grammar_aligned(args, model, tokenizer):
         top_p=args.top_p,
         top_k=args.top_k,
         temperature=args.temperature,
-        logits_processor=[grammar_aligned_processor],
+        logits_processor=[grammar_aligned_oracle_processor],
         repetition_penalty=args.repetition_penalty,
         # early_stopping=True,
         num_return_sequences=args.num_return_sequences,
@@ -345,7 +371,7 @@ def run_inference_grammar_constrained_track_scores(args):
     with open(log_file_path, 'a') as log:
         log.write(f"{get_current_time_as_string()} - input_grammar: {input_grammar}\n")
         for i in tqdm(range(args.iter), desc="Running Inference"):
-            output_sequences, scores, result = inference_grammar_aligned(args, model, tokenizer)
+            output_sequences, scores, result = inference_grammar_aligned(args, model, tokenizer, trie)
 
             # deal with scores:
             # List to collect non -inf scores
@@ -408,7 +434,7 @@ def run_inference_grammar_constrained_track_scores(args):
     # return output, faithful, ideal, elapsed_time
     return result, non_inf_scores_with_index, output_sequences, elapsed_time
 
-def run_inference_grammar_aligned(args):
+def run_inference_grammar_aligned(args, trie):
     model, tokenizer = load_model_tokenizer_hf(args)
     tokenizer.pad_token = tokenizer.eos_token
 
@@ -429,7 +455,7 @@ def run_inference_grammar_aligned(args):
     with open(log_file_path, 'a') as log:
         log.write(f"{get_current_time_as_string()} - input_grammar: {input_grammar}\n")
         for i in tqdm(range(args.iter), desc="Running Inference"):
-            sequences, scores, result = inference_grammar_aligned(args, model, tokenizer)
+            sequences, scores, result = inference_grammar_aligned(args, model, tokenizer, trie)
             print(f"result: {result}")
             log.write(f"{get_current_time_as_string()} - result: {result}\n")
             log.flush()
@@ -536,6 +562,7 @@ def run_inference_track_scores(args):
 
 if __name__ == "__main__":
     args = parse_args()
+    trie = get_oracle_trie()
 
     print(f"model_id: {args.model_id}")
     print(f"repetition_penalty: {args.repetition_penalty}")
@@ -556,39 +583,39 @@ if __name__ == "__main__":
     # print(f"generations: {generations}")
 
     ### run inference_gcd_get_logits_for_oracle ###
-    (sequences,
-            scores,
-            generations,
-            generated_tokens,
-            acceptance_details_history) = inference_gcd_get_logits_for_oracle(args, model, tokenizer)
-
-    print(f"sequences: {sequences}")
-    print(f"scores: {scores}")
-    print(f"generations: {generations}")
-    print(f"generated_tokens: {generated_tokens}")
-    print(f"acceptance_details_history: {acceptance_details_history}")
-
-
-    # ### run inference_grammar_aligned_track_full_history ###
     # (sequences,
-    #  scores,
-    #  generations, accepted_tokens_history, accepted_indices_history, acceptance_raw_scores_history,
-    #  acceptance_logits_history,
-    #  acceptance_details_history, adjusted_acceptance_detailed_history) = inference_grammar_aligned_track_full_history(args, model, tokenizer)
-
+    #         scores,
+    #         generations,
+    #         generated_tokens,
+    #         acceptance_details_history) = inference_gcd_get_logits_for_oracle(args, model, tokenizer)
 
     # print(f"sequences: {sequences}")
     # print(f"scores: {scores}")
     # print(f"generations: {generations}")
-    # print(f"accepted_tokens_history: {accepted_tokens_history}")
-    # print(f"accepted_indices_history: {accepted_indices_history}")
-    # print(f"acceptance_raw_scores_history: {acceptance_raw_scores_history}")
-    # print(f"acceptance_logits_history: {acceptance_logits_history}")
+    # print(f"generated_tokens: {generated_tokens}")
     # print(f"acceptance_details_history: {acceptance_details_history}")
-    # print(f"adjusted_acceptance_detailed_history: {adjusted_acceptance_detailed_history}")
+
+
+    ### run inference_grammar_aligned_track_full_history ###
+    (sequences,
+     scores,
+     generations, accepted_tokens_history, accepted_indices_history, acceptance_raw_scores_history,
+     acceptance_logits_history,
+     acceptance_details_history, adjusted_acceptance_detailed_history) = inference_grammar_aligned_track_full_history(args, model, tokenizer, trie)
+
+
+    print(f"sequences: {sequences}")
+    print(f"scores: {scores}")
+    print(f"generations: {generations}")
+    print(f"accepted_tokens_history: {accepted_tokens_history}")
+    print(f"accepted_indices_history: {accepted_indices_history}")
+    print(f"acceptance_raw_scores_history: {acceptance_raw_scores_history}")
+    print(f"acceptance_logits_history: {acceptance_logits_history}")
+    print(f"acceptance_details_history: {acceptance_details_history}")
+    print(f"adjusted_acceptance_detailed_history: {adjusted_acceptance_detailed_history}")
 
     # ### run gad ###
-    # output, faithful, ideal, elapsed_time = run_inference_grammar_aligned(args)
+    # output, faithful, ideal, elapsed_time = run_inference_grammar_aligned(args, trie)
 
 
 
