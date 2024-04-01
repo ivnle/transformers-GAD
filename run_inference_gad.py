@@ -5,7 +5,7 @@ import jsonlines
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation.logits_process import LogitsProcessorList, InfNanRemoveLogitsProcessor
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
-from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor, GrammarAlignedLogitsProcessor
+from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor
 from transformers_gad.generation.gad_logits_processor import GrammarAlignedGroundTruthLogitsProcessor
 from transformers_gad.build_oracle.build_oracle_trie import run_demo_trie_string_01_len_3
 from transformers_gad.generation.gad_logits_processor_oracle import GrammarAlignedOracleLogitsProcessor
@@ -103,10 +103,11 @@ def get_sygus_prompt(filename, prompt_type):
 
         raise ValueError(f"Prompt type {prompt_type} not found in file {filename}")
 
-def inference_gad(args, model, tokenizer, prompt, grammar, trie):
+def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
     """
     latest version of gad test function prepared for run inference for iterations
     """
+    grammar = IncrementalGrammarConstraint(grammar_str, "root", tokenizer)
     gad_oracle_processor = GrammarAlignedOracleLogitsProcessor(grammar, trie)
     inf_nan_remove_processor = InfNanRemoveLogitsProcessor()
     logits_processors = LogitsProcessorList([

@@ -13,6 +13,20 @@ def load_model_tokenizer_hf(args):
 
     return model, tokenizer
 
+def load_model_tokenizer_hf_with_device(args):
+    tokenizer = AutoTokenizer.from_pretrained(args.model_id,
+                                              # use_fast=True,
+                                              cache_dir=args.cache_dir)
+    model = AutoModelForCausalLM.from_pretrained(args.model_id, cache_dir=args.cache_dir)
+    tokenizer.pad_token = tokenizer.eos_token
+
+    if torch.cuda.is_available():
+        model = model.cuda()
+
+    return model, tokenizer
+
+
+
 
 def get_file(args):
     base_dir = args.base_grammar_dir

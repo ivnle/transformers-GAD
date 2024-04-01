@@ -1,4 +1,4 @@
-root ::= "define-fun f ((x (BitVec 64))) (BitVec 64)" start
+root ::= "define-fun f ((x (BitVec 64))) (BitVec 64) " start
 start ::= "#x0000000000000000" | "#x0000000000000001" | "x" | NotOp | SmolOp | EhadOp | ArbaOp | SheshOp | AndOp | OrOp | XorOp | AddOp | ImOp
 NotOp ::= "(bvnot " start ")"
 SmolOp ::= "(smol " start ")"

@@ -1,10 +1,10 @@
 #!/bin/bash
 
-GPUs=(4 5 6 7 2 3 0 1)
+GPUs=(6 7 2 3 0 1 4 5)
 gpu_counter=0
 
 # Define default values for the arguments
-MODEL_ID="mistralai/Mistral-7B-Instruct-v0.1"
+MODEL_ID="mistralai/Mistral-7B-Instruct-v0.2"
 ITER=100
 MAX_NEW_TOKENS=512
 PROMPT_TYPES=("bare" "completion")
@@ -13,7 +13,7 @@ PROMPT_TYPES=("bare" "completion")
 for PROMPT_TYPE in "${PROMPT_TYPES[@]}"; do
     gpu=${GPUs[$gpu_counter]}
     echo "Running model: $MODEL_ID, on GPU: $gpu"
-    CUDA_VISIBLE_DEVICES=$gpu python run_inference_gcd_build_oracle_trie.py \
+    CUDA_VISIBLE_DEVICES=$gpu python run_inference_gcd_gad_cuda.py \
     --model_id "$MODEL_ID" \
     --cache_dir "/nobackup2/yf/mila/GD_caches/" \
     --num_return_sequences 1 \

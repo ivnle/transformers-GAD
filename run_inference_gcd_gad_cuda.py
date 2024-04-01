@@ -10,7 +10,7 @@ import argparse
 import os
 import random
 from inference_utils import (get_file,
-                             load_model_tokenizer_hf,
+                             load_model_tokenizer_hf, load_model_tokenizer_hf_with_device,
                              get_sygus_prompt,
                              get_grammar_file_path_by_prompt_type,
                              save_trie_to_pkl,
@@ -383,7 +383,7 @@ def construct_gcd_output_file_path(args):
 
 if __name__ == "__main__":
     args = parse_args()
-    model, tokenizer = load_model_tokenizer_hf(args)
+    model, tokenizer = load_model_tokenizer_hf_with_device(args)
 
     print(f"model_id: {args.model_id}")
     print(f"repetition_penalty: {args.repetition_penalty}")
