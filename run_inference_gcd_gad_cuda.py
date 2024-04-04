@@ -14,7 +14,7 @@ from inference_utils import (get_file,
                              get_sygus_prompt,
                              get_grammar_file_path_by_prompt_type,
                              save_trie_to_pkl,
-                             construct_trie_file)
+                             construct_trie_file, construct_trie_file_cuda)
 import subprocess
 import matplotlib.pyplot as plt
 import numpy as np
@@ -301,7 +301,7 @@ def inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
 def run_inference_gcd_construct_oracle_trie(args):
     model, tokenizer = load_model_tokenizer_hf(args)
     output_file_path = construct_gcd_output_file_path(args)
-    trie_file = construct_trie_file(args)
+    trie_file = construct_trie_file_cuda(args)
     trie = Trie()
     prompt = get_sygus_prompt(args.sygus_prompt_file, args.prompt_type)
     test_file = get_grammar_file_path_by_prompt_type(args)
@@ -359,8 +359,8 @@ def run_inference_gcd_construct_oracle_trie(args):
             outfile.flush()
             os.fsync(outfile.fileno())
 
-    trie_file_before = construct_trie_file(args, before_trie_status)
-    trie_file_after = construct_trie_file(args, after_trie_status)
+    trie_file_before = construct_trie_file_cuda(args, before_trie_status)
+    trie_file_after = construct_trie_file_cuda(args, after_trie_status)
     save_trie_to_pkl(adjusted_trie_before, trie_file_before)
     print(f"GAD before trie saved to {trie_file_before}")
     save_trie_to_pkl(adjustd_trie_after, trie_file_after)
@@ -372,7 +372,7 @@ def run_inference_gcd_construct_oracle_trie(args):
 
 def construct_gcd_output_file_path(args):
     model_name = args.model_id.split("/")[-1]
-    output_file_path = os.path.join(args.output_folder, f"gcd_g-pre_100_10_{model_name}_p-{args.prompt_type}_iter-{args.iter}.jsonl")
+    output_file_path = os.path.join(args.output_folder, f"gcd_g-pre_100_10_{model_name}_p-{args.prompt_type}_iter-{args.iter}_cuda.jsonl")
     output_directory = os.path.dirname(output_file_path)
     # Ensure the directory exists
     if not os.path.exists(output_directory):

@@ -4,7 +4,7 @@ GPUs=(4 5 6 7 2 3 0 1)
 gpu_counter=0
 
 # Define default values for the arguments
-MODEL_ID="mistralai/Mistral-7B-Instruct-v0.1"
+MODEL_ID="bigcode/starcoder2-15b"
 ITER=100
 MAX_NEW_TOKENS=512
 PROMPT_TYPES=("bare" "completion")

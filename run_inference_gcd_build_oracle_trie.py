@@ -345,15 +345,15 @@ def run_inference_gcd_construct_oracle_trie(args):
         before_trie_status = "gad_before"
         after_trie_status = "gad_after"
         adjusted_trie_before = Trie()
-        adjustd_trie_after = Trie()
+        adjusted_trie_after = Trie()
         for i in tqdm(range(args.iter), desc="Running Inference"):
-            generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations = inference_gad(args, model, tokenizer, prompt, grammar, trie)
+            generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations = inference_gad(args, model, tokenizer, prompt, grammar_str, trie)
             result = {"answer": generations, "prompt": prompt, "prompt_type": args.prompt_type,
                       "grammar": "PRE_100_10.sl"}
             print(f"result: {result}")
             # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
             update_oracle_trie(adjusted_trie_before, generated_tokens, acceptance_details_history)
-            update_oracle_trie(adjustd_trie_after, generated_tokens, adjusted_acceptance_details_history)
+            update_oracle_trie(adjusted_trie_after, generated_tokens, adjusted_acceptance_details_history)
             json_record = json.dumps(result)
             outfile.write(json_record + '\n')
             outfile.flush()
@@ -363,7 +363,7 @@ def run_inference_gcd_construct_oracle_trie(args):
     trie_file_after = construct_trie_file(args, after_trie_status)
     save_trie_to_pkl(adjusted_trie_before, trie_file_before)
     print(f"GAD before trie saved to {trie_file_before}")
-    save_trie_to_pkl(adjustd_trie_after, trie_file_after)
+    save_trie_to_pkl(adjusted_trie_after, trie_file_after)
     print(f"GAD after trie saved to {trie_file_after}")
     end_time = time.time()
     print(f"GAD results saved to {gad_output_file_path}")
