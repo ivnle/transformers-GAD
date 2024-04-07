@@ -73,6 +73,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
                 print(f"log_logit: {log_logit}")
                 # Assume a method to get theta for this specific token
                 successful_rate = self.oracle_trie.get_successful_rate_for_candidate_token(current_parent, token_id)
+                print(f"successful_rate: {successful_rate}")
 
                 if not isinstance(successful_rate, torch.Tensor):
                     successful_rate = torch.tensor(successful_rate, dtype=torch.float)
@@ -91,7 +92,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         # we dynamically create stacks at the first call, so that we know the batch size and beam size
         if self.batch_accept_states is None:
             self.batch_accept_states = [
-                # self.grammar_constraint.init_stacks()
+                # self.gramm ar_constraint.init_stacks()
                 copy.deepcopy(
                     self.grammar_constraint.string_recognizer.get_initial_accept_state()
                 )

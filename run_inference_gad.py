@@ -9,7 +9,7 @@ from transformers_gad.generation.logits_process import GrammarConstrainedLogitsP
 from transformers_gad.generation.gad_logits_processor import GrammarAlignedGroundTruthLogitsProcessor
 from transformers_gad.build_oracle.build_oracle_trie import run_demo_trie_string_01_len_3
 from transformers_gad.generation.gad_logits_processor_oracle import GrammarAlignedOracleLogitsProcessor
-from transformers_gad.build_oracle.build_oracle_trie import Trie, TrieNode
+from transformers_gad.build_oracle.build_oracle_trie import Trie, TrieNode, update_oracle_trie
 import argparse
 import os
 import random
@@ -26,6 +26,12 @@ import time
 from datetime import datetime
 from check_is_valid_string import is_valid_string_start_w_1_all_0, is_valid_string_0, is_valid_string_1, is_valid_string_01
 from vllm import LLM, SamplingParams
+from inference_utils import (get_file,
+                             load_model_tokenizer_hf,
+                             get_sygus_prompt,
+                             get_grammar_file_path_by_prompt_type,
+                             save_trie_to_pkl,
+                             construct_trie_file)
 
 
 #models=("meta-llama/Llama-2-7b-hf"
@@ -38,11 +44,11 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Inference with grammar constraint decoding.")
     parser.add_argument("--model_id", type=str, default="mistralai/Mistral-7B-Instruct-v0.1",
                         help="pretrained model checkpoint.")
-    parser.add_argument("--cache_dir", type=str, default='/nobackup2/yf/mila/GD_caches/',
+    parser.add_argument("--cache_dir", type=str, default='/nobackup2/yf/mila/GD_caches',
                         help="Where to store cache tokenizers and models.")
     parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/mila/GD/examples/grammars/",
                         help="Base directory for test grammars.")
-    parser.add_argument("--grammar_file", type=str, default="string_start_w_1_all_0_len_3.ebnf",
+    parser.add_argument("--grammar_file", type=str, default="string_01.ebnf",
                         help="Grammar file to test.")
     parser.add_argument("--num_return_sequences", type=int, default=1,
                         help="Number of sequences to return.")
@@ -54,26 +60,32 @@ def parse_args():
     #                     help="Number of beams for beam search.")
     parser.add_argument("--repetition_penalty", type=float, default=1.0,
                          help="Repetition penalty for greedy decoding.")
-    parser.add_argument("--string_length", type=int, default=3,
-                        help="Length of string to generate.")
-    parser.add_argument("--prompt", type=str, default=f"Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.",
-                        help="Prompt for model inference.")
+    parser.add_argument("--prompt", type=str, default=f"Generate a program.",
+                        help="Depreciated, warning: only test prompt for the model.")
     parser.add_argument("--iter", type=int, default=1,
                         help="Number of iterations for inference.")
     parser.add_argument("--temperature", type=float, default=1.0,
                         help="Temperature for sampling.")
+    parser.add_argument("--do_sample", action='store_true',
+                        help="Whether to sample from the model.")
     parser.add_argument("--top_p", type=float, default=1.0,
                         help="Top p for nucleus sampling.")
     parser.add_argument("--top_k", type=int, default=0,
                         help="Top k for sampling.")
-    parser.add_argument("--log_file", type=str, default='/nobackup2/yf/mila/GD/log_GAD/track_scores_prob2.log',
-                        help="Where to store log file.")
-    parser.add_argument("--max_new_tokens", type=int, default=4,
+    # parser.add_argument("--log_file", type=str, default='/nobackup2/yf/mila/GD/log/test_log.txt',
+    #                     help="Where to store log file.")
+    parser.add_argument("--max_new_tokens", type=int, default=512,
                         help="Maximum number of new tokens to generate.")
     parser.add_argument("--sygus_prompt_file", type=str, default="/nobackup2/yf/mila/GD/prompts/pre_prompt.jsonl",
                         help="File path to prompts for sygus task.")
     parser.add_argument("--prompt_type", type=str, choices=["bare", "completion"], default="bare",
                         help="Prompt type for sygus task.")
+    parser.add_argument("--output_folder", type=str, default="/nobackup2/yf/mila/GD/results/",
+                        help="Output folder to store results.")
+    parser.add_argument("--grammar_name", type=str, default="PRE_100",
+                        help="Name of the grammar, mainly used for call grammar file.")
+    parser.add_argument("--trie_folder", type=str, default="/nobackup2/yf/mila/GD/results_trie/",
+                        help="Folder to store trie files.")
 
     args = parser.parse_args()
     return args
@@ -146,7 +158,51 @@ def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
     # print(f"grammar constrained generations: {generations}")
     return generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations
 
+def run_inference_gad_loading_trie(args):
+    model, tokenizer = load_model_tokenizer_hf(args)
+    trie_file = construct_trie_file(args)
+    prompt = get_sygus_prompt(args.sygus_prompt_file, args.prompt_type)
+    test_file = get_grammar_file_path_by_prompt_type(args)
 
+    # #### only for test purpose ####
+    # prompt = args.prompt
+    # test_file = get_file(args)
+
+    # Load grammar
+    with open(test_file, "r") as file:
+        grammar_str = file.read()
+
+    gad_output_file_path = construct_gad_output_file_path(args)
+    start_time = time.time()
+
+    with open(gad_output_file_path, 'a', encoding='utf-8') as outfile:
+        trie = load_oracle_trie(trie_file)
+        before_trie_status = "gad_before"
+        after_trie_status = "gad_after"
+        adjusted_trie_before = Trie()
+        adjusted_trie_after = Trie()
+        for i in tqdm(range(args.iter), desc="Running Inference"):
+            generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations = inference_gad(args, model, tokenizer, prompt, grammar_str, trie)
+            result = {"answer": generations, "prompt": prompt, "prompt_type": args.prompt_type,
+                      "grammar": "PRE_100_10.sl"}
+            print(f"result: {result}")
+            # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
+            update_oracle_trie(adjusted_trie_before, generated_tokens, acceptance_details_history)
+            update_oracle_trie(adjusted_trie_after, generated_tokens, adjusted_acceptance_details_history)
+            json_record = json.dumps(result)
+            outfile.write(json_record + '\n')
+            outfile.flush()
+            os.fsync(outfile.fileno())
+
+    trie_file_before = construct_trie_file(args, before_trie_status)
+    trie_file_after = construct_trie_file(args, after_trie_status)
+    save_trie_to_pkl(adjusted_trie_before, trie_file_before)
+    print(f"GAD before trie saved to {trie_file_before}")
+    save_trie_to_pkl(adjusted_trie_after, trie_file_after)
+    print(f"GAD after trie saved to {trie_file_after}")
+    end_time = time.time()
+    print(f"GAD results saved to {gad_output_file_path}")
+    print(f"Total execution time: {end_time - start_time:.2f} seconds.")
 
 
 if __name__ == "__main__":
@@ -159,12 +215,12 @@ if __name__ == "__main__":
     print(f"temperature: {args.temperature}")
     print(f"top_p: {args.top_p}")
     print(f"max_new_tokens: {args.max_new_tokens}")
-    print(f"log_file: {args.log_file}")
+    # print(f"log_file: {args.log_file}")
 
     # output, faithful, ideal, elapsed_time = run_inference_grammar_constrained_track_scores(args)
     # result, non_inf_scores_with_index, output_sequences, elapsed_time = run_inference_grammar_constrained_track_scores(args)
     # result, non_inf_scores_with_index, output_sequences, elapsed_time = run_inference_track_scores(args)
-    model, tokenizer = load_model_tokenizer_hf(args)
+    # model, tokenizer = load_model_tokenizer_hf(args)
     # sequences, scores, generations = inference_track_scores(args, model, tokenizer)
     # print(f"sequences: {sequences}")
     # print(f"scores: {scores}")
@@ -184,26 +240,26 @@ if __name__ == "__main__":
     # print(f"acceptance_details_history: {acceptance_details_history}")
 
 
-    ### run inference_grammar_aligned_track_full_history ###
-    (sequences,
-     scores,
-     generations, accepted_tokens_history, accepted_indices_history, acceptance_raw_scores_history,
-     acceptance_logits_history,
-     acceptance_details_history, adjusted_acceptance_detailed_history) = inference_grammar_aligned_track_full_history(args, model, tokenizer, trie)
-
-
-    print(f"sequences: {sequences}")
-    print(f"scores: {scores}")
-    print(f"generations: {generations}")
-    print(f"accepted_tokens_history: {accepted_tokens_history}")
-    print(f"accepted_indices_history: {accepted_indices_history}")
-    print(f"acceptance_raw_scores_history: {acceptance_raw_scores_history}")
-    print(f"acceptance_logits_history: {acceptance_logits_history}")
-    print(f"acceptance_details_history: {acceptance_details_history}")
-    print(f"adjusted_acceptance_detailed_history: {adjusted_acceptance_detailed_history}")
+    # ### run inference_grammar_aligned_track_full_history ###
+    # (sequences,
+    #  scores,
+    #  generations, accepted_tokens_history, accepted_indices_history, acceptance_raw_scores_history,
+    #  acceptance_logits_history,
+    #  acceptance_details_history, adjusted_acceptance_detailed_history) = inference_grammar_aligned_track_full_history(args, model, tokenizer, trie)
+    #
+    #
+    # print(f"sequences: {sequences}")
+    # print(f"scores: {scores}")
+    # print(f"generations: {generations}")
+    # print(f"accepted_tokens_history: {accepted_tokens_history}")
+    # print(f"accepted_indices_history: {accepted_indices_history}")
+    # print(f"acceptance_raw_scores_history: {acceptance_raw_scores_history}")
+    # print(f"acceptance_logits_history: {acceptance_logits_history}")
+    # print(f"acceptance_details_history: {acceptance_details_history}")
+    # print(f"adjusted_acceptance_detailed_history: {adjusted_acceptance_detailed_history}")
 
     # ### run gad ###
-    # output, faithful, ideal, elapsed_time = run_inference_grammar_aligned(args, trie)
+    run_inference_gad_loading_trie(args)
 
 
 
