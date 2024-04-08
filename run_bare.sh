@@ -4,8 +4,9 @@ GPUs=(0 1 2 3 4)
 gpu_counter=0
 
 # Define default values for the arguments
-MODEL_IDS=("bigcode/starcoder2-7b" "bigcode/starcoder2-3b" "bigcode/starcoder2-15b")
-ITER=100
+#MODEL_IDS=("bigcode/starcoder2-7b" "bigcode/starcoder2-3b" "bigcode/starcoder2-15b")
+MODEL_IDS=("mistralai/Mistral-7B-Instruct-v0.2")
+ITER=1
 MAX_NEW_TOKENS=512
 SYGUS_PROMPT_FILE="/nobackup2/yf/mila/GD/prompts/pre_prompt.jsonl"
 PROMPT_TYPES=("bare" "completion")

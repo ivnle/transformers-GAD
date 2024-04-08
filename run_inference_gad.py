@@ -33,62 +33,12 @@ from inference_utils import (get_file,
                              save_trie_to_pkl,
                              construct_trie_file)
 
-
+from arg_parser import ArgumentParser
 #models=("meta-llama/Llama-2-7b-hf"
 #"meta-llama/Llama-2-13b-hf"
 #"meta-llama/Llama-2-70b-hf"
 #"mistralai/Mixtral-8x7B-Instruct-v0.1"
 # "mistralai/Mistral-7B-Instruct-v0.1")
-
-def parse_args():
-    parser = argparse.ArgumentParser(description="Inference with grammar constraint decoding.")
-    parser.add_argument("--model_id", type=str, default="mistralai/Mistral-7B-Instruct-v0.1",
-                        help="pretrained model checkpoint.")
-    parser.add_argument("--cache_dir", type=str, default='/nobackup2/yf/mila/GD_caches',
-                        help="Where to store cache tokenizers and models.")
-    parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/mila/GD/examples/grammars/",
-                        help="Base directory for test grammars.")
-    parser.add_argument("--grammar_file", type=str, default="string_01.ebnf",
-                        help="Grammar file to test.")
-    parser.add_argument("--num_return_sequences", type=int, default=1,
-                        help="Number of sequences to return.")
-    # parser.add_argument("--max_length", type=int, default=50,
-    #                     help="Maximum length of generated sequences when do not sample.")
-    # parser.add_argument("--seed", type=int, default=42,
-    #                     help="Random seed for reproducibility.")
-    # parser.add_argument("--num_beams", type=int, default=5,
-    #                     help="Number of beams for beam search.")
-    parser.add_argument("--repetition_penalty", type=float, default=1.0,
-                         help="Repetition penalty for greedy decoding.")
-    parser.add_argument("--prompt", type=str, default=f"Generate a program.",
-                        help="Depreciated, warning: only test prompt for the model.")
-    parser.add_argument("--iter", type=int, default=1,
-                        help="Number of iterations for inference.")
-    parser.add_argument("--temperature", type=float, default=1.0,
-                        help="Temperature for sampling.")
-    parser.add_argument("--do_sample", action='store_true',
-                        help="Whether to sample from the model.")
-    parser.add_argument("--top_p", type=float, default=1.0,
-                        help="Top p for nucleus sampling.")
-    parser.add_argument("--top_k", type=int, default=0,
-                        help="Top k for sampling.")
-    # parser.add_argument("--log_file", type=str, default='/nobackup2/yf/mila/GD/log/test_log.txt',
-    #                     help="Where to store log file.")
-    parser.add_argument("--max_new_tokens", type=int, default=512,
-                        help="Maximum number of new tokens to generate.")
-    parser.add_argument("--sygus_prompt_file", type=str, default="/nobackup2/yf/mila/GD/prompts/pre_prompt.jsonl",
-                        help="File path to prompts for sygus task.")
-    parser.add_argument("--prompt_type", type=str, choices=["bare", "completion"], default="bare",
-                        help="Prompt type for sygus task.")
-    parser.add_argument("--output_folder", type=str, default="/nobackup2/yf/mila/GD/results/",
-                        help="Output folder to store results.")
-    parser.add_argument("--grammar_name", type=str, default="PRE_100",
-                        help="Name of the grammar, mainly used for call grammar file.")
-    parser.add_argument("--trie_folder", type=str, default="/nobackup2/yf/mila/GD/results_trie/",
-                        help="Folder to store trie files.")
-
-    args = parser.parse_args()
-    return args
 
 def load_oracle_trie(trie_file):
     with open(trie_file, 'rb') as f:
@@ -206,7 +156,9 @@ def run_inference_gad_loading_trie(args):
 
 
 if __name__ == "__main__":
-    args = parse_args()
+    arg_parser = ArgumentParser(version="gad")
+    args = arg_parser.parse_args()
+
 
     print(f"model_id: {args.model_id}")
     print(f"repetition_penalty: {args.repetition_penalty}")
