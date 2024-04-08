@@ -133,6 +133,6 @@ if __name__ == '__main__':
 
     sys.path.append('/nobackup2/yf/mila/GD/transformers_gad')
 
-    with open('/nobackup2/yf/mila/GD/results_trie/trie_PRE_100_bare_starcoder2-15b_iter-100.pkl', 'rb') as f:
+    with open('/nobackup2/yf/mila/GD/results_trie/trie_PRE_100_10_binary_3_Mistral-7B-Instruct-v0.1_i10_cpu.pkl', 'rb') as f:
         trie = pickle.load(f)
         trie.print_all_nodes()

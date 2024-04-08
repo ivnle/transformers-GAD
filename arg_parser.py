@@ -3,9 +3,8 @@ import argparse
 class ArgumentParser:
     def __init__(self, version="bare"):
         self.version = version
-        self.parser = argparse.ArgumentParser(description="Inference parser.")
+        self.parser = argparse.ArgumentParser(description="Inference argument parser.")
 
-        # Common arguments across versions
         self._add_basic_arguments()
 
         # Version-specific arguments
@@ -37,13 +36,15 @@ class ArgumentParser:
                                  help="Top k for sampling.")
         self.parser.add_argument("--max_new_tokens", type=int, default=512,
                                  help="Maximum number of new tokens to generate.")
-        self.parser.add_argument("--prompt_type", type=str, choices=["bare", "completion"], default="bare",
+        self.parser.add_argument("--prompt_type", type=str, choices=["bare", "completion", "binary_3"], default="bare",
                                  help="Prompt type for sygus task.")
         self.parser.add_argument("--output_folder", type=str, default="/nobackup2/yf/mila/GD/results/",
                                  help="Output folder to store results.")
         self.parser.add_argument("--device", type=str, choices=["cpu", "cuda", "mps", "xpu", "npu"], default="cpu",
                                  help="The device type.")
-        self.parser.add_argument("--sygus_prompt_file", type=str, default="/nobackup2/yf/mila/GD/prompts/pre_prompt.jsonl",
+        self.parser.add_argument("--grammar_prompt_file", type=str, default="/nobackup2/yf/mila/GD/benchmarks/comp/2018/PBE_BV_Track/PRE_100_10.sl",
+                                 help="File path to prompts for sygus task.")
+        self.parser.add_argument("--instruct_prompt_file", type=str, default="/nobackup2/yf/mila/GD/prompts/pre_prompt.jsonl",
                                  help="File path to prompts for sygus task.")
         self.parser.add_argument("--dtype", type=str, choices=["float32", "float16", "bfloat16"], default=None,
                                  help="Override the default dtype. If not set, it will use float16 on GPU and float32 on CPU.")
@@ -62,16 +63,12 @@ class ArgumentParser:
                                  help="Base directory for test grammars.")
         self.parser.add_argument("--grammar_file", type=str, default="string_01.ebnf",
                                  help="Grammar file to test.")
-        self.parser.add_argument("--grammar_name", type=str, default="PRE_100",
-                                 help="Name of the grammar, mainly used for call grammar file.")
 
     def _add_gad_arguments(self):
         self.parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/mila/GD/examples/grammars/",
                                  help="Base directory for test grammars.")
         self.parser.add_argument("--grammar_file", type=str, default="string_01.ebnf",
-                                 help="Grammar file to test.")
-        self.parser.add_argument("--grammar_name", type=str, default="PRE_100",
-                                 help="Name of the grammar, mainly used for call grammar file.")
+                                 help="Grammar file only to test, sygus is constructed automatically.")
         self.parser.add_argument("--trie_folder", type=str, default="/nobackup2/yf/mila/GD/results_trie/",
                                  help="Folder to store trie files.")
 

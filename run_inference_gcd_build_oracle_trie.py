@@ -11,10 +11,11 @@ import os
 import random
 from inference_utils import (get_file,
                              load_model_tokenizer_hf,
-                             get_sygus_prompt,
+                             get_prompt,
                              get_grammar_file_path_by_prompt_type,
                              save_trie_to_pkl,
-                             construct_trie_file)
+                             construct_trie_file,
+                             construct_sygus_prompt)
 import subprocess
 import matplotlib.pyplot as plt
 import numpy as np
@@ -221,6 +222,7 @@ def inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
     input_ids = tokenizer(
         [prompt], add_special_tokens=False, return_tensors="pt", padding=True
     )["input_ids"]
+    input_ids = input_ids.to(model.device)
 
     output = model.generate(
         input_ids,
@@ -252,10 +254,16 @@ def run_inference_gcd_construct_oracle_trie(args):
     output_file_path = construct_gcd_output_file_path(args)
     trie_file = construct_trie_file(args)
     trie = Trie()
-    prompt = get_sygus_prompt(args.sygus_prompt_file, args.prompt_type)
-    test_file = get_grammar_file_path_by_prompt_type(args)
-    grammar_prompt = test_file.split("/")[-1]
-    grammar_prompt = grammar_prompt.split(".")[0]
+    if "binary" in args.prompt_type:
+        prompt = get_prompt(args, args.prompt_type)
+        test_file = get_file(args)
+        grammar_constr_name = test_file.split("/")[-1]
+        grammar_prompt_file = None
+    else:
+        prompt = construct_sygus_prompt(args, args.prompt_type)
+        test_file = get_grammar_file_path_by_prompt_type(args)
+        grammar_constr_name = test_file.split("/")[-1]
+        grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
 
     # #### only for test purpose ####
     # prompt = args.prompt
@@ -274,7 +282,8 @@ def run_inference_gcd_construct_oracle_trie(args):
             result = {"answer": generations,
                       "prompt": prompt,
                       "prompt_type": args.prompt_type,
-                      "grammar": grammar_prompt}
+                      "grammar_prompt": grammar_prompt_file,
+                      "grammar_constr": grammar_constr_name}
             print(f"result: {result}")
             # print(f"generated_tokens: {generated_t okens}, acceptance_details_history: {acceptance_details_history}")
             update_oracle_trie(trie, generated_tokens, acceptance_details_history)
@@ -301,8 +310,11 @@ def run_inference_gcd_construct_oracle_trie(args):
         adjusted_trie_after = Trie()
         for i in tqdm(range(args.iter), desc="Running Inference"):
             generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations = inference_gad(args, model, tokenizer, prompt, grammar_str, trie)
-            result = {"answer": generations, "prompt": prompt, "prompt_type": args.prompt_type,
-                      "grammar": "PRE_100_10.sl"}
+            result = {"answer": generations,
+                      "prompt": prompt,
+                      "prompt_type": args.prompt_type,
+                      "grammar_prompt": grammar_prompt_file,
+                      "grammar_constr": grammar_constr_name}
             print(f"result: {result}")
             # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
             update_oracle_trie(adjusted_trie_before, generated_tokens, acceptance_details_history)
@@ -325,7 +337,9 @@ def run_inference_gcd_construct_oracle_trie(args):
 
 def construct_gcd_output_file_path(args):
     model_name = args.model_id.split("/")[-1]
-    output_file_path = os.path.join(args.output_folder, f"gcd_g-pre_100_10_{model_name}_p-{args.prompt_type}_iter-{args.iter}.jsonl")
+    grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
+    grammar_prompt_name = grammar_prompt_file.split(".")[0]
+    output_file_path = os.path.join(args.output_folder, f"gcd_g-{grammar_prompt_name}_{model_name}_p-{args.prompt_type}_i{args.iter}_{args.device}.jsonl")
     output_directory = os.path.dirname(output_file_path)
     # Ensure the directory exists
     if not os.path.exists(output_directory):

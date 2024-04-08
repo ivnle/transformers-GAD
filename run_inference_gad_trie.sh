@@ -23,10 +23,13 @@ for PROMPT_TYPE in "${PROMPT_TYPES[@]}"; do
     --top_p 1.0 \
     --top_k 0 \
     --max_new_tokens $MAX_NEW_TOKENS \
-    --sygus_prompt_file "/nobackup2/yf/mila/GD/prompts/pre_prompt.jsonl" \
     --prompt_type "$PROMPT_TYPE" \
     --output_folder "/nobackup2/yf/mila/GD/results/" \
-    --base_grammar_dir "/nobackup2/yf/mila/GD/examples/sygus/" &
+    --base_grammar_dir "/nobackup2/yf/mila/GD/examples/sygus/" \
+    --instruct_prompt_file "/nobackup2/yf/mila/GD/prompts/pre_prompt.jsonl" \
+    --grammar_prompt_file "/nobackup2/yf/mila/GD/benchmarks/comp/2018/PBE_BV_Track/PRE_100_10.sl" \
+    --dtype "float32" \
+    --device "cuda" &
     let "gpu_counter = (gpu_counter + 1) % ${#GPUs[@]}"
 done
 

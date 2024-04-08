@@ -28,10 +28,11 @@ from check_is_valid_string import is_valid_string_start_w_1_all_0, is_valid_stri
 from vllm import LLM, SamplingParams
 from inference_utils import (get_file,
                              load_model_tokenizer_hf,
-                             get_sygus_prompt,
+                             get_prompt,
                              get_grammar_file_path_by_prompt_type,
                              save_trie_to_pkl,
-                             construct_trie_file)
+                             construct_trie_file,
+                             construct_sygus_prompt)
 
 from arg_parser import ArgumentParser
 #models=("meta-llama/Llama-2-7b-hf"
@@ -47,23 +48,16 @@ def load_oracle_trie(trie_file):
 
 def construct_gad_output_file_path(args):
     model_name = args.model_id.split("/")[-1]
-    output_file_path = os.path.join(args.output_folder, f"gad_g-pre_100_10_{model_name}_p-{args.prompt_type}_iter-{args.iter}.jsonl")
+    grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
+    grammar_prompt_name = grammar_prompt_file.split(".")[0]
+    output_file_path = os.path.join(args.output_folder,
+                                    f"gad_g-{grammar_prompt_name}_{model_name}_p-{args.prompt_type}_i{args.iter}_{args.device}.jsonl")
     output_directory = os.path.dirname(output_file_path)
     # Ensure the directory exists
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
 
     return output_file_path
-
-def get_sygus_prompt(filename, prompt_type):
-    with open(filename, 'r') as file:
-        for line in file:
-            data = json.loads(line)
-
-            if data.get('prompt_type') == prompt_type:
-                return data['prompt']
-
-        raise ValueError(f"Prompt type {prompt_type} not found in file {filename}")
 
 def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
     """
@@ -81,6 +75,8 @@ def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
     input_ids = tokenizer(
         [prompt], add_special_tokens=False, return_tensors="pt", padding=True
     )["input_ids"]
+
+    input_ids = input_ids.to(model.device)
 
     output = model.generate(
         input_ids,
@@ -111,8 +107,17 @@ def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
 def run_inference_gad_loading_trie(args):
     model, tokenizer = load_model_tokenizer_hf(args)
     trie_file = construct_trie_file(args)
-    prompt = get_sygus_prompt(args.sygus_prompt_file, args.prompt_type)
-    test_file = get_grammar_file_path_by_prompt_type(args)
+
+    if "binary" in args.prompt_type:
+        prompt = get_prompt(args, args.prompt_type)
+        test_file = get_file(args)
+        grammar_constr_name = test_file.split("/")[-1]
+        grammar_prompt_file = None
+    else:
+        prompt = construct_sygus_prompt(args, args.prompt_type)
+        test_file = get_grammar_file_path_by_prompt_type(args)
+        grammar_constr_name = test_file.split("/")[-1]
+        grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
 
     # #### only for test purpose ####
     # prompt = args.prompt
@@ -133,8 +138,11 @@ def run_inference_gad_loading_trie(args):
         adjusted_trie_after = Trie()
         for i in tqdm(range(args.iter), desc="Running Inference"):
             generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations = inference_gad(args, model, tokenizer, prompt, grammar_str, trie)
-            result = {"answer": generations, "prompt": prompt, "prompt_type": args.prompt_type,
-                      "grammar": "PRE_100_10.sl"}
+            result = {"answer": generations,
+                      "prompt": prompt,
+                      "prompt_type": args.prompt_type,
+                      "grammar_prompt": grammar_prompt_file,
+                      "grammar_constr": grammar_constr_name}
             print(f"result: {result}")
             # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
             update_oracle_trie(adjusted_trie_before, generated_tokens, acceptance_details_history)

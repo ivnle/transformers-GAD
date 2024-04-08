@@ -6,6 +6,10 @@ import pickle
 import sys
 import hashlib
 import typing
+import re
+from arg_parser import ArgumentParser
+
+GRAMMAR_PROMPT_TOKEN = "<|grammar_prompt|>"
 
 def load_model_tokenizer_hf(args):
     tokenizer = AutoTokenizer.from_pretrained(args.model_id,
@@ -30,20 +34,49 @@ def get_file(args):
     grammar_file = args.grammar_file
     return os.path.join(base_dir, grammar_file)
 
+def extract_prefix(filename):
+    pattern = r"(.*?)(?=_\d+\.sl$)"
+    match = re.search(pattern, filename)
+
+    if match:
+        return match.group(1)
+    else:
+        return filename
+
 def get_grammar_file_path_by_prompt_type(args):
     base_dir = args.base_grammar_dir
-    grammar_file = f"{args.grammar_name}_{args.prompt_type}.ebnf"
+    grammar_prompt_name = args.grammar_prompt_file.split("/")[-1]
+    grammar_prefix = extract_prefix(grammar_prompt_name)
+
+    grammar_file = f"{grammar_prefix}_{args.prompt_type}.ebnf"
     return os.path.join(base_dir, grammar_file)
 
-def get_sygus_prompt(filename, prompt_type):
-    with open(filename, 'r') as file:
+def get_prompt(args, prompt_type):
+    """depreciated, use construct_sygus_prompt instead for generalized version."""
+    with open(args.instruct_prompt_file, 'r') as file:
         for line in file:
             data = json.loads(line)
 
             if data.get('prompt_type') == prompt_type:
                 return data['prompt']
 
-        raise ValueError(f"Prompt type {prompt_type} not found in file {filename}")
+        raise ValueError(f"Prompt type {prompt_type} not found in file {args.instruct_prompt_file}")
+
+def construct_sygus_prompt(args, prompt_type):
+    with open(args.grammar_prompt_file, "r") as file:
+        grammar_str = file.read()
+
+    with open(args.instruct_prompt_file, 'r') as file:
+        for line in file:
+            data = json.loads(line)
+
+            if data.get('prompt_type') == prompt_type:
+                instruct_prompt = data['instruct_prompt']
+                prompt = instruct_prompt.replace(GRAMMAR_PROMPT_TOKEN, grammar_str)
+                return prompt
+
+        raise ValueError(f"Prompt type {prompt_type} not found in file {args.instruct_prompt_file}")
+
 
 def save_trie_to_pkl(trie, file_path):
     sys.setrecursionlimit(10000000)
@@ -52,10 +85,12 @@ def save_trie_to_pkl(trie, file_path):
 
 def construct_trie_file(args, trie_status=None):
     model_name = args.model_id.split("/")[-1]
+    grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
+    grammar_prompt_name = grammar_prompt_file.split(".")[0]
     if trie_status is None:
-        trie_file = f"trie_{args.grammar_name}_{args.prompt_type}_{model_name}_iter-{args.iter}_{args.device}.pkl"
+        trie_file = f"trie_{grammar_prompt_name}_{args.prompt_type}_{model_name}_i{args.iter}_{args.device}.pkl"
     else:
-        trie_file = f"trie_{args.grammar_name}_{args.prompt_type}_{model_name}_iter-{args.iter}_{args.device}_{trie_status}.pkl"
+        trie_file = f"trie_{grammar_prompt_name}_{args.prompt_type}_{model_name}_i{args.iter}_{args.device}_{trie_status}.pkl"
     trie_file_path = os.path.join(args.trie_folder, trie_file)
     return trie_file_path
 
@@ -64,3 +99,9 @@ def stable_hash(s: str) -> int:
     hash_obj = hashlib.sha256()
     hash_obj.update(bytes(s, "UTF-8"))
     return int.from_bytes(hash_obj.digest(), "big")
+
+if __name__ == "__main__":
+    parser = ArgumentParser()
+    args = parser.parse_args()
+    prompt = construct_sygus_prompt(args, "completion")
+    print(prompt)

@@ -5,11 +5,10 @@ gpu_counter=0
 
 # Define default values for the arguments
 #MODEL_IDS=("bigcode/starcoder2-7b" "bigcode/starcoder2-3b" "bigcode/starcoder2-15b")
-MODEL_IDS=("mistralai/Mistral-7B-Instruct-v0.2")
-ITER=1
+MODEL_IDS=("mistralai/Mistral-7B-Instruct-v0.1")
+ITER=10
 MAX_NEW_TOKENS=512
-SYGUS_PROMPT_FILE="/nobackup2/yf/mila/GD/prompts/pre_prompt.jsonl"
-PROMPT_TYPES=("bare" "completion")
+PROMPT_TYPES=("binary_3")
 
 # Outer loop for MODEL_ID
 for MODEL_ID in "${MODEL_IDS[@]}"; do
@@ -27,9 +26,12 @@ for MODEL_ID in "${MODEL_IDS[@]}"; do
         --top_p 1.0 \
         --top_k 0 \
         --max_new_tokens $MAX_NEW_TOKENS \
-        --sygus_prompt_file "$SYGUS_PROMPT_FILE" \
+        --instruct_prompt_file "/nobackup2/yf/mila/GD/prompts/pre_prompt.jsonl" \
         --prompt_type "$PROMPT_TYPE" \
-        --output_folder "/nobackup2/yf/mila/GD/results/" &
+        --output_folder "/nobackup2/yf/mila/GD/results/" \
+        --grammar_prompt_file "/nobackup2/yf/mila/GD/benchmarks/comp/2018/PBE_BV_Track/PRE_100_10.sl" \
+        --dtype "float32" \
+        --device "cuda" &
         let "gpu_counter = (gpu_counter + 1) % ${#GPUs[@]}"
     done
 done
