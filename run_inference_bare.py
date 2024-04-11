@@ -14,6 +14,7 @@ import logging
 from tqdm import tqdm
 import time
 from datetime import datetime
+from inference_utils import get_prompt, get_grammar_file_path_by_prompt_type, construct_sygus_prompt
 
 
 #models=("meta-llama/Llama-2-7b-hf"
@@ -61,12 +62,26 @@ def inference_bare(args, model, tokenizer, prompt):
 
 def run_inference_bare(args,output_file_path):
     model, tokenizer = load_model_tokenizer_hf(args)
-    prompt = get_sygus_prompt(args.sygus_prompt_file, args.prompt_type)
+    if "binary" in args.prompt_type:
+        prompt = get_prompt(args, args.prompt_type)
+        # test_file = get_file(args)
+        # grammar_constr_name = test_file.split("/")[-1]
+        grammar_prompt_file = None
+    else:
+        prompt = construct_sygus_prompt(args, args.prompt_type)
+        # test_file = get_grammar_file_path_by_prompt_type(args)
+        # grammar_constr_name = test_file.split("/")[-1]
+        grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
     start_time = time.time()
     with open(output_file_path, 'a', encoding='utf-8') as outfile:
         for i in tqdm(range(args.iter), desc="Running Inference"):
             generations = inference_bare(args, model, tokenizer, prompt)
-            result = {"answer": generations, "prompt": prompt, "prompt_type": args.prompt_type, "grammar": "PRE_100_10.sl"}
+            result = {"answer": generations,
+                      "prompt": prompt,
+                      "prompt_type": args.prompt_type,
+                      "grammar_prompt": grammar_prompt_file,
+                    #   "grammar_constr": grammar_constr_name
+                      }
             print(f"result: {result}")
 
             json_record = json.dumps(result)
@@ -79,9 +94,11 @@ def run_inference_bare(args,output_file_path):
     print(f"Results saved to {output_file_path}")
     print(f"Total execution time: {end_time - start_time:.2f} seconds.")
 
-def construct_output_file_path(args):
+def construct_bare_output_file_path(args):
     model_name = args.model_id.split("/")[-1]
-    output_file_path = os.path.join(args.output_folder, f"bare_g-pre_100_10_{model_name}_p-{args.prompt_type}_iter-{args.iter}.jsonl")
+    grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
+    grammar_prompt_name = grammar_prompt_file.split(".")[0]
+    output_file_path = os.path.join(args.output_folder, f"bare_g-{grammar_prompt_name}_{model_name}_p-{args.prompt_type}_i{args.iter}_{args.device}.jsonl")
     output_directory = os.path.dirname(output_file_path)
     # Ensure the directory exists
     if not os.path.exists(output_directory):
@@ -92,7 +109,7 @@ def construct_output_file_path(args):
 if __name__ == "__main__":
     arg_parser = ArgumentParser(version="bare")
     args = arg_parser.parse_args()
-    output_file_path = construct_output_file_path(args)
+    output_file_path = construct_bare_output_file_path(args)
 
     print(f"model_id: {args.model_id}")
     print(f"repetition_penalty: {args.repetition_penalty}")
