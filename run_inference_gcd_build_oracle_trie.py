@@ -11,7 +11,6 @@ from inference_utils import (get_file,
                              save_trie_to_pkl,
                              construct_trie_file,
                              construct_sygus_prompt)
-from GD.prev.get_desired_string_dict import stringsofLenk
 import json
 from tqdm import tqdm
 import time
@@ -25,131 +24,12 @@ from arg_parser import ArgumentParser
 #"mistralai/Mixtral-8x7B-Instruct-v0.1")
 
 
-def inference_grammar_constrained(args, model, tokenizer):
-    """
-    depreciated, only apply for generating binary strings.
-    """
-    test_file = get_file(args)
-
-    # Load grammar
-    with open(test_file, "r") as file:
-        grammar_str = file.read()
-    print(f"grammar_str: {grammar_str}")
-    grammar = IncrementalGrammarConstraint(grammar_str, "root", tokenizer)
-    grammar_processor = GrammarConstrainedLogitsProcessor(grammar)
-
-    # Generate
-    prompt = args.prompt
-    input_ids = tokenizer(
-        [prompt], add_special_tokens=False, return_tensors="pt", padding=True
-    )["input_ids"]
-    # tensor([[16968,   368,  5706,   263,  7581,  1347,   310,  3309,   472,  1556,
-    #          29871, 29946, 29973]])
-
-    # if args.do_sample == False:
-    #     output = model.generate(
-    #         input_ids,
-    #         do_sample=args.do_sample,
-    #         max_length=args.max_length,
-    #         num_beams=args.nums_beams,
-    #         logits_processor=[grammar_processor],
-    #         repetition_penalty=args.repetition_penalty,
-    #         num_return_sequences=args.num_return_sequences,
-    #     )
-    #
-    # else:
-    output = model.generate(
-        input_ids,
-        do_sample=True,
-        pad_token_id=tokenizer.eos_token_id,
-        eos_token_id=tokenizer.eos_token_id,
-        # num_beams=args.num_beams,
-        max_new_tokens=args.max_new_tokens,
-        top_p=args.top_p,
-        # top_k=args.top_k,
-        temperature=args.temperature,
-        logits_processor=[grammar_processor],
-        repetition_penalty=args.repetition_penalty,
-        # early_stopping=True,
-        num_return_sequences=args.num_return_sequences
-    )
-
-    # decode output
-    generations = tokenizer.batch_decode(output, skip_special_tokens=True)
-    print(f"grammar constrained generations: {generations}")
-    return generations
-
-def run_inference_grammar_constrained(args):
-    """
-    depreciated, only apply for generating binary strings.
-    """
-    model, tokenizer = load_model_tokenizer_hf(args)
-    tokenizer.pad_token = tokenizer.eos_token
-
-    def get_current_time_as_string():
-        return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-
-    log_file_path = args.log_file
-    start_time = time.time()
-
-    with open(get_file(args), 'r') as f:
-        input_grammar = f.read()
-    # output = stringsofLenk_max(input_grammar, args.string_length)
-    output = stringsofLenk(input_grammar, args.string_length)
-    ideal = {key: round(args.iter / len(output.keys())) for key in output.keys()}
-    faithful = output.copy()
-    output['other'] = 0
-    ideal['other'] = 0
-    with open(log_file_path, 'a') as log:
-        log.write(f"{get_current_time_as_string()} - input_grammar: {input_grammar}\n")
-        for i in tqdm(range(args.iter), desc="Running Inference"):
-            result = inference_grammar_constrained(args, model, tokenizer)
-            log.write(f"{get_current_time_as_string()} - result: {result}\n")
-            log.flush()
-            # print(f'start logging...')
-            res = result[0].split(".")[2]
-            # print(f"res: {res}")
-            if res in output:
-                output[res] += 1
-            else:
-                output['other'] += 1
-
-            faithful[res] = faithful.get(res, 0) + 1 # collect all the outputs instead of classifying to others
-            if i % 10 == 0:
-                log.write(f"{get_current_time_as_string()} - Iteration: {i+1}\n")
-                log.flush()
-                log.write(f"{get_current_time_as_string()} - Output: {output}\n")
-                log.flush()
-                log.write(f"{get_current_time_as_string()} - Faithful: {faithful}\n")
-                log.flush()
-        end_time = time.time()
-        elapsed_time = end_time - start_time
-        log.write(f"Elapsed time: {elapsed_time} seconds\n")
-        log.flush()
-        log.write(f"model_id: {args.model_id}\n")
-        log.flush()
-        log.write(f"repetition_penalty: {args.repetition_penalty}\n")
-        log.flush()
-        # print(f"num_beams: {args.num_beams}")
-        log.write(f"temperature: {args.temperature}\n")
-        log.flush()
-        log.write(f"top_p: {args.top_p}\n")
-        log.flush()
-        log.write(f"max_new_tokens: {args.max_new_tokens}\n")
-        log.flush()
-        log.write(f"{get_current_time_as_string()} - output: {output}\n")
-        log.flush()
-        log.write(f"{get_current_time_as_string()} - faithful: {faithful}\n")
-        log.flush()
-        log.write(f"{get_current_time_as_string()} - ideal: {ideal}\n")
-        log.flush()
-    return output, faithful, ideal, elapsed_time
-
 def inference_gcd(args, model, tokenizer):
     """
     latest version of gcd test function
     """
     test_file = get_grammar_file_path_by_prompt_type(args)
+    print(f"test_file: {test_file}")
     prompt = args.prompt
 
     # Load grammar
@@ -349,10 +229,10 @@ if __name__ == "__main__":
     print(f"output_folder: {args.output_folder}")
 
     # test to see whether grammar file works
-    inference_gcd(args, model, tokenizer)
+    # inference_gcd(args, model, tokenizer)
 
     # run inference and build trie
-    # run_inference_gcd_construct_oracle_trie(args)
+    run_inference_gcd_construct_oracle_trie(args)
 
 
 

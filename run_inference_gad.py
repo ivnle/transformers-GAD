@@ -10,22 +10,14 @@ from transformers_gad.generation.gad_logits_processor import GrammarAlignedGroun
 from transformers_gad.build_oracle.build_oracle_trie import run_demo_trie_string_01_len_3
 from transformers_gad.generation.gad_logits_processor_oracle import GrammarAlignedOracleLogitsProcessor
 from transformers_gad.build_oracle.build_oracle_trie import Trie, TrieNode, update_oracle_trie
-import argparse
 import os
-import random
 from inference_utils import get_file, load_model_tokenizer_hf
-import subprocess
 import matplotlib.pyplot as plt
 import numpy as np
-from GD.prev import get_desired_string_dict
-from GD.prev.get_desired_string_dict import stringsofLenk_max, stringsofLenk, convert_grammar
 import json
-import logging
 from tqdm import tqdm
 import time
 from datetime import datetime
-from check_is_valid_string import is_valid_string_start_w_1_all_0, is_valid_string_0, is_valid_string_1, is_valid_string_01
-from vllm import LLM, SamplingParams
 from inference_utils import (get_file,
                              load_model_tokenizer_hf,
                              get_prompt,
