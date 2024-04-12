@@ -10,8 +10,8 @@ from inference_utils import get_file, load_model_tokenizer_hf
 import subprocess
 import matplotlib.pyplot as plt
 import numpy as np
-import get_desired_string_dict
-from get_desired_string_dict import stringsofLenk_max, stringsofLenk, convert_grammar, stringsofLenk_01
+from GD.prev import get_desired_string_dict
+from GD.prev.get_desired_string_dict import stringsofLenk_max, stringsofLenk, convert_grammar
 import json
 import logging
 from tqdm import tqdm
@@ -28,13 +28,13 @@ from vllm import LLM, SamplingParams
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Inference with grammar constraint decoding.")
-    parser.add_argument("--model_id", type=str, default="mistralai/Mistral-7B-Instruct-v0.1",
+    parser.add_argument("--model_id", type=str, default="meta-llama/Llama-2-13b-hf",
                         help="pretrained model checkpoint.")
     parser.add_argument("--cache_dir", type=str, default='/nobackup2/yf/mila/GD_caches',
                         help="Where to store cache tokenizers and models.")
-    parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/mila/GD/examples/sygus/",
+    parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/mila/GD/examples/grammars/",
                         help="Base directory for test grammars.")
-    parser.add_argument("--grammar_file", type=str, default="PRE_100_completion.ebnf",
+    parser.add_argument("--grammar_file", type=str, default="string_01.ebnf",
                         help="Grammar file to test.")
     parser.add_argument("--num_return_sequences", type=int, default=1,
                         help="Number of sequences to return.")
@@ -44,13 +44,13 @@ def parse_args():
     #                     help="Random seed for reproducibility.")
     # parser.add_argument("--num_beams", type=int, default=5,
     #                     help="Number of beams for beam search.")
-    parser.add_argument("--repetition_penalty", type=float, default=1.1,
+    parser.add_argument("--repetition_penalty", type=float, default=1.0,
                          help="Repetition penalty for greedy decoding.")
     parser.add_argument("--string_length", type=int, default=5,
                         help="Length of string to generate.")
     parser.add_argument("--prompt", type=str, default=f"Generate a random binary string of length 5?",
                         help="Prompt for model inference.")
-    parser.add_argument("--iter", type=int, default=500,
+    parser.add_argument("--iter", type=int, default=5,
                         help="Number of iterations for inference.")
     parser.add_argument("--temperature", type=float, default=0.7,
                         help="Temperature for sampling.")
@@ -62,7 +62,7 @@ def parse_args():
     #                     help="Top k for sampling.")
     parser.add_argument("--log_file", type=str, default='/nobackup2/yf/mila/GD/log/test_log.txt',
                         help="Where to store log file.")
-    parser.add_argument("--max_new_tokens", type=int, default=512,
+    parser.add_argument("--max_new_tokens", type=int, default=30,
                         help="Maximum number of new tokens to generate.")
 
     args = parser.parse_args()
@@ -86,21 +86,33 @@ def inference_grammar_constrained(args, model, tokenizer):
     # tensor([[16968,   368,  5706,   263,  7581,  1347,   310,  3309,   472,  1556,
     #          29871, 29946, 29973]])
 
-    output = model.generate(
-        input_ids,
-        do_sample=True,
-        pad_token_id=tokenizer.eos_token_id,
-        eos_token_id=tokenizer.eos_token_id,
-        # num_beams=args.num_beams,
-        max_new_tokens=args.max_new_tokens,
-        top_p=args.top_p,
-        # top_k=args.top_k,
-        temperature=args.temperature,
-        logits_processor=[grammar_processor],
-        repetition_penalty=args.repetition_penalty,
-        # early_stopping=True,
-        num_return_sequences=args.num_return_sequences
-    )
+    if args.do_sample == False:
+        output = model.generate(
+            input_ids,
+            do_sample=args.do_sample,
+            max_length=args.max_length,
+            num_beams=args.nums_beams,
+            logits_processor=[grammar_processor],
+            repetition_penalty=args.repetition_penalty,
+            num_return_sequences=args.num_return_sequences,
+        )
+
+    else:
+        output = model.generate(
+            input_ids,
+            do_sample=args.do_sample,
+            pad_token_id=tokenizer.eos_token_id,
+            eos_token_id=tokenizer.eos_token_id,
+            # num_beams=args.num_beams,
+            max_new_tokens=args.max_new_tokens,
+            top_p=args.top_p,
+            # top_k=args.top_k,
+            temperature=args.temperature,
+            logits_processor=[grammar_processor],
+            repetition_penalty=args.repetition_penalty,
+            # early_stopping=True,
+            num_return_sequences=args.num_return_sequences
+        )
 
     # decode output
     generations = tokenizer.batch_decode(output, skip_special_tokens=True)
@@ -153,14 +165,19 @@ def inference_greedy_vllm(args):
 def run_inference_grammar_constrained(args):
     model, tokenizer = load_model_tokenizer_hf(args)
     tokenizer.pad_token = tokenizer.eos_token
-    logging.basicConfig(filename=args.log_file, level=logging.INFO,
-                        format='%(asctime)s:%(levelname)s:%(message)s')
     start_time = time.time()
     with open(get_file(args), 'r') as f:
         input_grammar = f.read()
-    logging.info(f"input_grammar: {input_grammar}")
+
+    print(f"model_id: {args.model_id}")
+    print(f"repetition_penalty: {args.repetition_penalty}")
+    # print(f"num_beams: {args.num_beams}")
+    print(f"temperature: {args.temperature}")
+    print(f"top_p: {args.top_p}")
+    print(f"max_new_tokens: {args.max_new_tokens}")
+
     # output = stringsofLenk_max(input_grammar, args.string_length)
-    output = stringsofLenk_01(input_grammar, args.string_length)
+    output = stringsofLenk(input_grammar, args.string_length)
     ideal = {key: round(args.iter / len(output.keys())) for key in output.keys()}
     faithful = output.copy()
     output['other'] = 0
@@ -168,31 +185,19 @@ def run_inference_grammar_constrained(args):
 
     for i in tqdm(range(args.iter), desc="Running Inference"):
         result = inference_grammar_constrained(args, model, tokenizer)
-        logging.info(f"result: {result}")
+        print(f"result: {result}")
         res = result[0].split(".")[2]
-        # print(f"res: {res}")
         if res in output:
             output[res] += 1
         else:
             output['other'] += 1
 
         faithful[res] = faithful.get(res, 0) + 1 # collect all the outputs instead of classifying to others
-        # if i % 10 == 0:
-        #     logging.info(f"Iteration: {i+1}")
-        #     logging.info(f"Output: {output}")
-        #     logging.info(f"Faithful: {faithful}")
+        if i % 10 == 0:
+            logging.info(f"Output: {output}")
+            logging.info(f"Faithful: {faithful}")
     end_time = time.time()
     elapsed_time = end_time - start_time
-    logging.info(f"Elapsed time: {elapsed_time} seconds")
-    logging.info(f"model_id: {args.model_id}")
-    logging.info(f"repetition_penalty: {args.repetition_penalty}")
-    # print(f"num_beams: {args.num_beams}")
-    logging.info(f"temperature: {args.temperature}")
-    logging.info(f"top_p: {args.top_p}")
-    logging.info(f"max_new_tokens: {args.max_new_tokens}")
-    logging.info(f"output: {output}")
-    logging.info(f"faithful: {faithful}")
-    logging.info(f"ideal: {ideal}")
     return output, faithful, ideal, elapsed_time
 
 def run_inference_greedy(args):
@@ -226,6 +231,36 @@ def run_inference_greedy(args):
     print(f"end logging...")
     return generations
 
+
+def run_inference_greedy_w_grammar_rejection(args):
+    # TODO: implement this after find a working prompt
+    start_time = time.time()
+    with open(get_file(args), 'r') as f:
+        input_grammar = f.read()
+
+    output = stringsofLenk_max(input_grammar, args.string_length)
+    ideal = {key: round(args.iter / len(output.keys())) for key in output.keys()}
+    faithful = output.copy()
+    output['other'] = 0
+    ideal['other'] = 0
+
+    for i in tqdm(range(args.iter), desc="Running Inference"):
+        result = inference_greedy(args)
+        print(f"result: {result}")
+        res = result[0].split("?")[1]
+
+        if res in output:
+            output[res] += 1
+        else:
+            output['other'] += 1
+
+        faithful[res] = faithful.get(res, 0) + 1 # collect all the outputs instead of classifying to others
+        if i % 10 == 0:
+            print(f"Output: {output}")
+            print(f"Faithful: {faithful}")
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    return output, faithful, ideal, elapsed_time
 
 def log_results(args, output, faithful, ideal, elapsed_time):
     logging.basicConfig(filename=args.log_file, level=logging.INFO,
@@ -289,15 +324,13 @@ def plot_results(args, output, ideal, datetime_string):
     annotate_bars(modelGen)
     annotate_bars(idealDist)
 
-    plt.savefig(f"/nobackup2/yf/mila/GD/plots/t-{datetime_string}_m-{model}_l-{args.string_length}_g-{grammar}_t-{args.temperature}_rp-{args.repetition_penalty}_tp-{args.top_p}_mnt-{args.max_new_tokens}_iter-{args.iter}.pdf")
+    plt.savefig(f"/nobackup2/yf/mila/GD/plots/t-{datetime_string}_m-{model}_l-{args.string_length}_g-{grammar}_t-{args.temperature}_rp-{args.repetition_penalty}_tp-{args.top_p}_mnt-{args.max_new_tokens}.pdf")
 
 if __name__ == "__main__":
     args = parse_args()
-    model, tokenizer = load_model_tokenizer_hf(args)
 
     print(f"model_id: {args.model_id}")
     print(f"repetition_penalty: {args.repetition_penalty}")
-    print(f"grammar_file: {args.grammar_file}")
     # print(f"num_beams: {args.num_beams}")
     print(f"temperature: {args.temperature}")
     print(f"top_p: {args.top_p}")
@@ -307,13 +340,12 @@ if __name__ == "__main__":
     # print(f"Output: {output}")
     # print(f"Faithful: {faithful}")
     # print(f"Ideal: {ideal}")
+    #
     # datetime_string = log_results(args, output, faithful, ideal, elapsed_time)
     # plot_results(args, output, ideal, datetime_string)
-
-
     # generation = inference_greedy_vllm(args)
     # generation = inference_greedy(args)
-    generation = inference_grammar_constrained(args, model, tokenizer)
-    # generations = run_inference_greedy(args)
+    # generation = inference_grammar_constrained(args)
+    generations = run_inference_greedy(args)
 
 

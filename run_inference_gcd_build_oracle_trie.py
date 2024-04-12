@@ -1,14 +1,9 @@
-import torch
-
-from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
 from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor
 from transformers.generation.logits_process import LogitsProcessorList, InfNanRemoveLogitsProcessor
 from transformers_gad.build_oracle.build_oracle_trie import Trie, update_oracle_trie
 from run_inference_gad import inference_gad, load_oracle_trie, construct_gad_output_file_path
-import argparse
 import os
-import random
 from inference_utils import (get_file,
                              load_model_tokenizer_hf,
                              get_prompt,
@@ -16,25 +11,18 @@ from inference_utils import (get_file,
                              save_trie_to_pkl,
                              construct_trie_file,
                              construct_sygus_prompt)
-import subprocess
-import matplotlib.pyplot as plt
-import numpy as np
-import get_desired_string_dict
-from get_desired_string_dict import stringsofLenk_max, stringsofLenk, convert_grammar
+from GD.prev.get_desired_string_dict import stringsofLenk
 import json
-import logging
 from tqdm import tqdm
 import time
 from datetime import datetime
-from check_is_valid_string import is_valid_string_start_w_1_all_0, is_valid_string_0, is_valid_string_1, is_valid_string_01
-from vllm import LLM, SamplingParams
+from arg_parser import ArgumentParser
 
 
 #models=("meta-llama/Llama-2-7b-hf"
 #"meta-llama/Llama-2-13b-hf"
 #"meta-llama/Llama-2-70b-hf"
 #"mistralai/Mixtral-8x7B-Instruct-v0.1")
-from arg_parser import ArgumentParser
 
 
 def inference_grammar_constrained(args, model, tokenizer):
@@ -360,8 +348,12 @@ if __name__ == "__main__":
     print(f"max_new_tokens: {args.max_new_tokens}")
     print(f"output_folder: {args.output_folder}")
 
-    run_inference_gcd_construct_oracle_trie(args)
-    # inference_gcd(args, model, tokenizer)
+    # test to see whether grammar file works
+    inference_gcd(args, model, tokenizer)
+
+    # run inference and build trie
+    # run_inference_gcd_construct_oracle_trie(args)
+
 
 
 

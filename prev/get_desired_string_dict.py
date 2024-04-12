@@ -109,7 +109,7 @@ def stringsofLenk_01(input_grammar, k):
     return Stringdict
 
 if __name__ == "__main__":
-    f = open('./examples/grammars/string_start_w_0_all_1.ebnf')
+    f = open('../examples/grammars/string_start_w_0_all_1.ebnf')
     input_grammar = f.read()
     f.close()
     converted_grammar_dict = convert_grammar(input_grammar)

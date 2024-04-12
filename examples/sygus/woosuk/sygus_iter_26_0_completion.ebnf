@@ -1,0 +1,5 @@
+root ::= Start ")"
+Start ::= Depth2
+Depth2 ::= "(and " Depth1 " " Depth1 ")" | "(or " Depth1 " " Depth1 ")" | "(xor " Depth2 " " Depth2 ")" | "(not " Depth2 ")" | Depth1
+Depth1 ::= "(and " Depth0 " " Depth0 ")" | "(or " Depth0 " " Depth0 ")" | "(xor " Depth1 " " Depth1 ")" | "(not " Depth1 ")" | Depth0 | "n192"
+Depth0 ::= "true" | "false" | "(xor " Depth0 " " Depth0 ")" | "(not " Depth0)" | "n199" | "n195" | "n189"

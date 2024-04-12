@@ -30,32 +30,36 @@ def load_model_tokenizer_hf(args):
     return model, tokenizer
 
 def get_file(args):
+    """Depreciated, get grammar file path, use only for test case."""
     base_dir = args.base_grammar_dir
     grammar_file = args.grammar_file
     return os.path.join(base_dir, grammar_file)
-
-def extract_prefix(filename):
-    """
-    Extracts the prefix of a filename, which is the part connected by the first underscore.
-    Works for PRE_100 and find_inv, crci
-    """
-    pattern = r"^([^_]+)_([^_]+)"
-    match = re.match(pattern, filename)
-    if match:
-        # Combine the first two captured groups with an underscore
-        return "_".join(match.groups())
-    else:
-        raise ValueError(f"Filename {filename} does not match pattern {pattern}")
-
-def get_grammar_prefix(args):
-    grammar_prompt_name = args.grammar_prompt_file.split("/")[-1]
-    grammar_prompt_name = grammar_prompt_name.split(".")[0]
-    return extract_prefix(grammar_prompt_name)
 
 def get_grammar_file_path_by_prompt_type(args):
     grammar_prefix = get_grammar_prefix(args)
     grammar_file = f"{grammar_prefix}_{args.prompt_type}.ebnf"
     return os.path.join(args.base_grammar_dir, grammar_file)
+
+def extract_prefix(filename):
+    """
+    Extracts the prefix of a filename, which is the part connected by the first underscore.
+    Works for PRE_100 and find_inv, crci; deal with files in woosuk separately.
+    """
+    if "sygus" in filename:
+        return filename
+    else:
+        pattern = r"^([^_]+)_([^_]+)"
+        match = re.match(pattern, filename)
+        if match:
+            # Combine the first two captured groups with an underscore
+            return "_".join(match.groups())
+        else:
+            raise ValueError(f"Filename {filename} does not match pattern {pattern}")
+
+def get_grammar_prefix(args):
+    grammar_prompt_name = args.grammar_prompt_file.split("/")[-1]
+    grammar_prompt_name = grammar_prompt_name.split(".")[0]
+    return extract_prefix(grammar_prompt_name)
 
 def get_prompt(args, prompt_type):
     """depreciated, use construct_sygus_prompt instead for generalized version."""
@@ -127,4 +131,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     prompt = construct_sygus_prompt(args, "completion")
     print(prompt)
-    print(extract_prefix("PRE_100_10"))
+    print(extract_prefix("sygus_iter_26_0"))

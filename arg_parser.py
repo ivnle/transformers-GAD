@@ -59,15 +59,15 @@ class ArgumentParser:
         # self.parser.add_argument("--num_beams", type=int, default=5,
         #                     help="Number of beams for beam search.")
     def _add_gcd_arguments(self):
-        self.parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/lily/GD/examples/grammars/",
-                                 help="Base directory for test grammars.")
-        self.parser.add_argument("--grammar_file", type=str, default="string_01.ebnf",
-                                 help="Grammar file to test.")
+        self.parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/lily/GD/examples/sygus/",
+                                 help="Base directory for grammar constraint files. This directory should be exactly one level above the directory containing the grammar file.")
+        self.parser.add_argument("--grammar_file", type=str, default="find_inv_bare.ebnf",
+                                 help="Grammar file to test, sygus is constructed automatically.")
 
     def _add_gad_arguments(self):
-        self.parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/lily/GD/examples/grammars/",
-                                 help="Base directory for test grammars.")
-        self.parser.add_argument("--grammar_file", type=str, default="string_01.ebnf",
+        self.parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/lily/GD/examples/sygus/",
+                                 help="Base directory for grammar constraint files. This directory should be exactly one level above the directory containing the grammar file.")
+        self.parser.add_argument("--grammar_file", type=str, default="find_inv_bare.ebnf",
                                  help="Grammar file only to test, sygus is constructed automatically.")
         self.parser.add_argument("--trie_folder", type=str, default="/nobackup2/yf/lily/GD/results_trie/",
                                  help="Folder to store trie files.")

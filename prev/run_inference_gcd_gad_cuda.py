@@ -18,8 +18,8 @@ from inference_utils import (get_file,
 import subprocess
 import matplotlib.pyplot as plt
 import numpy as np
-import get_desired_string_dict
-from get_desired_string_dict import stringsofLenk_max, stringsofLenk, convert_grammar
+from GD.prev import get_desired_string_dict
+from GD.prev.get_desired_string_dict import stringsofLenk_max, stringsofLenk, convert_grammar
 import json
 import logging
 from tqdm import tqdm
