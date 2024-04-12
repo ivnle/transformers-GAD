@@ -1,0 +1,13 @@
+.idea
+.vscode
+
+venv
+__*
+
+*.pyc
+*.pyo
+*.pyx
+
+lextab.py
+parsetab.py
+parser.out
