@@ -35,21 +35,27 @@ def get_file(args):
     return os.path.join(base_dir, grammar_file)
 
 def extract_prefix(filename):
-    pattern = r"(.*?)(?=_\d+\.sl$)"
-    match = re.search(pattern, filename)
-
+    """
+    Extracts the prefix of a filename, which is the part connected by the first underscore.
+    Works for PRE_100 and find_inv, crci
+    """
+    pattern = r"^([^_]+)_([^_]+)"
+    match = re.match(pattern, filename)
     if match:
-        return match.group(1)
+        # Combine the first two captured groups with an underscore
+        return "_".join(match.groups())
     else:
-        return filename
+        raise ValueError(f"Filename {filename} does not match pattern {pattern}")
+
+def get_grammar_prefix(args):
+    grammar_prompt_name = args.grammar_prompt_file.split("/")[-1]
+    grammar_prompt_name = grammar_prompt_name.split(".")[0]
+    return extract_prefix(grammar_prompt_name)
 
 def get_grammar_file_path_by_prompt_type(args):
-    base_dir = args.base_grammar_dir
-    grammar_prompt_name = args.grammar_prompt_file.split("/")[-1]
-    grammar_prefix = extract_prefix(grammar_prompt_name)
-
+    grammar_prefix = get_grammar_prefix(args)
     grammar_file = f"{grammar_prefix}_{args.prompt_type}.ebnf"
-    return os.path.join(base_dir, grammar_file)
+    return os.path.join(args.base_grammar_dir, grammar_file)
 
 def get_prompt(args, prompt_type):
     """depreciated, use construct_sygus_prompt instead for generalized version."""
@@ -65,17 +71,33 @@ def get_prompt(args, prompt_type):
 def construct_sygus_prompt(args, prompt_type):
     with open(args.grammar_prompt_file, "r") as file:
         grammar_str = file.read()
+    if "bare" in prompt_type:
+        grammar_prefix = None
+    else:
+        grammar_prefix = get_grammar_prefix(args)
+        # print(f"grammar_prefix: {grammar_prefix}")
 
     with open(args.instruct_prompt_file, 'r') as file:
         for line in file:
-            data = json.loads(line)
+            try:
+                data = json.loads(line)
+            except json.JSONDecodeError as e:
+                print(f"Error decoding JSON: {e}")
+                continue
 
+            # Check for prompt_type match
             if data.get('prompt_type') == prompt_type:
-                instruct_prompt = data['instruct_prompt']
-                prompt = instruct_prompt.replace(GRAMMAR_PROMPT_TOKEN, grammar_str)
-                return prompt
+                # Handle the "bare" case or ensure grammar_prefix matches
+                if data.get('prompt_type') == prompt_type and (
+                        grammar_prefix is None or grammar_prefix == data.get('grammar_prefix')):
+                    instruct_prompt = data['instruct_prompt']
+                    # Debugging print
+                    print(f"instruct_prompt: {instruct_prompt}")
+                    prompt = instruct_prompt.replace(GRAMMAR_PROMPT_TOKEN, grammar_str)
+                    return prompt
 
-        raise ValueError(f"Prompt type {prompt_type} not found in file {args.instruct_prompt_file}")
+            # If no matching line was found, raise an error
+    raise ValueError(f"Prompt type {prompt_type} not found in file {args.instruct_prompt_file}")
 
 
 def save_trie_to_pkl(trie, file_path):
@@ -105,3 +127,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     prompt = construct_sygus_prompt(args, "completion")
     print(prompt)
+    print(extract_prefix("PRE_100_10"))

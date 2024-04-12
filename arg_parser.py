@@ -20,7 +20,7 @@ class ArgumentParser:
     def _add_basic_arguments(self):
         self.parser.add_argument("--model_id", type=str, default="mistralai/Mistral-7B-Instruct-v0.1",
                                  help="pretrained model checkpoint.")
-        self.parser.add_argument("--cache_dir", type=str, default='/nobackup2/yf/mila/GD_caches/',
+        self.parser.add_argument("--cache_dir", type=str, default='/nobackup2/yf/lily/GD_caches/',
                                  help="Where to store cache tokenizers and models.")
         self.parser.add_argument("--num_return_sequences", type=int, default=1,
                                  help="Number of sequences to return.")
@@ -38,19 +38,19 @@ class ArgumentParser:
                                  help="Maximum number of new tokens to generate.")
         self.parser.add_argument("--prompt_type", type=str, choices=["bare", "completion", "binary_3"], default="bare",
                                  help="Prompt type for sygus task.")
-        self.parser.add_argument("--output_folder", type=str, default="/nobackup2/yf/mila/GD/results/",
+        self.parser.add_argument("--output_folder", type=str, default="/nobackup2/yf/lily/GD/results/",
                                  help="Output folder to store results.")
         self.parser.add_argument("--device", type=str, choices=["cpu", "cuda", "mps", "xpu", "npu"], default="cpu",
                                  help="The device type.")
-        self.parser.add_argument("--grammar_prompt_file", type=str, default="/nobackup2/yf/mila/GD/benchmarks/comp/2018/PBE_BV_Track/PRE_100_10.sl",
+        self.parser.add_argument("--grammar_prompt_file", type=str, default="/nobackup2/yf/lily/GD/benchmarks/comp/2018/PBE_BV_Track/PRE_100_10.sl",
                                  help="File path to prompts for sygus task.")
-        self.parser.add_argument("--instruct_prompt_file", type=str, default="/nobackup2/yf/mila/GD/prompts/pre_prompt.jsonl",
+        self.parser.add_argument("--instruct_prompt_file", type=str, default="/nobackup2/yf/lily/GD/prompts/pre_prompt.jsonl",
                                  help="File path to prompts for sygus task.")
         self.parser.add_argument("--dtype", type=str, choices=["float32", "float16", "bfloat16"], default=None,
                                  help="Override the default dtype. If not set, it will use float16 on GPU and float32 on CPU.")
         # self.parser.add_argument("--prompt", type=str, default=f"Generate a program.",
         #                          help="Depreciated, warning: only test prompt for the model.")
-        # self.parser.add_argument("--log_file", type=str, default='/nobackup2/yf/mila/GD/log_GAD/track_scores_prob2.log',
+        # self.parser.add_argument("--log_file", type=str, default='/nobackup2/yf/lily/GD/log_GAD/track_scores_prob2.log',
         #                     help="Where to store log file.")
         # self.parser.add_argument("--max_length", type=int, default=50,
         #                     help="Maximum length of generated sequences when do not sample.")
@@ -59,17 +59,17 @@ class ArgumentParser:
         # self.parser.add_argument("--num_beams", type=int, default=5,
         #                     help="Number of beams for beam search.")
     def _add_gcd_arguments(self):
-        self.parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/mila/GD/examples/grammars/",
+        self.parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/lily/GD/examples/grammars/",
                                  help="Base directory for test grammars.")
         self.parser.add_argument("--grammar_file", type=str, default="string_01.ebnf",
                                  help="Grammar file to test.")
 
     def _add_gad_arguments(self):
-        self.parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/mila/GD/examples/grammars/",
+        self.parser.add_argument("--base_grammar_dir", type=str, default="/nobackup2/yf/lily/GD/examples/grammars/",
                                  help="Base directory for test grammars.")
         self.parser.add_argument("--grammar_file", type=str, default="string_01.ebnf",
                                  help="Grammar file only to test, sygus is constructed automatically.")
-        self.parser.add_argument("--trie_folder", type=str, default="/nobackup2/yf/mila/GD/results_trie/",
+        self.parser.add_argument("--trie_folder", type=str, default="/nobackup2/yf/lily/GD/results_trie/",
                                  help="Folder to store trie files.")
 
     def parse_args(self):
