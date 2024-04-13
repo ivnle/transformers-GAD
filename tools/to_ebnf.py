@@ -101,7 +101,7 @@ def main(args):
     other_rules = convert_to_ebnf(f'({grammar_str})', args)
     top_non = grammar.nonterminals[0][0]
 
-    top_rule = f'Top ::= "(define-fun {func.function_symbol} ({param_str}) {range_str}" {top_non} ")"'
+    top_rule = f'root ::= "(define-fun {func.function_symbol} ({param_str}) {range_str} " {top_non} ")"'
 
     print(top_rule)
     print(other_rules)

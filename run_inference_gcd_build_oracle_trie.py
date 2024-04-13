@@ -229,10 +229,10 @@ if __name__ == "__main__":
     print(f"output_folder: {args.output_folder}")
 
     # test to see whether grammar file works
-    # inference_gcd(args, model, tokenizer)
+    inference_gcd(args, model, tokenizer)
 
     # run inference and build trie
-    run_inference_gcd_construct_oracle_trie(args)
+    # run_inference_gcd_construct_oracle_trie(args)
 
 
 
