@@ -8,9 +8,9 @@ from sygus.src.ast import *
 from sygus.src.symbol_table_builder import SymbolTableBuilder
 from sygus.src.v2.printer import SygusV2ASTPrinter as printer
 
-TMP_DIR = "tmp"
-TMP_PATH = TMP_DIR + "/tmp.sl"
-CVC5_PATH = "./cvc5-macOS"
+TMP_DIR = "temp"
+TMP_PATH = TMP_DIR + "/temp.sl"
+CVC5_PATH = "tools/cvc5-macOS"
 
 def make_tempdir():
     if not os.path.exists(TMP_DIR):

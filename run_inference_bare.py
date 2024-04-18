@@ -118,7 +118,13 @@ if __name__ == "__main__":
     print(f"max_new_tokens: {args.max_new_tokens}")
     print(f"output_file_path: {output_file_path}")
 
-    run_inference_bare(args, output_file_path)
+    # run_inference_bare(args, output_file_path)
+
+    # debug
+    model, tokenizer = load_model_tokenizer_hf(args)
+    prompt = args.prompt
+    generations = inference_bare(args, model, tokenizer, prompt)
+    print(f"bare_generations: {generations}")
 
 
 

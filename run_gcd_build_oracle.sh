@@ -6,7 +6,17 @@ gpu_counter=0
 # Define default values for the arguments
 #MODEL_ID="bigcode/starcoder2-15b"
 #MODEL_IDS=("codellama/CodeLlama-7b-Instruct-hf" "codellama/CodeLlama-13b-Instruct-hf" "codellama/CodeLlama-34b-Instruct-hf" "codellama/CodeLlama-70b-Instruct-hf")
-MODEL_IDS=("codellama/CodeLlama-7b-Instruct-hf")
+MODEL_IDS=(
+#"stabilityai/stable-code-instruct-3b"
+#"deepseek-ai/deepseek-coder-6.7b-instruct"
+#"HuggingFaceH4/starchat2-15b-v0.1"
+"stabilityai/stable-code-3b"
+"deepseek-ai/deepseek-coder-6.7b-base"
+"bigcode/starcoder2-15b"
+"codellama/CodeLlama-13b-Instruct-hf"
+#"codellama/CodeLlama-7b-Instruct-hf"
+"codellama/CodeLlama-70b-Instruct-hf"
+)
 ITER=50
 MAX_NEW_TOKENS=512
 PROMPT_TYPES=("bare")
@@ -14,9 +24,10 @@ PROMPT_TYPES=("bare")
 GRAMMAR_DIR="/nobackup2/yf/lily/GD/examples/sygus/"
 # GRAMMAR_FILE="string_start_w_1_all_0_len_3.ebnf"
 GRAMMAR_PROMPT_FILES=(
-"/nobackup2/yf/lily/GD/benchmarks/comp/2019/General_Track/bv-conditional-inverses/find_inv_bvsge_bvadd_4bit.sl"
-"/nobackup2/yf/lily/GD/benchmarks/comp/2019/General_Track/woosuk/sygus_iter_26_0.sl"
-"/nobackup2/yf/lily/GD/benchmarks/comp/2019/General_Track/from_2018/CrCi/CrCy_1-P5-D5-sIn1.sl"
+#"/nobackup2/yf/lily/GD/benchmarks/comp/2019/General_Track/bv-conditional-inverses/find_inv_bvsge_bvadd_4bit.sl"
+#"/nobackup2/yf/lily/GD/benchmarks/comp/2019/General_Track/woosuk/sygus_iter_26_0.sl"
+#"/nobackup2/yf/lily/GD/benchmarks/comp/2019/General_Track/from_2018/CrCi/CrCy_1-P5-D5-sIn1.sl"
+"/nobackup2/yf/lily/GD/benchmarks/comp/2019/PBE_SLIA_Track/from_2018/lastname.sl"
 )
 
 # Call the Python script with the defined arguments

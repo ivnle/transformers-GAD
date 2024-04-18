@@ -16,9 +16,9 @@ class ArgumentParser:
             pass
         else:
             raise ValueError(f"Unknown version: {version}")
-
+# "mistralai/Mistral-7B-Instruct-v0.1"
     def _add_basic_arguments(self):
-        self.parser.add_argument("--model_id", type=str, default="mistralai/Mistral-7B-Instruct-v0.1",
+        self.parser.add_argument("--model_id", type=str, default="stabilityai/stable-code-instruct-3b",
                                  help="pretrained model checkpoint.")
         self.parser.add_argument("--cache_dir", type=str, default='/nobackup2/yf/lily/GD_caches/',
                                  help="Where to store cache tokenizers and models.")
@@ -48,8 +48,8 @@ class ArgumentParser:
                                  help="File path to prompts for sygus task.")
         self.parser.add_argument("--dtype", type=str, choices=["float32", "float16", "bfloat16"], default=None,
                                  help="Override the default dtype. If not set, it will use float16 on GPU and float32 on CPU.")
-        # self.parser.add_argument("--prompt", type=str, default=f"Generate a program.",
-        #                          help="Depreciated, warning: only test prompt for the model.")
+        self.parser.add_argument("--prompt", type=str, default=f"Generate a program.",
+                                 help="Depreciated, warning: only test prompt for the model.")
         # self.parser.add_argument("--log_file", type=str, default='/nobackup2/yf/lily/GD/log_GAD/track_scores_prob2.log',
         #                     help="Where to store log file.")
         # self.parser.add_argument("--max_length", type=int, default=50,

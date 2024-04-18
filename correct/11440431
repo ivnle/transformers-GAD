@@ -1,0 +1,3 @@
+(
+(define-fun f ((_arg_0 String)) String (ite (str.contains _arg_0 "US") (str.replace _arg_0 (str.++ " " "US") "") (str.replace _arg_0 (str.++ " " "CAN") "")))
+)

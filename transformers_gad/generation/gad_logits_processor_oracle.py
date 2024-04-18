@@ -92,7 +92,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         # we dynamically create stacks at the first call, so that we know the batch size and beam size
         if self.batch_accept_states is None:
             self.batch_accept_states = [
-                # self.gramm ar_constraint.init_stacks()
+                # self.grammar_constraint.init_stacks()
                 copy.deepcopy(
                     self.grammar_constraint.string_recognizer.get_initial_accept_state()
                 )

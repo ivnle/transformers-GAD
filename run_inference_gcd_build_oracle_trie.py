@@ -43,10 +43,40 @@ def inference_gcd(args, model, tokenizer):
         grammar_processor,
     ])
 
+
+
+    # pipe = pipeline(
+    #     "text-generation",
+    #     model="HuggingFaceH4/starchat2-15b-v0.1",
+    #     device_map="auto",
+    #     torch_dtype=torch.bfloat16,
+    # )
+    # messages = [
+    #     {
+    #         "role": "system",
+    #         "content": "You are StarChat2, an expert programming assistant",
+    #     },
+    #     {"role": "user",
+    #      "content": "Write a simple website in HTML. When a user clicks the button, it shows a random Chuck Norris joke."},
+    # ]
+    # outputs = pipe(
+    #     messages,
+    #     max_new_tokens=512,
+    #     do_sample=True,
+    #     temperature=0.7,
+    #     top_k=50,
+    #     top_p=0.95,
+    #     logits_processor=logits_processors,
+    #     stop_sequence="<|im_end|>",
+    # )
+    # print(outputs[0]["generated_text"][-1]["content"])
+
     # Generate
     input_ids = tokenizer(
         [prompt], add_special_tokens=False, return_tensors="pt", padding=True
     )["input_ids"]
+
+    model.resize_token_embeddings(len(tokenizer))
 
     output = model.generate(
         input_ids,
@@ -73,6 +103,7 @@ def inference_gcd(args, model, tokenizer):
     print(f"prompt: {prompt}")
     print(f"grammar constrained generations: {generations}")
     return generated_tokens, acceptance_details_history, generations
+
 
 def inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str):
     """
@@ -113,7 +144,7 @@ def inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
     input_length = 1 if model.config.is_encoder_decoder else input_ids.shape[1]
     generated_tokens = output.sequences[:, input_length:]
     acceptance_details_history = grammar_processor.acceptance_details_history
-    generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
+    generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=False)
     # print(f"grammar constrained generations: {generations}")
     return generated_tokens, acceptance_details_history, generations
 
@@ -229,10 +260,10 @@ if __name__ == "__main__":
     print(f"output_folder: {args.output_folder}")
 
     # test to see whether grammar file works
-    inference_gcd(args, model, tokenizer)
+    # inference_gcd(args, model, tokenizer)
 
     # run inference and build trie
-    # run_inference_gcd_construct_oracle_trie(args)
+    run_inference_gcd_construct_oracle_trie(args)
 
 
 

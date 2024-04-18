@@ -26,6 +26,7 @@ def load_model_tokenizer_hf(args):
         elif args.dtype == "bfloat16":
             dtype = torch.bfloat16
         model.to(dtype=dtype)
+    model.resize_token_embeddings(len(tokenizer))
 
     return model, tokenizer
 
@@ -45,7 +46,7 @@ def extract_prefix(filename):
     Extracts the prefix of a filename, which is the part connected by the first underscore.
     Works for PRE_100 and find_inv, crci; deal with files in woosuk separately.
     """
-    if "sygus" in filename:
+    if "sygus" or "name" in filename:
         return filename
     else:
         pattern = r"^([^_]+)_([^_]+)"
