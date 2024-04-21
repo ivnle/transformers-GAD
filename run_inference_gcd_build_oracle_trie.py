@@ -144,7 +144,7 @@ def inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
     input_length = 1 if model.config.is_encoder_decoder else input_ids.shape[1]
     generated_tokens = output.sequences[:, input_length:]
     acceptance_details_history = grammar_processor.acceptance_details_history
-    generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=False)
+    generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
     # print(f"grammar constrained generations: {generations}")
     return generated_tokens, acceptance_details_history, generations
 
