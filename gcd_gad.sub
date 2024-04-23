@@ -1,0 +1,20 @@
+universe = docker
+log = chtc_logs/run_$(Cluster)_$(Process).log
+
+executable = run_gcd_build_oracle.sh
+environment = "cluster=$(Cluster) process=$(Process) example1=$(example1) example2=$(example2)"
+output = chtc_logs/run_$(Cluster)_$(Process).out
+error = chtc_logs/run_$(Cluster)_$(Process).err
+docker_image = amxu/queso:19
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT_OR_EVICT
+transfer_input_files = TODO
+transfer_output_files = TODO
+
+request_cpus = 1
+request_memory = 32GB
+request_disk = 5GB
+# requirements= (CpuModel == "AMD EPYC 7763 64-Core Processor")
+
+queue example1,example2 from args.txt

@@ -10,12 +10,14 @@ MODEL_IDS=(
 #"stabilityai/stable-code-instruct-3b"
 #"deepseek-ai/deepseek-coder-6.7b-instruct"
 #"HuggingFaceH4/starchat2-15b-v0.1"
-"stabilityai/stable-code-3b"
-"deepseek-ai/deepseek-coder-6.7b-base"
-"bigcode/starcoder2-15b"
-"codellama/CodeLlama-13b-Instruct-hf"
+#"stabilityai/stable-code-3b"
+#"deepseek-ai/deepseek-coder-6.7b-base"
+#"bigcode/starcoder2-15b"
+#"codellama/CodeLlama-13b-Instruct-hf"
 #"codellama/CodeLlama-7b-Instruct-hf"
-"codellama/CodeLlama-70b-Instruct-hf"
+#"codellama/CodeLlama-70b-Instruct-hf"
+#"meta-llama/Meta-Llama-3-8B-Instruct"
+"mistralai/Mixtral-8x7B-Instruct-v0.1"
 )
 ITER=50
 MAX_NEW_TOKENS=512
@@ -50,7 +52,7 @@ for MODEL_ID in "${MODEL_IDS[@]}"; do
             --output_folder "/nobackup2/yf/lily/GD/results/" \
             --base_grammar_dir "$GRAMMAR_DIR" \
             --instruct_prompt_file "/nobackup2/yf/lily/GD/prompts/pre_prompt.jsonl" \
-            --dtype "float32" \
+            --dtype "bfloat16" \
             --grammar_prompt_file "$GRAMMAR_PROMPT_FILE" \
             --device "cpu" &
             let "gpu_counter = (gpu_counter + 1) % ${#GPUs[@]}"
