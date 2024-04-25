@@ -50,6 +50,8 @@ def convert_to_ebnf(grammar_string, args):
     for c in string.whitespace:
         grammar_string = grammar_string.replace(c, " ")
     
+    grammar_string = grammar_string.replace('" "', '"whitespace"')
+    # print(grammar_string)
     # print(tokenize(grammar_string))
 
     sexp = parse(tokenize(grammar_string))
@@ -64,7 +66,7 @@ def convert_to_ebnf(grammar_string, args):
     for non in sexp:
         out += convert_non_to_ebnf(non, non_list) + "\n"
 
-    return out
+    return out.replace('"whitespace"', " ")
 
 def main(args):
     input_string = args.input_file.read()
