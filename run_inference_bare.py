@@ -34,6 +34,7 @@ def get_sygus_prompt(filename, prompt_type):
 
         raise ValueError(f"Prompt type {prompt_type} not found in file {filename}")
 
+@torch.inference_mode()
 def inference_bare(args, model, tokenizer, prompt):
     tokenizer.pad_token = tokenizer.eos_token
     input_ids = tokenizer(

@@ -3,6 +3,7 @@ from transformers_gad.generation.logits_process import GrammarConstrainedLogitsP
 from transformers.generation.logits_process import LogitsProcessorList, InfNanRemoveLogitsProcessor
 from transformers_gad.build_oracle.build_oracle_trie import Trie, update_oracle_trie
 from run_inference_gad import inference_gad, load_oracle_trie, construct_gad_output_file_path
+import torch
 import os
 from inference_utils import (get_file,
                              load_model_tokenizer_hf,
@@ -23,7 +24,7 @@ from arg_parser import ArgumentParser
 #"meta-llama/Llama-2-70b-hf"
 #"mistralai/Mixtral-8x7B-Instruct-v0.1")
 
-
+@torch.inference_mode()
 def inference_gcd(args, model, tokenizer):
     """
     latest version of gcd test function
@@ -104,7 +105,7 @@ def inference_gcd(args, model, tokenizer):
     print(f"grammar constrained generations: {generations}")
     return generated_tokens, acceptance_details_history, generations
 
-
+@torch.inference_mode()
 def inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str):
     """
     latest version of gcd test function

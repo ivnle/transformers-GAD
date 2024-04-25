@@ -51,6 +51,7 @@ def construct_gad_output_file_path(args):
 
     return output_file_path
 
+@torch.inference_mode()
 def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
     """
     latest version of gad test function prepared for run inference for iterations
