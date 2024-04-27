@@ -108,6 +108,8 @@ def main(args):
     print(top_rule)
     print(other_rules)
 
+    return top_rule, other_rules
+
 if __name__ == "__main__":
     parser = ArgumentParser(formatter_class=ArgumentDefaultsHelpFormatter)
     parser.add_argument(
