@@ -1,0 +1,115 @@
+You are an expert in program synthesis. You are tasked with solving a Syntax-Guided Synthesis (SyGuS) problem. Your goal is to output a function that should produce outputs that satisfy a series of constraints when given specific inputs.
+
+Question:
+(set-logic SLIA)
+
+(synth-fun f ((firstname String) (lastname String)) String
+    ((Start String) (ntString String) (ntInt Int) (ntBool Bool))
+    ((Start String (ntString))
+    (ntString String (firstname lastname " " "." (str.++ ntString ntString) (str.replace ntString ntString ntString) (str.at ntString ntInt) (str.substr ntString ntInt ntInt)))
+    (ntInt Int (0 1 2 (+ ntInt ntInt) (str.len ntString) (str.indexof ntString ntString ntInt)))
+    (ntBool Bool (true false (str.prefixof ntString ntString) (str.suffixof ntString ntString)))))
+
+(declare-var firstname String)
+(declare-var lastname String)
+(constraint (= (f "Launa" "Withers") "L. Withers"))
+(constraint (= (f "Lakenya" "Edison") "L. Edison"))
+(constraint (= (f "Brendan" "Hage") "B. Hage"))
+(constraint (= (f "Bradford" "Lango") "B. Lango"))
+(constraint (= (f "Rudolf" "Akiyama") "R. Akiyama"))
+(constraint (= (f "Lara" "Constable") "L. Constable"))
+
+(check-synth)
+Solution:
+(define-fun f ((firstname String) (lastname String)) String (str.++ (str.++ (str.++ (str.at firstname 0) ".") " ") lastname))
+
+Question:
+(set-logic SLIA)
+
+(synth-fun f ((name String)) String
+    ((Start String) (ntString String) (ntInt Int) (ntBool Bool))
+    ((Start String (ntString))
+    (ntString String (name " " "(" ")" "-" "." (str.++ ntString ntString) (str.replace ntString ntString ntString) (str.at ntString ntInt) (str.from_int ntInt) (str.substr ntString ntInt ntInt)))
+    (ntInt Int (0 1 2 3 4 5 (+ ntInt ntInt) (- ntInt ntInt) (str.len ntString) (str.to_int ntString) (str.indexof ntString ntString ntInt)))
+    (ntBool Bool (true false (str.prefixof ntString ntString) (str.suffixof ntString ntString) (str.contains ntString ntString)))))
+
+(declare-var name String)
+(constraint (= (f "938-242-504") "938.242.504"))
+(constraint (= (f "308-916-545") "308.916.545"))
+(constraint (= (f "623-599-749") "623.599.749"))
+(constraint (= (f "981-424-843") "981.424.843"))
+(constraint (= (f "118-980-214") "118.980.214"))
+(constraint (= (f "244-655-094") "244.655.094"))
+
+(check-synth)
+Solution:
+(define-fun f ((name String)) String (str.++ (str.++ (str.++ (str.++ (str.++ (str.++ (str.substr name 0 3) ".") (str.substr name 4 3)) ".") (str.at name (+ 3 5))) (str.at name (+ 4 5))) (str.at name (+ 5 5))))
+
+Question:
+(set-logic SLIA)
+
+(synth-fun f ((firstname String) (lastname String)) String
+    ((Start String) (ntString String) (ntInt Int) (ntBool Bool))
+    ((Start String (ntString))
+    (ntString String (firstname lastname " " (str.++ ntString ntString) (str.replace ntString ntString ntString) (str.at ntString ntInt) (str.from_int ntInt) (str.substr ntString ntInt ntInt)))
+    (ntInt Int (0 1 2 (+ ntInt ntInt) (- ntInt ntInt) (str.len ntString) (str.to_int ntString) (str.indexof ntString ntString ntInt)))
+    (ntBool Bool (true false (str.prefixof ntString ntString) (str.suffixof ntString ntString) (str.contains ntString ntString)))))
+
+(declare-var firstname String)
+(declare-var lastname String)
+(constraint (= (f "Launa" "Withers") "Withers Launa"))
+(constraint (= (f "Lakenya" "Edison") "Edison Lakenya"))
+(constraint (= (f "Brendan" "Hage") "Hage Brendan"))
+(constraint (= (f "Bradford" "Lango") "Lango Bradford"))
+(constraint (= (f "Rudolf" "Akiyama") "Akiyama Rudolf"))
+(constraint (= (f "Lara" "Constable") "Constable Lara"))
+
+(check-synth)
+Solution:
+(define-fun f ((firstname String) (lastname String)) String (str.++ (str.++ lastname " ") firstname))
+
+Question:
+(set-logic SLIA)
+
+(synth-fun f ((col1 String) (col2 String)) String
+    ((Start String) (ntString String) (ntInt Int) (ntBool Bool))
+    ((Start String (ntString))
+    (ntString String (col1 col2 " " "," (str.++ ntString ntString) (str.replace ntString ntString ntString) (str.at ntString ntInt) (str.from_int ntInt) (str.substr ntString ntInt ntInt)))
+    (ntInt Int (0 1 2 (+ ntInt ntInt) (- ntInt ntInt) (str.len ntString) (str.to_int ntString) (str.indexof ntString ntString ntInt)))
+    (ntBool Bool (true false (str.prefixof ntString ntString) (str.suffixof ntString ntString) (str.contains ntString ntString)))))
+
+(declare-var col1 String)
+(declare-var col2 String)
+(constraint (= (f "UC Berkeley" "Berkeley, CA") "UC Berkeley, Berkeley, CA"))
+(constraint (= (f "University of Pennsylvania" "Phialdelphia, PA, USA") "University of Pennsylvania, Phialdelphia, PA, USA"))
+(constraint (= (f "UCLA" "Los Angeles, CA") "UCLA, Los Angeles, CA"))
+(constraint (= (f "Cornell University" "Ithaca, New York, USA") "Cornell University, Ithaca, New York, USA"))
+(constraint (= (f "Penn" "Philadelphia, PA, USA") "Penn, Philadelphia, PA, USA"))
+(constraint (= (f "University of Michigan" "Ann Arbor, MI, USA") "University of Michigan, Ann Arbor, MI, USA"))
+(constraint (= (f "UC Berkeley" "Berkeley, CA") "UC Berkeley, Berkeley, CA"))
+(constraint (= (f "MIT" "Cambridge, MA") "MIT, Cambridge, MA"))
+(constraint (= (f "University of Pennsylvania" "Phialdelphia, PA, USA") "University of Pennsylvania, Phialdelphia, PA, USA"))
+(constraint (= (f "UCLA" "Los Angeles, CA") "UCLA, Los Angeles, CA"))
+(constraint (= (f "University of Maryland College Park" "College Park, MD") "University of Maryland College Park, College Park, MD"))
+(constraint (= (f "University of Michigan" "Ann Arbor, MI, USA") "University of Michigan, Ann Arbor, MI, USA"))
+(constraint (= (f "UC Berkeley" "Berkeley, CA") "UC Berkeley, Berkeley, CA"))
+(constraint (= (f "MIT" "Cambridge, MA") "MIT, Cambridge, MA"))
+(constraint (= (f "Rice University" "Houston, TX") "Rice University, Houston, TX"))
+(constraint (= (f "Yale University" "New Haven, CT, USA") "Yale University, New Haven, CT, USA"))
+(constraint (= (f "Columbia University" "New York, NY, USA") "Columbia University, New York, NY, USA"))
+(constraint (= (f "NYU" "New York, New York, USA") "NYU, New York, New York, USA"))
+(constraint (= (f "Drexel University" "Philadelphia, PA") "Drexel University, Philadelphia, PA"))
+(constraint (= (f "UC Berkeley" "Berkeley, CA") "UC Berkeley, Berkeley, CA"))
+(constraint (= (f "UIUC" "Urbana, IL") "UIUC, Urbana, IL"))
+(constraint (= (f "Temple University" "Philadelphia, PA") "Temple University, Philadelphia, PA"))
+(constraint (= (f "Harvard University" "Cambridge, MA, USA") "Harvard University, Cambridge, MA, USA"))
+(constraint (= (f "University of Connecticut" "Storrs, CT, USA") "University of Connecticut, Storrs, CT, USA"))
+(constraint (= (f "Drexel University" "Philadelphia, PA") "Drexel University, Philadelphia, PA"))
+(constraint (= (f "NYU" "New York, New York, USA") "NYU, New York, New York, USA"))
+(constraint (= (f "UIUC" "Urbana, IL") "UIUC, Urbana, IL"))
+(constraint (= (f "New Haven University" "New Haven, CT, USA") "New Haven University, New Haven, CT, USA"))
+(constraint (= (f "University of California, Santa Barbara" "Santa Barbara, CA, USA") "University of California, Santa Barbara, Santa Barbara, CA, USA"))
+(constraint (= (f "University of Connecticut" "Storrs, CT, USA") "University of Connecticut, Storrs, CT, USA"))
+
+(check-synth)
+Solution:

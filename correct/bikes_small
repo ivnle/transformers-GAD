@@ -1,3 +1,1 @@
-(
 (define-fun f ((name String)) String (let ((_let_1 (str.len (str.substr name 4 5)))) (str.++ (str.substr name 0 _let_1) (str.at name _let_1))))
-)

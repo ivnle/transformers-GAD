@@ -1,3 +1,1 @@
-(
 (define-fun f ((col1 String) (col2 String)) String (let ((_let_1 (str.++ "," (str.++ " " "USA")))) (ite (str.prefixof "New York" col2) (str.++ "New York" (str.++ "," (str.++ " " (str.++ "NY" _let_1)))) (ite (str.suffixof "USA" col2) (str.replace col2 "New York" "NY") (str.++ (str.replace col2 "New York" "MD") _let_1)))))
-)

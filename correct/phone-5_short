@@ -1,3 +1,1 @@
-(
 (define-fun f ((name String)) String (str.++ (str.at name 1) (str.++ (str.at name (- (str.indexof name " " 4) 2)) (str.at name (- (str.indexof name " " 3) 1)))))
-)

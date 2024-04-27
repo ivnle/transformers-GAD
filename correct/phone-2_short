@@ -1,3 +1,1 @@
-(
 (define-fun f ((name String)) String (str.++ (str.at name (+ 3 5)) (str.++ (str.at name (+ 4 5)) (str.at name (+ 5 5)))))
-)
