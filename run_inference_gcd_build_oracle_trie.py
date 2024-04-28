@@ -245,7 +245,7 @@ def construct_gcd_output_file_path(args):
     model_name = args.model_id.split("/")[-1]
     grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
     grammar_prompt_name = grammar_prompt_file.split(".")[0]
-    output_file_path = os.path.join(args.output_folder, f"gcd_g-{grammar_prompt_name}_{model_name}_p-{args.prompt_type}_i{args.iter}_{args.device}.jsonl")
+    output_file_path = os.path.join(args.output_folder, f"gcd_g-{grammar_prompt_name}_{model_name}_p-{args.prompt_type}_i{args.iter}_{args.device}_sd{args.seed}_{args.dtype}.jsonl")
     output_directory = os.path.dirname(output_file_path)
     # Ensure the directory exists
     if not os.path.exists(output_directory):
@@ -256,7 +256,7 @@ def construct_gcd_output_file_path(args):
 def construct_gcd_output_file_path_from_folder(args, test_filename):
     model_name = args.model_id.split("/")[-1]
     output_file_path = os.path.join(args.output_folder, f"{test_filename}")
-    output_file_path = os.path.join(output_file_path, f"gcd_{model_name}_i{args.iter}_{args.device}_sd{args.seed}.jsonl")
+    output_file_path = os.path.join(output_file_path, f"gcd_{model_name}_i{args.iter}_{args.device}_sd{args.seed}_{args.dtype}.jsonl")
     output_directory = os.path.dirname(output_file_path)
     # Ensure the directory exists
     if not os.path.exists(output_directory):

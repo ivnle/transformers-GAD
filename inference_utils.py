@@ -125,9 +125,9 @@ def construct_trie_file_from_folder(args, test_filename, trie_status=None):
     model_name = args.model_id.split("/")[-1]
     trie_file_path = os.path.join(args.trie_folder, f"{test_filename}")
     if trie_status is None:
-        trie_file = f"trie_{model_name}_i{args.iter}_{args.device}_sd{args.seed}.pkl"
+        trie_file = f"trie_{model_name}_i{args.iter}_{args.device}_sd{args.seed}_{args.dtype}.pkl"
     else:
-        trie_file = f"trie_{model_name}_i{args.iter}_{args.device}_{trie_status}_sd{args.seed}.pkl"
+        trie_file = f"trie_{model_name}_i{args.iter}_{args.device}_{trie_status}_sd{args.seed}_{args.dtype}.pkl"
     trie_file_path = os.path.join(trie_file_path, trie_file)
     trie_directory = os.path.dirname(trie_file_path)
     # Ensure the directory exists
