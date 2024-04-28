@@ -24,14 +24,12 @@ from inference_utils import (get_file,
                              get_grammar_file_path_by_prompt_type,
                              save_trie_to_pkl,
                              construct_trie_file,
-                             construct_sygus_prompt)
+                             construct_sygus_prompt,
+                             construct_trie_file_from_folder,
+                             get_prompt_in_test_folder,
+                             fix_seed)
 
 from arg_parser import ArgumentParser
-#models=("meta-llama/Llama-2-7b-hf"
-#"meta-llama/Llama-2-13b-hf"
-#"meta-llama/Llama-2-70b-hf"
-#"mistralai/Mixtral-8x7B-Instruct-v0.1"
-# "mistralai/Mistral-7B-Instruct-v0.1")
 
 def load_oracle_trie(trie_file):
     with open(trie_file, 'rb') as f:
@@ -44,6 +42,17 @@ def construct_gad_output_file_path(args):
     grammar_prompt_name = grammar_prompt_file.split(".")[0]
     output_file_path = os.path.join(args.output_folder,
                                     f"gad_g-{grammar_prompt_name}_{model_name}_p-{args.prompt_type}_i{args.iter}_{args.device}.jsonl")
+    output_directory = os.path.dirname(output_file_path)
+    # Ensure the directory exists
+    if not os.path.exists(output_directory):
+        os.makedirs(output_directory)
+
+    return output_file_path
+
+def construct_gad_output_file_path_from_folder(args, test_filename):
+    model_name = args.model_id.split("/")[-1]
+    output_file_path = os.path.join(args.output_folder, f"{test_filename}")
+    output_file_path = os.path.join(output_file_path, f"gad_{model_name}_i{args.iter}_{args.device}_sd{args.seed}.jsonl")
     output_directory = os.path.dirname(output_file_path)
     # Ensure the directory exists
     if not os.path.exists(output_directory):
@@ -97,34 +106,41 @@ def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
     # print(f"grammar constrained generations: {generations}")
     return generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations
 
-def run_inference_gad_loading_trie(args):
+@torch.inference_mode()
+def run_inference_gad_loading_trie(args, test_filename):
     model, tokenizer = load_model_tokenizer_hf(args)
-    trie_file = construct_trie_file(args)
+    trie_file = construct_trie_file_from_folder(args, test_filename)
 
-    if "binary" in args.prompt_type:
-        prompt = get_prompt(args, args.prompt_type)
-        test_file = get_file(args)
-        grammar_constr_name = test_file.split("/")[-1]
-        grammar_prompt_file = None
-    else:
-        prompt = construct_sygus_prompt(args, args.prompt_type)
-        test_file = get_grammar_file_path_by_prompt_type(args)
-        grammar_constr_name = test_file.split("/")[-1]
-        grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
+    # if "binary" in args.prompt_type:
+    #     prompt = get_prompt(args, args.prompt_type)
+    #     test_file = get_file(args)
+    #     grammar_constr_name = test_file.split("/")[-1]
+    #     grammar_prompt_file = None
+    # else:
+    #     prompt = construct_sygus_prompt(args, args.prompt_type)
+    #     test_file = get_grammar_file_path_by_prompt_type(args)
+    #     grammar_constr_name = test_file.split("/")[-1]
+    #     grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
 
     # #### only for test purpose ####
     # prompt = args.prompt
     # test_file = get_file(args)
 
     # Load grammar
+    test_file = os.path.join(args.grammar_folder, f"{test_filename}.ebnf")
     with open(test_file, "r") as file:
         grammar_str = file.read()
 
-    gad_output_file_path = construct_gad_output_file_path(args)
+    prompt = get_prompt_in_test_folder(args, test_filename)
+    grammar_prompt_file = f"{test_filename}.sl"
+    grammar_constr_name = f"{test_filename}.txt"
+
+    gad_output_file_path = construct_gad_output_file_path_from_folder(args, test_filename)
+
     start_time = time.time()
 
     with open(gad_output_file_path, 'a', encoding='utf-8') as outfile:
-        trie = load_oracle_trie(trie_file)
+        trie = load_oracle_trie(trie_file) # This is oracle trie constructed from gcd
         before_trie_status = "gad_before"
         after_trie_status = "gad_after"
         adjusted_trie_before = Trie()
@@ -133,7 +149,7 @@ def run_inference_gad_loading_trie(args):
             generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations = inference_gad(args, model, tokenizer, prompt, grammar_str, trie)
             result = {"answer": generations,
                       "prompt": prompt,
-                      "prompt_type": args.prompt_type,
+                      # "prompt_type": args.prompt_type,
                       "grammar_prompt": grammar_prompt_file,
                       "grammar_constr": grammar_constr_name}
             print(f"result: {result}")
@@ -145,8 +161,8 @@ def run_inference_gad_loading_trie(args):
             outfile.flush()
             os.fsync(outfile.fileno())
 
-    trie_file_before = construct_trie_file(args, before_trie_status)
-    trie_file_after = construct_trie_file(args, after_trie_status)
+    trie_file_before = construct_trie_file_from_folder(args, test_filename, before_trie_status)
+    trie_file_after = construct_trie_file_from_folder(args, test_filename, after_trie_status)
     save_trie_to_pkl(adjusted_trie_before, trie_file_before)
     print(f"GAD before trie saved to {trie_file_before}")
     save_trie_to_pkl(adjusted_trie_after, trie_file_after)
@@ -160,15 +176,22 @@ if __name__ == "__main__":
     arg_parser = ArgumentParser(version="gad")
     args = arg_parser.parse_args()
 
-
     print(f"model_id: {args.model_id}")
     print(f"repetition_penalty: {args.repetition_penalty}")
-    print(f"grammar_file: {args.grammar_file}")
     # print(f"num_beams: {args.num_beams}")
     print(f"temperature: {args.temperature}")
     print(f"top_p: {args.top_p}")
     print(f"max_new_tokens: {args.max_new_tokens}")
-    # print(f"log_file: {args.log_file}")
+
+    directory = args.test_folder
+    for filename in os.listdir(directory):
+        if filename.endswith(".sl"):
+            test_filename = filename[:-3]
+            print(f"test_filename: {test_filename}")
+            fix_seed(args.seed)
+            run_inference_gad_loading_trie(args, test_filename)
+    print("GCD Inference Done!")
+
 
     # output, faithful, ideal, elapsed_time = run_inference_grammar_constrained_track_scores(args)
     # result, non_inf_scores_with_index, output_sequences, elapsed_time = run_inference_grammar_constrained_track_scores(args)
@@ -212,7 +235,7 @@ if __name__ == "__main__":
     # print(f"adjusted_acceptance_detailed_history: {adjusted_acceptance_detailed_history}")
 
     # ### run gad ###
-    run_inference_gad_loading_trie(args)
+    # run_inference_gad_loading_trie(args)
 
 
 

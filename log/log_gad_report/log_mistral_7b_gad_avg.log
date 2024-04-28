@@ -1,0 +1,707 @@
+2024-03-19 00:40:22 - input_grammar: root   ::= "0"d | "1"a
+a      ::= "0"c | "1"b
+b      ::= "0" | "1"
+c      ::= "0" | "1"
+d      ::= "0"e
+e      ::= "0"
+2024-03-19 00:40:30 - result: ['Be a helpful assistant. Generate a random binary string of length 4? Directly show the generated string without explanation.110']
+2024-03-19 00:40:30 - Iteration: 1
+2024-03-19 00:40:30 - Output: {'other': 1}
+2024-03-19 00:40:30 - Faithful: {'110': 1}
+2024-03-19 00:40:38 - result: ['Be a helpful assistant. Generate a random binary string of length 4? Directly show the generated string without explanation.101']
+2024-03-19 00:40:47 - result: ['Be a helpful assistant. Generate a random binary string of length 4? Directly show the generated string without explanation.110']
+2024-03-19 00:40:57 - result: ['Be a helpful assistant. Generate a random binary string of length 4? Directly show the generated string without explanation.000']
+2024-03-19 00:41:06 - result: ['Be a helpful assistant. Generate a random binary string of length 4? Directly show the generated string without explanation.000']
+2024-03-19 00:41:15 - result: ['Be a helpful assistant. Generate a random binary string of length 4? Directly show the generated string without explanation.000']
+2024-03-19 00:41:22 - result: ['Be a helpful assistant. Generate a random binary string of length 4? Directly show the generated string without explanation.100']
+2024-03-19 00:41:29 - result: ['Be a helpful assistant. Generate a random binary string of length 4? Directly show the generated string without explanation.101']
+2024-03-19 00:41:36 - result: ['Be a helpful assistant. Generate a random binary string of length 4? Directly show the generated string without explanation.100']
+2024-03-19 00:41:43 - result: ['Be a helpful assistant. Generate a random binary string of length 4? Directly show the generated string without explanation.101']
+2024-03-19 00:41:50 - result: ['Be a helpful assistant. Generate a random binary string of length 4? Directly show the generated string without explanation.000']
+2024-03-19 00:41:50 - Iteration: 11
+2024-03-19 00:41:50 - Output: {'other': 11}
+2024-03-19 00:41:50 - Faithful: {'110': 2, '101': 3, '000': 4, '100': 2}
+2024-03-19 00:41:57 - result: ['Be a helpful assistant. Generate a random binary string of length 4? Directly show the generated string without explanation.000']
+2024-03-19 00:43:08 - input_grammar: root   ::= "0"d | "1"a
+a      ::= "0"c | "1"b
+b      ::= "0" | "1"
+c      ::= "0" | "1"
+d      ::= "0"e
+e      ::= "0"
+2024-03-19 00:43:15 - result: (tensor([[ 1739,   264, 10865, 13892, 28723, 26075,   264,  5509, 10136,  1423,
+           302,  3575, 28705, 28770, 28804,  6055,   346,  1347,   272,  7138,
+          1423,  1671, 13268, 28723, 28740, 28734, 28740,     2]]), (tensor([[-inf, -inf, -inf,  ..., -inf, -inf, -inf]]), tensor([[-inf, -inf, -inf,  ..., -inf, -inf, -inf]]), tensor([[-inf, -inf, -inf,  ..., -inf, -inf, -inf]]), tensor([[   -inf,    -inf, -1.7487,  ...,    -inf,    -inf,    -inf]])), ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101'])
+2024-03-19 00:44:28 - input_grammar: root   ::= "0"d | "1"a
+a      ::= "0"c | "1"b
+b      ::= "0" | "1"
+c      ::= "0" | "1"
+d      ::= "0"e
+e      ::= "0"
+2024-03-19 00:44:35 - result: (tensor([[ 1739,   264, 10865, 13892, 28723, 26075,   264,  5509, 10136,  1423,
+           302,  3575, 28705, 28770, 28804,  6055,   346,  1347,   272,  7138,
+          1423,  1671, 13268, 28723, 28740, 28740, 28740,     2]]), (tensor([[-inf, -inf, -inf,  ..., -inf, -inf, -inf]]), tensor([[-inf, -inf, -inf,  ..., -inf, -inf, -inf]]), tensor([[-inf, -inf, -inf,  ..., -inf, -inf, -inf]]), tensor([[   -inf,    -inf, -2.0325,  ...,    -inf,    -inf,    -inf]])), ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111'])
+2024-03-19 00:47:01 - input_grammar: root   ::= "0"d | "1"a
+a      ::= "0"c | "1"b
+b      ::= "0" | "1"
+c      ::= "0" | "1"
+d      ::= "0"e
+e      ::= "0"
+2024-03-19 00:47:08 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:47:08 - Iteration: 1
+2024-03-19 00:47:08 - Output: {'other': 1}
+2024-03-19 00:47:08 - Faithful: {'000': 1}
+2024-03-19 00:47:16 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 00:47:25 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:47:34 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 00:47:43 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:47:52 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:47:59 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 00:48:05 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:48:12 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:48:18 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:48:25 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 00:48:25 - Iteration: 11
+2024-03-19 00:48:25 - Output: {'other': 11}
+2024-03-19 00:48:25 - Faithful: {'000': 5, '110': 2, '100': 2, '101': 1, '111': 1}
+2024-03-19 00:48:32 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:48:41 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:48:48 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:48:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:49:04 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:49:11 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:49:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:49:24 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:49:31 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:49:38 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 00:49:38 - Iteration: 21
+2024-03-19 00:49:38 - Output: {'other': 21}
+2024-03-19 00:49:38 - Faithful: {'000': 10, '110': 2, '100': 3, '101': 1, '111': 5}
+2024-03-19 00:49:44 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:49:51 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:49:58 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 00:50:05 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:50:12 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:50:18 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:50:25 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 00:50:32 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:50:38 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:50:45 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:50:45 - Iteration: 31
+2024-03-19 00:50:45 - Output: {'other': 31}
+2024-03-19 00:50:45 - Faithful: {'000': 15, '110': 3, '100': 4, '101': 1, '111': 8}
+2024-03-19 00:50:51 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:50:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:51:04 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:51:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:51:16 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:51:22 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:51:28 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:51:34 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:51:40 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:51:49 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:51:49 - Iteration: 41
+2024-03-19 00:51:49 - Output: {'other': 41}
+2024-03-19 00:51:49 - Faithful: {'000': 22, '110': 3, '100': 4, '101': 3, '111': 9}
+2024-03-19 00:51:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:52:05 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:52:13 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 00:52:21 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 00:52:29 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:52:37 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:52:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:52:53 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:53:02 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:53:11 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 00:53:11 - Iteration: 51
+2024-03-19 00:53:11 - Output: {'other': 51}
+2024-03-19 00:53:11 - Faithful: {'000': 26, '110': 5, '100': 5, '101': 5, '111': 10}
+2024-03-19 00:53:19 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:53:27 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 00:53:36 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 00:53:45 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:53:53 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 00:54:02 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:54:11 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:54:20 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:54:28 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:54:37 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:54:37 - Iteration: 61
+2024-03-19 00:54:37 - Output: {'other': 61}
+2024-03-19 00:54:37 - Faithful: {'000': 30, '110': 6, '100': 7, '101': 5, '111': 13}
+2024-03-19 00:54:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:54:54 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:55:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:55:09 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:55:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 00:55:26 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:55:35 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 00:55:44 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:55:53 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:56:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:56:01 - Iteration: 71
+2024-03-19 00:56:01 - Output: {'other': 71}
+2024-03-19 00:56:01 - Faithful: {'000': 30, '110': 7, '100': 8, '101': 9, '111': 17}
+2024-03-19 00:56:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:56:18 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:56:26 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 00:56:35 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:56:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:56:54 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:57:03 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:57:11 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:57:19 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 00:57:28 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 00:57:28 - Iteration: 81
+2024-03-19 00:57:28 - Output: {'other': 81}
+2024-03-19 00:57:28 - Faithful: {'000': 34, '110': 7, '100': 11, '101': 11, '111': 18}
+2024-03-19 00:57:37 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:57:45 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:57:53 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:58:02 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:58:09 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:58:18 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 00:58:24 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:58:33 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:58:42 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:58:52 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:58:52 - Iteration: 91
+2024-03-19 00:58:52 - Output: {'other': 91}
+2024-03-19 00:58:52 - Faithful: {'000': 39, '110': 8, '100': 11, '101': 13, '111': 20}
+2024-03-19 00:59:00 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:59:07 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:59:14 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 00:59:22 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:59:30 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:59:39 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 00:59:47 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 00:59:54 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:00:02 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:00:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 01:00:10 - Iteration: 101
+2024-03-19 01:00:10 - Output: {'other': 101}
+2024-03-19 01:00:10 - Faithful: {'000': 44, '110': 9, '100': 11, '101': 15, '111': 22}
+2024-03-19 01:00:18 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:00:26 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:00:35 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:00:43 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:00:51 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:01:00 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:01:08 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:01:16 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:01:25 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:01:34 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 01:01:34 - Iteration: 111
+2024-03-19 01:01:34 - Output: {'other': 111}
+2024-03-19 01:01:34 - Faithful: {'000': 49, '110': 10, '100': 11, '101': 17, '111': 24}
+2024-03-19 01:01:42 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:01:50 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:01:59 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:02:08 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:02:16 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:02:24 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:02:32 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:02:40 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:02:48 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:02:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:02:57 - Iteration: 121
+2024-03-19 01:02:57 - Output: {'other': 121}
+2024-03-19 01:02:57 - Faithful: {'000': 53, '110': 10, '100': 12, '101': 20, '111': 26}
+2024-03-19 01:03:06 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:03:18 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:03:27 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:03:35 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:03:44 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:03:52 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:04:00 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 01:04:09 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:04:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:04:25 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:04:25 - Iteration: 131
+2024-03-19 01:04:25 - Output: {'other': 131}
+2024-03-19 01:04:25 - Faithful: {'000': 57, '110': 11, '100': 13, '101': 21, '111': 29}
+2024-03-19 01:04:33 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:04:42 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:04:50 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:04:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:05:04 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:05:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:05:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:05:23 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:05:30 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:05:37 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:05:37 - Iteration: 141
+2024-03-19 01:05:37 - Output: {'other': 141}
+2024-03-19 01:05:37 - Faithful: {'000': 61, '110': 11, '100': 15, '101': 23, '111': 31}
+2024-03-19 01:05:43 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:05:50 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:05:56 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:06:03 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:06:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 01:06:16 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:06:23 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:06:30 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 01:06:36 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:06:43 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:06:43 - Iteration: 151
+2024-03-19 01:06:43 - Output: {'other': 151}
+2024-03-19 01:06:43 - Faithful: {'000': 65, '110': 13, '100': 16, '101': 24, '111': 33}
+2024-03-19 01:06:50 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:06:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:07:03 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:07:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:07:20 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:07:26 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:07:33 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:07:39 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:07:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:07:53 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:07:53 - Iteration: 161
+2024-03-19 01:07:53 - Output: {'other': 161}
+2024-03-19 01:07:53 - Faithful: {'000': 70, '110': 13, '100': 18, '101': 26, '111': 34}
+2024-03-19 01:08:00 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:08:07 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:08:14 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:08:20 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:08:27 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:08:34 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:08:41 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:08:48 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:08:55 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:09:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:09:01 - Iteration: 171
+2024-03-19 01:09:01 - Output: {'other': 171}
+2024-03-19 01:09:01 - Faithful: {'000': 74, '110': 13, '100': 19, '101': 29, '111': 36}
+2024-03-19 01:09:08 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:09:16 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:09:23 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:09:31 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:09:38 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:09:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:09:56 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:10:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:10:20 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:10:32 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:10:32 - Iteration: 181
+2024-03-19 01:10:32 - Output: {'other': 181}
+2024-03-19 01:10:32 - Faithful: {'000': 78, '110': 13, '100': 21, '101': 32, '111': 37}
+2024-03-19 01:10:44 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:10:56 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:11:09 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:11:22 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:11:36 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:11:50 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:12:04 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:12:14 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:12:26 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:12:37 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:12:37 - Iteration: 191
+2024-03-19 01:12:37 - Output: {'other': 191}
+2024-03-19 01:12:37 - Faithful: {'000': 80, '110': 13, '100': 22, '101': 35, '111': 41}
+2024-03-19 01:12:50 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:13:07 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:13:21 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:13:33 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:13:44 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:14:02 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 01:14:12 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:14:24 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:14:33 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:14:45 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:14:45 - Iteration: 201
+2024-03-19 01:14:45 - Output: {'other': 201}
+2024-03-19 01:14:45 - Faithful: {'000': 81, '110': 14, '100': 24, '101': 38, '111': 44}
+2024-03-19 01:14:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:15:08 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:15:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:15:30 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:15:41 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:15:53 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:16:04 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:16:16 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:16:30 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:16:43 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:16:43 - Iteration: 211
+2024-03-19 01:16:43 - Output: {'other': 211}
+2024-03-19 01:16:43 - Faithful: {'000': 87, '110': 14, '100': 24, '101': 39, '111': 47}
+2024-03-19 01:16:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:17:11 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:17:28 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 01:17:41 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:17:53 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:18:06 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:18:18 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:18:27 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:18:42 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:18:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:18:57 - Iteration: 221
+2024-03-19 01:18:57 - Output: {'other': 221}
+2024-03-19 01:18:57 - Faithful: {'000': 91, '110': 15, '100': 28, '101': 40, '111': 47}
+2024-03-19 01:19:09 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:19:27 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:19:38 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:19:52 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:20:05 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:20:20 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:20:35 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:20:51 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:21:08 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:21:20 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:21:20 - Iteration: 231
+2024-03-19 01:21:20 - Output: {'other': 231}
+2024-03-19 01:21:20 - Faithful: {'000': 93, '110': 15, '100': 29, '101': 46, '111': 48}
+2024-03-19 01:21:33 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:21:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:21:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:22:07 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:22:19 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:22:31 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:22:42 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:22:52 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:23:05 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:23:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:23:17 - Iteration: 241
+2024-03-19 01:23:17 - Output: {'other': 241}
+2024-03-19 01:23:17 - Faithful: {'000': 97, '110': 15, '100': 30, '101': 47, '111': 52}
+2024-03-19 01:23:29 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 01:23:40 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:23:51 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:24:00 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:24:11 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:24:23 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:24:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:25:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:25:15 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:25:28 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:25:28 - Iteration: 251
+2024-03-19 01:25:28 - Output: {'other': 251}
+2024-03-19 01:25:28 - Faithful: {'000': 98, '110': 16, '100': 32, '101': 53, '111': 52}
+2024-03-19 01:25:41 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:25:53 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:26:06 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:26:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:26:31 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:26:44 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:26:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:27:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:27:23 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:27:33 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:27:33 - Iteration: 261
+2024-03-19 01:27:33 - Output: {'other': 261}
+2024-03-19 01:27:33 - Faithful: {'000': 105, '110': 16, '100': 33, '101': 55, '111': 52}
+2024-03-19 01:27:45 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:27:58 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:28:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:28:22 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:28:34 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:28:45 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:28:59 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:29:15 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:29:32 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:29:47 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:29:47 - Iteration: 271
+2024-03-19 01:29:47 - Output: {'other': 271}
+2024-03-19 01:29:47 - Faithful: {'000': 110, '110': 16, '100': 36, '101': 56, '111': 53}
+2024-03-19 01:29:59 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:30:09 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:30:22 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:30:33 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:30:44 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:30:56 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:31:11 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:31:23 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:31:34 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:31:42 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:31:42 - Iteration: 281
+2024-03-19 01:31:42 - Output: {'other': 281}
+2024-03-19 01:31:42 - Faithful: {'000': 112, '110': 16, '100': 39, '101': 60, '111': 54}
+2024-03-19 01:31:53 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:32:05 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:32:20 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:32:34 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:32:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:32:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:33:07 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:33:19 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:33:34 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:33:54 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:33:54 - Iteration: 291
+2024-03-19 01:33:54 - Output: {'other': 291}
+2024-03-19 01:33:54 - Faithful: {'000': 117, '110': 16, '100': 41, '101': 62, '111': 55}
+2024-03-19 01:34:05 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:34:19 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:34:34 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:34:48 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:35:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 01:35:13 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:35:23 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:35:37 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:35:50 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:35:59 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:35:59 - Iteration: 301
+2024-03-19 01:35:59 - Output: {'other': 301}
+2024-03-19 01:35:59 - Faithful: {'000': 119, '110': 17, '100': 43, '101': 65, '111': 57}
+2024-03-19 01:36:08 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:36:19 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:36:31 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:36:42 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:36:58 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 01:37:09 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:37:20 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:37:32 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:37:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:38:00 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:38:00 - Iteration: 311
+2024-03-19 01:38:00 - Output: {'other': 311}
+2024-03-19 01:38:00 - Faithful: {'000': 122, '110': 18, '100': 44, '101': 66, '111': 61}
+2024-03-19 01:38:29 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:38:42 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:38:55 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:39:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:39:26 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:39:41 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:39:51 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:40:05 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:40:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:40:28 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:40:28 - Iteration: 321
+2024-03-19 01:40:28 - Output: {'other': 321}
+2024-03-19 01:40:28 - Faithful: {'000': 127, '110': 18, '100': 45, '101': 68, '111': 63}
+2024-03-19 01:40:38 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:40:50 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:41:04 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:41:18 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:41:30 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:41:43 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:41:55 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:42:07 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:42:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:42:28 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:42:28 - Iteration: 331
+2024-03-19 01:42:28 - Output: {'other': 331}
+2024-03-19 01:42:28 - Faithful: {'000': 130, '110': 18, '100': 48, '101': 71, '111': 64}
+2024-03-19 01:42:41 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:42:52 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:43:04 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:43:16 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:43:27 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:43:39 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:43:51 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:44:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:44:14 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:44:27 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:44:27 - Iteration: 341
+2024-03-19 01:44:27 - Output: {'other': 341}
+2024-03-19 01:44:27 - Faithful: {'000': 138, '110': 18, '100': 48, '101': 71, '111': 66}
+2024-03-19 01:44:39 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:44:50 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:45:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:45:12 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:45:24 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:45:37 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:45:50 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:46:03 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:46:16 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:46:29 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:46:29 - Iteration: 351
+2024-03-19 01:46:29 - Output: {'other': 351}
+2024-03-19 01:46:29 - Faithful: {'000': 142, '110': 18, '100': 50, '101': 74, '111': 67}
+2024-03-19 01:46:41 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:46:52 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:47:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:47:12 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:47:24 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:47:37 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:47:49 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:48:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:48:12 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:48:24 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:48:24 - Iteration: 361
+2024-03-19 01:48:24 - Output: {'other': 361}
+2024-03-19 01:48:24 - Faithful: {'000': 146, '110': 18, '100': 52, '101': 76, '111': 69}
+2024-03-19 01:48:35 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:48:47 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:49:00 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:49:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:49:23 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:49:40 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:49:55 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:50:03 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:50:14 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:50:26 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:50:26 - Iteration: 371
+2024-03-19 01:50:26 - Output: {'other': 371}
+2024-03-19 01:50:26 - Faithful: {'000': 153, '110': 18, '100': 53, '101': 78, '111': 69}
+2024-03-19 01:50:37 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:50:48 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:50:56 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:51:09 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:51:24 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:51:38 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:51:54 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:52:11 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:52:27 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:52:44 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:52:44 - Iteration: 381
+2024-03-19 01:52:44 - Output: {'other': 381}
+2024-03-19 01:52:44 - Faithful: {'000': 156, '110': 18, '100': 56, '101': 80, '111': 71}
+2024-03-19 01:53:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:53:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:53:33 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:53:48 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:54:02 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:54:14 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:54:26 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:54:38 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:54:49 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:54:59 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:54:59 - Iteration: 391
+2024-03-19 01:54:59 - Output: {'other': 391}
+2024-03-19 01:54:59 - Faithful: {'000': 161, '110': 18, '100': 59, '101': 81, '111': 72}
+2024-03-19 01:55:38 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:55:54 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:56:11 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:56:25 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:56:39 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:56:54 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:57:07 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 01:57:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:57:27 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:57:38 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:57:38 - Iteration: 401
+2024-03-19 01:57:38 - Output: {'other': 401}
+2024-03-19 01:57:38 - Faithful: {'000': 165, '110': 18, '100': 60, '101': 82, '111': 76}
+2024-03-19 01:57:50 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:58:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:58:11 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 01:58:23 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:58:35 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 01:58:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:58:56 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:59:08 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 01:59:18 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:59:29 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:59:29 - Iteration: 411
+2024-03-19 01:59:29 - Output: {'other': 411}
+2024-03-19 01:59:29 - Faithful: {'000': 170, '110': 19, '100': 61, '101': 82, '111': 79}
+2024-03-19 01:59:44 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 01:59:55 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:00:06 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:00:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:00:32 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:00:47 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:00:59 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:01:09 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:01:20 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:01:36 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:01:36 - Iteration: 421
+2024-03-19 02:01:36 - Output: {'other': 421}
+2024-03-19 02:01:36 - Faithful: {'000': 177, '110': 19, '100': 62, '101': 83, '111': 80}
+2024-03-19 02:01:48 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:01:58 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:02:06 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:02:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 02:02:29 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:02:39 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:02:49 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:03:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:03:16 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:03:33 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:03:33 - Iteration: 431
+2024-03-19 02:03:33 - Output: {'other': 431}
+2024-03-19 02:03:33 - Faithful: {'000': 181, '110': 20, '100': 63, '101': 83, '111': 84}
+2024-03-19 02:03:47 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:03:58 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:04:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:04:21 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:04:31 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:04:43 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:04:55 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:05:06 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:05:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:05:27 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:05:27 - Iteration: 441
+2024-03-19 02:05:27 - Output: {'other': 441}
+2024-03-19 02:05:27 - Faithful: {'000': 184, '110': 20, '100': 69, '101': 84, '111': 84}
+2024-03-19 02:05:43 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:05:53 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:06:04 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:06:15 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:06:26 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:06:49 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:07:00 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:07:22 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:07:36 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:07:48 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:07:48 - Iteration: 451
+2024-03-19 02:07:48 - Output: {'other': 451}
+2024-03-19 02:07:48 - Faithful: {'000': 188, '110': 20, '100': 71, '101': 87, '111': 85}
+2024-03-19 02:08:01 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:08:14 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:08:29 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:08:43 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:08:57 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:09:06 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:09:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:09:32 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:09:45 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:09:56 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:09:56 - Iteration: 461
+2024-03-19 02:09:56 - Output: {'other': 461}
+2024-03-19 02:09:56 - Faithful: {'000': 193, '110': 20, '100': 71, '101': 91, '111': 86}
+2024-03-19 02:10:08 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:10:20 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:10:30 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:10:44 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:10:59 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:11:10 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:11:21 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:11:31 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.110']
+2024-03-19 02:11:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:11:59 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:11:59 - Iteration: 471
+2024-03-19 02:11:59 - Output: {'other': 471}
+2024-03-19 02:11:59 - Faithful: {'000': 196, '110': 21, '100': 73, '101': 93, '111': 88}
+2024-03-19 02:12:19 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:12:40 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:12:53 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:13:04 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:13:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:13:32 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:13:47 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:13:59 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:14:11 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:14:22 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:14:22 - Iteration: 481
+2024-03-19 02:14:22 - Output: {'other': 481}
+2024-03-19 02:14:22 - Faithful: {'000': 198, '110': 21, '100': 76, '101': 97, '111': 89}
+2024-03-19 02:14:34 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:14:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:14:58 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:15:12 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:15:25 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:15:35 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:15:51 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:16:06 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:16:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:16:29 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.000']
+2024-03-19 02:16:29 - Iteration: 491
+2024-03-19 02:16:29 - Output: {'other': 491}
+2024-03-19 02:16:29 - Faithful: {'000': 202, '110': 21, '100': 79, '101': 98, '111': 91}
+2024-03-19 02:16:59 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.101']
+2024-03-19 02:17:17 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:17:33 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:17:46 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:17:58 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:18:11 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:18:23 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+2024-03-19 02:18:34 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.111']
+2024-03-19 02:18:44 - result: ['Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.100']
+Elapsed time: 5502.774569988251 seconds
+model_id: mistralai/Mistral-7B-Instruct-v0.1
+repetition_penalty: 1.0
+temperature: 1.0
+top_p: 1.0
+max_new_tokens: 4
+2024-03-19 02:18:44 - output: {'other': 500}
+2024-03-19 02:18:44 - faithful: {'000': 202, '110': 21, '100': 83, '101': 99, '111': 95}
+2024-03-19 02:18:44 - ideal: {'other': 0}

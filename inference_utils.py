@@ -121,11 +121,38 @@ def construct_trie_file(args, trie_status=None):
     trie_file_path = os.path.join(args.trie_folder, trie_file)
     return trie_file_path
 
+def construct_trie_file_from_folder(args, test_filename, trie_status=None):
+    model_name = args.model_id.split("/")[-1]
+    trie_file_path = os.path.join(args.trie_folder, f"{test_filename}")
+    if trie_status is None:
+        trie_file = f"trie_{model_name}_i{args.iter}_{args.device}_sd{args.seed}.pkl"
+    else:
+        trie_file = f"trie_{model_name}_i{args.iter}_{args.device}_{trie_status}_sd{args.seed}.pkl"
+    trie_file_path = os.path.join(trie_file_path, trie_file)
+
+    return trie_file_path
+
 def stable_hash(s: str) -> int:
     """Returns a stable hash of the given string, stable between runs."""
     hash_obj = hashlib.sha256()
     hash_obj.update(bytes(s, "UTF-8"))
     return int.from_bytes(hash_obj.digest(), "big")
+
+def fix_seed(seed: int):
+    """Fixes the seed for reproducibility."""
+    import numpy as np
+    import random
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    np.random.seed(seed)
+    random.seed(seed)
+
+def get_prompt_in_test_folder(args, test_filename):
+    prompt_file = os.path.join(args.prompt_folder, f"{test_filename}.txt")
+    with open(prompt_file, 'r') as file:
+        prompt = file.read()
+    return prompt
+
 
 if __name__ == "__main__":
     parser = ArgumentParser()

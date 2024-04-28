@@ -2,7 +2,7 @@ from transformers_gad.grammar_utils import IncrementalGrammarConstraint
 from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor
 from transformers.generation.logits_process import LogitsProcessorList, InfNanRemoveLogitsProcessor
 from transformers_gad.build_oracle.build_oracle_trie import Trie, update_oracle_trie
-from run_inference_gad import inference_gad, load_oracle_trie, construct_gad_output_file_path
+from run_inference_gad import inference_gad, load_oracle_trie, construct_gad_output_file_path, construct_gad_output_file_path_from_folder
 import torch
 import os
 from inference_utils import (get_file,
@@ -11,7 +11,10 @@ from inference_utils import (get_file,
                              get_grammar_file_path_by_prompt_type,
                              save_trie_to_pkl,
                              construct_trie_file,
-                             construct_sygus_prompt)
+                             construct_sygus_prompt,
+                             construct_trie_file_from_folder,
+                             get_prompt_in_test_folder,
+                             fix_seed)
 import json
 from tqdm import tqdm
 import time
@@ -43,8 +46,6 @@ def inference_gcd(args, model, tokenizer):
         inf_nan_remove_processor,
         grammar_processor,
     ])
-
-
 
     # pipe = pipeline(
     #     "text-generation",
@@ -149,43 +150,48 @@ def inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
     # print(f"grammar constrained generations: {generations}")
     return generated_tokens, acceptance_details_history, generations
 
-def run_inference_gcd_construct_oracle_trie(args):
+@torch.inference_mode()
+def run_inference_gcd_construct_oracle_trie(args, test_filename):
     model, tokenizer = load_model_tokenizer_hf(args)
-    output_file_path = construct_gcd_output_file_path(args)
-    trie_file = construct_trie_file(args)
+    output_file_path = construct_gcd_output_file_path_from_folder(args, test_filename)
+    trie_file = construct_trie_file_from_folder(args, test_filename)
     trie = Trie()
-    if "binary" in args.prompt_type:
-        prompt = get_prompt(args, args.prompt_type)
-        test_file = get_file(args)
-        grammar_constr_name = test_file.split("/")[-1]
-        grammar_prompt_file = None
-    else:
-        prompt = construct_sygus_prompt(args, args.prompt_type)
-        test_file = get_grammar_file_path_by_prompt_type(args)
-        grammar_constr_name = test_file.split("/")[-1]
-        grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
+    # if "binary" in args.prompt_type:
+    #     prompt = get_prompt(args, args.prompt_type)
+    #     test_file = get_file(args)
+    #     grammar_constr_name = test_file.split("/")[-1]
+    #     grammar_prompt_file = None
+    # else:
+    #     prompt = construct_sygus_prompt(args, args.prompt_type)
+    #     test_file = get_grammar_file_path_by_prompt_type(args)
+    #     grammar_constr_name = test_file.split("/")[-1]
+    #     grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
 
     # #### only for test purpose ####
     # prompt = args.prompt
     # test_file = get_file(args)
 
     # Load grammar
+    test_file = os.path.join(args.grammar_folder, f"{test_filename}.ebnf")
     with open(test_file, "r") as file:
         grammar_str = file.read()
 
-    start_time = time.time()
+    prompt = get_prompt_in_test_folder(args, test_filename)
+    grammar_prompt_file = f"{test_filename}.sl"
+    grammar_constr_name = f"{test_filename}.txt"
 
+    start_time = time.time()
 
     with open(output_file_path, 'a', encoding='utf-8') as outfile:
         for i in tqdm(range(args.iter), desc="Running Inference"):
             generated_tokens, acceptance_details_history, generations = inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
             result = {"answer": generations,
                       "prompt": prompt,
-                      "prompt_type": args.prompt_type,
+                      # "prompt_type": args.prompt_type,
                       "grammar_prompt": grammar_prompt_file,
                       "grammar_constr": grammar_constr_name}
             print(f"result: {result}")
-            # print(f"generated_tokens: {generated_t okens}, acceptance_details_history: {acceptance_details_history}")
+            # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
             update_oracle_trie(trie, generated_tokens, acceptance_details_history)
             json_record = json.dumps(result)
             outfile.write(json_record + '\n')
@@ -199,7 +205,7 @@ def run_inference_gcd_construct_oracle_trie(args):
 
     ##### also run gad after gcd #####
 
-    gad_output_file_path = construct_gad_output_file_path(args)
+    gad_output_file_path = construct_gad_output_file_path_from_folder(args, test_filename)
     start_time = time.time()
 
     with open(gad_output_file_path, 'a', encoding='utf-8') as outfile:
@@ -212,7 +218,7 @@ def run_inference_gcd_construct_oracle_trie(args):
             generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations = inference_gad(args, model, tokenizer, prompt, grammar_str, trie)
             result = {"answer": generations,
                       "prompt": prompt,
-                      "prompt_type": args.prompt_type,
+                      # "prompt_type": args.prompt_type,
                       "grammar_prompt": grammar_prompt_file,
                       "grammar_constr": grammar_constr_name}
             print(f"result: {result}")
@@ -224,8 +230,8 @@ def run_inference_gcd_construct_oracle_trie(args):
             outfile.flush()
             os.fsync(outfile.fileno())
 
-    trie_file_before = construct_trie_file(args, before_trie_status)
-    trie_file_after = construct_trie_file(args, after_trie_status)
+    trie_file_before = construct_trie_file_from_folder(args, test_filename, before_trie_status)
+    trie_file_after = construct_trie_file_from_folder(args, test_filename, after_trie_status)
     save_trie_to_pkl(adjusted_trie_before, trie_file_before)
     print(f"GAD before trie saved to {trie_file_before}")
     save_trie_to_pkl(adjusted_trie_after, trie_file_after)
@@ -247,6 +253,17 @@ def construct_gcd_output_file_path(args):
 
     return output_file_path
 
+def construct_gcd_output_file_path_from_folder(args, test_filename):
+    model_name = args.model_id.split("/")[-1]
+    output_file_path = os.path.join(args.output_folder, f"{test_filename}")
+    output_file_path = os.path.join(output_file_path, f"gcd_{model_name}_i{args.iter}_{args.device}_sd{args.seed}.jsonl")
+    output_directory = os.path.dirname(output_file_path)
+    # Ensure the directory exists
+    if not os.path.exists(output_directory):
+        os.makedirs(output_directory)
+
+    return output_file_path
+
 
 if __name__ == "__main__":
     arg_parser = ArgumentParser(version="gad")
@@ -258,14 +275,23 @@ if __name__ == "__main__":
     print(f"temperature: {args.temperature}")
     print(f"top_p: {args.top_p}")
     print(f"max_new_tokens: {args.max_new_tokens}")
-    print(f"output_folder: {args.output_folder}")
+
+    directory = args.test_folder
+    for filename in os.listdir(directory):
+        if filename.endswith(".sl"):
+            test_filename = filename[:-3]
+            print(f"test_filename: {test_filename}")
+            fix_seed(args.seed)
+            run_inference_gcd_construct_oracle_trie(args, test_filename)
+    print("GCD Inference Done!")
+
+    # print(f"output_folder: {args.output_folder}")
 
     # test to see whether grammar file works
     # inference_gcd(args, model, tokenizer)
 
     # run inference and build trie
-    run_inference_gcd_construct_oracle_trie(args)
-
+    # run_inference_gcd_construct_oracle_trie(args)
 
 
 

@@ -108,13 +108,12 @@ def main(args):
     print(top_rule)
     print(other_rules)
 
-    return top_rule, other_rules
 
 if __name__ == "__main__":
     parser = ArgumentParser(formatter_class=ArgumentDefaultsHelpFormatter)
     parser.add_argument(
         '-s', '--source-sygus-standard', default='1', choices=['1','2'],
-        help='The SyGuS language standard used in the input file')
+        help='The SyGuS language standard used in the input file. Use 1 to include the function definition in the ebnf grammar. Use 2 to exclude them.')
 
     parser.add_argument(
         'input_file', type=FileType('r'),
