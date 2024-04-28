@@ -49,7 +49,56 @@ def convert_to_ebnf(grammar_string, args):
     out = ""
     for c in string.whitespace:
         grammar_string = grammar_string.replace(c, " ")
-    
+
+    grammar_string = grammar_string.replace('","', 'comma')
+    grammar_string = grammar_string.replace('"."', 'dot')
+    grammar_string = grammar_string.replace('""', 'empty')
+    grammar_string = grammar_string.replace('"Dr."', 'doctor_Dr')
+    grammar_string = grammar_string.replace('"("', 'left_paren')
+    grammar_string = grammar_string.replace('")"', 'right_paren')
+    grammar_string = grammar_string.replace('"+"', 'plus')
+    grammar_string = grammar_string.replace('"-"', 'minus')
+    grammar_string = grammar_string.replace('"USA"', 'United_States')
+    grammar_string = grammar_string.replace('"New York"', 'New_York')
+    grammar_string = grammar_string.replace('"A"', 'capital_A')
+    grammar_string = grammar_string.replace('"B"', 'capital_B')
+    grammar_string = grammar_string.replace('"C"', 'capital_C')
+    grammar_string = grammar_string.replace('"D"', 'capital_D')
+    grammar_string = grammar_string.replace('"E"', 'capital_E')
+    grammar_string = grammar_string.replace('"F"', 'capital_F')
+    grammar_string = grammar_string.replace('"G"', 'capital_G')
+    grammar_string = grammar_string.replace('"H"', 'capital_H')
+    grammar_string = grammar_string.replace('"I"', 'capital_I')
+    grammar_string = grammar_string.replace('"J"', 'capital_J')
+    grammar_string = grammar_string.replace('"K"', 'capital_K')
+    grammar_string = grammar_string.replace('"L"', 'capital_L')
+    grammar_string = grammar_string.replace('"M"', 'capital_M')
+    grammar_string = grammar_string.replace('"N"', 'capital_N')
+    grammar_string = grammar_string.replace('"O"', 'capital_O')
+    grammar_string = grammar_string.replace('"P"', 'capital_P')
+    grammar_string = grammar_string.replace('"Q"', 'capital_Q')
+    grammar_string = grammar_string.replace('"R"', 'capital_R')
+    grammar_string = grammar_string.replace('"S"', 'capital_S')
+    grammar_string = grammar_string.replace('"T"', 'capital_T')
+    grammar_string = grammar_string.replace('"U"', 'capital_U')
+    grammar_string = grammar_string.replace('"V"', 'capital_V')
+    grammar_string = grammar_string.replace('"W"', 'capital_W')
+    grammar_string = grammar_string.replace('"X"', 'capital_X')
+    grammar_string = grammar_string.replace('"Y"', 'capital_Y')
+    grammar_string = grammar_string.replace('"Z"', 'capital_Z')
+
+    state_abbreviations = [
+        "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL",
+        "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO",
+        "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR",
+        "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI"
+    ]
+
+    for state in state_abbreviations:
+        replacement_string = f'state_{state}'
+        grammar_string = grammar_string.replace(f'"{state}"', replacement_string)
+
+
     grammar_string = grammar_string.replace('" "', '"whitespace"')
     # print(grammar_string)
     # print(tokenize(grammar_string))
@@ -66,7 +115,55 @@ def convert_to_ebnf(grammar_string, args):
     for non in sexp:
         out += convert_non_to_ebnf(non, non_list) + "\n"
 
-    return out.replace('"whitespace"', " ")
+    out = out.replace('"whitespace"', " ")
+    out = out.replace('comma', ",")
+    out = out.replace('empty', "")
+    out = out.replace('dot', ".")
+    out = out.replace('doctor_Dr', '"Dr."')
+    out = out.replace('capital_D', '"D"')
+    out = out.replace('left_paren', '"("')
+    out = out.replace('right_paren', '")"')
+    out = out.replace('plus', '"+"')
+    out = out.replace('minus', '"-"')
+    out = out.replace('United_States', '"USA"')
+    out = out.replace('Pennsylvania', '"PA"')
+    out = out.replace('California', '"CA"')
+    out = out.replace('New_York_abb', '"NY"')
+    out = out.replace('Maryland', '"MD"')
+    out = out.replace('Connecticut', '"CT"')
+    out = out.replace('New_York', '"New York"')
+    out = out.replace('capital_A', '"A"')
+    out = out.replace('capital_B', '"B"')
+    out = out.replace('capital_C', '"C"')
+    out = out.replace('capital_D', '"D"')
+    out = out.replace('capital_E', '"E"')
+    out = out.replace('capital_F', '"F"')
+    out = out.replace('capital_G', '"G"')
+    out = out.replace('capital_H', '"H"')
+    out = out.replace('capital_I', '"I"')
+    out = out.replace('capital_J', '"J"')
+    out = out.replace('capital_K', '"K"')
+    out = out.replace('capital_L', '"L"')
+    out = out.replace('capital_M', '"M"')
+    out = out.replace('capital_N', '"N"')
+    out = out.replace('capital_O', '"O"')
+    out = out.replace('capital_P', '"P"')
+    out = out.replace('capital_Q', '"Q"')
+    out = out.replace('capital_R', '"R"')
+    out = out.replace('capital_S', '"S"')
+    out = out.replace('capital_T', '"T"')
+    out = out.replace('capital_U', '"U"')
+    out = out.replace('capital_V', '"V"')
+    out = out.replace('capital_W', '"W"')
+    out = out.replace('capital_X', '"X"')
+    out = out.replace('capital_Y', '"Y"')
+    out = out.replace('capital_Z', '"Z"')
+
+    for state in state_abbreviations:
+        replacement_string = f'state_{state}'
+        out = out.replace(replacement_string, f'"{state}"')
+
+    return out
 
 def main(args):
     input_string = args.input_file.read()
