@@ -5,8 +5,10 @@ log/log_GAD/
 benchmarks/
 
 .ipynb_checkpoints/
-__pycache__/
 .DS_Store
+__pycache__/
+*.py[cod]
+*.pyc
 
 log_GAD/
 log_gad_report/
@@ -14,3 +16,4 @@ log_oracle_tree/
 log/
 debug/
 prev/
+post_process/
