@@ -4,6 +4,13 @@ log/log_GAD/
 
 benchmarks/
 
-.pynb_checkpoints/
+.ipynb_checkpoints/
 __pycache__/
 .DS_Store
+
+log_GAD/
+log_gad_report/
+log_oracle_tree/
+log/
+debug/
+prev/
