@@ -115,9 +115,9 @@ def construct_trie_file(args, trie_status=None):
     grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
     grammar_prompt_name = grammar_prompt_file.split(".")[0]
     if trie_status is None:
-        trie_file = f"trie_{grammar_prompt_name}_{args.prompt_type}_{model_name}_i{args.iter}_{args.device}.pkl"
+        trie_file = f"trie_{grammar_prompt_name}_{args.prompt_type}_{model_name}_i{args.iter}_{args.device}_sd{args.seed}_{args.dtype}.pkl"
     else:
-        trie_file = f"trie_{grammar_prompt_name}_{args.prompt_type}_{model_name}_i{args.iter}_{args.device}_{trie_status}.pkl"
+        trie_file = f"trie_{grammar_prompt_name}_{args.prompt_type}_{model_name}_i{args.iter}_{args.device}_{trie_status}_sd{args.seed}_{args.dtype}.pkl"
     trie_file_path = os.path.join(args.trie_folder, trie_file)
     return trie_file_path
 
