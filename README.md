@@ -24,7 +24,7 @@ Update the configurations in `run_bare.sh` and `run_gcd_build_oracle.sh` to spec
     ```
     export HF_HOME=/path/to/where/you/store/hf/models
     ```
-- `GPUS`: modify this to specify the GPU to use. For example, `0` for GPU 0, `0,1` for GPUs 0 and 1.
+- `GPUS`: modify this to specify the GPU to use. For example, `0` for GPU 0, `GPUS=(0 1)` for GPUs 0 and 1.
 - `dtype`: Default is `float32`. Only change this if you encounter model loading issues. Changing it to `float16` should help resolve space issues.
 
 ### Step 2: run the script
