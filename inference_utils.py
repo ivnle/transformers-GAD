@@ -129,6 +129,10 @@ def construct_trie_file_from_folder(args, test_filename, trie_status=None):
     else:
         trie_file = f"trie_{model_name}_i{args.iter}_{args.device}_{trie_status}_sd{args.seed}.pkl"
     trie_file_path = os.path.join(trie_file_path, trie_file)
+    trie_directory = os.path.dirname(trie_file_path)
+    # Ensure the directory exists
+    if not os.path.exists(trie_directory):
+        os.makedirs(trie_directory)
 
     return trie_file_path
 

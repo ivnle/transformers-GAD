@@ -47,9 +47,11 @@ class ArgumentParser:
         self.parser.add_argument("--seed", type=int, default=None,
                                  help="Random seed for reproducibility.")
         self.parser.add_argument("--test_folder", type=str, default="correct/",
-                                    help="Directory of test files.")
+                                 help="Directory of test files.")
         self.parser.add_argument("--prompt", type=str, default=f"Generate a program.",
                                  help="Depreciated, only to test the pipeline.")
+        self.parser.add_argument("--verbose", action="store_true",
+                                 help="Print more information.")
         # self.parser.add_argument("--log_file", type=str, default='log_GAD/track_scores_prob2.log',
         #                     help="Where to store log file.")
         # self.parser.add_argument("--max_length", type=int, default=50,

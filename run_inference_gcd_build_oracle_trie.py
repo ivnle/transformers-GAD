@@ -178,11 +178,11 @@ def run_inference_gcd_construct_oracle_trie(args, test_filename):
 
     prompt = get_prompt_in_test_folder(args, test_filename)
     grammar_prompt_file = f"{test_filename}.sl"
-    grammar_constr_name = f"{test_filename}.txt"
+    grammar_constr_name = f"{test_filename}.ebnf"
 
     start_time = time.time()
 
-    with open(output_file_path, 'a', encoding='utf-8') as outfile:
+    with open(output_file_path, 'w', encoding='utf-8') as outfile:
         for i in tqdm(range(args.iter), desc="Running Inference"):
             generated_tokens, acceptance_details_history, generations = inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
             result = {"answer": generations,

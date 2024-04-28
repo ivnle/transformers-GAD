@@ -178,7 +178,9 @@ def insert_nodes_by_generated_tokens(trie, generated_tokens, nodes):
                     trie.insert(current_parent, node)
 
                 else:
-                    print(f"Node {node.token_id} already exists as a child of the current parent at time step {time_step}")
+                    # if args.verbose:
+                        # print(f"Node {node.token_id} already exists as a child of the current parent at time step {time_step}")
+                    pass
 
                 # Check if this node matches the next token ID and should be the next parent.
                 if node.token_id == selected_token_id:

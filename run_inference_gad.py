@@ -133,13 +133,13 @@ def run_inference_gad_loading_trie(args, test_filename):
 
     prompt = get_prompt_in_test_folder(args, test_filename)
     grammar_prompt_file = f"{test_filename}.sl"
-    grammar_constr_name = f"{test_filename}.txt"
+    grammar_constr_name = f"{test_filename}.ebnf"
 
     gad_output_file_path = construct_gad_output_file_path_from_folder(args, test_filename)
 
     start_time = time.time()
 
-    with open(gad_output_file_path, 'a', encoding='utf-8') as outfile:
+    with open(gad_output_file_path, 'w', encoding='utf-8') as outfile:
         trie = load_oracle_trie(trie_file) # This is oracle trie constructed from gcd
         before_trie_status = "gad_before"
         after_trie_status = "gad_after"

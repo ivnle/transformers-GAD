@@ -12,27 +12,40 @@ OUTPUT_FOLDER="results/SLIA"
 TEST_FOLDER="correct/"
 PROMPT_FOLDER="prompts/SLIA"
 
+is_gpu_free() {
+    # If nvidia-smi query is successful and the GPU is idle (no process found), return 0 (success)
+    [ -z "$(nvidia-smi -i $1 --query-compute-apps=pid --format=csv,noheader,nounits)" ]
+}
+
 # Outer loop for MODEL_ID
 for MODEL_ID in "${MODEL_IDS[@]}"; do
-    gpu=${GPUs[$gpu_counter]}
-    echo "Running model: $MODEL_ID, on GPU: $gpu"
-    CUDA_VISIBLE_DEVICES=$gpu python run_inference_bare.py \
-    --model_id "$MODEL_ID" \
-    --cache_dir "$CACHE_DIR" \
-    --num_return_sequences 1 \
-    --repetition_penalty 1.0 \
-    --iter $ITER \
-    --temperature 1.0 \
-    --top_p 1.0 \
-    --top_k 0 \
-    --max_new_tokens $MAX_NEW_TOKENS \
-    --dtype "float32" \
-    --output_folder "$OUTPUT_FOLDER" \
-    --test_folder "$TEST_FOLDER" \
-    --prompt_folder "$PROMPT_FOLDER" \
-    --seed 42 \
-    --device "cuda" &
-    let "gpu_counter = (gpu_counter + 1) % ${#GPUs[@]}"
+    while true; do
+        gpu=${GPUs[$gpu_counter]}
+        if is_gpu_free $gpu; then
+            echo "GPU $gpu is free. Running model: $MODEL_ID, on GPU: $gpu"
+            CUDA_VISIBLE_DEVICES=$gpu python run_inference_bare.py \
+            --model_id "$MODEL_ID" \
+            --cache_dir "$CACHE_DIR" \
+            --num_return_sequences 1 \
+            --repetition_penalty 1.0 \
+            --iter $ITER \
+            --temperature 1.0 \
+            --top_p 1.0 \
+            --top_k 0 \
+            --max_new_tokens $MAX_NEW_TOKENS \
+            --dtype "float32" \
+            --output_folder "$OUTPUT_FOLDER" \
+            --test_folder "$TEST_FOLDER" \
+            --prompt_folder "$PROMPT_FOLDER" \
+            --seed 42 \
+            --device "cuda" &
+            let "gpu_counter = (gpu_counter + 1) % ${#GPUs[@]}"
+            break
+        else
+            echo "GPU $gpu is busy. Waiting for 60 seconds..."
+            sleep 60
+        fi
+    done
 done
 wait
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GPUs=(2 3 0 1)
+GPUs=(0)
 gpu_counter=0
 
 # Define default values for the arguments

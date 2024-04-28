@@ -76,9 +76,9 @@ def run_inference_bare(args,output_file_path, test_filename):
     #     grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
     prompt = get_prompt_in_test_folder(args, test_filename)
     grammar_prompt_file = f"{test_filename}.sl"
-    grammar_constr_name = f"{test_filename}.txt"
+    grammar_constr_name = f"{test_filename}.ebnf"
     start_time = time.time()
-    with open(output_file_path, 'a', encoding='utf-8') as outfile:
+    with open(output_file_path, 'w', encoding='utf-8') as outfile:
         for i in tqdm(range(args.iter), desc="Running Inference"):
             generations = inference_bare(args, model, tokenizer, prompt)
             result = {"answer": generations,

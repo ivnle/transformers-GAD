@@ -1,11 +1,11 @@
 #!/bin/bash
 
-GPUs=(0 1 2 3 4 5 6 7)
+GPUs=(0)
 gpu_counter=0
 
 # Define default values for the arguments
 MODEL_IDS=("mistralai/Mistral-7B-Instruct-v0.2")
-ITER=10
+ITER=50
 MAX_NEW_TOKENS=512
 CACHE_DIR="/path/to/where/you/store/hf/models"
 OUTPUT_FOLDER="results/SLIA"
@@ -23,7 +23,7 @@ for MODEL_ID in "${MODEL_IDS[@]}"; do
     while true; do
         gpu=${GPUs[$gpu_counter]}
         if is_gpu_free $gpu; then
-            echo "GPU $gpu is free. Running model: $model_path, on GPU: $gpu"
+            echo "GPU $gpu is free. Running model: $MODEL_ID, on GPU: $gpu"
             CUDA_VISIBLE_DEVICES=$gpu python run_inference_gcd_build_oracle_trie.py \
             --model_id "$MODEL_ID" \
             --cache_dir "$CACHE_DIR" \

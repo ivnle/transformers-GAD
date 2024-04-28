@@ -1,5 +1,9 @@
 transformers/
 
-log_GAD/
+log/log_GAD/
 
 benchmarks/
+
+.pynb_checkpoints/
+__pycache__/
+.DS_Store
