@@ -109,7 +109,7 @@ def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
 @torch.inference_mode()
 def run_inference_gad_loading_trie(args, test_filename):
     model, tokenizer = load_model_tokenizer_hf(args)
-    trie_file = construct_trie_file_from_folder(args, test_filename)
+    # trie_file = construct_trie_file_from_folder(args, test_filename)
 
     # if "binary" in args.prompt_type:
     #     prompt = get_prompt(args, args.prompt_type)
@@ -140,22 +140,25 @@ def run_inference_gad_loading_trie(args, test_filename):
     start_time = time.time()
 
     with open(gad_output_file_path, 'w', encoding='utf-8') as outfile:
-        trie = load_oracle_trie(trie_file) # This is oracle trie constructed from gcd
+        # trie = load_oracle_trie(trie_file) # This is oracle trie constructed from gcd
         before_trie_status = "gad_before"
         after_trie_status = "gad_after"
         adjusted_trie_before = Trie()
         adjusted_trie_after = Trie()
         for i in tqdm(range(args.iter), desc="Running Inference"):
-            generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations = inference_gad(args, model, tokenizer, prompt, grammar_str, trie)
+            generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations = inference_gad(args, model, tokenizer, prompt, grammar_str, adjusted_trie_before)
+            # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
+            _, updated_rate = update_oracle_trie(adjusted_trie_before, generated_tokens, acceptance_details_history)
+            update_oracle_trie(adjusted_trie_after, generated_tokens, adjusted_acceptance_details_history)
+
             result = {"answer": generations,
                       "prompt": prompt,
                       # "prompt_type": args.prompt_type,
                       "grammar_prompt": grammar_prompt_file,
-                      "grammar_constr": grammar_constr_name}
+                      "grammar_constr": grammar_constr_name,
+                      "updated_rate": updated_rate}
             print(f"result: {result}")
-            # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
-            update_oracle_trie(adjusted_trie_before, generated_tokens, acceptance_details_history)
-            update_oracle_trie(adjusted_trie_after, generated_tokens, adjusted_acceptance_details_history)
+
             json_record = json.dumps(result)
             outfile.write(json_record + '\n')
             outfile.flush()

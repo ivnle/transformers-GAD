@@ -10,7 +10,7 @@ class TrieNode:
         self.token = token
         self.raw_logit = raw_logit
         self.raw_score = raw_score
-        self.successful_rate = 1
+        self.success_rate = 1
         # isEndOfWord is True if node represent EOS
         self.is_end_of_sequence = False
         self.is_start_of_sequence = False
@@ -19,7 +19,7 @@ class TrieNode:
         parent_token_id = 'None (Root Node)' if self.parent is None else self.parent.token_id
         return (f"TrieNode(token_id={self.token_id}, token='{self.token}', "
                 f"raw_logit={self.raw_logit}, raw_score={self.raw_score}, children={list(self.children.keys())}, "
-                f"parent={parent_token_id}, successful rate={self.successful_rate})") # TODO: add prefix
+                f"parent={parent_token_id}, success rate={self.success_rate})") # TODO: add prefix
 
 
 
@@ -35,15 +35,19 @@ class Trie:
             child_node.parent = parent_node  # Set the parent of the child_node
             if child_node.token_id == 2: # TODO: replace to real EOS token
                 child_node.is_end_of_sequence = True
-            # update the successful rate of the parent node
-            self.update_successful_rate(parent_node)
+            # update the success rate of the parent node
+            return self.update_success_rate(parent_node)
+        else:
+            return 0
 
-    def update_successful_rate(self, node: TrieNode):
+    def update_success_rate(self, node: TrieNode):
         if node and node.children:
-            total_success_rate = sum(child.raw_logit * child.successful_rate for child in node.children.values())
-            node.successful_rate = total_success_rate
+            total_success_rate = sum(child.raw_logit * child.success_rate for child in node.children.values())
+            updated_rate = node.success_rate - total_success_rate
+            node.success_rate = total_success_rate
             if node.parent:
-                self.update_successful_rate(node.parent)
+                return self.update_success_rate(node.parent)
+            return updated_rate
 
     def search_last_parent(self, prefix: torch.LongTensor):
         found_parent = []
@@ -59,11 +63,11 @@ class Trie:
                 return None
         return current_parent
 
-    def get_successful_rate_for_candidate_token(self, parent_node, candidate_token_id):
+    def get_success_rate_for_candidate_token(self, parent_node, candidate_token_id):
         if parent_node is None:
             return 1
         if candidate_token_id in parent_node.children.keys():
-            return parent_node.children[candidate_token_id].successful_rate
+            return parent_node.children[candidate_token_id].success_rate
         else:
             return 1
 
@@ -111,7 +115,7 @@ class Trie:
         # Print current node's details
         indent = "  " * depth  # Create indentation based on the depth in the trie
         node_details = (f"{indent}TrieNode(token_id={node.token_id}, token='{node.token}', "
-                        f"raw_logit={node.raw_logit}, raw_score={node.raw_score}, successful rate={node.successful_rate}, "
+                        f"raw_logit={node.raw_logit}, raw_score={node.raw_score}, success rate={node.success_rate}, "
                         f"children={list(node.children.keys())}, "
                         f"parent={node.parent.token_id if node.parent else None}, "
                         f"is_end_of_sequence={node.is_end_of_sequence})")
@@ -165,6 +169,8 @@ def get_selected_token_id_at_time_step(tokens, time_step):
 def insert_nodes_by_generated_tokens(trie, generated_tokens, nodes):
     current_parent = trie.root
 
+    updated_total = 0
+
     for time_step, candidate_list in enumerate(nodes):
         selected_token_id = get_selected_token_id_at_time_step(generated_tokens, time_step)
         found_parent_for_next_step = False
@@ -175,7 +181,7 @@ def insert_nodes_by_generated_tokens(trie, generated_tokens, nodes):
                 if node.token_id not in current_parent.children.keys():
                     # print(f"current_parent={current_parent} at time step {time_step}")
                     # print(f"Inserting node {node.token_id} at time step {time_step}")
-                    trie.insert(current_parent, node)
+                    updated_total += trie.insert(current_parent, node)
 
                 else:
                     # if args.verbose:
@@ -192,6 +198,8 @@ def insert_nodes_by_generated_tokens(trie, generated_tokens, nodes):
             # print(f"current_parent_token_id={current_parent.token_id} at time step {time_step}")
         else:
             print(f"No matching child found for next parent at time step {time_step}")
+
+    return updated_total
 
 def run_demo_trie_string_01_len_3():
     # Your input
