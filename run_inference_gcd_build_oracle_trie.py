@@ -268,7 +268,7 @@ def construct_gcd_output_file_path_from_folder(args, test_filename):
 if __name__ == "__main__":
     arg_parser = ArgumentParser(version="gad")
     args = arg_parser.parse_args()
-    model, tokenizer = load_model_tokenizer_hf(args)
+    # model, tokenizer = load_model_tokenizer_hf(args)
 
     print(f"model_id: {args.model_id}")
     print(f"repetition_penalty: {args.repetition_penalty}")
