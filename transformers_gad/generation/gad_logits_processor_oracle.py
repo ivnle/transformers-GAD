@@ -69,17 +69,17 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
                 logit = logits[batch_index, idx].item()
                 log_logit = log_logits[batch_index, idx].item()
                 # Assume a method to get theta for this specific token
-                successful_rate = self.oracle_trie.get_successful_rate_for_candidate_token(current_parent, token_id)
+                success_rate = self.oracle_trie.get_success_rate_for_candidate_token(current_parent, token_id)
                 # if args.verbose:
                 #     print(f"token_id: {token_id}")
                 #     print(f"logit: {logit}")
                 #     print(f"log_logit: {log_logit}")
                 #     print(f"successful_rate: {successful_rate}")
 
-                if not isinstance(successful_rate, torch.Tensor):
-                    successful_rate = torch.tensor(successful_rate, dtype=torch.float)
+                if not isinstance(success_rate, torch.Tensor):
+                    success_rate = torch.tensor(success_rate, dtype=torch.float)
 
-                log_theta = torch.log(successful_rate)
+                log_theta = torch.log(success_rate)
                 # Calculate adjusted score
                 adjusted_score = log_logit + log_theta
                 # if args.verbose:
