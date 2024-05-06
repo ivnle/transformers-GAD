@@ -123,8 +123,15 @@ def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
     return generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations, metas, sum_log_prob
 
 @torch.inference_mode()
-def run_inference_gad_loading_trie(args, test_filename):
-    model, tokenizer = load_model_tokenizer_hf(args)
+def run_inference_gad_loading_trie(args, test_filename, model, tokenizer):
+    gad_output_file_path = construct_gad_output_file_path_from_folder(args, test_filename)
+    if os.path.exists(gad_output_file_path):
+        with open(gad_output_file_path, 'r', encoding='utf-8') as file:
+            lines = file.readlines()
+            if len(lines) >= args.iter:
+                print(f"Skipping {gad_output_file_path} as it already contains 100 or more lines.")
+                return
+    # model, tokenizer = load_model_tokenizer_hf(args)
     # trie_file = construct_trie_file_from_folder(args, test_filename)
 
     # if "binary" in args.prompt_type:
@@ -150,8 +157,6 @@ def run_inference_gad_loading_trie(args, test_filename):
     prompt = get_prompt_in_test_folder(args, test_filename)
     grammar_prompt_file = f"{test_filename}.sl"
     grammar_constr_name = f"{test_filename}.ebnf"
-
-    gad_output_file_path = construct_gad_output_file_path_from_folder(args, test_filename)
 
     start_time = time.time()
 
@@ -206,13 +211,14 @@ if __name__ == "__main__":
     print(f"top_p: {args.top_p}")
     print(f"max_new_tokens: {args.max_new_tokens}")
 
+    model, tokenizer = load_model_tokenizer_hf(args)
     directory = args.test_folder
     for filename in os.listdir(directory):
         if filename.endswith(".sl"):
             test_filename = filename[:-3]
             print(f"test_filename: {test_filename}")
             fix_seed(args.seed)
-            run_inference_gad_loading_trie(args, test_filename)
+            run_inference_gad_loading_trie(args, test_filename, model, tokenizer)
     print("GAD Inference Done!")
 
 

@@ -54,6 +54,7 @@ def inference_bare(args, model, tokenizer, prompt):
         repetition_penalty=args.repetition_penalty,
         num_return_sequences=args.num_return_sequences,
         return_dict_in_generate=True,
+        output_scores=True
     )
 
     input_length = 1 if model.config.is_encoder_decoder else input_ids.shape[1]
@@ -78,8 +79,14 @@ def inference_bare(args, model, tokenizer, prompt):
     return generations, metas, sum_log_prob
 
 @torch.inference_mode()
-def run_inference_bare(args,output_file_path, test_filename):
-    model, tokenizer = load_model_tokenizer_hf(args)
+def run_inference_bare(args,output_file_path, test_filename, model, tokenizer):
+    if os.path.exists(output_file_path):
+        with open(output_file_path, 'r', encoding='utf-8') as file:
+            lines = file.readlines()
+            if len(lines) >= args.iter:
+                print(f"Skipping {output_file_path} as it already contains 100 or more lines.")
+                return
+    # model, tokenizer = load_model_tokenizer_hf(args)
     # if "binary" in args.prompt_type:
     #     prompt = get_prompt(args, args.prompt_type)
     #     # test_file = get_file(args)
@@ -148,6 +155,7 @@ if __name__ == "__main__":
     print(f"top_p: {args.top_p}")
     print(f"max_new_tokens: {args.max_new_tokens}")
 
+    model, tokenizer = load_model_tokenizer_hf(args)
     directory = args.test_folder
     for filename in os.listdir(directory):
         if filename.endswith(".sl"):
@@ -155,7 +163,7 @@ if __name__ == "__main__":
             print(f"test_filename: {test_filename}")
             output_file_path = construct_bare_output_file_path_from_folder(args, test_filename)
             fix_seed(args.seed)
-            run_inference_bare(args, output_file_path, test_filename)
+            run_inference_bare(args, output_file_path, test_filename, model, tokenizer)
     print("Bare Inference Done!")
 
     # # Test for pre_prompt

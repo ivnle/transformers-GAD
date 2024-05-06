@@ -179,9 +179,15 @@ def inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
     return generated_tokens, acceptance_details_history, generations, metas, sum_log_prob
 
 @torch.inference_mode()
-def run_inference_gcd_construct_oracle_trie(args, test_filename):
-    model, tokenizer = load_model_tokenizer_hf(args)
+def run_inference_gcd_construct_oracle_trie(args, test_filename, model, tokenizer):
     output_file_path = construct_gcd_output_file_path_from_folder(args, test_filename)
+    if os.path.exists(output_file_path):
+        with open(output_file_path, 'r', encoding='utf-8') as file:
+            lines = file.readlines()
+            if len(lines) >= args.iter:
+                print(f"Skipping {output_file_path} as it already contains 100 or more lines.")
+                return
+    # model, tokenizer = load_model_tokenizer_hf(args)
     trie_file = construct_trie_file_from_folder(args, test_filename)
     trie = Trie()
     # if "binary" in args.prompt_type:
@@ -268,13 +274,14 @@ if __name__ == "__main__":
     print(f"top_p: {args.top_p}")
     print(f"max_new_tokens: {args.max_new_tokens}")
 
+    model, tokenizer = load_model_tokenizer_hf(args)
     directory = args.test_folder
     for filename in os.listdir(directory):
         if filename.endswith(".sl"):
             test_filename = filename[:-3]
             print(f"test_filename: {test_filename}")
             fix_seed(args.seed)
-            run_inference_gcd_construct_oracle_trie(args, test_filename)
+            run_inference_gcd_construct_oracle_trie(args, test_filename, model, tokenizer)
     print("GCD Inference Done!")
 
     # print(f"output_folder: {args.output_folder}")
