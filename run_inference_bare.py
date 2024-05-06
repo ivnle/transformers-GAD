@@ -59,7 +59,23 @@ def inference_bare(args, model, tokenizer, prompt):
     input_length = 1 if model.config.is_encoder_decoder else input_ids.shape[1]
     generated_tokens = output.sequences[:, input_length:]
     generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
-    return generations
+
+    transition_scores = model.compute_transition_scores(
+        output.sequences, output.scores, normalize_logits=True
+    )
+
+    metas = []
+    sum_log_prob = 0
+    for tok, score in zip(generated_tokens[0], transition_scores[0]):
+        meta = {
+            "token_id": int(tok),
+            "token_str": tokenizer.decode(tok),
+            "norm_score": float(score.cpu().numpy()),
+            "prob": float(np.exp(score.cpu().numpy()))
+        }
+        metas.append(meta)
+        sum_log_prob += float(score.cpu().numpy())
+    return generations, metas, sum_log_prob
 
 @torch.inference_mode()
 def run_inference_bare(args,output_file_path, test_filename):
@@ -80,8 +96,10 @@ def run_inference_bare(args,output_file_path, test_filename):
     start_time = time.time()
     with open(output_file_path, 'w', encoding='utf-8') as outfile:
         for i in tqdm(range(args.iter), desc="Running Inference"):
-            generations = inference_bare(args, model, tokenizer, prompt)
+            generations, metas, sum_log_prob = inference_bare(args, model, tokenizer, prompt)
             result = {"answer": generations,
+                      "metas": metas,
+                      "sum_log_prob": sum_log_prob,
                       "prompt": prompt,
                       "grammar_prompt": grammar_prompt_file,
                       "grammar_constr": grammar_constr_name
