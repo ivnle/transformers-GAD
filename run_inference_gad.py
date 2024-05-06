@@ -103,8 +103,24 @@ def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
     acceptance_details_history = gad_oracle_processor.acceptance_details_history
     adjusted_acceptance_details_history = gad_oracle_processor.adjusted_acceptance_details_history
     generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
+
+    transition_scores = model.compute_transition_scores(
+        output.sequences, output.scores, normalize_logits=True
+    )
+
+    metas = []
+    sum_log_prob = 0
+    for tok, score in zip(generated_tokens[0], transition_scores[0]):
+        meta = {
+            "token_id": int(tok),
+            "token_str": tokenizer.decode(tok),
+            "norm_score": float(score.cpu().numpy()),
+            "prob": float(np.exp(score.cpu().numpy()))
+        }
+        metas.append(meta)
+        sum_log_prob += float(score.cpu().numpy())
     # print(f"grammar constrained generations: {generations}")
-    return generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations
+    return generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations, metas, sum_log_prob
 
 @torch.inference_mode()
 def run_inference_gad_loading_trie(args, test_filename):
@@ -146,17 +162,21 @@ def run_inference_gad_loading_trie(args, test_filename):
         adjusted_trie_before = Trie()
         adjusted_trie_after = Trie()
         for i in tqdm(range(args.iter), desc="Running Inference"):
-            generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations = inference_gad(args, model, tokenizer, prompt, grammar_str, adjusted_trie_before)
+            generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations, metas, sum_log_prob = inference_gad(args, model, tokenizer, prompt, grammar_str, adjusted_trie_before)
             # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
             _, updated_rate = update_oracle_trie(adjusted_trie_before, generated_tokens, acceptance_details_history)
+            update_oracle_trie(adjusted_trie_before, generated_tokens, adjusted_acceptance_details_history)
             update_oracle_trie(adjusted_trie_after, generated_tokens, adjusted_acceptance_details_history)
 
             result = {"answer": generations,
+                      "sum_log_prob": sum_log_prob,
+                      "metas": metas,
+                      "updated_rate": updated_rate,
                       "prompt": prompt,
                       # "prompt_type": args.prompt_type,
                       "grammar_prompt": grammar_prompt_file,
                       "grammar_constr": grammar_constr_name,
-                      "updated_rate": updated_rate}
+                      }
             print(f"result: {result}")
 
             json_record = json.dumps(result)
@@ -193,7 +213,7 @@ if __name__ == "__main__":
             print(f"test_filename: {test_filename}")
             fix_seed(args.seed)
             run_inference_gad_loading_trie(args, test_filename)
-    print("GCD Inference Done!")
+    print("GAD Inference Done!")
 
 
     # output, faithful, ideal, elapsed_time = run_inference_grammar_constrained_track_scores(args)

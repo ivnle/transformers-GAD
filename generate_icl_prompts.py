@@ -29,7 +29,7 @@ def main():
 
         content.append(f"Question:\n{question_content}\nSolution:\n{solution_content}\n\n")
 
-    current_file_path = f"correct/{base_file}.sl"
+    current_file_path = f"correct/bv4/{base_file}.sl"
     if os.path.exists(current_file_path):
         with open(current_file_path, 'r') as file:
             question_content = file.read().strip()

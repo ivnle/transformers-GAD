@@ -1,5 +1,0 @@
-root ::= "(define-fun skel ((n199 Bool) (n195 Bool) (n192 Bool) (n189 Bool)) Bool" Start ")"
-Start ::= depth2
-depth2 ::= "(" "and" " " depth1 " " depth1 ")" | "(" "or" " " depth1 " " depth1 ")" | "(" "xor" " " depth2 " " depth2 ")" | "(" "not" " " depth2 ")" | depth1
-depth1 ::= "(" "and" " " depth0 " " depth0 ")" | "(" "or" " " depth0 " " depth0 ")" | "(" "xor" " " depth1 " " depth1 ")" | "(" "not" " " depth1 ")" | depth0 | "n192"
-depth0 ::= "true" | "false" | "(" "xor" " " depth0 " " depth0 ")" | "(" "not" " " depth0 ")" | "n199" | "n195" | "n189"

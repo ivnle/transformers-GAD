@@ -1,0 +1,1 @@
+(define-fun inv ((s (BitVec 4)) (t (BitVec 4))) (BitVec 4) (bvlshr s (bvlshr #b0111 (bvsub #b1000 #b0111))))

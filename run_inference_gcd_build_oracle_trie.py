@@ -20,6 +20,7 @@ from tqdm import tqdm
 import time
 from datetime import datetime
 from arg_parser import ArgumentParser
+import numpy as np
 
 
 #models=("meta-llama/Llama-2-7b-hf"
@@ -102,6 +103,17 @@ def inference_gcd(args, model, tokenizer):
     generated_tokens = output.sequences[:, input_length:]
     acceptance_details_history = grammar_processor.acceptance_details_history
     generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
+
+    transition_scores = model.compute_transition_scores(
+        output.sequences, output.scores, normalize_logits=True
+    )
+    for tok, score in zip(generated_tokens[0], transition_scores[0]):
+        # | token | token string | logits | probability
+        print(f"| {tok:5d} | {tokenizer.decode(tok):8s} | {score.numpy():.3f} | {np.exp(score.numpy()):.2%}")
+
+    # decode output
+    print(f"output sequences: {output.sequences}")
+    print(f"scores: {output.scores}")
     print(f"prompt: {prompt}")
     print(f"grammar constrained generations: {generations}")
     return generated_tokens, acceptance_details_history, generations
@@ -147,8 +159,24 @@ def inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
     generated_tokens = output.sequences[:, input_length:]
     acceptance_details_history = grammar_processor.acceptance_details_history
     generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
+
+    transition_scores = model.compute_transition_scores(
+        output.sequences, output.scores, normalize_logits=True
+    )
+
+    metas = []
+    sum_log_prob = 0
+    for tok, score in zip(generated_tokens[0], transition_scores[0]):
+        meta = {
+            "token_id": int(tok),
+            "token_str": tokenizer.decode(tok),
+            "norm_score": float(score.cpu().numpy()),
+            "prob": float(np.exp(score.cpu().numpy()))
+        }
+        metas.append(meta)
+        sum_log_prob += float(score.cpu().numpy())
     # print(f"grammar constrained generations: {generations}")
-    return generated_tokens, acceptance_details_history, generations
+    return generated_tokens, acceptance_details_history, generations, metas, sum_log_prob
 
 @torch.inference_mode()
 def run_inference_gcd_construct_oracle_trie(args, test_filename):
@@ -184,8 +212,10 @@ def run_inference_gcd_construct_oracle_trie(args, test_filename):
 
     with open(output_file_path, 'w', encoding='utf-8') as outfile:
         for i in tqdm(range(args.iter), desc="Running Inference"):
-            generated_tokens, acceptance_details_history, generations = inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
+            generated_tokens, acceptance_details_history, generations, metas, sum_log_prob = inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
             result = {"answer": generations,
+                      "sum_log_prob": sum_log_prob,
+                      "metas": metas,
                       "prompt": prompt,
                       # "prompt_type": args.prompt_type,
                       "grammar_prompt": grammar_prompt_file,
@@ -201,43 +231,6 @@ def run_inference_gcd_construct_oracle_trie(args, test_filename):
     print(f"Trie saved to {trie_file}")
     end_time = time.time()
     print(f"GCD results saved to {output_file_path}")
-    print(f"Total execution time: {end_time - start_time:.2f} seconds.")
-
-    ##### also run gad after gcd #####
-
-    gad_output_file_path = construct_gad_output_file_path_from_folder(args, test_filename)
-    start_time = time.time()
-
-    with open(gad_output_file_path, 'a', encoding='utf-8') as outfile:
-        trie = load_oracle_trie(trie_file)
-        before_trie_status = "gad_before"
-        after_trie_status = "gad_after"
-        adjusted_trie_before = Trie()
-        adjusted_trie_after = Trie()
-        for i in tqdm(range(args.iter), desc="Running Inference"):
-            generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations = inference_gad(args, model, tokenizer, prompt, grammar_str, trie)
-            result = {"answer": generations,
-                      "prompt": prompt,
-                      # "prompt_type": args.prompt_type,
-                      "grammar_prompt": grammar_prompt_file,
-                      "grammar_constr": grammar_constr_name}
-            print(f"result: {result}")
-            # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
-            update_oracle_trie(adjusted_trie_before, generated_tokens, acceptance_details_history)
-            update_oracle_trie(adjusted_trie_after, generated_tokens, adjusted_acceptance_details_history)
-            json_record = json.dumps(result)
-            outfile.write(json_record + '\n')
-            outfile.flush()
-            os.fsync(outfile.fileno())
-
-    trie_file_before = construct_trie_file_from_folder(args, test_filename, before_trie_status)
-    trie_file_after = construct_trie_file_from_folder(args, test_filename, after_trie_status)
-    save_trie_to_pkl(adjusted_trie_before, trie_file_before)
-    print(f"GAD before trie saved to {trie_file_before}")
-    save_trie_to_pkl(adjusted_trie_after, trie_file_after)
-    print(f"GAD after trie saved to {trie_file_after}")
-    end_time = time.time()
-    print(f"GAD results saved to {gad_output_file_path}")
     print(f"Total execution time: {end_time - start_time:.2f} seconds.")
 
 
@@ -268,7 +261,6 @@ def construct_gcd_output_file_path_from_folder(args, test_filename):
 if __name__ == "__main__":
     arg_parser = ArgumentParser(version="gad")
     args = arg_parser.parse_args()
-    # model, tokenizer = load_model_tokenizer_hf(args)
 
     print(f"model_id: {args.model_id}")
     print(f"repetition_penalty: {args.repetition_penalty}")
@@ -288,6 +280,7 @@ if __name__ == "__main__":
     # print(f"output_folder: {args.output_folder}")
 
     # test to see whether grammar file works
+    # model, tokenizer = load_model_tokenizer_hf(args)
     # inference_gcd(args, model, tokenizer)
 
     # run inference and build trie
