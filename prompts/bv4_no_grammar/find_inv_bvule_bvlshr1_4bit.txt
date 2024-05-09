@@ -16,14 +16,14 @@ Question:
 (define-fun max () (BitVec 4)
     (bvnot min))
 (define-fun l ((s (BitVec 4)) (t (BitVec 4))) Bool
-    (bvuge (bvmul (inv s t) s) t))
+    (bvule (uremtotal (inv s t) s) t))
 (define-fun SC ((s (BitVec 4)) (t (BitVec 4))) Bool
-    (not (bvult (bvor (bvneg s) s) t)))
+    true)
 (constraint (=> (SC s t) (l s t)))
 
 (check-synth)
 Solution:
-imeou
+(define-fun inv ((s (BitVec 4)) (t (BitVec 4))) (BitVec 4) s)
 
 Question:
 (set-logic BV)
@@ -41,14 +41,14 @@ Question:
 (define-fun max () (BitVec 4)
     (bvnot min))
 (define-fun l ((s (BitVec 4)) (t (BitVec 4))) Bool
-    (bvsge (bvlshr s (inv s t)) t))
+    (bvult (bvor (inv s t) s) t))
 (define-fun SC ((s (BitVec 4)) (t (BitVec 4))) Bool
-    (and (=> (bvslt s #x0) (bvsge (bvlshr s #x1) t)) (=> (bvsge s #x0) (bvsge s t))))
+    (bvult s t))
 (constraint (=> (SC s t) (l s t)))
 
 (check-synth)
 Solution:
-(define-fun inv ((s (BitVec 4)) (t (BitVec 4))) (BitVec 4) (bvlshr s (bvlshr #b0111 (bvsub #b1000 #b0111))))
+(define-fun inv ((s (BitVec 4)) (t (BitVec 4))) (BitVec 4) s)
 
 Question:
 (set-logic BV)
@@ -66,9 +66,9 @@ Question:
 (define-fun max () (BitVec 4)
     (bvnot min))
 (define-fun l ((s (BitVec 4)) (t (BitVec 4))) Bool
-    (distinct (bvlshr s (inv s t)) t))
+    (bvsge (bvneg (inv s t)) t))
 (define-fun SC ((s (BitVec 4)) (t (BitVec 4))) Bool
-    (or (distinct s #x0) (distinct t #x0)))
+    true)
 (constraint (=> (SC s t) (l s t)))
 
 (check-synth)
