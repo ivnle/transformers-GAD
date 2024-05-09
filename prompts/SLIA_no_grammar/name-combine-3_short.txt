@@ -1,0 +1,70 @@
+You are an expert in program synthesis. You are tasked with solving a Syntax-Guided Synthesis (SyGuS) problem. Your goal is to output a function that should produce outputs that satisfy a series of constraints when given specific inputs.
+
+Question:
+(set-logic SLIA)
+
+(synth-fun f ((firstname String) (lastname String)) String)
+
+(declare-var firstname String)
+(declare-var lastname String)
+(constraint (= (f "Launa" "Withers") "Launa Withers"))
+(constraint (= (f "Lakenya" "Edison") "Lakenya Edison"))
+(constraint (= (f "Brendan" "Hage") "Brendan Hage"))
+(constraint (= (f "Bradford" "Lango") "Bradford Lango"))
+(constraint (= (f "Rudolf" "Akiyama") "Rudolf Akiyama"))
+(constraint (= (f "Lara" "Constable") "Lara Constable"))
+
+(check-synth)
+Solution:
+(define-fun f ((firstname String) (lastname String)) String (str.++ firstname (str.++ " " lastname)))
+
+Question:
+(set-logic SLIA)
+
+(synth-fun f ((firstname String) (lastname String)) String)
+
+(declare-var firstname String)
+(declare-var lastname String)
+(constraint (= (f "Launa" "Withers") "L. Withers"))
+(constraint (= (f "Lakenya" "Edison") "L. Edison"))
+(constraint (= (f "Brendan" "Hage") "B. Hage"))
+(constraint (= (f "Bradford" "Lango") "B. Lango"))
+(constraint (= (f "Rudolf" "Akiyama") "R. Akiyama"))
+(constraint (= (f "Lara" "Constable") "L. Constable"))
+
+(check-synth)
+Solution:
+(define-fun f ((firstname String) (lastname String)) String (str.++ (str.++ (str.++ (str.at firstname 0) ".") " ") lastname))
+
+Question:
+(set-logic SLIA)
+
+(synth-fun f ((firstname String) (lastname String)) String)
+
+(declare-var firstname String)
+(declare-var lastname String)
+(constraint (= (f "Nancy" "FreeHafer") "Nancy F."))
+(constraint (= (f "Andrew" "Cencici") "Andrew C."))
+(constraint (= (f "Jan" "Kotas") "Jan K."))
+(constraint (= (f "Mariya" "Sergienko") "Mariya S."))
+
+(check-synth)
+Solution:
+(define-fun f ((firstname String) (lastname String)) String (str.++ (str.++ (str.++ firstname " ") (str.at lastname 0)) "."))
+
+Question:
+(set-logic SLIA)
+
+(synth-fun f ((firstname String) (lastname String)) String)
+
+(declare-var firstname String)
+(declare-var lastname String)
+(constraint (= (f "Launa" "Withers") "L. Withers"))
+(constraint (= (f "Lakenya" "Edison") "L. Edison"))
+(constraint (= (f "Brendan" "Hage") "B. Hage"))
+(constraint (= (f "Bradford" "Lango") "B. Lango"))
+(constraint (= (f "Rudolf" "Akiyama") "R. Akiyama"))
+(constraint (= (f "Lara" "Constable") "L. Constable"))
+
+(check-synth)
+Solution:
