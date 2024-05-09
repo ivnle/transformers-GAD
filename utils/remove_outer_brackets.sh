@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INPUT_DIR="correct"
+INPUT_DIR="correct/bv4"
 
 # loop through all files that do not have the .sl extension
 for file in $INPUT_DIR/*; do

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-INPUT_DIR="benchmarks/comp/2019/PBE_SLIA_Track/from_2018"
-OUTPUT_DIR="examples/sygus/SLIA"
+INPUT_DIR="benchmarks/comp/2019/General_Track/bv-conditional-inverses"
+OUTPUT_DIR="examples/sygus/bv4"
 
 mkdir -p $OUTPUT_DIR
 
