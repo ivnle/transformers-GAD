@@ -1,0 +1,1 @@
+PSE Inc. said it expects to report third earnings of 1.3 million to 1.7 million or 14 cents to 18 cents a share

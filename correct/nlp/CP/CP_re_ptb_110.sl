@@ -1,0 +1,1 @@
+Producer prices for intermediate goods grew 0.4 % in September after dropping for three consecutive months

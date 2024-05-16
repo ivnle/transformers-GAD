@@ -1,0 +1,1 @@
+At the investment firm of Smith Barney Harris Upham & Co. the commodity-chemical segment is seen pulling down overall profit for 20 companies representative of the whole industry by 8 % to 10 %

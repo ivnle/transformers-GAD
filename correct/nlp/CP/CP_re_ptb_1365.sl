@@ -1,0 +1,1 @@
+I spent 30 million in the last half-hour

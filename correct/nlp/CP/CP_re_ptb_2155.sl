@@ -1,0 +1,1 @@
+And he has kept mum on how his decision might affect a bid for United Airlines which includes a big stake by British Airways PLC

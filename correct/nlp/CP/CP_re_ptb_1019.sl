@@ -1,0 +1,1 @@
+Her friend Diana 's father was a professional thief they did n't seem to have any bedrooms at all

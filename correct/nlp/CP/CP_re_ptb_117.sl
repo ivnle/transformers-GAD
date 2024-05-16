@@ -1,0 +1,1 @@
+The Boston firm said stock-fund redemptions were running at less than one-third the level two years ago

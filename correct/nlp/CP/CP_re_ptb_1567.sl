@@ -1,0 +1,1 @@
+Interprovincial Pipe Line Co. said it will delay a proposed two-step 830 million Canadian-dollar 705.6 million expansion of its system because Canada 's output of crude oil is shrinking

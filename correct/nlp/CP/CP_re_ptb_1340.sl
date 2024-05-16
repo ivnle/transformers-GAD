@@ -1,0 +1,1 @@
+People wish the government would do something about leveraged buy-outs do something about takeovers do something about Donald Trump said Rand Araskog chairman of ITT Corp. whose stock dropped 3.375

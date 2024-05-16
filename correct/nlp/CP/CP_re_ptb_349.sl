@@ -1,0 +1,1 @@
+Competition is bound to get tougher if Kao introduces a product like Attack in the U.S.

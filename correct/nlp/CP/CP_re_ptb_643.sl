@@ -1,0 +1,1 @@
+At the end of the day 251.2 million shares were traded

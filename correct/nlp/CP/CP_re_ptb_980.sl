@@ -1,0 +1,1 @@
+L.J. Hooker based in Atlanta is operating with protection from its creditors under Chapter 11 of the U.S. Bankruptcy Code

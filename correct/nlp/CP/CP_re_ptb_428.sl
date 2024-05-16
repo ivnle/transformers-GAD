@@ -1,0 +1,1 @@
+A modest drop in the dollar only a modest one mind you would be welcomed by the U.S.

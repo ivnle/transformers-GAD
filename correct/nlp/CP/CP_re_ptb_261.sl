@@ -1,0 +1,1 @@
+But he added I believe Republicans and Democrats will work together to get capital-gains reform this year

@@ -1,0 +1,1 @@
+Moreover the Wilmington Del. company is helped when prices weaken on the commodity chemicals it buys for its own production needs such as ethylene

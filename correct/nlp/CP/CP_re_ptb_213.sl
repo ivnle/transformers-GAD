@@ -1,0 +1,1 @@
+In the past the OTC market thrived on a firm base of small-investor participation

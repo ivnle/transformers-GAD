@@ -1,0 +1,1 @@
+At the lounge manager Elizabeth Dyer wo n't admit patrons in jeans T-shirts or tennis shoes

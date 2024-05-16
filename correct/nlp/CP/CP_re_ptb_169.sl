@@ -1,0 +1,1 @@
+Half of them are really scared and want to sell she said but I 'm trying to talk them out of it

@@ -1,0 +1,1 @@
+He said Jews were sick with complexes and he called David Dinkins Mr. Giuliani 's black opponent a fancy shvartze with a mustache

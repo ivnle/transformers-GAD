@@ -1,0 +1,1 @@
+A major reason is that investors already have sharply scaled back their purchases of stock funds since Black Monday

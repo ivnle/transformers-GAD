@@ -1,0 +1,1 @@
+That ca n't be said of the 2,400 notepad computer introduced a few weeks ago by GRiD Systems Corp. a unit of Tandy

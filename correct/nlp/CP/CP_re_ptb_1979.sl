@@ -1,0 +1,1 @@
+Discount brokerage customers have been in the market somewhat but not whole hog like they were two years ago says Leslie Quick Jr. chairman of the Quick & Reilly discount brokerage firm

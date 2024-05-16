@@ -1,0 +1,1 @@
+It settled with a loss of 4.95 cents at 1.3210 a pound

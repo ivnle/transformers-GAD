@@ -1,0 +1,1 @@
+During the 1988 second half many companies posted record gasoline and chemical profits

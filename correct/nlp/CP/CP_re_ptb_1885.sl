@@ -1,0 +1,1 @@
+While neither side will disclose its contents Mr. Mehta expects it to contain more specific guarantees on research and development spending levels in Canada than Merieux offered to Investment Canada

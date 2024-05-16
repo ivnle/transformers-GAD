@@ -1,0 +1,1 @@
+The charge on loans to depository institutions by the New York Federal Reserve Bank

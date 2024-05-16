@@ -1,0 +1,1 @@
+But I think the kind of congressional investigation that has been pursued is a far greater danger to American notions of liberty and freedom than any incompetency and yes maybe criminality within HUD could possibly generate

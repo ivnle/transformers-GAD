@@ -1,0 +1,1 @@
+By many accounts an early hint of a price rout in the making came at the start of this year

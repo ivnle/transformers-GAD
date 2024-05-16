@@ -1,0 +1,1 @@
+At Quantum Chemical Corp. New York the trouble is lower prices for polyethylene higher debt costs and the idling of an important plant due to an explosion

@@ -1,0 +1,1 @@
+And it has remained there as evidenced by its reappearance in a 1972 CBS sitcom called Bridget Loves Bernie whose sole distinction was that it led to the real-life marriage of Meredith Baxter and David Birney

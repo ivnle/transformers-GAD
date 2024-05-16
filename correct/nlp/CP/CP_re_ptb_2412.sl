@@ -1,0 +1,1 @@
+Thomson missile products with about half British Aerospace 's annual revenue include the Crotale surface-to-air missile family

@@ -1,0 +1,1 @@
+Networks like other consumer products develop images in peoples ' minds that are n't easy to change

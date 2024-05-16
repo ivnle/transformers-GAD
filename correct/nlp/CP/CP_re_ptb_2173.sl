@@ -1,0 +1,1 @@
+There is no prospect of any so-called grand compromise or deal next year because the administration simply did n't live up to this year 's deal Senate Majority Leader George Mitchell D. Maine said yesterday on CBS News 's Face the Nation

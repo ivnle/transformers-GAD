@@ -1,0 +1,1 @@
+He thinks another crash is unlikely and says he was nibbling at selected stocks during Friday 's plunge

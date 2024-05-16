@@ -1,0 +1,1 @@
+In response to your overly optimistic outdated piece on how long unemployment lasts People Patterns Sept. 20 I am in the communications field above entry level

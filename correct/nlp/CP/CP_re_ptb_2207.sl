@@ -1,0 +1,1 @@
+Unseasonably hot dry weather across large portions of the Great Plains and in wheat-growing areas in Washington and Oregon is threatening to reduce the yield from this season 's winter wheat crop said Conrad Leslie a futures analyst and head of Leslie Analytical in Chicago

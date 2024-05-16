@@ -1,0 +1,1 @@
+The official White House reaction to a plunge in stock prices has a 60-year history of calm right up through Friday

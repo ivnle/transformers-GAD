@@ -1,0 +1,1 @@
+At stake is what Mike Swavely Compaq 's president of North America operations calls the Holy Grail of the computer industry the search for a real computer in a package so small you can take it everywhere

@@ -1,0 +1,1 @@
+Three million shares of 25 preferred via competitive bidding

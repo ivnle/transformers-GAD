@@ -1,0 +1,1 @@
+Canada 13.50 % Germany 8.50 % Japan 4.875 % Switzerland 8.50 % Britain 15 %

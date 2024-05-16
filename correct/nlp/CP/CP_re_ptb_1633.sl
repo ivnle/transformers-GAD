@@ -1,0 +1,1 @@
+The Supreme Court and some states have specifically recognized that the Fifth Amendment does not preclude the inference where the privilege is claimed by a party to a civil cause

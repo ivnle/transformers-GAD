@@ -1,0 +1,1 @@
+Once again the specialists were not able to handle the imbalances on the floor of the New York Stock Exchange said Christopher Pedersen senior vice president at Twenty-First Securities Corp

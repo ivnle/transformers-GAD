@@ -1,0 +1,1 @@
+Compaq Computer Corp. 's long-awaited entry today into the notebook field is expected to put immediate heat on others in the market especially Zenith Electronics Corp. the current market leader and on a swarm of promising start-ups

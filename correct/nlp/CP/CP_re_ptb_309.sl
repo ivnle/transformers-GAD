@@ -1,0 +1,1 @@
+Withhold income taxes from the paychecks of certain farm workers currently exempt from withholding

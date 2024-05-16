@@ -1,0 +1,1 @@
+Thus in a criminal case a prosecutor can not comment on a defendant 's failure to testify nor can the defendant be compelled to take the stand as a witness thus forcing him to take the Fifth

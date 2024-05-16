@@ -1,0 +1,1 @@
+I 'm the only one who said there would be an October massacre all through late August and September says Mr. Granville once a widely followed market guru and still a well-known newsletter writer

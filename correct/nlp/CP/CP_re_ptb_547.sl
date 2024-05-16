@@ -1,0 +1,1 @@
+Hundreds of East Germans flocked to Bonn 's Embassy in Warsaw bringing to more than 1,200 the number of emigres expected to flee to the West beginning today

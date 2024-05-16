@@ -1,0 +1,1 @@
+Shares of Rally 's Inc. an operator of fast-food restaurants closed at 17 each up from its 15 offering price and shares of Employee Benefit Plans Inc. a health-care consultant closed at 14.125 up from its 12 offering price

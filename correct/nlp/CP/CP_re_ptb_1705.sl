@@ -1,0 +1,1 @@
+John P. Frank president of Zenith Data Systems simply shrugs off such criticism noting that 3 1\/2-inch floppies were also unconventional when they first replaced five-inch disks

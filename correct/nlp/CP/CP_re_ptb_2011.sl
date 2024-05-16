@@ -1,0 +1,1 @@
+Officials at Drexel said they had n't seen the suit and thus could n't comment

@@ -1,0 +1,1 @@
+Just a month ago GM announced it would make an aging assembly plant in Lakewood Ga. the eighth U.S. assembly facility to close since 1987

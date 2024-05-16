@@ -1,0 +1,1 @@
+He says financial problems plaguing electronics fur and furniture companies key categories in the local retail economy have further deflated the market

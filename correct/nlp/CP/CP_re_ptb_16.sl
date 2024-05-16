@@ -1,0 +1,1 @@
+Quantum 's lot is mostly tied to polyethylene resin used to make garbage bags milk jugs housewares toys and meat packaging among other items

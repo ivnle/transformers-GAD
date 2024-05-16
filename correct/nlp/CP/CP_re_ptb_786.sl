@@ -1,0 +1,1 @@
+California 's Glendale Federal Bank awarded its 12 million to 15 million account to the Los Angeles office of Omnicom Group 's BBDO agency

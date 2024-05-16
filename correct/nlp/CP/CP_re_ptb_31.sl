@@ -1,0 +1,1 @@
+No one knows however whether the new posted prices will stick once producers and customers start to haggle

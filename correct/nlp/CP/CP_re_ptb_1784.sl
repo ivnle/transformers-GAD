@@ -1,0 +1,1 @@
+BULL HN INFORMATION SYSTEMS Inc. is a U.S. majority-owned unit of Cie. des Machines Bull

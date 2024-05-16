@@ -1,0 +1,1 @@
+Producers of commodity chemicals the basic chemicals produced in huge volumes for other manufacturers have seen sharp inventory cutting by buyers

@@ -1,0 +1,1 @@
+Mr. Watkins said the main reason for the production decline is shrinking output of light crude from mature conventional fields in western Canada

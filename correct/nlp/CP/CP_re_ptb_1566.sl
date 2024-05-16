@@ -1,0 +1,1 @@
+The units that filed the suit are Southeastern Newspapers Corp. and Florida Publishing Co

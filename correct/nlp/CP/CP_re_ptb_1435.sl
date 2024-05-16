@@ -1,0 +1,1 @@
+Results of the Tuesday October 10 1989 auction of short-term U.S. government bills sold at a discount from face value in units of 10,000 to 1 million

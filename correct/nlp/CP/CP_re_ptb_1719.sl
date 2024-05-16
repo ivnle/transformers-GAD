@@ -1,0 +1,1 @@
+As Syms 's core business of off-price retailing grows a small subsidiary that is operationally unrelated becomes a difficult distraction said Marcy Syms president of the parent in a statement

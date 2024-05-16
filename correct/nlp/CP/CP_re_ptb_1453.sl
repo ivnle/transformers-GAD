@@ -1,0 +1,1 @@
+In the latest nine months net income was 4.7 million or 1.31 a share on revenue of 44.3 million

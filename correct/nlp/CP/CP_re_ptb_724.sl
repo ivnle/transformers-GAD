@@ -1,0 +1,1 @@
+America West though is a smaller airline and therefore more affected by the delayed delivery of a single plane than many of its competitors would be

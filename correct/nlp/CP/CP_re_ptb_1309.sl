@@ -1,0 +1,1 @@
+New York money manager Mario Gabelli an expert at spotting takeover candidates says that takeovers are n't totally gone

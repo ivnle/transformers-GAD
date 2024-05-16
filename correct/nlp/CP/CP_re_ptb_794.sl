@@ -1,0 +1,1 @@
+A spokesman for the U.S. Attorney 's office said extradition proceedings are just beginning for the other two defendants in the case Eric Anthony Abrahams former Jamaican tourism minister and Jamaican businessman Arnold Foote Jr

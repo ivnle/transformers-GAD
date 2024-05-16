@@ -1,0 +1,1 @@
+Stocks of utilities held up relatively better than other market sectors during the sell-off

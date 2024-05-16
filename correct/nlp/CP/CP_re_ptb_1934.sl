@@ -1,0 +1,1 @@
+She 's assembling a staff of about 35 investigative reporters who will produce weekly in-depth segments with an eye toward breaking big stories

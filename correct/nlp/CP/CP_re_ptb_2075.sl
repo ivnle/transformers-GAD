@@ -1,0 +1,1 @@
+William O. Taylor the parent 's chairman and chief executive officer said earnings continued to be hurt by softness in ad volume at the Boston newspaper

@@ -1,0 +1,1 @@
+While Hong Kong companies have in the past issued warrants on their own shares Salomon 's warrants are the first here to be issued by a third party

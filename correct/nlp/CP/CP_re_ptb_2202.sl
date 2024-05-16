@@ -1,0 +1,1 @@
+In theory at least tight supplies next spring could leave the wheat futures market susceptible to a supply-demand squeeze said Daniel Basse a futures analyst with AgResource Co. in Chicago

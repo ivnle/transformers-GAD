@@ -1,0 +1,1 @@
+But even among those aged 75 and older the share living with a spouse rose slightly to 40 % in 1988 from 38 % in 1970

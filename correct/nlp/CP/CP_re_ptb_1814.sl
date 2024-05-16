@@ -1,0 +1,1 @@
+NCNB for example has been one of the highest rate payers in the Texas market and in Florida rates are especially sensitive in retirement communities

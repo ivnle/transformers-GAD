@@ -1,0 +1,1 @@
+As a group stock funds held 10.2 % of assets in cash as of August the latest figures available from the Investment Company Institute

@@ -1,0 +1,1 @@
+Pricor Inc. offering of one million new shares of common stock and 300,000 shares by holders via Drexel Burnham Lambert Inc. and J.C. Bradford & Co

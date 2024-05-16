@@ -1,0 +1,1 @@
+We 've had two more years of significant accumulation of debt just at the time when earnings are being squeezed Mr. Chimerine notes

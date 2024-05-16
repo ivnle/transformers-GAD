@@ -1,0 +1,1 @@
+The broken purchase appears as additional evidence of trouble at Imperial Corp. whose spokesman said the company withdrew its application from the federal Office of Thrift Supervision because of an informal notice that Imperial 's thrift unit failed to meet Community Reinvestment Act requirements

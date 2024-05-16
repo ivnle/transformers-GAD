@@ -1,0 +1,1 @@
+In the 1988 third quarter Quantum earned 99.8 million or 3.92 a share on sales of 724.4 million

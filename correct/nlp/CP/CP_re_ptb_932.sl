@@ -1,0 +1,1 @@
+These optional 1%-a-year increases to the steel quota program are built into the Bush administration 's steel-quota program to give its negotiators leverage with foreign steel suppliers to try to get them to withdraw subsidies and protectionism from their own steel industries

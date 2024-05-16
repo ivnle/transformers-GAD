@@ -1,0 +1,1 @@
+Speed up the collection of the payroll tax from large companies effective August 1990

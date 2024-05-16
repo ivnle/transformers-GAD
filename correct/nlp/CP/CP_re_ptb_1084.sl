@@ -1,0 +1,1 @@
+The auto maker 's decision to let word of the latest shutdowns and product reassignments trickle out in separate communiques to the affected plants showed disarray and an inability or unwillingness to provide consistent information Mr. Yokich said

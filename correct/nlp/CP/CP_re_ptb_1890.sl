@@ -1,0 +1,1 @@
+They said follow CNN he told reporters

@@ -1,0 +1,1 @@
+Meanwhile Friday brought a reprieve for money managers whose investment styles had put them at odds with the market rally

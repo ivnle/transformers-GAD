@@ -1,0 +1,1 @@
+But their study which spanned the 1962-85 period has since been shown to be jinxed by an unlucky choice of data

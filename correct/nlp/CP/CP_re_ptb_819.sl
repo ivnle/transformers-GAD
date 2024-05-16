@@ -1,0 +1,1 @@
+The company said Salomon Brothers Inc. and Howard Weil Labouisse Friedrichs Inc. underwriters for the offering were granted an option to buy as much as an additional 1.5 million shares to cover over-allotments

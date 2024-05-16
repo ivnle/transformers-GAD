@@ -1,0 +1,1 @@
+The dissenters of the Warren Court were often defending a legal legacy that they inherited says Prof. A.E. Dick Howard of the University of Virginia Law School but the dissenters today are defending a legacy that they created

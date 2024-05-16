@@ -1,0 +1,1 @@
+Separately several Saatchi agency clients said they believe the company 's management shakeup will have little affect on them

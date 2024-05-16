@@ -1,0 +1,1 @@
+The sudden romance of British Aerospace and Thomson-CSF traditionally bitter competitors for Middle East and Third World weapons contracts is stirring controversy in Western Europe 's defense industry

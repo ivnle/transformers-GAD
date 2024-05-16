@@ -1,0 +1,1 @@
+The Soviet Union has n't given any clear indication of its wheat purchase plans but many analysts expect Moscow to place sizable orders for U.S. wheat in the next few months further supporting prices

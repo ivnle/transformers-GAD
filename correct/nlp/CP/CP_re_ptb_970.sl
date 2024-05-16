@@ -1,0 +1,1 @@
+The agreements bring to a total of nine the number of planes the travel company has sold this year as part of a restructuring

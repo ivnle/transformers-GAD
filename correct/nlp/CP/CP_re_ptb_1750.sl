@@ -1,0 +1,1 @@
+Justice Stevens 69 is probably the most philosophical of the dissenters about his role in part because he may be the least liberal of the four but also because he enjoys the intellectual challenge of arguing with the majority more than the others

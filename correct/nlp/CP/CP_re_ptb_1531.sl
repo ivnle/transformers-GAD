@@ -1,0 +1,1 @@
+He did n't forecast Phillips 's results

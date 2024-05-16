@@ -1,0 +1,1 @@
+The interest-only securities will be sold separately by BT Securities

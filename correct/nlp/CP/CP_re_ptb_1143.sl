@@ -1,0 +1,1 @@
+Many of the affluent are n't comfortable with themselves either

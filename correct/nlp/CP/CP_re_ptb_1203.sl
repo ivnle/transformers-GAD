@@ -1,0 +1,1 @@
+Regulators also ordered CenTrust to stop buying back the preferred stock

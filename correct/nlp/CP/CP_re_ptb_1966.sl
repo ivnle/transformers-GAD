@@ -1,0 +1,1 @@
+I have this feeling that it 's built on sand she says that the market rises but there 's no foundation to it

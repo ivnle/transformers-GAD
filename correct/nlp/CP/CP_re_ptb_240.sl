@@ -1,0 +1,1 @@
+On the OTC market First Executive a big buyer of the high-risk high-yield issues slid 2 to 12 1\/4

@@ -1,0 +1,1 @@
+September 's steep rise in producer prices shows that inflation still persists and the pessimism over interest rates caused by the new price data contributed to the stock market 's plunge Friday

@@ -1,0 +1,1 @@
+During last week 's maneuverings on the deficit-cutting bill and the capital-gains issue there were signs that Senate Republicans and the administration were at odds

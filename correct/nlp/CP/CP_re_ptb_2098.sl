@@ -1,0 +1,1 @@
+Mr. Sweig estimated that Merck 's profit for the quarter rose by about 22 % propelled by sales of its line-up of fast-growing prescription drugs including its anti-cholesterol drug Mevacor a high blood pressure medicine Vasotec Primaxin an antibiotic and Pepcid an anti-ulcer medication

@@ -1,0 +1,1 @@
+Mr. Spielvogel had said that Prudential-Bache was prepared to finance either a management buy-out and restructuring or a buy-out of Backer Spielvogel alone led by him

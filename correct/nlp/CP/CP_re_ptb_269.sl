@@ -1,0 +1,1 @@
+One obvious place to attach a capital-gains tax cut and perhaps other popular items stripped from the deficit-reduction bill is the legislation to raise the federal borrowing limit

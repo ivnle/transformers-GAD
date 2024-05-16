@@ -1,0 +1,1 @@
+Himont Quantum and Union Carbide all declined to comment

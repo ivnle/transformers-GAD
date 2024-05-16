@@ -1,0 +1,1 @@
+Overall the index has climbed at a 5.1 % compound annual rate since the start of the year the Labor Department said

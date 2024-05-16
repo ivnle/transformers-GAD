@@ -1,0 +1,1 @@
+But they will have to act quickly

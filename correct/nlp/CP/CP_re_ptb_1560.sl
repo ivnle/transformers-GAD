@@ -1,0 +1,1 @@
+Going into the fourth quarter natural gas prices are anywhere from 8 % to 17 % lower than a year earlier

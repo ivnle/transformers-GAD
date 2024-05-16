@@ -1,0 +1,1 @@
+As a measure of the depths to which the Texas real estate market has sunk the RTC will pay 3.8 billion to NCNB to take 750 million of bad assets

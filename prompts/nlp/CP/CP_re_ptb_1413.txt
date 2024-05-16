@@ -1,0 +1,52 @@
+Perform constituency parsing on the provided sentences in accordance with the Penn TreeBank annotation guidelines. Fill in the last mapping.
+
+Ad Notes
+->
+[ ( NP-HLN ( NN Ad ) ( NNS Notes ) ) ]
+
+The market crumbled
+->
+[ ( S ( NP-SBJ ( DT The ) ( NN market ) ) ( VP ( VBD crumbled ) ) ) ]
+
+I felt betrayed he later said
+->
+[ ( S ( S-TPC-1 ( NP-SBJ ( PRP I ) ) ( VP ( VBD felt ) ( ADJP-PRD ( VBN betrayed ) ) ) ) ( NP-SBJ ( PRP he ) ) ( ADVP-TMP ( RB later ) ) ( VP ( VBD said ) ) ) ]
+
+Friday October 13 1989
+->
+[ ( NP ( NNP Friday ) ( NNP October ) ( CD 13 ) ( CD 1989 ) ) ]
+
+The Arabs had merely oil
+->
+[ ( S ( NP-SBJ ( DT The ) ( NNPS Arabs ) ) ( VP ( VBD had ) ( NP ( RB merely ) ( NN oil ) ) ) ) ]
+
+Energy
+->
+[ ( NP-HLN ( NN Energy ) ) ]
+
+Some U.S. entrepreneurs operate on a smaller scale
+->
+[ ( S ( NP-SBJ ( DT Some ) ( NNP U.S. ) ( NNS entrepreneurs ) ) ( VP ( VBP operate ) ( PP-MNR ( IN on ) ( NP ( DT a ) ( JJR smaller ) ( NN scale ) ) ) ) ) ]
+
+Knowledgeware Inc.
+->
+[ ( NP-HLN ( NNP Knowledgeware ) ( NNP Inc. ) ) ]
+
+And her husband sometimes calls her Ducky
+->
+[ ( S ( CC And ) ( NP-SBJ ( PRP$ her ) ( NN husband ) ) ( ADVP-TMP ( RB sometimes ) ) ( VP ( VBZ calls ) ( S ( NP-SBJ ( PRP her ) ) ( NP-PRD ( NNP Ducky ) ) ) ) ) ]
+
+Nausea seems a commonplace symptom
+->
+[ ( S ( NP-SBJ ( NN Nausea ) ) ( VP ( VBZ seems ) ( NP-PRD ( DT a ) ( JJ commonplace ) ( NN symptom ) ) ) ) ]
+
+Swedish Export Credit Corp Sweden
+->
+[ ( NP ( NP ( NNP Swedish ) ( NNP Export ) ( NNP Credit ) ( NNP Corp ) ) ( PRN ( NP-LOC ( NNP Sweden ) ) ) ) ]
+
+The dollar weakened against most other major currencies
+->
+[ ( S ( NP-SBJ ( DT The ) ( NN dollar ) ) ( VP ( VBD weakened ) ( PP ( IN against ) ( NP ( RBS most ) ( JJ other ) ( JJ major ) ( NNS currencies ) ) ) ) ) ]
+
+8.60 % 30 to 44 days 8.55 % 45 to 59 days 8.375 % 60 to 79 days 8.50 % 80 to 89 days 8.25 % 90 to 119 days 8.125 % 120 to 149 days 8 % 150 to 179 days 7.625 % 180 to 270 days
+->

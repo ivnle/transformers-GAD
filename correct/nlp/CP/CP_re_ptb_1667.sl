@@ -1,0 +1,1 @@
+One manufacturer already has produced a clipboard-sized computer called a notepad and two others have introduced even smaller palmtops

@@ -1,0 +1,1 @@
+In recent months the price of polyethylene even more than that of other commodity plastics has taken a dive

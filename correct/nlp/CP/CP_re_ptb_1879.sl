@@ -1,0 +1,1 @@
+Investment Canada declined to comment on the reasons for the government decision

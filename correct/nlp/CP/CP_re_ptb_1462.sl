@@ -1,0 +1,1 @@
+The company which issued a statement on the agreement late Friday said that 1 million of the payment was previously provided for in its financial statements and that 500,000 will be recognized in its 1989 third-quarter statement

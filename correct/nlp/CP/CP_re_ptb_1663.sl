@@ -1,0 +1,1 @@
+Further fractioning the late-night audience is the addition of the Arsenio Hall Show syndicated by Paramount Communications Inc

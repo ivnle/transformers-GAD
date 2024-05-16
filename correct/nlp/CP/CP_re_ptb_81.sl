@@ -1,0 +1,1 @@
+Analysts immediately viewed the price data the grimmest inflation news in months as evidence that the Federal Reserve was unlikely to allow interest rates to fall as many investors had hoped

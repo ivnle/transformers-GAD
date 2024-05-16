@@ -1,0 +1,1 @@
+Require mutual funds to include in their taxable income dividends paid to them on the date that the dividends are declared rather than received effective the day after the tax bill is enacted

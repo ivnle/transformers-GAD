@@ -1,0 +1,1 @@
+The 50-50 joint venture which may be dubbed Eurodynamics would have combined annual sales of at least 1.4 billion 2.17 billion and would be among the world 's largest missile makers

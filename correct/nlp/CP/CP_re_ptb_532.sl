@@ -1,0 +1,1 @@
+Bush indicated there might be room for flexibility in a bill to allow federal funding of abortions for poor women who are vicitims of rape and incest

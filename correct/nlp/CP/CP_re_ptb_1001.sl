@@ -1,0 +1,1 @@
+Managed properly and with a long-term outlook these can become investment-grade quality properties

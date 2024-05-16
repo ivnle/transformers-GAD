@@ -1,0 +1,1 @@
+It takes more error now to have a major depression than back in the Thirties much as the financial community and the government may try

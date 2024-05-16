@@ -1,0 +1,1 @@
+On the exchange floor as soon as UAL stopped trading we braced for a panic said one top floor trader

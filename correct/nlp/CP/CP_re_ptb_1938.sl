@@ -1,0 +1,1 @@
+The network 's salaries have always ranged far below industry standards resulting in a less-experienced work force

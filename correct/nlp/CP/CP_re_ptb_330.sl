@@ -1,0 +1,1 @@
+Retailers in Phoenix Ariz. say P&G 's new powdered detergent to be called Cheer with Color Guard will be on shelves in that market by early November

@@ -1,0 +1,1 @@
+Sharp increases in the price of fresh produce caused Spain 's September consumer price index to shoot up 1.1 % from the previous month pushing the annual rate of inflation to 6.8 % the National Institute of Statistics said Friday

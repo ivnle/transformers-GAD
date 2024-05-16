@@ -1,0 +1,1 @@
+We 've been very disappointed in the performance of natural gas prices said Mr. Cox Phillips 's president

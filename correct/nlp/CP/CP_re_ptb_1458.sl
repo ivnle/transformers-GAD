@@ -1,0 +1,1 @@
+In 1984 the EPA notified Gulf Resources which was a part-owner of the smelter that it was potentially liable for sharing cleanup costs at the site under the federal Superfund program

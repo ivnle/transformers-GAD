@@ -1,0 +1,1 @@
+The issue which is puttable back to the company at par on Oct. 15 1999 was priced at a spread of 50 basis points above the Treasury 's 10-year note

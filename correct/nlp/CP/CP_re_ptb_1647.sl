@@ -1,0 +1,1 @@
+We found with the size of our media purchases that an ad agency could do just as good a job at significantly lower cost said the spokesman who declined to specify how much RJR spends on network television time

@@ -1,0 +1,1 @@
+Selling snowballed because of waves of automatic stop-loss orders which are triggered by computer when prices fall to certain levels

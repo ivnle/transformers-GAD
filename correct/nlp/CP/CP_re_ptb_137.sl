@@ -1,0 +1,1 @@
+But a strong level of investor withdrawals is much more unlikely this time around fund managers said

@@ -1,0 +1,1 @@
+Critics however say the branch sale will make CenTrust more dependent than ever on brokered deposits and junk bonds

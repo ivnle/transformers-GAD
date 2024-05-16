@@ -1,0 +1,1 @@
+Seven of nine states have grown each year since 1980 including New York which lost 4 % of its population during the 1970s

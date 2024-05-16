@@ -1,0 +1,1 @@
+Ford Motor Co. said it acquired 5 % of the shares in Jaguar PLC

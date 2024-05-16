@@ -1,0 +1,1 @@
+But the Bush administration says it wants to see evidence that all Cocom members are complying fully with existing export-control procedures before it will support further liberalization

@@ -1,0 +1,1 @@
+150 million of 8.55 % senior notes due Oct. 15 2009 priced at par

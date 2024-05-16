@@ -1,0 +1,1 @@
+Of course Mr. Mason did not use neutral language

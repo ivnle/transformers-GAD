@@ -1,0 +1,1 @@
+The cuts are necessary because Congress and the administration have failed to reach agreement on a deficit-cutting bill

@@ -1,0 +1,1 @@
+He argues that efforts to firm up prices will be undermined by producers ' plans to expand production capacity

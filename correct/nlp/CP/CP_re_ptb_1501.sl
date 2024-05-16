@@ -1,0 +1,1 @@
+John Warnock Adobe 's chief executive officer said the Mountain View Calif. company has been receiving 1,000 calls a day about the product since it was demonstrated at a computer publishing conference several weeks ago

@@ -1,0 +1,1 @@
+One high-profile provision that was originally in the Senate bill but was cut out because it lost money was the proposal by Chairman Lloyd Bentsen D. Texas of the Senate Finance Committee to expand the deduction for individual retirement accounts

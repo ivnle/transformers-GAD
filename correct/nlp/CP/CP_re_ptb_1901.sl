@@ -1,0 +1,1 @@
+The show will be co-anchored by Bernard Shaw and Catherine Crier a 34-year-old former Texas judge and campus beauty queen who has never held a job in television or journalism

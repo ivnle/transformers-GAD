@@ -1,0 +1,1 @@
+But not much money was spent on the shows either a situation that encouraged cheap-to-make talk and game shows while discouraging expensive-to-produce dramas

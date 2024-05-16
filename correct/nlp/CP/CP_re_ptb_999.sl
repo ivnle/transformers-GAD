@@ -1,0 +1,1 @@
+Reached in Honolulu Mr. Shidler said that he believes the various Hooker malls can become profitable with new management

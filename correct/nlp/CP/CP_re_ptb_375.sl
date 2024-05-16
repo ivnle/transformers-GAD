@@ -1,0 +1,1 @@
+The transaction announced in August included about 146 million in deposits at the five outlets in California 's San Joaquin Valley

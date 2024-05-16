@@ -1,0 +1,1 @@
+I thought your editorial was factually accurate and deliberately elucidative

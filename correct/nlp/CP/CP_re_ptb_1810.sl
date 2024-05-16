@@ -1,0 +1,1 @@
+Acquirers paid premiums ranging from 1.5 % to 3.7 % for the deposits and branch systems roughly in line with what analysts were expecting

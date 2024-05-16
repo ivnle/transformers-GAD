@@ -1,0 +1,1 @@
+A third model marketed in Japan may hit the U.S. by the end of the first quarter of 1990 but by then analysts say Compaq will have established itself as one of three major players

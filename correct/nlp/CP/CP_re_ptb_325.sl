@@ -1,0 +1,1 @@
+Procter & Gamble Co. plans to begin testing next month a superconcentrated detergent that will require only a few spoonfuls per washload

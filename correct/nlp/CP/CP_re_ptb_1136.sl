@@ -1,0 +1,1 @@
+Unlike most studies of the affluent market this survey excluded the super-rich

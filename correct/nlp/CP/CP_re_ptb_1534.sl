@@ -1,0 +1,1 @@
+Typical is what happened to the price of ethylene a major commodity chemical produced in vast amounts by many oil companies

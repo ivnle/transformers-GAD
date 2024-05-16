@@ -1,0 +1,1 @@
+Meanwhile during the the S&P trading halt S&P futures sell orders began piling up while stocks in New York kept falling sharply

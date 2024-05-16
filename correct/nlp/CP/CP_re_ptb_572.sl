@@ -1,0 +1,1 @@
+In addition Ms. Consolo says tenants usually can negotiate to pay rents that are about one-quarter lower than landlords ' initial asking price

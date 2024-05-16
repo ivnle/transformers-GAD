@@ -1,0 +1,1 @@
+Average household income for the sample was 194,000 and average net assets were reported as 775,000

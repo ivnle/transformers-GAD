@@ -1,0 +1,1 @@
+He said he believes GM has plans to keep building A-body cars into the mid-1990s

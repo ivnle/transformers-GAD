@@ -1,0 +1,1 @@
+Lopid sales are expected to be about 300 million this year up from 190 million in 1988

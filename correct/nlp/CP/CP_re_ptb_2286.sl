@@ -1,0 +1,1 @@
+Not only is Mr. Mason the star of Chicken Soup he 's also the inheritor of a comedic tradition dating back to Duck Soup and he 's currently a man in hot water

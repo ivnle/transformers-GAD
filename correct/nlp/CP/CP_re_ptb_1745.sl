@@ -1,0 +1,1 @@
+Associates say he takes some defeats more personally than his colleagues especially attempts to curtail the right to abortion first recognized in his 1973 opinion Roe vs. Wade

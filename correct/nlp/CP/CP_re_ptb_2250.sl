@@ -1,0 +1,1 @@
+Tandem expects to report the full results for the quarter next week

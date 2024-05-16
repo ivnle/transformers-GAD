@@ -1,0 +1,1 @@
+New York retail rents still run well above the going rate in other U.S. cities

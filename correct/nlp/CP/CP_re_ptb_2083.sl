@@ -1,0 +1,1 @@
+Washington Post Co. is expected to report improved earnings largely because of increased cable revenue and publishing revenue helped by an improved retail market in the Washington area

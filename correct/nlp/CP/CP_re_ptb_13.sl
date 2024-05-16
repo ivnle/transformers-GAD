@@ -1,0 +1,1 @@
+At Quantum which is based in New York the trouble is magnified by the company 's heavy dependence on plastics

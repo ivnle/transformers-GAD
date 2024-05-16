@@ -1,0 +1,1 @@
+The group 's president Peter Chrisanthopoulos was n't in his office Friday afternoon to comment

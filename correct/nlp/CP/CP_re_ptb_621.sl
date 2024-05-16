@@ -1,0 +1,1 @@
+Columbia Savings officials were n't available for comment on the downgrade

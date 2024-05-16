@@ -1,0 +1,1 @@
+In a similar vein he adds that the anniversary of the 1987 crash and Saturday 's full moon could have played a part too in Friday 's market activity

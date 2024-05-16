@@ -1,0 +1,1 @@
+Also stricken was a fivefold increase in the maximum Occupational Safety and Health Administration penalties which would have raised 65 million in fiscal 1990

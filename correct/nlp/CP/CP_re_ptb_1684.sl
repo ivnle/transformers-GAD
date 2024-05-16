@@ -1,0 +1,1 @@
+I 've had a lot of people trying to sell me services to find out how big it is says Tom Humphries director of marketing for GRiD

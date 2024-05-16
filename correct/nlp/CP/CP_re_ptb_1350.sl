@@ -1,0 +1,1 @@
+Asked whether Friday 's action could help him avoid being Trumped by the New York real estate magnate Mr. Crandall smiled broadly and said No comment

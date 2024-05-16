@@ -1,0 +1,1 @@
+You will find the commodities off more than the others and the diversified companies about even or slightly better says James Wilbur a Smith Barney analyst

@@ -1,0 +1,1 @@
+She and her husband pulled most of their investments out of the market after the 1987 crash although she still owns some Texaco stock

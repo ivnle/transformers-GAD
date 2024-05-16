@@ -1,0 +1,1 @@
+Impose a tax on ozone-depleting chemicals such as those used in air conditioners and in Styrofoam beginning at 1.10 a pound starting next year

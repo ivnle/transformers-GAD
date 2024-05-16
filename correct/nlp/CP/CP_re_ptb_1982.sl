@@ -1,0 +1,1 @@
+Avner Arbel a Cornell University finance professor says government regulators will have to more closely control program trading to win back the confidence of the small investor

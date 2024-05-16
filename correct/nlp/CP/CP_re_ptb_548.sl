@@ -1,0 +1,1 @@
+More than 2,100 others escaped to West Germany through Hungary over the Weekend

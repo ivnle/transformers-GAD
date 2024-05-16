@@ -1,0 +1,1 @@
+Our goal is to create more programs with an individual identity says Paul Amos CNN executive vice president for programming

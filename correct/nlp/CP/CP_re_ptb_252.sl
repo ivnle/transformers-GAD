@@ -1,0 +1,1 @@
+He added We learned a lesson in 1987 about volatility

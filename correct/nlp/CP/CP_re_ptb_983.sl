@@ -1,0 +1,1 @@
+The 409 million bid is estimated by Mr. Simpson as representing 75 % of the value of all Hooker real-estate holdings in the U.S.

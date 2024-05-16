@@ -1,0 +1,1 @@
+Canadian steel-ingot production totaled 291,890 metric tons in the week ended Oct. 7 up 14.8 % from the preceding week 's total of 254,280 tons Statistics Canada a federal agency said

@@ -1,0 +1,1 @@
+For the third consecutive quarter however most of the companies ' revenues were battered by adverse foreign-currency translations as a result of the strong dollar abroad

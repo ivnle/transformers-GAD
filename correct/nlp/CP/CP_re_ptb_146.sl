@@ -1,0 +1,1 @@
+If they croak stocks like that he said it presents an opportunity that is the kind of thing you dream about

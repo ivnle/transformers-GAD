@@ -1,0 +1,1 @@
+Making computers smaller often means sacrificing memory

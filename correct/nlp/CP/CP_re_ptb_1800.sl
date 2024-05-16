@@ -1,0 +1,1 @@
+Robert D. Cardillo Avis vice president of marketing said The proliferation and costs attached to frequent-flier programs have significantly diminished their value

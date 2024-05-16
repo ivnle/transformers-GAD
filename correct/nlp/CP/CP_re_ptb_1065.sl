@@ -1,0 +1,1 @@
+At the time a group called R.B. Partners Ltd. consisting of eight of Arby 's largest franchisees offered more than 200 million to buy Arby 's Inc. which is part of DWG Corp

@@ -1,0 +1,1 @@
+But HOFI 's first offer would have given Ideal 's other shareholders about 10 % of the combined company

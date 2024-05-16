@@ -1,0 +1,1 @@
+The thrifts ' lawyers claim that the suits numbering 700 to 1,000 in Texas alone should be dismissed as moot because neither the S&Ls nor the extinct Federal Savings and Loan Insurance Corp. has the money to pay judgments

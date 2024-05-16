@@ -1,0 +1,1 @@
+The offering Series 102 backed by Freddie Mac 8 1\/2 % securities with a weighted average remaining term to maturity of 28.4 years was priced before the market 's afternoon surge

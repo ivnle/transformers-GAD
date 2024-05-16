@@ -1,0 +1,1 @@
+Consumer spending did drop in the months following Black Monday 1987 but only slightly and for a short period of time recalls Mr. Zarnowitz a longtime student of business cycles

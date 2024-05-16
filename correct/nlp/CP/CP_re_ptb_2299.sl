@@ -1,0 +1,1 @@
+These critics fail to distinguish between the type of ethnic humor that aims at disparaging another group such as Polish jokes and the type that is double-edged aiming inward as well as outward

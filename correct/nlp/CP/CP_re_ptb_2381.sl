@@ -1,0 +1,1 @@
+Another big polyethylene producer Union Carbide Corp. is expected to post profit of between 1 a share and 1.25 compared with 1.56 a share a year earlier when the company earned 213 million on sales of 2.11 billion

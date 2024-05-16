@@ -1,0 +1,1 @@
+Mr. Amos says the Shaw-Crier team will probably do two live interviews a day with most of the program at least for now appearing similar to CNN 's other newcasts

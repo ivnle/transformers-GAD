@@ -1,0 +1,1 @@
+He said the thrift will try to get regulators to reverse the decision

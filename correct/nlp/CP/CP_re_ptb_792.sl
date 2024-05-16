@@ -1,0 +1,1 @@
+As expected Young & Rubicam Inc. along with two senior executives and a former employee pleaded not guilty in federal court in New Haven Conn. to conspiracy and racketeering charges

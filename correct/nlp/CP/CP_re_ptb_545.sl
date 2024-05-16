@@ -1,0 +1,1 @@
+China 's Communist leadership voted to purge the party of hostile and anti-party elements and wealthy private businessmen whom they called exploiters

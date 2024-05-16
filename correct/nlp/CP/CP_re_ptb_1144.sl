@@ -1,0 +1,1 @@
+About 40 % do n't feel they 're more able than others

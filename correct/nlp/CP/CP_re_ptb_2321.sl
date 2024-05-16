@@ -1,0 +1,1 @@
+To some extent this tendency emerges whenever the show tries to enlighten us about ethnic stereotypes by reversing them

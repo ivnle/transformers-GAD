@@ -1,0 +1,1 @@
+This human toll adds the most painful dimension yet to the sudden change in Quantum 's fortunes

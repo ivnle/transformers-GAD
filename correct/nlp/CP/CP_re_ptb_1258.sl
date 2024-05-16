@@ -1,0 +1,1 @@
+Friday 's big drop she says was not a crash

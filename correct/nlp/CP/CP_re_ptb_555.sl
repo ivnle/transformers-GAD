@@ -1,0 +1,1 @@
+Lebanese Christian lawmakers presented to Arab mediators at talks in Saudi Arabia proposals for a new timetable for the withdrawal of Syria 's forces from Lebanon

@@ -1,0 +1,1 @@
+In the third quarter of 1987 the economy spurted at an inflation-adjusted annual rate of 5.3 %

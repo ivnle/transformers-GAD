@@ -1,0 +1,1 @@
+Typically a margin call occurs when the price of a stock falls below 75 % of its original value

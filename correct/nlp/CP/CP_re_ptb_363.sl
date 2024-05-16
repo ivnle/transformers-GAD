@@ -1,0 +1,1 @@
+Citing a payment from a supplier and strong sales of certain data-storage products Maxtor Corp. said earnings and revenue jumped in its second quarter ended Sept. 24

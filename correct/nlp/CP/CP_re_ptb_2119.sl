@@ -1,0 +1,1 @@
+Meanwhile analysts said Pfizer 's recent string of lackluster quarterly performances continued as earnings in the quarter were expected to decline by about 5 %

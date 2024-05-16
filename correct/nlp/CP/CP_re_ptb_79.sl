@@ -1,0 +1,1 @@
+After falling for three consecutive months the producer price index for finished goods shot up 0.9 % last month the Labor Department reported Friday as energy prices jumped after tumbling through the summer

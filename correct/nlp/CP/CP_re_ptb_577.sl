@@ -1,0 +1,1 @@
+The same factors limiting demand for office space have affected retailing

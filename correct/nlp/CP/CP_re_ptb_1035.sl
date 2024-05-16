@@ -1,0 +1,1 @@
+Harry has avoided all that by living in a Long Island suburb with his wife who 's so addicted to soap operas and mystery novels she barely seems to notice when her husband disappears for drug-seeking forays into Manhattan

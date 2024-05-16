@@ -1,0 +1,1 @@
+It also marks P&G 's growing concern that its Japanese rivals such as Kao Corp. may bring their superconcentrates to the U.S.

@@ -1,0 +1,1 @@
+If I sell now I 'll take a big loss

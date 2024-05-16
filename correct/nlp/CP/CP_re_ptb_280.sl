@@ -1,0 +1,1 @@
+The Senate bill was stripped of many popular though revenue-losing provisions a number of which are included in the House-passed bill

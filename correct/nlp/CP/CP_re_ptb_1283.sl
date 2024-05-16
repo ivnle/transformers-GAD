@@ -1,0 +1,1 @@
+That would be a normal bear market he says

@@ -1,0 +1,1 @@
+As she calculates it the average stock now sells for about 12.5 times companies ' earnings

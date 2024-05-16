@@ -1,0 +1,1 @@
+Thousands of supporters many brandishing flags of the outlawed African National Congress gave the anti-apartheid activists a tumultuous reception upon their return to black townships across the country

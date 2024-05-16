@@ -1,0 +1,1 @@
+The RJR spokesman said the company moved the 11 employees to New York last month because the group had then been in the midst of purchasing ad time for the networks ' upcoming season

@@ -1,0 +1,1 @@
+The Cincinnati consumer-products giant got clobbered two years ago in Japan when Kao introduced a powerful detergent called Attack which quickly won a 30 % stake in the Japanese markets

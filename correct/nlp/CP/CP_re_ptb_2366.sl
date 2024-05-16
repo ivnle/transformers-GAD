@@ -1,0 +1,1 @@
+Most estimates for Monsanto run between 1.70 and 2 a share

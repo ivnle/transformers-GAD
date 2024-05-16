@@ -1,0 +1,1 @@
+Relational Technology reported net income of 1.5 million or 12 cents a share in the year-earlier period

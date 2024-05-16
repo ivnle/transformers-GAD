@@ -1,0 +1,1 @@
+Against that backdrop UAW Vice President Stephen P. Yokich who recently became head of the union 's GM department issued a statement Friday blasting GM 's flagrant insensitivity toward union members

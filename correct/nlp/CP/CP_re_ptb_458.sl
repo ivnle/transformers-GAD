@@ -1,0 +1,1 @@
+At the very least the establishment here is taking comfort from the nation 's success in handling the last go-around

@@ -1,0 +1,1 @@
+Most of the stock selling pressure came from Wall Street professionals including computer-guided program traders

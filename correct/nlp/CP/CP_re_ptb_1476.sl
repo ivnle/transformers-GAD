@@ -1,0 +1,1 @@
+Take Microsoft Corp. the largest maker of personal computer software and generally considered an industry bellwether

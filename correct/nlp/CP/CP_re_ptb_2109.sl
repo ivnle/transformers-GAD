@@ -1,0 +1,1 @@
+The company 's lean operation analysts said allowed sharp-rising sales from its cholesterol drug Lopid to power earnings growth

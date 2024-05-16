@@ -1,0 +1,1 @@
+Another is that United Auto Workers union officials have signaled they want tighter no-layoff provisions in the new Big Three national contract that will be negotiated next year

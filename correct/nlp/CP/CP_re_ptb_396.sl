@@ -1,0 +1,1 @@
+We 're asking the court for a number of things he can grant in addition to the thrill of victory he says

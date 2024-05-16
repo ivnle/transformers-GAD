@@ -1,0 +1,1 @@
+NCNB continued its foray into the Florida and Texas markets

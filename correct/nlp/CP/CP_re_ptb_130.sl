@@ -1,0 +1,1 @@
+Even Peter Lynch manager of Fidelity 's 12.7 billion Magellan Fund the nation 's largest stock fund built up cash to 7 % or 850 million

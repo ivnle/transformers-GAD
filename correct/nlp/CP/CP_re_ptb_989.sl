@@ -1,0 +1,1 @@
+We do n't anticipate any problems in raising the funding for the bid said Allan Campbell the head of mergers and acquisitions at Hoare Govett in an interview

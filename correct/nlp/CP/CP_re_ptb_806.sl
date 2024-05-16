@@ -1,0 +1,1 @@
+In the '70s the market took falls nine times in a row on Friday the you-know-what

@@ -1,0 +1,1 @@
+Is this the wrong time to open a store

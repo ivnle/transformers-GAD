@@ -1,0 +1,1 @@
+I was buying at the close Friday and I 'll be buying again because I know we 're getting good value said Frederick A. Moran president of Moran Asset Management Inc. Greenwich Conn

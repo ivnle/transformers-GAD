@@ -1,0 +1,1 @@
+Still one federal appeals court has signaled it 's willing to entertain the notion and the lawyers have renewed their arguments in Texas and eight other states where the defense is permitted under state law

@@ -1,0 +1,1 @@
+Sales of both drugs have been hurt by new state laws restricting the prescriptions of certain tranquilizing medicines and adverse publicity about the excessive use of the drugs

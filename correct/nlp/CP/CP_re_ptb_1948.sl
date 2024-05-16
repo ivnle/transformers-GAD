@@ -1,0 +1,1 @@
+I think on Monday the small investors are going to panic and sell predicted Mr. Sullivan whose investments include AMR Corp. 's American Airlines unit and several mutual funds

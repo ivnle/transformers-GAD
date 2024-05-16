@@ -1,0 +1,1 @@
+Queens newsletter writer Francis X. Curzio actually did it He stated in writing in September 1987 that the Dow Jones Industrial Average was likely to decline about 500 points the following month

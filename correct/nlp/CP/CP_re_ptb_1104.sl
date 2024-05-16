@@ -1,0 +1,1 @@
+The population of all four states is on the upswing according to new Census Bureau estimates following declines throughout the early 1980s

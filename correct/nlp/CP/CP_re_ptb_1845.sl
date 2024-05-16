@@ -1,0 +1,1 @@
+But we would n't go into them alone and Canadian Utilities ' equity stake would be small he said

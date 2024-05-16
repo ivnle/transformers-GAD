@@ -1,0 +1,1 @@
+There were no major Eurobond or foreign bond offerings in Europe Friday

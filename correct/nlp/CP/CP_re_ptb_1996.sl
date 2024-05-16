@@ -1,0 +1,1 @@
+CityFed 's president and chief executive officer John Atherton said the loss stems from several factors

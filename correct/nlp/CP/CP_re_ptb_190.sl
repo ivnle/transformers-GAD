@@ -1,0 +1,1 @@
+There were too many phones ringing and too many things happening to expect market makers to be as efficient as robots

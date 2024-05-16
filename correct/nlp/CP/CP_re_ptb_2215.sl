@@ -1,0 +1,1 @@
+It was near the low range of estimates at 130 million 90-pound boxes compared with 146.6 million boxes last season

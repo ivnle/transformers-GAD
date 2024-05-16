@@ -1,0 +1,1 @@
+Honeywell Inc. and International Business Machines Corp. received Air Force contracts to develop integrated circuits for use in space

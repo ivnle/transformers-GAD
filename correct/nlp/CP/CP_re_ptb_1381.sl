@@ -1,0 +1,1 @@
+The only thing you do n't have he said is the portfolio insurance phenomenon overlaid on the rest

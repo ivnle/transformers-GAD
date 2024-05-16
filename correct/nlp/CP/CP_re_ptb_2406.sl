@@ -1,0 +1,1 @@
+Thomson feels the future of its defense business depends on building cooperation with other Europeans

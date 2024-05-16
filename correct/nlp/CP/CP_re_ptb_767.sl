@@ -1,0 +1,1 @@
+The executive close to Saatchi & Saatchi said that if a bidder came up with a ludicrously high offer a crazy offer which Saatchi knew it could n't beat it would have no choice but to recommend it to shareholders

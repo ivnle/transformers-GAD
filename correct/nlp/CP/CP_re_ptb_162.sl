@@ -1,0 +1,1 @@
+Several fund managers expect a rough market this morning before prices stabilize

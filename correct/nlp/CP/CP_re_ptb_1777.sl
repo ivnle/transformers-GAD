@@ -1,0 +1,1 @@
+The collateral is being sold by a thrift institution

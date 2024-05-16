@@ -1,0 +1,1 @@
+For example the delay in selling People 's Heritage Savings Salina Kan. with 1.7 billion in assets has forced the RTC to consider selling off the thrift branch-by-branch instead of as a whole institution

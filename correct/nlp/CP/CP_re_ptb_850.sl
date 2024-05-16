@@ -1,0 +1,1 @@
+European drama has had better though still mixed fortunes

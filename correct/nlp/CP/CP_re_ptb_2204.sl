@@ -1,0 +1,1 @@
+In July the CBOT ordered Ferruzzi Finanziaria S.p A. to liquidate futures positions equal to about 23 million bushels of soybeans

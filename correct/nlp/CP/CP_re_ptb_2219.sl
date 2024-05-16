@@ -1,0 +1,1 @@
+Brazilian juice after a delay caused by drought at the start of its crop season is beginning to arrive in the U.S. in large quantities

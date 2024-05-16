@@ -1,0 +1,1 @@
+Ideally we 'd like to be the operator of the project and a modest equity investor

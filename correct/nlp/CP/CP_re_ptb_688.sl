@@ -1,0 +1,1 @@
+Futures traders say the S&P was signaling that the Dow could fall as much as 200 points

@@ -1,0 +1,1 @@
+The decision is the latest move in an escalating battle between the franchisees and Mr. Posner that began in August

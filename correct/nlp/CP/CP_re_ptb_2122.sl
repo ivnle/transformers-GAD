@@ -1,0 +1,1 @@
+In the third quarter last year Pfizer earned 216.8 million or 1.29 a share

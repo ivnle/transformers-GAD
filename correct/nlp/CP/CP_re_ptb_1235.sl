@@ -1,0 +1,1 @@
+Vitarine won approval to market a version of a blood pressure medicine but acknowledged that it substituted a SmithKline Beecham PLC product as its own in tests

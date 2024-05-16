@@ -1,0 +1,1 @@
+Approximately 85 % of the total consisted of nonperforming commercial real estate assets

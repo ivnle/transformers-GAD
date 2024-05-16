@@ -1,0 +1,1 @@
+Mr. Field also had been chairman of McKesson Corp. resigning that post after a dispute with the board over corporate strategy

@@ -1,0 +1,1 @@
+Ripples from the strike by 55,000 Machinists union members against Boeing Co. reached air carriers Friday as America West Airlines announced it will postpone its new service out of Houston because of delays in receiving aircraft from the Seattle jet maker

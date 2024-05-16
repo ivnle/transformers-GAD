@@ -1,0 +1,1 @@
+Rated Baa-1 by Moody 's and triple-B-plus by S&P the issue will be sold through underwriters led by Morgan Stanley & Co

@@ -1,0 +1,1 @@
+The Dow industrials were down 55 points at 3 p.m. before the futures-trading halt

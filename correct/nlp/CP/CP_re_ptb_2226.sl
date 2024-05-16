@@ -1,0 +1,1 @@
+Although some analysts look for profit-taking in the wake of Friday 's leap in crude oil prices last week 's rally is generally expected to continue this week

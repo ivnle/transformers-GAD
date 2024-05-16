@@ -1,0 +1,1 @@
+Shortly before the visit Mr. Boesky and Drexel representives had met with Financial Corp. officials and had signed a letter of intent to acquire the 51 % stake in the company

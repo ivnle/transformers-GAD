@@ -1,0 +1,1 @@
+At the very moment that Senate Republicans were negotiating a deal to exclude capital gains from the deficit-reduction legislation White House spokesman Marlin Fitzwater told reporters that it was the president 's policy to include it

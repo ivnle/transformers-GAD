@@ -1,0 +1,1 @@
+Obviously they 're not in touch with what 's going on says Tom Manske vice president of the National Pocket Billiards Association

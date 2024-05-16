@@ -1,0 +1,1 @@
+The Treasury was locked in a battle over international economic policy although at that time it was with West German officials rather than the Federal Reserve

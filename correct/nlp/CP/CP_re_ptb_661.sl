@@ -1,0 +1,1 @@
+When trading was halted in Philip Morris the stock was trading at 41 down 3 3\/8 while IBM closed 5 5\/8 lower at 102

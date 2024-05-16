@@ -1,0 +1,1 @@
+Olivetti has denied that it violated Cocom rules asserting that the reported shipments were properly licensed by the Italian authorities

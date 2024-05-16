@@ -1,0 +1,1 @@
+Friends and associates who saw Justice Blackmun during the summer said he was no more discouraged about the court than in recent years

@@ -1,0 +1,1 @@
+Third-quarter profit estimates for several companies are being strongly affected by the price of newsprint which in the last two years has had several price increases

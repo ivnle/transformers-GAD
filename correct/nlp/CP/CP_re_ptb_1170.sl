@@ -1,0 +1,1 @@
+Automatic call processors will provide that system for virtually any telephone Mr. Pierce said not just phones produced by Elcotel

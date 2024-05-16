@@ -1,0 +1,1 @@
+Japan 's wholesale prices in September rose 3.3 % from a year earlier and were up 0.4 % from the previous month the Bank of Japan announced Friday

@@ -1,0 +1,1 @@
+He like Justice Brennan considers dissents highly important for the future a point that has n't escaped legal scholars

@@ -1,0 +1,1 @@
+Canadian investment rules require that big foreign takeovers meet that standard

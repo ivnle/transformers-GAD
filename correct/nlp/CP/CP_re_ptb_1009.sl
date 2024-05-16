@@ -1,0 +1,1 @@
+For Ms. Cunningham the architectural discombobulation matched the discrepancy she felt living in the AnaMor Towers as a little girl outwardly ordinary inwardly ornate owing all inspiration to heathen cultures

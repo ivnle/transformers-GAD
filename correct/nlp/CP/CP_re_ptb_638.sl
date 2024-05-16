@@ -1,0 +1,1 @@
+When the dollar is in a free-fall even central banks ca n't stop it

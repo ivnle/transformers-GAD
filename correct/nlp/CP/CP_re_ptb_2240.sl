@@ -1,0 +1,1 @@
+Nuveen California Performance Plus Municipal Fund Inc. initial offering of five million common shares via Alex Brown & Sons Inc. John Nuveen & Co. Prudential-Bache Capital Funding and Bateman Eichler Hill Richards

@@ -1,0 +1,1 @@
+It was previously thought ASKO held a 13.6 % stake that was accumulated since July

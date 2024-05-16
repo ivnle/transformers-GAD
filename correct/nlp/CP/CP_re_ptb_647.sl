@@ -1,0 +1,1 @@
+The Dow fell 22.6 % on Black Monday

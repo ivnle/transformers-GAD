@@ -1,0 +1,1 @@
+Mr. King of Robinson-Humphrey and others were quick to add that they believe the problem stemmed more from traders ' inability to handle the volume of calls rather than a deliberate attempt to avoid making trades

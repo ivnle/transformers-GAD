@@ -1,0 +1,1 @@
+Not everything looks grim for Quantum

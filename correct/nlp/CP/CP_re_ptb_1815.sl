@@ -1,0 +1,1 @@
+The RTC had previously targeted five thrifts for quick sales in order to spend cash by certain budgetary deadlines but the delays illustrate the tough chore facing the agency

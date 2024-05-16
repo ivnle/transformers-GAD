@@ -1,0 +1,1 @@
+Still even that modest increase is good news for a state that had n't grown at all since 1981

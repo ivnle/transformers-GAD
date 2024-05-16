@@ -1,0 +1,1 @@
+Overall though the South and West still outpace the Northeast and Midwest and fast-growing states like Florida and California ensure that the pattern will continue

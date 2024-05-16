@@ -1,0 +1,1 @@
+Royal Bank of Scotland Group PLC an Edinburgh Scotland financial services company will list American depositary shares representing preferred shares with the symbol RBSPr

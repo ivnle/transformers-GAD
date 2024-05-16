@@ -1,0 +1,1 @@
+But the exchange will look at the performance of all specialists in all stocks

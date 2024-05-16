@@ -1,0 +1,1 @@
+The No. 2 auto maker disclosed last month that it wants to buy as much as 15 % of the British luxury-car maker the maximum allowed under current United Kingdom government restrictions

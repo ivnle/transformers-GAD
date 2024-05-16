@@ -1,0 +1,1 @@
+Final-hour trading accelerated to 108.1 million shares a record for the Big Board

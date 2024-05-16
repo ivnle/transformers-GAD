@@ -1,0 +1,1 @@
+If the dollar stays weak he says that will add to inflationary pressures in the U.S. and make it hard for the Federal Reserve Board to ease interest rates very much

@@ -1,0 +1,1 @@
+Tandem Computers Inc. preparing to fight with International Business Machines Corp. for a piece of the mainframe business said it expects to post higher revenue and earnings for its fiscal fourth quarter ended Sept. 30

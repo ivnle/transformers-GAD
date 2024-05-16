@@ -1,0 +1,1 @@
+At the same time its annual payments on long-term debt will more than double from a year ago to about 240 million largely because of debt taken on to pay a 50-a-share special dividend earlier this year

@@ -1,0 +1,1 @@
+The investment community for one has been anticipating a speedy resolution

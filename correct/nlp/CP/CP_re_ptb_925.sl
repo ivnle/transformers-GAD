@@ -1,0 +1,1 @@
+But its quota has been as high as 6.9 % in 1984

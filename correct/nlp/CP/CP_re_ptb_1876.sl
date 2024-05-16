@@ -1,0 +1,1 @@
+This is n't a change in government policy this provision has been used before said Jodi Redmond press secretary for Harvie Andre Canada 's minister of industry science and technology

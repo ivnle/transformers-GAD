@@ -1,0 +1,1 @@
+The shutdowns will idle about 3,000 Canadian assembly workers and about 2,500 workers in Ohio

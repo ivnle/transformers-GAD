@@ -1,0 +1,1 @@
+Elcotel has also developed an automatic call processor that will make further use of the company 's system for automating and handling credit-card calls and collect calls

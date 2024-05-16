@@ -1,0 +1,1 @@
+Retail real estate brokers say tenants are reluctant to sign leases because of uncertainty about the local economy turmoil in their own industries and a belief that rents have not yet hit bottom

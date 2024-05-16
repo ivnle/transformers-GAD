@@ -1,0 +1,1 @@
+14 million common shares via Goldman Sachs & Co

@@ -1,0 +1,1 @@
+He also said substantial reserves have been set aside for possible losses from the junk bonds

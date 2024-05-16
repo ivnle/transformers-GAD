@@ -1,0 +1,1 @@
+In the year ended Aug. 31 1988 MedChem earned 2.9 million or 72 cents a share on sales of 17.4 million

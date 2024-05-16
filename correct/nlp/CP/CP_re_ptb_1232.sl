@@ -1,0 +1,1 @@
+The thrift is also working to unload its junk-bond portfolio by continuing to sell off the bonds and it plans to eventually place some of them in a separate affiliate as required under the new thrift law

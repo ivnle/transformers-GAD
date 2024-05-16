@@ -1,0 +1,1 @@
+By some accounts on Wall Street and in the industry the inventory reductions are near an end which may presage firmer demand

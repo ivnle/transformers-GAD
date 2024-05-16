@@ -1,0 +1,1 @@
+We got calls from big block houses asking us if we want to make bids on anything said Mr. Weisman who happy with his returns on investments chalked up earlier declined the offers

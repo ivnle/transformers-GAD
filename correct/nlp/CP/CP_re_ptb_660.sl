@@ -1,0 +1,1 @@
+But as panic spread speculators began to sell blue-chip stocks such as Philip Morris and International Business Machines to offset their losses

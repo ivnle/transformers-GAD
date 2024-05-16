@@ -1,0 +1,1 @@
+The franchisees owners or operators of 1,000 of the 1,900 franchised Arby 's in the U.S. said We have concluded that continued control of Arby 's by Victor Posner is totally unacceptable to us because it is extremely likely to cause irreparable damage to the Arby 's system

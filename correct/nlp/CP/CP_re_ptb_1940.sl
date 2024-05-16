@@ -1,0 +1,1 @@
+Says Mr. Mosettig CNN is my wire service they 're on top of everything

@@ -1,0 +1,1 @@
+She highlighted exclusionary business practices that the U.S. government has identified

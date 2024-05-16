@@ -1,0 +1,1 @@
+The administration has sent out confusing signals about its response to a recent spate of airline takeovers

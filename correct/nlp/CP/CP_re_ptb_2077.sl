@@ -1,0 +1,1 @@
+After a supply crunch caused prices to rise 14 % since 1986 to 650 a metric ton analysts are encouraged because they do n't expect a price increase for the rest of this year

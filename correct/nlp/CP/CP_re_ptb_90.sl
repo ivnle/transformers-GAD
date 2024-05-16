@@ -1,0 +1,1 @@
+All year energy prices have skewed the producer price index which measures changes in the prices producers receive for goods

@@ -1,0 +1,1 @@
+European programs usually target only their own local audience and often only a small portion of that

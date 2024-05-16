@@ -1,0 +1,1 @@
+Yet more than one American official who sat in with her during three days of talks with Japanese officials said her tone often was surprisingly conciliatory

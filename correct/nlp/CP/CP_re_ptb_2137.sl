@@ -1,0 +1,1 @@
+Diamond Shamrock Offshore 's stock rose 12.5 cents Friday to close at 8.25 in New York Stock Exchange composite trading

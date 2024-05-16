@@ -1,0 +1,1 @@
+Before the sun had set on Friday Richard Rahn the supply-side chief economist of the U.S. Chamber of Commerce issued a statement attributing the drop in stock prices to the Senate decision to postpone action on capital gains

@@ -1,0 +1,1 @@
+Pricing cycles to be sure are nothing new for plastics producers

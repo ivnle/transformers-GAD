@@ -1,0 +1,1 @@
+Grumman Corp. received an 18.1 million Navy contract to upgrade aircraft electronics

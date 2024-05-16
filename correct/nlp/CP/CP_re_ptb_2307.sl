@@ -1,0 +1,1 @@
+The question is if group conflicts still exist as undeniably they do and if Mr. Mason 's type of ethnic humor is passe then what other means do we have for letting off steam

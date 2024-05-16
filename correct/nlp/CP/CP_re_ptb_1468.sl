@@ -1,0 +1,1 @@
+In addition Gulf must give the government 20 days ' advance written notice of any loans exceeding 50 million that are made to the Bermuda-based holding company

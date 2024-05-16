@@ -1,0 +1,1 @@
+We had a good amount of selling from institutions but not as much panic Mr. DaPuzzo said

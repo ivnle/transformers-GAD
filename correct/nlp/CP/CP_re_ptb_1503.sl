@@ -1,0 +1,1 @@
+It creates uncertainty and usually slows down sales said Russ Crabs an analyst at Soundview Financial Group

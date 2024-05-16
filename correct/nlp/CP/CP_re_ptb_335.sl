@@ -1,0 +1,1 @@
+When Attack hit the shelves in 1987 P&G 's share of the Japanese market fell to about 8 % from more than 20 %

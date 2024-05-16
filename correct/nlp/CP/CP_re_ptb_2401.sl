@@ -1,0 +1,1 @@
+At least one potential GEC partner Matra insists it is n't interested in Ferranti

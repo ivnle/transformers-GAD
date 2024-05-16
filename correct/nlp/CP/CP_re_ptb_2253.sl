@@ -1,0 +1,1 @@
+The company 's U.S. performance was helped by a record quarter for new customers he said

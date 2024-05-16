@@ -1,0 +1,1 @@
+A provision that would have made the Social Security Administration an independent agency was excised

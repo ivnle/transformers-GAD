@@ -1,0 +1,1 @@
+James Tarantino head of OTC trading at Hambrecht & Quist in San Francisco said It was just like two years ago

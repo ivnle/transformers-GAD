@@ -1,0 +1,1 @@
+While the Japanese have embraced the compact packaging and convenience of concentrated products the true test for P&G will be in the 4 billion U.S. detergent market where growth is slow and liquids have gained prominence over powders

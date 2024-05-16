@@ -1,0 +1,1 @@
+Tandem said it expects to report revenue of about 450 million and earnings of 35 cents to 40 cents a share

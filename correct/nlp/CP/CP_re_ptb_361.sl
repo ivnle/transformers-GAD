@@ -1,0 +1,1 @@
+The transaction is subject to a definitive agreement and approval by Ideal shareholders

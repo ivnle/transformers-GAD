@@ -1,0 +1,1 @@
+Industry estimates put Avis 's annual cost of all five programs at between 8 million and 14 million

@@ -1,0 +1,1 @@
+It 's not a show of weakness they are improving the quality of circulation while insuring their profits

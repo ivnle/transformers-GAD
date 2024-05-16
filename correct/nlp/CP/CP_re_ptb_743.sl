@@ -1,0 +1,1 @@
+Last week Boeing Chairman Frank Shrontz sent striking workers a letter saying that to my knowledge Boeing 's offer represents the best overall three-year contract of any major U.S. industrial firm in recent history

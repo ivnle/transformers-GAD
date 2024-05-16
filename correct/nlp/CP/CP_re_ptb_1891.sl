@@ -1,0 +1,1 @@
+That shows how far Ted Turner 's Cable News Network has come since its birth nine years ago when it was considered the laughingstock of television news

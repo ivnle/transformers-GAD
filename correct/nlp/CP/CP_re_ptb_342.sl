@@ -1,0 +1,1 @@
+P&G and others also have tried repeatedly to hook consumers on detergent and fabric softener combinations in pouches but they have n't sold well despite the convenience

@@ -1,0 +1,1 @@
+Royal Trustco will pay the RTC 25 million to assume 989 million in deposits

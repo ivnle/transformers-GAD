@@ -1,0 +1,1 @@
+The U.S. Federal Trade Commission advised Ford last week that it would n't raise any objection to the acquisition of as much as 15 % of Jaguar shares

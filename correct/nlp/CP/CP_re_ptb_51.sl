@@ -1,0 +1,1 @@
+Until this year the company had been steadily lowering its accident rate and picking up trade-group safety awards

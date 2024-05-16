@@ -1,0 +1,1 @@
+Now greatly increased supplies are on the market while the dollar is stronger and domestic economic growth is slower

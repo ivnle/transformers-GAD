@@ -1,0 +1,1 @@
+In academia a so-called Friday the 13th effect has been set up and shot down by different professors

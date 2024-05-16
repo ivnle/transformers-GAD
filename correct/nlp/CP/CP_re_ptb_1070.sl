@@ -1,0 +1,1 @@
+We support all efforts to remove Victor Posner from control of Arby 's Inc. and the Arby 's system

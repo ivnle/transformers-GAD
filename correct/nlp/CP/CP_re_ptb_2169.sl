@@ -1,0 +1,1 @@
+In that case there will be plenty of blame to go around

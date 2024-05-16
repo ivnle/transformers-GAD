@@ -1,0 +1,1 @@
+Madison and Fifth Avenues and East 57th Street can command rents of up to 500 a square foot and 250 is not uncommon

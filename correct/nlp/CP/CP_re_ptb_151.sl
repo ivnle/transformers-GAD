@@ -1,0 +1,1 @@
+They hope to avoid the jammed phone lines and other snags that infuriated some fund investors in October 1987

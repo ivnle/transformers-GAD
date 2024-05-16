@@ -1,0 +1,1 @@
+The goal was to learn about one of today 's fastest-growing income groups the upper-middle class

@@ -1,0 +1,1 @@
+To a degree Quantum represents the new times that have arrived for producers of the so-called commodity plastics that pervade modern life

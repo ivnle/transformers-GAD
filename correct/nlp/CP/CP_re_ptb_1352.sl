@@ -1,0 +1,1 @@
+Of the 19 economists who worked on the Business Council forecast only two projected periods of decline in the nation 's output over the next two years and in both instances the declines are too modest to warrant the phrase recession said Lewis Preston chairman of J.P. Morgan & Co. and vice chairman of the Business Council

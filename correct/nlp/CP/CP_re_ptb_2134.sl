@@ -1,0 +1,1 @@
+Diamond Shamrock Offshore Partners said it had discovered gas offshore Louisiana

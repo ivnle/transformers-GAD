@@ -1,0 +1,1 @@
+Until recently Adobe had a lock on the market for image software but last month Apple Adobe 's biggest customer and Microsoft rebelled

@@ -1,0 +1,1 @@
+The company said it expects earnings of 14 to 17 cents a share down from 25 cents a share in the year-earlier period

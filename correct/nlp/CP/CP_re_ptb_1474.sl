@@ -1,0 +1,1 @@
+Prices have risen 5.9 % in the first nine months of the year outstripping both the initial 3 % inflation goal set by the government of Socialist Prime Minister Felipe Gonzalez and the second revised goal of 5.8 %

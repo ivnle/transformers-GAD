@@ -1,0 +1,1 @@
+CNN executives hope the headlines created by such scoops will generate excitement for its branded programs in the way 60 Minutes did so well for CBS

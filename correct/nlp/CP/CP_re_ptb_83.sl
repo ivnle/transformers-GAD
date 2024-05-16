@@ -1,0 +1,1 @@
+That rise came on top of a 0.7 % gain in August and suggested there is still healthy consumer demand in the economy

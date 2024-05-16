@@ -1,0 +1,1 @@
+Marc Perkins a Tampa Fla. investment banker said the market drop is one of a tremendous number of signs that the leveraged take-out era is ending

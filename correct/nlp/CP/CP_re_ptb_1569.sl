@@ -1,0 +1,1 @@
+Canadian crude production averaged about 1.69 million barrels a day during 1989 's first half about 1 % below the 1988 level

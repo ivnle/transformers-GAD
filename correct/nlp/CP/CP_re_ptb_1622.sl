@@ -1,0 +1,1 @@
+It 's when such slapping does n't occur that we 've got trouble

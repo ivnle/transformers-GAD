@@ -1,0 +1,1 @@
+The only thing Robert Goldberg could praise about CBS 's new show Island Son Leisure & Arts Sept. 25 was the local color unfortunately neither he nor the producers of the show have done their homework

@@ -1,0 +1,1 @@
+But he added you can only take one call at a time

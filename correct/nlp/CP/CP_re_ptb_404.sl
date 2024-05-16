@@ -1,0 +1,1 @@
+After all until a few years ago the stock market was viewed as a barometer of the national economy

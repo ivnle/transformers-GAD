@@ -1,0 +1,1 @@
+Today could even be an up day Mr. Davis says if major brokerage firms agree to refrain from program trading

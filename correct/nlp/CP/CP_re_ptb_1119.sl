@@ -1,0 +1,1 @@
+And even after losing a spouse more of the elderly are staying independent

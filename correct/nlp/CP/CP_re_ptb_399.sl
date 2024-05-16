@@ -1,0 +1,1 @@
+The stock market 's swoon may turn out to be good news for the economy

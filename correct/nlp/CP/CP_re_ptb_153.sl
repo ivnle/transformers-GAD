@@ -1,0 +1,1 @@
+The centers normally are closed through the weekend

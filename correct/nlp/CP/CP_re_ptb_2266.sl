@@ -1,0 +1,1 @@
+Nevertheless Tandem faces a variety of challenges the biggest being that customers generally view the company 's computers as complementary to IBM 's mainframes

@@ -1,0 +1,1 @@
+It 's a dollar-priced product and the strong dollar has made it more expensive in Europe the analyst said

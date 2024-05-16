@@ -1,0 +1,1 @@
+The company said a portion of the 32 million realized from the sales will be used to repay its bank debt and other obligations resulting from the currently suspended air-charter operations

@@ -1,0 +1,1 @@
+Interprovincial Canada 's biggest oil pipeline operator and a major transporter of crude to the U.S. said revised industry forecasts indicate that Canadian oil output will total about 1.64 million barrels a day by 1991 8 % lower than a previous estimate

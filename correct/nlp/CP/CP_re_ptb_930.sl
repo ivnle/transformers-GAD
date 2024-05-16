@@ -1,0 +1,1 @@
+That was essentially made up of a 1 % increase in the overall quota program and 1 % from cutting Japan 's allowance

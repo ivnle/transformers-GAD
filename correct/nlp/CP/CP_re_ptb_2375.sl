@@ -1,0 +1,1 @@
+Himont faces lower prices for its mainstay product polypropylene while it goes forward with a heavy capital investment program to bolster its raw material supply and develop new uses for polypropylene whose markets include the packaging and automobile industries

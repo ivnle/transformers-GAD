@@ -1,0 +1,1 @@
+IBM is expected to respond to Tandem 's Cyclone by discounting its own mainframes which analysts say are roughly three times the price of a comparable system from Tandem

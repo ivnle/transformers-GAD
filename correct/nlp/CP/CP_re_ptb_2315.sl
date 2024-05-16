@@ -1,0 +1,1 @@
+And a safe one imagine if the romance in question were between an Orthodox Jew and a member of the Nation of Islam

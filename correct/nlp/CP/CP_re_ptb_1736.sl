@@ -1,0 +1,1 @@
+Moreover in recent months he has said that when he was on the winning side in the 1960s he knew that the tables might turn in the future

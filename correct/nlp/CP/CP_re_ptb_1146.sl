@@ -1,0 +1,1 @@
+Thirty-five percent attend religious services regularly at the same time 60 % feel that in life one sometimes has to compromise one 's principles

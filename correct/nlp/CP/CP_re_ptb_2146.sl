@@ -1,0 +1,1 @@
+By 11:59 p.m. tonight President Bush must order 16 billion of automatic across-the-board cuts in government spending to comply with the Gramm-Rudman budget law

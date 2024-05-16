@@ -1,0 +1,1 @@
+British Aerospace 's chief missile products include its 17-year-old family of Rapier surface-to-air missiles

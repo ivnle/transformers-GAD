@@ -1,0 +1,1 @@
+One of Italy 's favorite shows Fantastico a tepid variety show is so popular that viewers clamored to buy a chocolate product Cacao Fantastico whose praises were sung each week by dancing showgirls even though the product did n't exist

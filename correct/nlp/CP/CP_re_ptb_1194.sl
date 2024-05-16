@@ -1,0 +1,1 @@
+The 50 million warrants will be priced at 1.25 each and are expected to carry a premium to the share price of about 26 %

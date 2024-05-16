@@ -1,0 +1,1 @@
+That was n't the case in 1987 when the dollar was so weak that some economists and government officials seriously worried that it might collapse producing panic among foreign investors and diminishing the flow of foreign capital to the U.S.

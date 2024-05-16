@@ -1,0 +1,1 @@
+However analysts point to positive advertising spending at several of its major daily newspapers such as the Miami Herald and San Jose Mercury News

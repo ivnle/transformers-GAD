@@ -1,0 +1,1 @@
+A MedChem spokesman said the products contribute about a third of MedChem 's sales and 10 % to 20 % of its earnings

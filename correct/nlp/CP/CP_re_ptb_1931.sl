@@ -1,0 +1,1 @@
+I find it hard to conceive of people switching over to CNN for what at least in the public 's mind is the same news says Reuven Frank the former two-time president of NBC News and creator of the Huntley-Brinkley Report

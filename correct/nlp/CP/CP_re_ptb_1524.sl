@@ -1,0 +1,1 @@
+Mr. Benton expects Compaq to unveil a family of high-end personal computers later this year that are powerful enough to serve as the hub for communications within large networks of desk-top machines

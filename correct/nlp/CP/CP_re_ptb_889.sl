@@ -1,0 +1,1 @@
+And Time 's paid circulation according to Audit Bureau of Circulations dropped 7.3 % to 4,393,237 in the six months ended June 30 1989

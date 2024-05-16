@@ -1,0 +1,1 @@
+Analysts generally cite a lack of bearish developments as well as rumors of a possible tightening of supplies of some fuels and crudes

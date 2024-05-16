@@ -1,0 +1,1 @@
+Its watchers are on the whole a disloyal group of channel-zapping grazers and news junkies who spend an average of just 26 minutes a day watching CNN according to audience research

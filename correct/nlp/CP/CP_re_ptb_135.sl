@@ -1,0 +1,1 @@
+That was modestly higher than the 8.8 % and 9.2 % levels in August and September of 1987

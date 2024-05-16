@@ -1,0 +1,1 @@
+Heavy selling of Standard & Poor 's 500-stock index futures in Chicago relentlessly beat stocks downward

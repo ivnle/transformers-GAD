@@ -1,0 +1,1 @@
+Four million common shares via Salomon Brothers Inc

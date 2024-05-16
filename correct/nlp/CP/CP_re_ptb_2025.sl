@@ -1,0 +1,1 @@
+Typically developers option property and then once they get the administrative approvals they buy it said Mr. Karatz adding that he believes the joint venture is the first of its kind

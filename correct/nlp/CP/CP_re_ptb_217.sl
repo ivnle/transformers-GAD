@@ -1,0 +1,1 @@
+More troubling is the prospect that the overall collapse in stock prices could permanently erode the base of small-investor support the OTC market was struggling to rebuild in the wake of the October 1987 crash

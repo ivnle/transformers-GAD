@@ -1,0 +1,1 @@
+Financial Corp. of Santa Barbara filed suit against former stock speculator Ivan F. Boesky and Drexel Burnham Lambert Inc. charging they defrauded the thrift by concealing their relationship when persuading it to buy 284 million in high-yield high-risk junk bonds

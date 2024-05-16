@@ -1,0 +1,1 @@
+The agreement and consent decree are subject to court approval the company said

@@ -1,0 +1,1 @@
+Gulf Resources earlier this year proposed a reorganization plan that would make it a unit of a Bermuda concern potentially exempting it from liability for the smelter 's cleanup costs

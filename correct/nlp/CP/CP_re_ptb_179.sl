@@ -1,0 +1,1 @@
+Nonetheless the Nasdaq Composite Index suffered its biggest point decline of the year and its sixth worst ever diving 14.90 or 3 % to 467.29

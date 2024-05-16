@@ -1,0 +1,1 @@
+Squibb 's profit estimated by analysts to be about 18 % above the 123 million or 1.25 a share it earned in the third quarter of 1988 was the result of especially strong sales of its Capoten drug for treating high blood pressure and other heart disease

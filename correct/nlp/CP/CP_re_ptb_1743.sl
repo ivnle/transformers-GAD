@@ -1,0 +1,1 @@
+Brennan and Marshall are speaking in their dissents to a more distant future he says

@@ -1,0 +1,1 @@
+High-grade unsecured notes sold through dealers by major corporations in multiples of 1,000

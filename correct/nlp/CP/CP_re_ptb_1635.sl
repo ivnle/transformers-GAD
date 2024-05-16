@@ -1,0 +1,1 @@
+Thus in a civil case a defendant may be called as a witness he may be forced to testify or take the Fifth and his taking of the Fifth may permit the drawing of an adverse inference against him in the civil matter

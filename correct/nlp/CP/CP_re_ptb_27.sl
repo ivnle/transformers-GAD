@@ -1,0 +1,1 @@
+Kenneth Mitchell director of Dow 's polyethylene business says producers were surprised to learn how much inventories had swelled throughout the distribution chain as prices spiraled up

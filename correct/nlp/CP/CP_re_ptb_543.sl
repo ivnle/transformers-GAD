@@ -1,0 +1,1 @@
+South Korea 's President Roh traveled to the U.S. for a five-day visit that is expected to focus on ties between Washington and Seoul

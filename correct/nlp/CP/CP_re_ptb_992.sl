@@ -1,0 +1,1 @@
+L.J. Hooker was a small home-building company based in Atlanta in 1979 when Mr. Simpson was hired to push it into commercial development

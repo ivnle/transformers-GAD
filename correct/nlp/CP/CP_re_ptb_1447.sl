@@ -1,0 +1,1 @@
+Annualized average rate of return after expenses for the past 30 days not a forecast of future returns

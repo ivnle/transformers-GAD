@@ -1,0 +1,1 @@
+Stock-fund sales have rebounded in recent months but monthly net purchases are still running at less than half 1987 levels

@@ -1,0 +1,1 @@
+Others undoubtedly will follow but most analysts believe Compaq has at least a six-month lead on the competition

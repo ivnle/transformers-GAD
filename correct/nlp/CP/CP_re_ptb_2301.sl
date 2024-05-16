@@ -1,0 +1,1 @@
+In the hands of a zealot like Lenny Bruce this double-edged blade could cut both the self and the audience to ribbons

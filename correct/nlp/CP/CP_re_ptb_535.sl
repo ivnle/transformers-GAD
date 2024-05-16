@@ -1,0 +1,1 @@
+The White House said minors have n't any right to abortion without the consent of their parents

@@ -1,0 +1,1 @@
+AIM Telephones Inc. a Parsippany N.J. telecommunications equipment supply company started trading with the symbol AIM

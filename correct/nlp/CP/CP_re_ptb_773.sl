@@ -1,0 +1,1 @@
+That speculation abounded Friday as industry executives analyzed the appointment of the new chief executive Robert Louis-Dreyfus who joins Saatchi and becomes a member of its board on Jan. 1

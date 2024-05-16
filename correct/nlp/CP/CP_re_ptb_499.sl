@@ -1,0 +1,1 @@
+144.5 million of Kaiser Permanente revenue bonds via a PaineWebber group

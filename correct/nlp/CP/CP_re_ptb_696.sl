@@ -1,0 +1,1 @@
+However Jeffrey B. Lane president of Shearson Lehman Hutton Inc. said that Friday 's plunge is going to set back relations with customers because it reinforces the concern of volatility

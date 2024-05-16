@@ -1,0 +1,1 @@
+Senators hope that the need to avoid those cuts will pressure the House to agree to the streamlined bill

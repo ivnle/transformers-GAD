@@ -1,0 +1,1 @@
+The Fiero plant was viewed as a model of union-management cooperation at GM before slow sales of the Fiero forced the company to close the factory last year

@@ -1,0 +1,1 @@
+Of course established corporate managements often tend to applaud the setbacks of stock speculators and takeover artists

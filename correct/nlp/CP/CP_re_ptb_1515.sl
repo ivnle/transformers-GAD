@@ -1,0 +1,1 @@
+Some lagging competitors even may leave the personal computer business altogether

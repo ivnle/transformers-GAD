@@ -1,0 +1,1 @@
+The likelihood of living alone beyond the age of 75 has increased to 40 % from 32 %

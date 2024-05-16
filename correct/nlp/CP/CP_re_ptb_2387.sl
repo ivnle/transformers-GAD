@@ -1,0 +1,1 @@
+The venture would strengthen the rapidly growing ties between the two companies and help make them a leading force in European defense contracting

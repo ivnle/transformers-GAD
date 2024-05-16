@@ -1,0 +1,1 @@
+Assuming that the market does n't head into a bottomless free fall some executives think Friday 's action could prove a harbinger of good news as a sign that the leveraged buy-out and takeover frenzy of recent years may be abating

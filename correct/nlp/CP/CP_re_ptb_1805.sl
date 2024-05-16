@@ -1,0 +1,1 @@
+Two of the four big thrifts were sold to NCNB Corp. Charlotte N.C. which has aggressively expanded its markets particularly in Texas and Florida

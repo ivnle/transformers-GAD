@@ -1,0 +1,1 @@
+The dismissal of the pending suits could go a long way toward clearing court dockets in Texas and reducing the FSLIC 's massive legal bills which topped 73 million last year

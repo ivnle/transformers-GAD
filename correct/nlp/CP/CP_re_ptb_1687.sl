@@ -1,0 +1,1 @@
+Consider the growth of portables which now comprise 12 % of all personal computer sales

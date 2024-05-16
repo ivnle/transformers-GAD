@@ -1,0 +1,1 @@
+A few of the executives here for the fall meeting of the Business Council a group that meets to discuss national issues were only too happy to personalize their criticism

@@ -1,0 +1,1 @@
+PacifiCare Health Systems Inc. proposed offering of 1.5 million common shares of which 700,000 shares will be offered by PacifiCare and 800,000 shares by UniHealth America Inc PacifiCare 's 71 % via Dillon Read & Co. Inc. Goldman Sachs & Co. and Dean Witter Reynolds Inc

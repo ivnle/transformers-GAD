@@ -1,0 +1,1 @@
+We view Friday 's market decline as offering us a buying opportunity as long-term investors a recording at Gabelli & Co. funds said over the weekend

@@ -1,0 +1,1 @@
+He expects to invest the rest if the market weakens further

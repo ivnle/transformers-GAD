@@ -1,0 +1,1 @@
+Mr. Crabs said this probably is behind the expected weak performance of Aldus Corp. maker of a widely used computer publishing program

@@ -1,0 +1,1 @@
+100 million of general obligation veterans ' tax notes Series 1989 via competitive bid

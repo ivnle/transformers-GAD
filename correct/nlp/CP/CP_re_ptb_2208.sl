@@ -1,0 +1,1 @@
+For example in the Oklahoma panhandle 40 % or more of the topsoil is short of moisture

@@ -1,0 +1,1 @@
+The buyers will also be locked into deposit rates for just two weeks as has been the case with previous deals

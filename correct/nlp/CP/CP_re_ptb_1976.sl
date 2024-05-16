@@ -1,0 +1,1 @@
+When the little guy gets frightened the big guys hurt badly

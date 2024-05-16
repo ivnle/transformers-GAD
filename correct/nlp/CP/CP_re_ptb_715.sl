@@ -1,0 +1,1 @@
+Mr. Otradovec said Boeing told America West that the 757 it was supposed to get this Thursday would n't be delivered until Nov. 7 the day after the airline had been planning to initiate service at Houston with four daily flights including three nonstops to Phoenix and one nonstop to Las Vegas

@@ -1,0 +1,1 @@
+Hill Democrats are particularly angry over Mr. Bush 's claim that the capital-gains cut was part of April 's budget accord and his insistence on combining it with the deficit-reduction legislation

@@ -1,0 +1,1 @@
+Affiliated Publications Inc. reversed a year-earlier third quarter net loss

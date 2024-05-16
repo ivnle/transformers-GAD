@@ -1,0 +1,1 @@
+The London Sunday Times which first reported the U.S. concerns cited a U.S. intelligence report as the source of the allegations that Olivetti exported 25 million in embargoed state-of-the-art flexible manufacturing systems to the Soviet aviation industry

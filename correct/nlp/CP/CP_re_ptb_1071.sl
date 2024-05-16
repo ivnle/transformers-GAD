@@ -1,0 +1,1 @@
+The group said it would consider among other things withholding royalty payments and initiating a class-action lawsuit seeking court approval for the withholdings

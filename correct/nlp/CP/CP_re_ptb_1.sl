@@ -1,0 +1,1 @@
+The timing of Quantum 's chief executive officer John Hoyt Stookey appeared to be nothing less than inspired because he had just increased Quantum 's reliance on plastics

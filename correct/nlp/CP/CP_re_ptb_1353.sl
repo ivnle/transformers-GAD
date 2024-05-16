@@ -1,0 +1,1 @@
+Pension funds insurers and other behemoths of the investing world said they began scooping up stocks during Friday 's market rout

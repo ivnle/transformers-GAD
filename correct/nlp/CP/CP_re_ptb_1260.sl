@@ -1,0 +1,1 @@
+Now as in those two years her stock market indicators are positive

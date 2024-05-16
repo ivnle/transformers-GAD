@@ -1,0 +1,1 @@
+Many interpret the delay as an indication that regulators are skeptical about the proposal

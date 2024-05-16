@@ -1,0 +1,1 @@
+The next stage is to get beyond the opinion leaders who use us as a point of reference to become a point of reference at ordinary dinner tables says Jon Petrovich executive vice president of Headline News CNN 's sister network

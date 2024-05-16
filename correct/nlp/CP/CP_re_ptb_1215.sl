@@ -1,0 +1,1 @@
+The Office of Thrift Supervision has been hounding CenTrust to provide current market values for its holdings but CenTrust has said it ca n't easily obtain such values because of the relative illiquidity of the bonds and lack of a ready market

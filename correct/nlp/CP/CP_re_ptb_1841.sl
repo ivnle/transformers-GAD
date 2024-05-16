@@ -1,0 +1,1 @@
+Atco Ltd. said its utilities arm is considering building new electric power plants some valued at more than one billion Canadian dollars 851 million in Great Britain and elsewhere

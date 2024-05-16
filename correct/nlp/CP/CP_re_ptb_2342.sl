@@ -1,0 +1,1 @@
+In the previous quarter the company earned 4.5 million or 37 cents a share on sales of 47.2 million

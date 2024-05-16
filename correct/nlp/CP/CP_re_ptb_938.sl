@@ -1,0 +1,1 @@
+He said such results should be measurable in dollars and cents in reducing the U.S. trade deficit with Japan

@@ -1,0 +1,1 @@
+When the news broke of an attempted coup in Panama two weeks ago Sen. Christopher Dodd called the State Department for a briefing

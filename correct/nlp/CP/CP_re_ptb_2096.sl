@@ -1,0 +1,1 @@
+Analysts said profit for the dozen or so big drug makers as a group is estimated to have climbed between 11 % and 14 %

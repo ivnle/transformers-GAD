@@ -1,0 +1,1 @@
+In recent months a string of cross-border mergers and joint ventures have reshaped the once-balkanized world of European arms manufacture

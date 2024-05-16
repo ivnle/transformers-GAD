@@ -1,0 +1,1 @@
+The Garden City N.Y. car-rental company said it wo n't renew contracts with NWA Inc. 's Northwest Airlines unit Pan Am Corp. 's Pan American World Airways unit and Midway Airlines at the end of this year

@@ -1,0 +1,1 @@
+Amid a crowd of crashing stocks Relational Technology Inc. 's stock fell particularly hard Friday dropping 23 % because its problems were compounded by disclosure of an unexpected loss for its fiscal first quarter

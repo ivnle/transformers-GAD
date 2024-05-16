@@ -1,0 +1,1 @@
+Some evinced an optimism that had been rewarded when they did n't flee the market in 1987

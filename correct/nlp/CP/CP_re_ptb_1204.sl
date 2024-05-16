@@ -1,0 +1,1 @@
+David L. Paul chairman and chief executive officer criticized the federal Office of Thrift Supervision which issued the directive saying it was inappropriate and based on insufficient reasons

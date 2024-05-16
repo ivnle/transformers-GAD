@@ -1,0 +1,1 @@
+Politicians tried to finger each other for the blame although many analysts doubt that Washington was singly responsible for Wall Street 's woes

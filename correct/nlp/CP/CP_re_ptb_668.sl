@@ -1,0 +1,1 @@
+As a result the link between the futures and stock markets ripped apart

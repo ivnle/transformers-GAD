@@ -1,0 +1,1 @@
+The government estimates that the new plan will boost production next year by about 66 million bushels

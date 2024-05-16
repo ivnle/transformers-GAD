@@ -1,0 +1,1 @@
+Energy prices then plummeted through the summer causing the index to decline for three consecutive months

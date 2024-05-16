@@ -1,0 +1,1 @@
+This role reversal holds true as well for his three liberal and moderate allies Justices Thurgood Marshall Harry Blackmun and John Stevens

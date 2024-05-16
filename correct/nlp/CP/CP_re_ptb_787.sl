@@ -1,0 +1,1 @@
+The account was previously handled by Davis Ball & Colombatto Advertising Inc. a Los Angeles agency

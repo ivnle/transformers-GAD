@@ -1,0 +1,1 @@
+Maxtor said effects from discontinuing the line may have a positive effect on future earnings and revenue

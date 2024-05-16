@@ -1,0 +1,1 @@
+I think the Friday report combined with the actions of the Fed weakened the belief that there was going to be an imminent easing of monetary policy said Robert Dederick chief economist at Northern Trust Co. in Chicago

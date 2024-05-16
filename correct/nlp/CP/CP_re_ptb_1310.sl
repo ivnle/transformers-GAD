@@ -1,0 +1,1 @@
+Companies are still going to buy companies around the world he says

@@ -1,0 +1,1 @@
+The Justice Department announced that the FBI has been given the authority to seize U.S. fugitives overseas without the permission of foreign governments

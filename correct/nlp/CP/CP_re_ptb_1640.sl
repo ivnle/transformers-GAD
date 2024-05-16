@@ -1,0 +1,1 @@
+The subcommittee Congress and the American public have every right to draw the adverse inference and to concur with Mr. Pierce 's own belief that his testimony could help convict him of a crime

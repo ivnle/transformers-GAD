@@ -1,0 +1,1 @@
+In one wild hour of trading the market managed to accomplish what the Bush administration has been trying to do unsuccessfully for weeks

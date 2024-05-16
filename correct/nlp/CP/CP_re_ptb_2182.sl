@@ -1,0 +1,1 @@
+Rep. Panetta said that OMB 's figure would still be enough to avoid permanent across-the-board cuts but added We 're getting very close to the margins here

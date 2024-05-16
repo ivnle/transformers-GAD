@@ -1,0 +1,1 @@
+Another contradictory message comes from Businessland Inc. a computer retailer

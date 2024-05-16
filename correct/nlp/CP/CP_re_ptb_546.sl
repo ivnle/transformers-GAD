@@ -1,0 +1,1 @@
+The decision reported by the official Xinhua News Agency indicated that the crackdown prompted by student-led pro-democracy protests in June is intensifying

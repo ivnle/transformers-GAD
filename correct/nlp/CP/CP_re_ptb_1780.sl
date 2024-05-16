@@ -1,0 +1,1 @@
+The principal-only securities pay the principal from the underlying Freddie Mac 8 % securities while the interest-only securities pay only interest

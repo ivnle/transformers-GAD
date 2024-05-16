@@ -1,0 +1,1 @@
+But always in years past they have bucked the trend and have been able to pick up a fifth vote to eke out a number of major victories in civil rights and liberties cases

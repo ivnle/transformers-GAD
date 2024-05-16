@@ -1,0 +1,1 @@
+Others wonder how many more of these shocks the small investor can stand

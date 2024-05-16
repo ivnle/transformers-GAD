@@ -1,0 +1,1 @@
+Ports of Call Inc. reached agreements to sell its remaining seven aircraft to buyers that were n't disclosed

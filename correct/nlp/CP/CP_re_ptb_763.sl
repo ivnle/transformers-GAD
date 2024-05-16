@@ -1,0 +1,1 @@
+But the beleaguered British advertising and consulting giant which last week named a new chief executive officer to replace Maurice Saatchi has been the subject of intense takeover speculation for weeks

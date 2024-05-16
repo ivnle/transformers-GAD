@@ -1,0 +1,1 @@
+The release cautioned that there are significant differences between the current environment and that of October 1987 and that there are still attractive investment opportunities in the stock market

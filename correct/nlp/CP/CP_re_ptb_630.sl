@@ -1,0 +1,1 @@
+The 49 stock specialist firms on the Big Board floor the buyers and sellers of last resort who were criticized after the 1987 crash once again could n't handle the selling pressure

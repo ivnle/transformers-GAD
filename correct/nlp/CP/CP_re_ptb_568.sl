@@ -1,0 +1,1 @@
+This further confuses retailers she says

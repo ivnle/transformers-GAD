@@ -1,0 +1,1 @@
+Several analysts said they expected Warner-Lambert 's profit also to increase by more than 20 % from 87.7 million or 1.25 a share it reported in the like period last year

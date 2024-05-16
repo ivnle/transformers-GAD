@@ -1,0 +1,1 @@
+At her news conference for Japanese reporters one economics journalist summed up the Japanese sense of relief

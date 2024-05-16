@@ -1,0 +1,1 @@
+Salomon Brothers International Ltd. a British subsidiary of Salomon Inc. announced it will issue warrants on shares of Hong Kong Telecommunications Ltd

@@ -1,0 +1,1 @@
+The Thornton mall opened Sept. 19 with a Bigg 's hypermarket as its anchor the Columbia mall is expected to open Nov. 15

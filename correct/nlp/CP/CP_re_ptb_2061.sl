@@ -1,0 +1,1 @@
+Gannett 's 83 daily and 35 non-daily newspapers reported a 3 % increase in advertising and circulation revenue

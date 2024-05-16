@@ -1,0 +1,1 @@
+Merieux said the government 's minister of industry science and technology told it that he was n't convinced that the purchase is likely to be of net benefit to Canada

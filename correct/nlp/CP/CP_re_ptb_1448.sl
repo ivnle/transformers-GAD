@@ -1,0 +1,1 @@
+Traditional Industries Inc. said it expects to report a net loss for the fourth quarter that ended June 30 and is seeking new financing

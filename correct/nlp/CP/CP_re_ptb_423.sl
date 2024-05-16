@@ -1,0 +1,1 @@
+Anticipating the Fed 's move money traders lowered a key interest rate known as the Federal Funds rate to 8.625 % late Friday down from 8.820 % the day before

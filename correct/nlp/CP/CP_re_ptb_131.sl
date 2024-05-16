@@ -1,0 +1,1 @@
+One reason is that after two years of monthly net redemptions the fund posted net inflows of money from investors in August and September

@@ -1,0 +1,1 @@
+When an agreement was reached to strip capital gains from the legislation Oregon Sen. Bob Packwood the ranking GOP member of the tax-writing Senate Finance Committee hailed it

@@ -1,0 +1,1 @@
+Increase to 6 a person from 3 the international air-passenger departure tax and impose a 3-a-person tax on international departures by commercial ships

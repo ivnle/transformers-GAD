@@ -1,0 +1,1 @@
+Stock fund redemptions during the 1987 debacle did n't begin to snowball until after the market opened on Black Monday

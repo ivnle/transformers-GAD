@@ -1,0 +1,1 @@
+Indeed one chief executive who was downright delighted by Friday 's events was Robert Crandall chairman of AMR Corp. the parent of American Airlines and the target of a takeover offer by Mr. Trump

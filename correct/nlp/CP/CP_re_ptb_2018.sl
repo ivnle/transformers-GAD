@@ -1,0 +1,1 @@
+Financial Corp. purchased the bonds in at least 70 different transactions in 1984 and since then has realized 11 million in losses on them the company said

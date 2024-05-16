@@ -1,0 +1,1 @@
+Why not simply questions designed to identify sources and causes of waste and inefficiency

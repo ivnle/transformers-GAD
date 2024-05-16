@@ -1,0 +1,1 @@
+At the same time the integrated-steel business was hurt by continued increases in materials costs and repair and maintenance expenses as well as higher labor costs under its new contract

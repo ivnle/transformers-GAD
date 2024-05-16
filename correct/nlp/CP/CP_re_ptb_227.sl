@@ -1,0 +1,1 @@
+In addition Mr. DaPuzzo said computer-guided program selling of OTC stocks in the Russell Index of 2000 small stocks and the Standard & Poor 's 500-stock Index sent occasional waves through the market

@@ -1,0 +1,1 @@
+A consortium bid however would diminish GEC 's direct role in Ferranti and might consequently appease ministry officials

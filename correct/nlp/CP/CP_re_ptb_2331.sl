@@ -1,0 +1,1 @@
+The database software company said it expects a 2 million net loss for the fiscal first quarter ended Sept. 30

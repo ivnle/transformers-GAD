@@ -1,0 +1,1 @@
+In its severest test the 60 billion of portfolio insurance in effect in the 1987 crash did n't work as stock buyers disappeared and stock and futures prices became disconnected

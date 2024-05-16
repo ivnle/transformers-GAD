@@ -1,0 +1,1 @@
+Joseph Hardiman president of the National Association of Securities Dealers which oversees the Nasdaq computerized trading system said that despite the rush of selling he never considered the situation an emergency

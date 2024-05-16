@@ -1,0 +1,1 @@
+The lower results Mr. Pierce said reflect a 12-month decline in industry sales of privately owned pay telephones Elcotel 's primary business

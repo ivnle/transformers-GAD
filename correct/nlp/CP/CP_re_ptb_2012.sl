@@ -1,0 +1,1 @@
+In addition to 33 million compensatory damages the suit seeks 100 million in punitive damages

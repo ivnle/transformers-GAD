@@ -1,0 +1,1 @@
+CBS insisted the move was n't a setback for the program which is the network 's first entry into the late-night talk show format since 1972

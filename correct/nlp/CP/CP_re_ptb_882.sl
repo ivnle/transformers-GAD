@@ -1,0 +1,1 @@
+Besides Time executives think selling a news magazine with a clock radio is tacky

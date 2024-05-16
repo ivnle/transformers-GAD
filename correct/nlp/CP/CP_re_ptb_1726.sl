@@ -1,0 +1,1 @@
+Every indication is that the four are prepared to accept this new role and the frustrations that go with it but in different ways

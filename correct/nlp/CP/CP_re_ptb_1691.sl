@@ -1,0 +1,1 @@
+It also has precluded use of the faster more powerful microprocessors found in increasing numbers of desktop machines

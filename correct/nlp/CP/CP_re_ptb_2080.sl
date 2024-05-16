@@ -1,0 +1,1 @@
+Trouble on the East Coast was likely offset by improved ad linage at the Los Angeles Times which this week also unveiled a redesign

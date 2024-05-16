@@ -1,0 +1,1 @@
+Last term alone he cast 52 dissenting votes in 133 decisions with the contentious flag-burning ruling as his only big victory

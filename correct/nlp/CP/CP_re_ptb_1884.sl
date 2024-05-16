@@ -1,0 +1,1 @@
+The university is considering a settlement proposal made by Connaught

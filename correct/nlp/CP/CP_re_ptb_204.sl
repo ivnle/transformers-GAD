@@ -1,0 +1,1 @@
+So while OTC companies incurred losses on Friday trading officials said the damage was n't as bad as it was in 1987

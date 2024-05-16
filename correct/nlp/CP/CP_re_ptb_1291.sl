@@ -1,0 +1,1 @@
+Unlike 1987 interest rates have been falling this year

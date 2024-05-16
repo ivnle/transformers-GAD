@@ -1,0 +1,1 @@
+We hope to take advantage of it said John Snyder a member of a Los Angeles investors ' club

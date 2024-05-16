@@ -1,0 +1,1 @@
+If this seems like pretty weak stuff around which to raise the protectionist barriers it may be because these shows need all the protection they can get

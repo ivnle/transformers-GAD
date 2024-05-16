@@ -1,0 +1,1 @@
+Its parent company Hooker Corp. of Sydney Australia is currently being managed by a court-appointed provisional liquidator

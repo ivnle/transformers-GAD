@@ -1,0 +1,1 @@
+Treasury officials have been arguing for months that the dollar 's strength was out of whack with economic fundamentals threatening to extinguish the export boom that has sustained manufacturers for several years

@@ -1,0 +1,1 @@
+We were all wonderful heroes last year says an executive at one of Quantum 's competitors

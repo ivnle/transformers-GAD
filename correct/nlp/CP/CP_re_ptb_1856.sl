@@ -1,0 +1,1 @@
+We 're certainly looking at some power generating projects in England said Bruce Stram vice president corporate strategy and corporate planning with Enron Corp. Houston a big natural gas producer and pipeline operator

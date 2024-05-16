@@ -1,0 +1,1 @@
+McCaw lost 8 % or 3 1\/2 to 40

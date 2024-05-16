@@ -1,0 +1,1 @@
+But if his explanation of motivation is true why is his investigation so oriented as to identify criminal activity

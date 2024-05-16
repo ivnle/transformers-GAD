@@ -1,0 +1,1 @@
+A Canadian bank bought another thrift in the first RTC transaction with a foreign bank

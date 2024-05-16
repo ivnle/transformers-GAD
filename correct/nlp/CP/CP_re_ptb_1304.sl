@@ -1,0 +1,1 @@
+This has both made investors uneasy and the corporations more vulnerable

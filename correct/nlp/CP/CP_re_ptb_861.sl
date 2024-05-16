@@ -1,0 +1,1 @@
+We 've basically got to start from scratch to train writers and producers to make shows that other people will want to see concedes Colin Young head of Britain 's National Film Theatre School

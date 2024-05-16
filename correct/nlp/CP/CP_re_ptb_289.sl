@@ -1,0 +1,1 @@
+Sen. Dole said that the move required sacrifice by every senator

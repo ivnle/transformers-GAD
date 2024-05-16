@@ -1,0 +1,1 @@
+Thousands of residents of low-lying areas were ordered to evacuate as the storm headed north in the Gulf of Mexico with 80 mph winds

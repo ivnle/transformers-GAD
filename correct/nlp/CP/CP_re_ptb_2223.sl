@@ -1,0 +1,1 @@
+New York futures prices have dropped significantly from more than 2 a pound at midyear

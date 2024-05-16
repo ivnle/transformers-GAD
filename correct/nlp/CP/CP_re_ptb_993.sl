@@ -1,0 +1,1 @@
+The company grew modestly until 1986 when a majority position in Hooker Corp. was acquired by Australian developer George Herscu currently Hooker 's chairman

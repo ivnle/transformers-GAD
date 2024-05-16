@@ -1,0 +1,1 @@
+They 've been looking to get their costs down and this is a fairly sensible way to do it he said

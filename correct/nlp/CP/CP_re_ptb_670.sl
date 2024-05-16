@@ -1,0 +1,1 @@
+The futures halt was even assailed by Big Board floor traders

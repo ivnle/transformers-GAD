@@ -1,0 +1,1 @@
+He retired as senior vice president finance and administration and chief financial officer of the company Oct. 1

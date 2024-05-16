@@ -1,0 +1,1 @@
+The trend toward lower rents may seem surprising given that some communities in New York are bemoaning the loss of favorite local businesses to high rents

@@ -1,0 +1,1 @@
+But their 1987 performance indicates that they wo n't abandon stocks unless conditions get far worse

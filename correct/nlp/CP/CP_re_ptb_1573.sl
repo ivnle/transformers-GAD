@@ -1,0 +1,1 @@
+Many of Canada 's oil and gas producers say the outlook for natural gas is better than it is for oil and have shifted their exploration and development budgets accordingly

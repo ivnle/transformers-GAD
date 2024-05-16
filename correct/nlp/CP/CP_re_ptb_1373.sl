@@ -1,0 +1,1 @@
+The last crash taught institutional investors that they have to be long-term holders and that they ca n't react to short-term events good or bad said Stephen L. Nesbitt senior vice president for the pension consultants Wilshire Associates in Santa Monica Calif

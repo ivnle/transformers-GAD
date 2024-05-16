@@ -1,0 +1,1 @@
+The Senate also dropped a plan by its Finance Committee that would have increased the income threshold beyond which senior citizens have their Social Security benefits reduced

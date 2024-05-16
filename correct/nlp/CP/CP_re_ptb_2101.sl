@@ -1,0 +1,1 @@
+In Rahway N.J. a Merck spokesman said the company does n't make earnings projections

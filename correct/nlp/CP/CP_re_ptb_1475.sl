@@ -1,0 +1,1 @@
+Predicting the financial results of computer firms has been a tough job lately

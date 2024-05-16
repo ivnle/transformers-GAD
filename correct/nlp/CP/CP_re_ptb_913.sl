@@ -1,0 +1,1 @@
+Some of these countries have in recent years made informal agreements with the U.S. that are similar to quotas

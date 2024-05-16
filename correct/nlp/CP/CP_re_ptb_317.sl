@@ -1,0 +1,1 @@
+Removal of the U.S. Postal Service 's operating budget from the federal budget reducing the deficit by 1.77 billion

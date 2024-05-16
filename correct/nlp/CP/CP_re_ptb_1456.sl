@@ -1,0 +1,1 @@
+Under an agreement filed in federal court in August to settle FTC objections to some Traditional sales practices Traditional said it would establish a 250,000 trust fund to provide refunds to certain customers

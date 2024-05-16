@@ -1,0 +1,1 @@
+Crude oil production may turn out to be the most surprising element of companies ' earnings this year

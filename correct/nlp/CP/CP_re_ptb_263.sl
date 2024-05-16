@@ -1,0 +1,1 @@
+We do n't need this as a way to get capital gains he said

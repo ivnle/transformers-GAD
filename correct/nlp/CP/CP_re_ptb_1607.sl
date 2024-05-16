@@ -1,0 +1,1 @@
+Of course Mr. Lantos doth protest that his subcommittee simply seeks information for legislative change

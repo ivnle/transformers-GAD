@@ -1,0 +1,1 @@
+The partnership Kaufman & Broad Land Development Venture Limited Partnership is a 50-50 joint venture with a trust created by institutional clients of Heitman Advisory Corp. a unit of Heitman Financial Corp. a real estate advisory management and development company with offices in Chicago and Beverly Hills Calif

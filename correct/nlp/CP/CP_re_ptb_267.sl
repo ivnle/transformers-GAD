@@ -1,0 +1,1 @@
+Senate Majority Leader George Mitchell D. Maine said he was confident that any House-Senate agreement on the deficit-reduction legislation would n't include a capital-gains tax cut

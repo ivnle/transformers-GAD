@@ -1,0 +1,1 @@
+The capability of existing fields to deliver oil is dropping and oil exploration activity is also down dramatically as many producers shift their emphasis to natural gas said Ronald Watkins vice president for government and industry relations with Interprovincial 's parent Interhome Energy Inc

@@ -1,0 +1,1 @@
+Ferruzzi has denied it was trying to manipulate the soybean futures market

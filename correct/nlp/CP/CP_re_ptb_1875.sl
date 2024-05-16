@@ -1,0 +1,1 @@
+He said it has reached the same conclusions about some attempts to buy closely held concerns but eventually allowed those acquisitions to proceed

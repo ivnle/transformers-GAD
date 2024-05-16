@@ -1,0 +1,1 @@
+Under terms of its proposed two-step expansion which would have required regulatory approval Interprovincial intended to add 200,000 barrels a day of additional capacity to its system beginning with a modest expansion by 1991

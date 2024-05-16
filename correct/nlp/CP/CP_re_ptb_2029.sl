@@ -1,0 +1,1 @@
+This is one of the best ways to assure a pipeline of land to fuel our growth at a minimum risk to our company Mr. Karatz said

@@ -1,0 +1,1 @@
+In 1988 10 % of those aged 65 to 74 lived with relatives other than spouses down from 15 % in 1970

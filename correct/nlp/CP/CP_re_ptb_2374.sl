@@ -1,0 +1,1 @@
+The projections are in the neighborhood of 50 cents a share to 75 cents compared with a restated 1.65 a share a year earlier when profit was 107.8 million on sales of 435.5 million

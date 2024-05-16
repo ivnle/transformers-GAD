@@ -1,0 +1,1 @@
+Upjohn 's biggest-selling drugs are Xanax a tranquilizer and Halcion a sedative

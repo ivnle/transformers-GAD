@@ -1,0 +1,1 @@
+In August the network hired award-winning producer Pamela Hill the former head of news specials at ABC

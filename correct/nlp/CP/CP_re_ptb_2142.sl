@@ -1,0 +1,1 @@
+A few hours later the stock market dropped 190 points

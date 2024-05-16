@@ -1,0 +1,1 @@
+Because despite all the media prattle about comedy and politics not mixing they are similar in one respect Both can serve as mechanisms for easing tensions and facilitating the co-existence of groups in conflict

@@ -1,0 +1,1 @@
+The company currently using about 80 % of its North American vehicle capacity has vowed it will run at 100 % of capacity by 1992

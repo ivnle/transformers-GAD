@@ -1,0 +1,1 @@
+The company 's net worth can not fall below 185 million after the dividends are issued

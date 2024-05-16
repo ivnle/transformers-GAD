@@ -1,0 +1,1 @@
+A plan currently under study gives Damascus two years to pull back to eastern Lebanon starting from the time Beirut 's legislature increases political power for Moslems

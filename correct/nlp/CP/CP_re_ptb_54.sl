@@ -1,0 +1,1 @@
+But the numbers become trickier and subject to dickering between insured and insurer when demand is shifting

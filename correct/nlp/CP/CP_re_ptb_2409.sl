@@ -1,0 +1,1 @@
+To justify 50-50 ownership of the planned venture Thomson would make a cash payment to British Aerospace

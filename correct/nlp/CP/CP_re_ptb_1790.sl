@@ -1,0 +1,1 @@
+A spokesman for Avis would n't specify the costs but said the three airlines being dropped account for far less than half of the total

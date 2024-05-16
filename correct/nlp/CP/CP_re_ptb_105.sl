@@ -1,0 +1,1 @@
+Prices for capital equipment rose a hefty 1.1 % in September while prices for home electronic equipment fell 1.1 %

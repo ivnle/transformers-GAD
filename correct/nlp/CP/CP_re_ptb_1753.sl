@@ -1,0 +1,1 @@
+James Robinson 57 years old was elected president and chief executive officer of this maker of magnetic recording heads for disk drives

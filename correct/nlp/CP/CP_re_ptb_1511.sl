@@ -1,0 +1,1 @@
+He said Apple 's family of Macintosh computers for instance uses four different buses and no one seems to mind

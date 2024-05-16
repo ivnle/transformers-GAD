@@ -1,0 +1,1 @@
+So she thinks the damage will be short-lived and contained

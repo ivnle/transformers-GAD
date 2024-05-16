@@ -1,0 +1,1 @@
+Calculating that excess polyethylene would soon be sloshing around the world other buyers then bet that prices had peaked and so began to draw down inventories rather than order new product

@@ -1,0 +1,1 @@
+No to my mind the Journal did not defend sleaze fraud waste embezzlement influence-peddling and abuse of the public trust

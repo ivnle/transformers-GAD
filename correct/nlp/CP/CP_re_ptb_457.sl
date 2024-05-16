@@ -1,0 +1,1 @@
+The prosperity that followed Black Monday permits a more optimistic view today

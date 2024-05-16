@@ -1,0 +1,1 @@
+Total advertising linage was modestly lower as classified-ad volume increased while there was softer demand for retail and national ad linage said John Curley Gannett 's chief executive officer

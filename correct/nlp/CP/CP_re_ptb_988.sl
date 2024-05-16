@@ -1,0 +1,1 @@
+The consortium was put together by Hoare Govett the London-based investment banking company that is a subsidiary of Security Pacific Corp

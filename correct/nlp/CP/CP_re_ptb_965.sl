@@ -1,0 +1,1 @@
+But she stressed I am against managed trade

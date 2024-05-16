@@ -1,0 +1,1 @@
+But it may be weeks before GEC and its potential partners decide whether to bid the source indicated

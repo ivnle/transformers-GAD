@@ -1,0 +1,1 @@
+He concluded his remarks by quoting emotionally and at some length according to those present the late Martin Luther King 's famous I Have a Dream speech from the 1963 March on Washington

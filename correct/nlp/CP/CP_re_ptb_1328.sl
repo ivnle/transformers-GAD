@@ -1,0 +1,1 @@
+If it promptly cuts the discount rate it charges on loans to banks he says That could quiet things down

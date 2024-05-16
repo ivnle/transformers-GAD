@@ -1,0 +1,1 @@
+Mr. Rogers spent half his cash on hand Friday for our favorite stocks that have fallen apart

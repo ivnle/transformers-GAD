@@ -1,0 +1,1 @@
+In fact Budget indicated it saw some benefit to staying involved in these programs in which renters earn frequent-flier miles and fliers can get car-rental discounts

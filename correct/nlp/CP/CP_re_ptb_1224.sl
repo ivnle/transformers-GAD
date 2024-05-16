@@ -1,0 +1,1 @@
+Most analysts and thrift executives had expected a decision on the proposed transaction which was announced in July long before now

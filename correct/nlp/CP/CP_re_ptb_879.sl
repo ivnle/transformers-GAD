@@ -1,0 +1,1 @@
+In recent years Reader 's Digest New York Times Co. 's McCall 's and most recently News Corp. 's TV Guide have cut their massive circulation rate bases to eliminate marginal circulation and hold down rates for advertisers

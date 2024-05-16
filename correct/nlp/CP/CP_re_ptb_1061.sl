@@ -1,0 +1,1 @@
+They will be available in minimum denominations of 10,000

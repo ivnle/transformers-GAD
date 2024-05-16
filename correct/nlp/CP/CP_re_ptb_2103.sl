@@ -1,0 +1,1 @@
+The drug introduced last year is expected to generate sales of about 300 million this year

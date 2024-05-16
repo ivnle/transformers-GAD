@@ -1,0 +1,1 @@
+Arbitragers could n't dump their UAL stock but they rid themselves of nearly every rumor stock they had

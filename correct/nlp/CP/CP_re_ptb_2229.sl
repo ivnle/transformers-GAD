@@ -1,0 +1,1 @@
+On the New York Mercantile Exchange West Texas Intermediate crude for November delivery finished at 20.89 a barrel up 42 cents on the day

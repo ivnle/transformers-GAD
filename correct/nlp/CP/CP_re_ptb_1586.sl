@@ -1,0 +1,1 @@
+Regarding the Oct. 3 letter to the editor from Rep. Tom Lantos chairman of the House Subcommittee on Employment and Housing alleging

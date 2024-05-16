@@ -1,0 +1,1 @@
+Once known as National Distillers & Chemical Corp. the company exited the wine and spirits business and plowed more of its resources into plastics after Mr. Stookey took the chief executive 's job in 1986

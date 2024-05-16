@@ -1,0 +1,1 @@
+This is something P&G would do with or without Kao says Mr. Zurkuhlen

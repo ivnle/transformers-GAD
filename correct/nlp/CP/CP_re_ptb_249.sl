@@ -1,0 +1,1 @@
+Merrill Lynch & Co. officials do n't expect margin calls to be as big a factor as in 1987 because fewer individual investors are buying stock on margin a spokesman said

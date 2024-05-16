@@ -1,0 +1,1 @@
+The administration has been trying to push the dollar lower the Fed has been resisting

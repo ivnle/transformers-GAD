@@ -1,0 +1,1 @@
+But while the New York Stock Exchange did n't fall apart Friday as the Dow Jones Industrial Average plunged 190.58 points most of it in the final hour it barely managed to stay this side of chaos

@@ -1,0 +1,1 @@
+To be sure Kao would n't have an easy time taking U.S. market share away from the mighty P&G which has about 23 % of the market

@@ -1,0 +1,1 @@
+HOFI the North American holding company of Swiss concern Holderbank Financiere Glaris Ltd. previously proposed combining its 100 % stake in St. Lawrence Cement Inc. and its 60 % stake in Dundee Cement Co. with its 67 % stake in Ideal

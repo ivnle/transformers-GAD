@@ -1,0 +1,1 @@
+Mr. Lichtblau said Canada 's declining crude output combined with the fast-shrinking output of U.S. crude will help intensify U.S. reliance on oil from overseas particularly the Middle East

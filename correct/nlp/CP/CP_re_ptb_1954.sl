@@ -1,0 +1,1 @@
+Mrs. Crump said her Ashwood Investment Club 's portfolio lost about one-third of its value following the Black Monday crash but no one got discouraged and we gained that back and more

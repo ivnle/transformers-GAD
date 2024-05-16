@@ -1,0 +1,1 @@
+On a recent Saturday night in the midst of West Germany 's most popular prime-time show a contestant bet the host that she could name any of 100 different cheeses after just one nibble while blindfolded

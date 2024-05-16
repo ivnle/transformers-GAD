@@ -1,0 +1,1 @@
+The former president and chief executive Eric W. Markrud resigned in June

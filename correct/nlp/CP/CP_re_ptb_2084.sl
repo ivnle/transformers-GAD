@@ -1,0 +1,1 @@
+According to analysts profits were also helped by successful cost-cutting measures at Newsweek

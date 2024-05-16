@@ -1,0 +1,1 @@
+A quantitative analyst with Shearson Lehman Hutton Inc. Ms. Garzarelli had warned clients to take their money out of the market before the 1987 crash

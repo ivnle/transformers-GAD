@@ -1,0 +1,1 @@
+There seems to be a move around the world to deregulate the generation of electricity Mr. Richardson said and Canadian Utilities hopes to capitalize on it

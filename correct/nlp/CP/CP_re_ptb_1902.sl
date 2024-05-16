@@ -1,0 +1,1 @@
+The new show is perhaps the boldest in a number of steps the network is taking to build audience loyalty by shifting away from its current format toward more full-length signature programming with recognizable stars

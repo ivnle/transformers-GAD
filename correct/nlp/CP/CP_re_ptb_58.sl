@@ -1,0 +1,1 @@
+The plant usually accounts for 20 % to 25 % of Quantum 's polyethylene production and 50 % of its ethylene production

@@ -1,0 +1,1 @@
+The planes long range versions of the medium-haul twin-jet will be delivered with Pratt & Whitney PW4060 engines

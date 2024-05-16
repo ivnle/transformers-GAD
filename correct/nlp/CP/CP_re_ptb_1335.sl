@@ -1,0 +1,1 @@
+Many of the nation 's highest-ranking executives saluted Friday 's market plunge as an overdue comeuppance for speculators and takeover players

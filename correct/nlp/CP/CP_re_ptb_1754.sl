@@ -1,0 +1,1 @@
+He has been president and chief executive officer of Amperex Electronics Corp. a division of North American Philips Corp. itself a subsidiary of N.V Philips of the Netherlands

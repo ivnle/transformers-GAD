@@ -1,0 +1,1 @@
+It was like the Friday before Black Monday two years ago

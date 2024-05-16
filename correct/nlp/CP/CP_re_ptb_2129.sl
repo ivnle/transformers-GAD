@@ -1,0 +1,1 @@
+Alan Seelenfreund 52 years old was named chairman of this processor of prescription claims succeeding Thomas W. Field Jr. 55 who resigned last month

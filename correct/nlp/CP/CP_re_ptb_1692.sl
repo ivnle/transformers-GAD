@@ -1,0 +1,1 @@
+Size and weight considerations also have limited screen displays

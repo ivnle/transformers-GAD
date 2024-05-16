@@ -1,0 +1,1 @@
+NCNB will pay the RTC a premium of 40.4 million for 1.1 billion in deposits

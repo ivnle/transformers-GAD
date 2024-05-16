@@ -1,0 +1,1 @@
+The U.S. share of the Japanese market has been stuck around 10 % for years

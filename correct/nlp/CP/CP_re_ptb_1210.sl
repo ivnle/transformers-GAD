@@ -1,0 +1,1 @@
+CenTrust which is Florida 's largest thrift holds one of the largest junk-bond portfolios of any thrift in the nation

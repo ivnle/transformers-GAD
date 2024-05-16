@@ -1,0 +1,1 @@
+Ideal said it expects to complete the transaction early next year

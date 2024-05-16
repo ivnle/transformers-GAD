@@ -1,0 +1,1 @@
+Less robust earnings at Pfizer Inc. and Upjohn Co. were attributed to those companies ' older products many of which face stiffening competition from generic drugs and other medicines

@@ -1,0 +1,1 @@
+But the economy 's slower growth this year also means the outlook for corporate profits is n't good he says

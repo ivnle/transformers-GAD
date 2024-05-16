@@ -1,0 +1,1 @@
+Mr. Sweig said he estimated that Lilly 's earnings for the quarter jumped about 20 % largely because of the performance of its new anti-depressant Prozac

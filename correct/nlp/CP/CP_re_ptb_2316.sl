@@ -1,0 +1,1 @@
+Back in the 1920s the play and movie versions of Abie 's Irish Rose made the theme of courtship between the assimilated offspring of Jewish and Irish immigrants so popular that its author Anne Nichols lost a plagiarism suit on the grounds that the plot has entered the public domain

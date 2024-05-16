@@ -1,0 +1,1 @@
+He has four stocks in mind to buy if the prices drop to the level he wants

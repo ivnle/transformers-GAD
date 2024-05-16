@@ -1,0 +1,1 @@
+In July the company reported that booming sales of new personal computers from Apple and IBM had resulted in net income more than doubling for its fourth quarter ended June 30 to 7.4 million or 23 cents a share

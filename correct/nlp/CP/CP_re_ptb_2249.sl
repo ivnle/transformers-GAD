@@ -1,0 +1,1 @@
+In the year-earlier period Tandem reported net income of 30.1 million or 31 cents a share on revenue of 383.9 million

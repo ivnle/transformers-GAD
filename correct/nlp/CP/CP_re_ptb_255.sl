@@ -1,0 +1,1 @@
+Lawmakers drastically streamlined the bill to blunt criticism that it was bloated with special-interest tax breaks and spending increases

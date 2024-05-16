@@ -1,0 +1,1 @@
+American is preparing to take delivery of another 757 in early December and 20 more next year and is n't anticipating any changes in that timetable

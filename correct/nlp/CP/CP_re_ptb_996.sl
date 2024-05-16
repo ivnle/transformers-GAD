@@ -1,0 +1,1 @@
+Since then Hooker Corp. has sold its interest in the Parisian chain back to Parisian 's management and is currently attempting to sell the B. Altman & Co. chain

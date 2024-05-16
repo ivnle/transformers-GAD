@@ -1,0 +1,1 @@
+But Senate supporters of the trimmer legislation said that other bills would soon be moving through Congress that could carry some of the measures that had been cast aside including a capital-gains tax cut

@@ -1,0 +1,1 @@
+Information International Inc. said it was sued by a buyer of its computerized newspaper-publishing system alleging that the company failed to correct deficiencies in the system

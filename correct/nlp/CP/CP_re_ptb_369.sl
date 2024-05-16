@@ -1,0 +1,1 @@
+Operationally Maxtor benefited from robust sales of products that store data for high-end personal computers and computer workstations

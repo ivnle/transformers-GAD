@@ -1,0 +1,1 @@
+Just last week they announced they may make a joint bid to buy Ferranti International Signal PLC a smaller British defense contractor rocked by alleged accounting fraud at a U.S. unit

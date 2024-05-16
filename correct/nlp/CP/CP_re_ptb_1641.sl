@@ -1,0 +1,1 @@
+Drawing the adverse inference in a noncriminal congressional hearing does not offend the Fifth Amendment shield against self-incrimination

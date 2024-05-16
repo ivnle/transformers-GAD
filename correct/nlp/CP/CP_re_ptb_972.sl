@@ -1,0 +1,1 @@
+Earlier the company announced it would sell its aging fleet of Boeing Co. 707s because of increasing maintenance costs

@@ -1,0 +1,1 @@
+Other Hooker properties included are a 20-story office tower in midtown Atlanta expected to be completed next February vacant land sites in Florida and Ohio L.J. Hooker International the commercial real-estate brokerage company that once did business as Merrill Lynch Commercial Real Estate plus other shopping centers

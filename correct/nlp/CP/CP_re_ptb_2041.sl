@@ -1,0 +1,1 @@
+The statistics quoted by the new Census Bureau report garnered from 1984 to 1986 are out of date certainly as an average for the Northeast and possibly for the rest of the country

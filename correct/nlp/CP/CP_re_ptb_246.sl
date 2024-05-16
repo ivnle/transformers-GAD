@@ -1,0 +1,1 @@
+If the investor does n't put up the extra cash to satisfy the call the brokerage firm may begin liquidating the securities

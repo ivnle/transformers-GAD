@@ -1,0 +1,1 @@
+After that the buyers may repudiate the rates paid by the former thrifts

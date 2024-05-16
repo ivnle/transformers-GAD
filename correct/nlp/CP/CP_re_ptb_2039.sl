@@ -1,0 +1,1 @@
+I was laid off in August 1988 and after a thorough and exhausting job search was hired in August 1989

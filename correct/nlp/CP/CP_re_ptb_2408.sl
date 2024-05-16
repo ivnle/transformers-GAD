@@ -1,0 +1,1 @@
+In missiles Thomson is already overshadowed by British Aerospace and by its home rival France 's Aerospatiale S.A. to better compete Thomson officials say they need a partnership

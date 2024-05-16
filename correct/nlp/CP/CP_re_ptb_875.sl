@@ -1,0 +1,1 @@
+In an announcement to its staff last week executives at Time Warner Inc. 's weekly magazine said Time will dramatically de-emphasize its use of electronic giveaways such as telephones in television subscription drives cut the circulation it guarantees advertisers by 300,000 to four million and increase the cost of its annual subscription rate by about 4 to 55

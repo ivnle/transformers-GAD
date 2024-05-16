@@ -1,0 +1,1 @@
+Obviously IBM can give bigger discounts to users immediately said Mr. Weiss

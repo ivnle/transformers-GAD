@@ -1,0 +1,1 @@
+Mr. Atherton said CityFed will also mark its portfolio of high-yield corporate bonds to market as a result of federal legislation requiring that savings institutions divest themselves of such bonds

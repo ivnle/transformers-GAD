@@ -1,0 +1,1 @@
+Ideal Basic Industries Inc. said its directors reached an agreement in principle calling for HOFI North America Inc. to combine its North American cement holdings with Ideal in a transaction that will leave Ideal 's minority shareholders with 12.8 % of the combined company

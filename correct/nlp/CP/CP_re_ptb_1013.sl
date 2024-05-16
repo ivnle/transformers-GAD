@@ -1,0 +1,1 @@
+Rosie reinvented this man who may or may not have known about his child as a war hero for Lily 's benefit

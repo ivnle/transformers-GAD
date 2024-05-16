@@ -1,0 +1,1 @@
+Hooker 's philosophy was to build and sell

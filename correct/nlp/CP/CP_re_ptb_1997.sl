@@ -1,0 +1,1 @@
+He said nonperforming assets rose to slightly more than 700 million from 516 million between June and September

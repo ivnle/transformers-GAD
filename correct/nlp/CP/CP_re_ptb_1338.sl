@@ -1,0 +1,1 @@
+If we get rid of a lot of that nonsense it will be a big plus

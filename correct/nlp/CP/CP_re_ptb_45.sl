@@ -1,0 +1,1 @@
+In any case on the day of the meeting Quantum 's shares slid 2.625 to 36.625 in Big Board trading

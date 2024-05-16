@@ -1,0 +1,1 @@
+In its lawsuit Pharmacia is seeking unspecified damages and a preliminary injunction to block MedChem from selling the AMVISC products

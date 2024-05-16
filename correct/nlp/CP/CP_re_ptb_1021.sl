@@ -1,0 +1,1 @@
+When Rosie died her uncles moved in and let her make the sleeping and other household arrangements

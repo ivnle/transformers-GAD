@@ -1,0 +1,1 @@
+There 's no evidence that the Soviet program to illegally acquire Western technology has diminished said a State Department spokesman

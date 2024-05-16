@@ -1,0 +1,1 @@
+She analyzed families by their sleeping arrangements

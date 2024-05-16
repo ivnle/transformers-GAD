@@ -1,0 +1,1 @@
+The medical-products company added that it plans to assert its other defenses against Pharmacia 's lawsuit including the claim that it has n't infringed on Pharmacia 's patent

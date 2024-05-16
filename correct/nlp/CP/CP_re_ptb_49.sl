@@ -1,0 +1,1 @@
+Two workers died and six remain in the hospital

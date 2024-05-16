@@ -1,0 +1,1 @@
+We do n't look at it as not being a standard we look at it as a new standard he argues

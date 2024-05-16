@@ -1,0 +1,1 @@
+After an explosion idled the plant in June the company progressed in September to within 12 hours of completing the drawn-out process of restarting it

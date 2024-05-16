@@ -1,0 +1,1 @@
+After two years of talks plans for the venture are sufficiently advanced for the companies to seek French and British government clearance

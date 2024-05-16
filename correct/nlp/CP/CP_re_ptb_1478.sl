@@ -1,0 +1,1 @@
+Investors taking this as a sign that a broad industry slump was in the offing reacted by selling the company 's stock which lost 3.25 that day to close at 52 in national over-the-counter trading

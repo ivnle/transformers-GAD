@@ -1,0 +1,1 @@
+Mexico which was one of the first countries to conclude its steel talks with the U.S. virtually doubled its quota to 0.95 % of the U.S. steel market from 0.48 % under the previous quotas

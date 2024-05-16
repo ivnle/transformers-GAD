@@ -1,0 +1,1 @@
+And today he 'll be looking to buy drug stocks like Eli Lilly Pfizer and American Home Products whose dividend yields have been bolstered by stock declines

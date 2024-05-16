@@ -1,0 +1,1 @@
+Until recently national governments in Europe controlled most of the air time and allowed little or no advertising

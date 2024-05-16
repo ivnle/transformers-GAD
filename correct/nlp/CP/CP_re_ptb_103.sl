@@ -1,0 +1,1 @@
+Many analysts said the September increase was a one-time event coming as dealers introduced their 1990 models

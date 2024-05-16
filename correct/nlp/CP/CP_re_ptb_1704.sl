@@ -1,0 +1,1 @@
+Rod Canion Compaq 's president and chief executive officer notes pointedly that Zenith 's 2,000 MinisPort uses an unconventional two-inch floppy disk whereas Compaq 's new machines use the more common 3 1\/2-inch disk

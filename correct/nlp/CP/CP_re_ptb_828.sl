@@ -1,0 +1,1 @@
+So far the French have failed to win enough broad-based support to prevail

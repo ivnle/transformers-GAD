@@ -1,0 +1,1 @@
+We could see higher oil prices this year said Bryan Jacoboski an analyst at PaineWebber Inc

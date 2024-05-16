@@ -1,0 +1,1 @@
+But the commodity-chemical producers are caught on the downside of a pricing cycle

@@ -1,0 +1,1 @@
+That means two plants one in Scarborough Ontario and the other in Lordstown Ohio probably will be shut down after the end of 1991

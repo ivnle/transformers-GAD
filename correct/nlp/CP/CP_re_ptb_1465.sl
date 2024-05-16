@@ -1,0 +1,1 @@
+Under the agreement Gulf must give the U.S. government 45 days ' advance written notice before issuing any dividends on common stock

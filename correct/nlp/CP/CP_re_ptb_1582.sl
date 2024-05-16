@@ -1,0 +1,1 @@
+But when something is inevitable you learn to live with it he said

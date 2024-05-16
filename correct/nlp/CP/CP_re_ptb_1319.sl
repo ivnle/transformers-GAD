@@ -1,0 +1,1 @@
+Friday you could n't sell dollars he says

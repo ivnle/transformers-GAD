@@ -1,0 +1,1 @@
+The index which registered 156.8 at the end of September has a base of 100 set in 1983 and is n't seasonally adjusted

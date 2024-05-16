@@ -1,0 +1,1 @@
+Under an agreement signed by the Big Board and the Chicago Mercantile Exchange trading was temporarily halted in Chicago

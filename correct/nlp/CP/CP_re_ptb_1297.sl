@@ -1,0 +1,1 @@
+If I had come into Friday on margin or with very little cash in the portfolios I would not do any buying

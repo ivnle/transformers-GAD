@@ -1,0 +1,1 @@
+Mr. Seelenfreund is executive vice president and chief financial officer of McKesson and will continue in those roles

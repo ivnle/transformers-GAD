@@ -1,0 +1,1 @@
+No one in Washington was willing to take the blame for provoking Friday 's drop in the stock market

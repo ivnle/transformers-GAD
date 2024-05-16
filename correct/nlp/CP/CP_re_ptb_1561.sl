@@ -1,0 +1,1 @@
+For instance natural gas currently produced along the Gulf Coast is selling on the spot market for around 1.47 a thousand cubic feet down 13 % from 1.69 a thousand cubic feet a year ago

@@ -1,0 +1,1 @@
+The principal-only securities will be repackaged by BT Securities into a Freddie Mac Remic Series 103 that will have six classes

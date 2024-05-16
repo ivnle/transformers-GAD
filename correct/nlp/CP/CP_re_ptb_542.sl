@@ -1,0 +1,1 @@
+The spacecraft 's five astronauts are to dispatch the Galileo space probe on an exploration mission to Jupiter

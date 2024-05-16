@@ -1,0 +1,1 @@
+The price cut one analyst said appeared to be aimed even more at Europe where consumption of Brazilian juice has fallen

@@ -1,0 +1,1 @@
+Just the fact we 're on 24 hours is no longer bulletin says Ed Turner CNN 's executive vice president news gathering and no relation to Ted Turner

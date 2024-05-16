@@ -1,0 +1,1 @@
+There is more resiliency in the economy at large than we commonly suppose he says

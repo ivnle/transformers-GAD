@@ -1,0 +1,1 @@
+In the same month the Office of Thrift Supervision ordered the institution to stop paying common stock dividends until its operations were on track

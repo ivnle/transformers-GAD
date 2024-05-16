@@ -1,0 +1,1 @@
+But most investors were seeking share prices and other information

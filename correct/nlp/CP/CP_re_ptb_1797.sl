@@ -1,0 +1,1 @@
+At the time Hertz said its annual fees to those airlines amounted to 20 million and that the value of redeemed awards topped 15 million

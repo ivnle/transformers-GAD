@@ -1,0 +1,1 @@
+GM said it still is talking with Jaguar about acquiring a minority interest

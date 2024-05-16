@@ -1,0 +1,1 @@
+200 million of 1990 general obligation tax revenue notes Series 1990A via competitive bid

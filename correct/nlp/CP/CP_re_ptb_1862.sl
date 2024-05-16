@@ -1,0 +1,1 @@
+For instance Haole white is not the ultimate insult Mainland haole is

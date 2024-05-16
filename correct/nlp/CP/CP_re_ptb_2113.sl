@@ -1,0 +1,1 @@
+The company was officially merged with Bristol-Myers Co. earlier this month

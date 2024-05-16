@@ -1,0 +1,1 @@
+Denver-based portfolio manager James Craig was n't daunted when Friday 's rout shaved 40 million from the value of the 752 million Janus Fund he oversees

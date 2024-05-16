@@ -1,0 +1,1 @@
+I 'm not going to worry about one day 's decline said Kenneth Olsen Digital Equipment Corp. president who was leisurely strolling through the bright orange and yellow leaves of the mountains here after his company 's shares plunged 5.75 to close at 86.50

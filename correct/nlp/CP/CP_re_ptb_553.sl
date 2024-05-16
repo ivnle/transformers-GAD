@@ -1,0 +1,1 @@
+He made his remarks to a PLO gathering in Baghdad

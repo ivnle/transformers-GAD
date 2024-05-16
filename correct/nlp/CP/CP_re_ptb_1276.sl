@@ -1,0 +1,1 @@
+In 1987 such selling contributed to a snowball effect

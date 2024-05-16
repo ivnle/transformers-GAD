@@ -1,0 +1,1 @@
+The single-day record of 288 million shares was set on Oct. 21

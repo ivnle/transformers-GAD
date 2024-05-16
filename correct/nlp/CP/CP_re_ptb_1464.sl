@@ -1,0 +1,1 @@
+Gulf Resources added that it will seek to recover equitable contribution from others for both the amount of the settlement and any other liabilities it may incur under the Superfund law

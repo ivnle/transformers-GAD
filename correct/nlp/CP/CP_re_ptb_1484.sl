@@ -1,0 +1,1 @@
+The industry defies characterization

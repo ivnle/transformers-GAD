@@ -1,0 +1,1 @@
+Everyone will tell you that this time is different from 1987 he says

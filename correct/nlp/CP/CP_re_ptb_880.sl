@@ -1,0 +1,1 @@
+Deep discounts in subscriptions and offers of free clock radios and watches have become accepted forms of attracting new subscribers in the hyper-competitive world of magazine news-weeklies

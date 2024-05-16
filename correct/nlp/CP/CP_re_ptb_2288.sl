@@ -1,0 +1,1 @@
+Mr. Mason said that many Jewish voters feel guilty toward blacks so they support black candidates uncritically

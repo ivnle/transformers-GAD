@@ -1,0 +1,1 @@
+On top of everything else Quantum confronts a disaster at its plant in Morris Ill

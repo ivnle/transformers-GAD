@@ -1,0 +1,1 @@
+The fundamental rule of contract law applied to both cases was that courts will not enforce agreements to which the parties did not intend to be bound

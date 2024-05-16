@@ -1,0 +1,1 @@
+New federal legislation requires that all thrifts divest themselves of such speculative securities over a period of years

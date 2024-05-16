@@ -1,0 +1,1 @@
+The share of minorities in those positions has risen to 16 % from 12 %

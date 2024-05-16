@@ -1,0 +1,1 @@
+It said the delay resulted from difficulties in resolving its accounting of a settlement with the Federal Trade Commission

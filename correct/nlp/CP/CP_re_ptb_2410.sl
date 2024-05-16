@@ -1,0 +1,1 @@
+Annual revenue of British Aerospace 's missile business is about 950 million a Thomson spokesman said

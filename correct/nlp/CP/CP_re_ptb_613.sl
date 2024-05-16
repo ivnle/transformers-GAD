@@ -1,0 +1,1 @@
+IBM closed at 102 down 5.625

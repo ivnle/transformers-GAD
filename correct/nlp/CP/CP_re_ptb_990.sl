@@ -1,0 +1,1 @@
+Hoare Govett is acting as the consortium 's investment bankers

@@ -1,0 +1,1 @@
+Shares of UAL the parent of United Airlines were extremely active all day Friday reacting to news and rumors about the proposed 6.79 billion buy-out of the airline by an employee-management group

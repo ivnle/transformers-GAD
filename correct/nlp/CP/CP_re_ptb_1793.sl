@@ -1,0 +1,1 @@
+I can not see how this news by Hertz and Avis can not benefit Budget 's programs said Bob Wilson Budget 's vice president marketing planning

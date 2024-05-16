@@ -1,0 +1,1 @@
+It worked others said because there were no exceptions all revenue-losing provisions were stricken

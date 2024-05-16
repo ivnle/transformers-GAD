@@ -1,0 +1,1 @@
+Here 's what Ronald Reagan said after the 1987 crash The underlying economy remains sound

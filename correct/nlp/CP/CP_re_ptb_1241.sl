@@ -1,0 +1,1 @@
+Bolar has denied that it switched the brand-name product for its own in such testing

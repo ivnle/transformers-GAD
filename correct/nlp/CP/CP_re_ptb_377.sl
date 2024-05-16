@@ -1,0 +1,1 @@
+Valley Federal said Friday that it is considering whether to seek another buyer for the branches or to pursue the transaction with Imperial Corp. which said it is attempting to meet Community Reinvestment Act requirements

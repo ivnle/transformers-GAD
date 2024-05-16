@@ -1,0 +1,1 @@
+The exchange ratio was never established

@@ -1,0 +1,1 @@
+Everyone was hitting everyone else 's bid he said

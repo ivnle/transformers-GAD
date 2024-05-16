@@ -1,0 +1,1 @@
+The 409 million bid includes the assumption of an estimated 300 million in secured liabilities on those properties according to those making the bid

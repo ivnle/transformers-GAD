@@ -1,0 +1,1 @@
+The nation 's largest short-selling operation is Feshbach Brothers Palo Alto Calif. which said last May that its short positions had shown losses of 10 % for the year up to that point

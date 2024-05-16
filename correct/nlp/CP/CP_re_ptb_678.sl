@@ -1,0 +1,1 @@
+At 3:30 p.m. at the end of the cooling off period the average was down 114.76 points

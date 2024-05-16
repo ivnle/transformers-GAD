@@ -1,0 +1,1 @@
+Diamond Shamrock is the operator with a 100 % interest in the well

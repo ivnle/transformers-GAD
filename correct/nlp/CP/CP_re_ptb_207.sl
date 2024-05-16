@@ -1,0 +1,1 @@
+Tony Cecin head of equity trading at Piper Jaffray & Hopwood in Minneapolis said that Piper Jaffray actually made money on Friday

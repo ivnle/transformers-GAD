@@ -1,0 +1,1 @@
+The Bush administration trying to blunt growing demands from Western Europe for a relaxation of controls on exports to the Soviet bloc is questioning whether Italy 's Ing C. Olivetti & Co. supplied militarily valuable technology to the Soviets

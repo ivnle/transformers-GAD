@@ -1,0 +1,1 @@
+Refining margins were so good in the third quarter of last year and generally not very good this year said William Randol a securities analyst at First Boston Corp

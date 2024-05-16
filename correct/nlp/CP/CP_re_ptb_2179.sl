@@ -1,0 +1,1 @@
+Senate Republicans expressed the hope that the House would follow the lead of the Senate which on Friday agreed to drop a variety of spending measures and tax breaks that would have increased the fiscal 1990 deficit

@@ -1,0 +1,1 @@
+Most of the Western European members of Coordinating Committee on Multilateral Export Controls the unofficial forum through which the U.S. and its allies align their export-control policies are expected to argue for more liberal export rules at a meeting to be held in Paris Oct. 25 and 26

@@ -1,0 +1,1 @@
+Analysts ' third-quarter estimates for the Midland Mich. company are between 3.20 a share and 3.30 a share compared with 3.36 a year ago when profit was 632 million on sales of 4.15 billion

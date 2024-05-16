@@ -1,0 +1,1 @@
+He ticks off several major differences between now and two years ago

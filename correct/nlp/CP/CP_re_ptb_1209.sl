@@ -1,0 +1,1 @@
+For the nine months ended June 30 CenTrust had a net loss of 21.3 million compared with year-earlier net income of 52.8 million

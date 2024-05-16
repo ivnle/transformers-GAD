@@ -1,0 +1,1 @@
+There has n't been any fundamental change in the economy added John Smale whose Procter & Gamble Co. took an 8.75 slide to close at 120.75

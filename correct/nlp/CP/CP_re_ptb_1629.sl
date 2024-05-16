@@ -1,0 +1,1 @@
+The Fifth Amendment states in relevant part that no person shall be compelled in any criminal case to be a witness against himself

@@ -1,0 +1,1 @@
+100 million of general obligation capital appreciation bonds College Savings Plan 1989 Series B via a Prudential-Bache Capital Funding group

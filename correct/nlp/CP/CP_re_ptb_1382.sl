@@ -1,0 +1,1 @@
+Most institutional investors have abandoned the portfolio insurance hedging technique which is widely thought to have worsened the 1987 crash

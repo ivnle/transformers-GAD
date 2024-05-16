@@ -1,0 +1,1 @@
+The book loses some momentum toward the end when Lily becomes more preoccupied with dating boys and less with her delightfully weird family

@@ -1,0 +1,1 @@
+Line by line Mr. Friedman 's weary cynicism can be amusing especially when he 's riffing on the Hollywood social scheme the way people size each other up immediately canceling the desperate ones who merely almost made it

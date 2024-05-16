@@ -1,0 +1,1 @@
+Asked if the administration agreed he curtly replied The adminstration will have to speak for itself

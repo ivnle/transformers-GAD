@@ -1,0 +1,1 @@
+What we are doing is screening out the readers who are only casually related to the magazine and do n't really read it said Mr. Heinemann

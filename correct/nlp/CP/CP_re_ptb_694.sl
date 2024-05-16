@@ -1,0 +1,1 @@
+At Merrill Lynch & Co. the nation 's biggest brokerage firm a news release was prepared headlined Merrill Lynch Comments on Market Drop

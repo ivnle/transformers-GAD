@@ -1,0 +1,1 @@
+CityFed added that significant additional loan-loss provisions may be required by federal regulators as part of the current annual examination of City Federal Savings Bank CityFed 's primary subsidiary based in Somerset N.J

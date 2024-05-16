@@ -1,0 +1,1 @@
+That 's when George L. Ball chairman of the Prudential Insurance Co. of America unit took to the internal intercom system to declare that the plunge was only mechanical

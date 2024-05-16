@@ -1,0 +1,1 @@
+After the 1929 crash Herbert Hoover said The fundamental business of the country is on a sound and prosperous basis

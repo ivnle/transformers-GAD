@@ -1,0 +1,1 @@
+Time magazine executives predictably paint the circulation cut as a show of strength and actually a benefit to advertisers

@@ -1,0 +1,1 @@
+On days like Friday that means they must buy shares from sellers when no one else is willing to

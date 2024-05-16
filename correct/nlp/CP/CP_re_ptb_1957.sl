@@ -1,0 +1,1 @@
+But Robert Showalter an official of the association said no special bulletins or emergency meetings of the investors ' clubs are planned

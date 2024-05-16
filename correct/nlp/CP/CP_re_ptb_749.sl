@@ -1,0 +1,1 @@
+United Auto Workers Local 1069 which represents 3,000 workers at Boeing 's helicopter unit in Delaware County Pa. said it agreed to extend its contract on a day-by-day basis with a 10-day notification to cancel while it continues bargaining

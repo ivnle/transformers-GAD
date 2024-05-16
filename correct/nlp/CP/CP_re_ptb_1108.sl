@@ -1,0 +1,1 @@
+Between 1987 and 1988 North Dakota was the only state in the Midwest to lose population a loss of 4,000 people

@@ -1,0 +1,1 @@
+Meanwhile the U.S. has negotiated a significant cut in Japan 's steel quota and made only a minor increase to the steel allotment for the European Community
