@@ -32,21 +32,5 @@ Knowledgeware Inc.
 ->
 [ ( NP-HLN ( NNP Knowledgeware ) ( NNP Inc. ) ) ]
 
-And her husband sometimes calls her Ducky
-->
-[ ( S ( CC And ) ( NP-SBJ ( PRP$ her ) ( NN husband ) ) ( ADVP-TMP ( RB sometimes ) ) ( VP ( VBZ calls ) ( S ( NP-SBJ ( PRP her ) ) ( NP-PRD ( NNP Ducky ) ) ) ) ) ]
-
-Nausea seems a commonplace symptom
-->
-[ ( S ( NP-SBJ ( NN Nausea ) ) ( VP ( VBZ seems ) ( NP-PRD ( DT a ) ( JJ commonplace ) ( NN symptom ) ) ) ) ]
-
-Swedish Export Credit Corp Sweden
-->
-[ ( NP ( NP ( NNP Swedish ) ( NNP Export ) ( NNP Credit ) ( NNP Corp ) ) ( PRN ( NP-LOC ( NNP Sweden ) ) ) ) ]
-
-The dollar weakened against most other major currencies
-->
-[ ( S ( NP-SBJ ( DT The ) ( NN dollar ) ) ( VP ( VBD weakened ) ( PP ( IN against ) ( NP ( RBS most ) ( JJ other ) ( JJ major ) ( NNS currencies ) ) ) ) ) ]
-
 The company which issued a statement on the agreement late Friday said that 1 million of the payment was previously provided for in its financial statements and that 500,000 will be recognized in its 1989 third-quarter statement
 ->

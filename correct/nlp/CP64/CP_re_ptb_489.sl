@@ -1,0 +1,1 @@
+2.4 million common shares via Montgomery Securities

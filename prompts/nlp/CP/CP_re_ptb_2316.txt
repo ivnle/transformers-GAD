@@ -32,21 +32,5 @@ Knowledgeware Inc.
 ->
 [ ( NP-HLN ( NNP Knowledgeware ) ( NNP Inc. ) ) ]
 
-And her husband sometimes calls her Ducky
-->
-[ ( S ( CC And ) ( NP-SBJ ( PRP$ her ) ( NN husband ) ) ( ADVP-TMP ( RB sometimes ) ) ( VP ( VBZ calls ) ( S ( NP-SBJ ( PRP her ) ) ( NP-PRD ( NNP Ducky ) ) ) ) ) ]
-
-Nausea seems a commonplace symptom
-->
-[ ( S ( NP-SBJ ( NN Nausea ) ) ( VP ( VBZ seems ) ( NP-PRD ( DT a ) ( JJ commonplace ) ( NN symptom ) ) ) ) ]
-
-Swedish Export Credit Corp Sweden
-->
-[ ( NP ( NP ( NNP Swedish ) ( NNP Export ) ( NNP Credit ) ( NNP Corp ) ) ( PRN ( NP-LOC ( NNP Sweden ) ) ) ) ]
-
-The dollar weakened against most other major currencies
-->
-[ ( S ( NP-SBJ ( DT The ) ( NN dollar ) ) ( VP ( VBD weakened ) ( PP ( IN against ) ( NP ( RBS most ) ( JJ other ) ( JJ major ) ( NNS currencies ) ) ) ) ) ]
-
 Back in the 1920s the play and movie versions of Abie 's Irish Rose made the theme of courtship between the assimilated offspring of Jewish and Irish immigrants so popular that its author Anne Nichols lost a plagiarism suit on the grounds that the plot has entered the public domain
 ->

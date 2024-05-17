@@ -32,21 +32,5 @@ Knowledgeware Inc.
 ->
 [ ( NP-HLN ( NNP Knowledgeware ) ( NNP Inc. ) ) ]
 
-And her husband sometimes calls her Ducky
-->
-[ ( S ( CC And ) ( NP-SBJ ( PRP$ her ) ( NN husband ) ) ( ADVP-TMP ( RB sometimes ) ) ( VP ( VBZ calls ) ( S ( NP-SBJ ( PRP her ) ) ( NP-PRD ( NNP Ducky ) ) ) ) ) ]
-
-Nausea seems a commonplace symptom
-->
-[ ( S ( NP-SBJ ( NN Nausea ) ) ( VP ( VBZ seems ) ( NP-PRD ( DT a ) ( JJ commonplace ) ( NN symptom ) ) ) ) ]
-
-Swedish Export Credit Corp Sweden
-->
-[ ( NP ( NP ( NNP Swedish ) ( NNP Export ) ( NNP Credit ) ( NNP Corp ) ) ( PRN ( NP-LOC ( NNP Sweden ) ) ) ) ]
-
-The dollar weakened against most other major currencies
-->
-[ ( S ( NP-SBJ ( DT The ) ( NN dollar ) ) ( VP ( VBD weakened ) ( PP ( IN against ) ( NP ( RBS most ) ( JJ other ) ( JJ major ) ( NNS currencies ) ) ) ) ) ]
-
 At the Oklahoma City plant which employs about 6,000 workers building the eight-year-old A-body mid-sized cars Steve Featherston UAW local vice president said the plant has no new product lined up and none of us knows when the A-body cars will die
 ->

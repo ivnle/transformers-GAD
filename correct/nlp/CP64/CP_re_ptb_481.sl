@@ -1,0 +1,1 @@
+1.3 million common shares via Merrill Lynch

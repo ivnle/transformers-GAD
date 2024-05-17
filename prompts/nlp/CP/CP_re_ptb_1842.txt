@@ -32,21 +32,5 @@ Knowledgeware Inc.
 ->
 [ ( NP-HLN ( NNP Knowledgeware ) ( NNP Inc. ) ) ]
 
-And her husband sometimes calls her Ducky
-->
-[ ( S ( CC And ) ( NP-SBJ ( PRP$ her ) ( NN husband ) ) ( ADVP-TMP ( RB sometimes ) ) ( VP ( VBZ calls ) ( S ( NP-SBJ ( PRP her ) ) ( NP-PRD ( NNP Ducky ) ) ) ) ) ]
-
-Nausea seems a commonplace symptom
-->
-[ ( S ( NP-SBJ ( NN Nausea ) ) ( VP ( VBZ seems ) ( NP-PRD ( DT a ) ( JJ commonplace ) ( NN symptom ) ) ) ) ]
-
-Swedish Export Credit Corp Sweden
-->
-[ ( NP ( NP ( NNP Swedish ) ( NNP Export ) ( NNP Credit ) ( NNP Corp ) ) ( PRN ( NP-LOC ( NNP Sweden ) ) ) ) ]
-
-The dollar weakened against most other major currencies
-->
-[ ( S ( NP-SBJ ( DT The ) ( NN dollar ) ) ( VP ( VBD weakened ) ( PP ( IN against ) ( NP ( RBS most ) ( JJ other ) ( JJ major ) ( NNS currencies ) ) ) ) ) ]
-
 C.S. Richardson Atco 's senior vice president finance said its 50.1%-owned Canadian Utilities Ltd. unit is reviewing cogeneration projects in eastern Canada and conventional electric power generating plants elsewhere including Britain where the British government plans to allow limited competition in electrical generation from private-sector suppliers as part of its privatization program
 ->

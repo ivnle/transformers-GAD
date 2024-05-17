@@ -32,21 +32,5 @@ Knowledgeware Inc.
 ->
 [ ( NP-HLN ( NNP Knowledgeware ) ( NNP Inc. ) ) ]
 
-And her husband sometimes calls her Ducky
-->
-[ ( S ( CC And ) ( NP-SBJ ( PRP$ her ) ( NN husband ) ) ( ADVP-TMP ( RB sometimes ) ) ( VP ( VBZ calls ) ( S ( NP-SBJ ( PRP her ) ) ( NP-PRD ( NNP Ducky ) ) ) ) ) ]
-
-Nausea seems a commonplace symptom
-->
-[ ( S ( NP-SBJ ( NN Nausea ) ) ( VP ( VBZ seems ) ( NP-PRD ( DT a ) ( JJ commonplace ) ( NN symptom ) ) ) ) ]
-
-Swedish Export Credit Corp Sweden
-->
-[ ( NP ( NP ( NNP Swedish ) ( NNP Export ) ( NNP Credit ) ( NNP Corp ) ) ( PRN ( NP-LOC ( NNP Sweden ) ) ) ) ]
-
-The dollar weakened against most other major currencies
-->
-[ ( S ( NP-SBJ ( DT The ) ( NN dollar ) ) ( VP ( VBD weakened ) ( PP ( IN against ) ( NP ( RBS most ) ( JJ other ) ( JJ major ) ( NNS currencies ) ) ) ) ) ]
-
 Pricor Inc. offering of one million new shares of common stock and 300,000 shares by holders via Drexel Burnham Lambert Inc. and J.C. Bradford & Co
 ->

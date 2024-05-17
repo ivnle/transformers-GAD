@@ -139,6 +139,8 @@ def parse_char(src) -> (str, str):
             return "\t", src[2:]
         elif esc == "\\":
             return "\\", src[2:]
+        elif esc == "/":
+            return "\\", src[1:]
         raise RuntimeError("unknown escape at " + src)
     elif src:
         return src[0], src[1:]
@@ -153,6 +155,7 @@ def _parse_rhs_literal_string(src: str, outbuf: List[int]) -> str:
     while remaining_src and remaining_src[0] != '"':
         char, remaining_src = parse_char(remaining_src)
         outbuf.append(LITERAL_MARKER)
+        # print(f"char: {char}")
         outbuf.append(ord(char))
         outbuf.append(ord(char))
 
