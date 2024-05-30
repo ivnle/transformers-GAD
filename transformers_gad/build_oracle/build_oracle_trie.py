@@ -63,6 +63,14 @@ class Trie:
                 return None
         return current_parent
 
+    def search_token_from_parent(self, parent_node, candidate_token_id):
+        if parent_node is None:
+            return None
+        if candidate_token_id in parent_node.children.keys():
+            return parent_node.children[candidate_token_id]
+        else:
+            return None
+
     def get_success_rate_for_candidate_token(self, parent_node, candidate_token_id):
         if parent_node is None:
             return 1
@@ -131,12 +139,23 @@ def visualize_trie(trie_root): # TODO: problem with visualization
         node_id = id(node)
 
         # Add the current node to the graph
-        label = f"{node.token} (ID: {node.token_id}, Logit: {node.raw_logit})"
-        graph.node(str(node_id), label=label)
+
 
         # If this node has a parent, add an edge from the parent to this node
         if parent:
+            parent_prob_sum_gcd = sum([node.raw_logit for node in parent.children.values()])
+            gcd_prob = node.raw_logit / parent_prob_sum_gcd
+
+            parent_prob_sum_gad = sum([node.raw_logit * node.success_rate for node in parent.children.values()])
+            gad_prob = node.raw_logit * node.success_rate / parent_prob_sum_gad
+            
+            label = f"{node.token} (ID: {node.token_id}, LLM's Prob: {node.raw_logit}, GCD Prob: {gcd_prob}, GAD Prob: {gad_prob})"
+            graph.node(str(node_id), label=label)
+
             graph.edge(str(id(parent)), str(node_id))
+        else:
+            label = f"{node.token} (Root)"
+            graph.node(str(node_id), label=label)
 
         # Recursively add nodes/edges for the children
         for child in node.children.values():

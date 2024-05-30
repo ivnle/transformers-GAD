@@ -17,3 +17,7 @@ log/
 debug/
 prev/
 post_process/
+
+results/
+results_trie/
+plots/

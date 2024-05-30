@@ -13,7 +13,7 @@ def tokenize(s):
     ['(', 'quote', '(', '+', 1, 2, ')', '+', '(', 1, '(', 1, ')', ')', ')']
     """
     return list(map(lambda s: int(s) if s.isnumeric() else s, filter(
-        bool, shlex.split(s.replace('(', '( ').replace(')', ' )')))))
+        bool, shlex.split(s.replace('(', '( ').replace(')', ' )'), posix=False))))
 
 def parse(tokens):
     """
@@ -51,7 +51,11 @@ def convert_to_ebnf(grammar_string, args):
     for c in string.whitespace:
         grammar_string = grammar_string.replace(c, " ")
 
-    sexp = parse(tokenize(grammar_string))
+    grammar_string.replace('""', "empty_string")
+
+    tokens = tokenize(grammar_string)
+    tokens = [str(token).replace("\"", "\\\"") for token in tokens]
+    sexp = parse(tokens)
     
     if args.source_sygus_standard == "2":
         sexp = sexp[1]
@@ -62,6 +66,10 @@ def convert_to_ebnf(grammar_string, args):
 
     for non in sexp:
         out += convert_non_to_ebnf(non, non_list) + "\n"
+
+    out.replace("empty_string", '\\\"\\\"')
+    out = out.replace("str.to.int", "str.to_int")
+    out = out.replace("int.to.str", "str.from_int")
 
     return out
 
@@ -76,6 +84,9 @@ def main(args):
         from sygus.src.v1.parser import SygusV1Parser
         parser = SygusV1Parser()
     
+    input_string = input_string.replace("str.to_int", "str.to.int")
+    input_string = input_string.replace("str.from_int", "int.to.str")
+
     ast = parser.parse(input_string)
     sym_table = SymbolTableBuilder.run(ast)
 
