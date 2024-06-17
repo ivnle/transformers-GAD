@@ -1,4 +1,0 @@
-root ::= "(define-fun max3 ((x Int) (y Int) (z Int)) Int " Start ")"
-Start ::= "x" | "y" | "z" | "0" | "1" | "(" "+" " " Start " " Start ")" | "(" "-" " " Start " " Start ")" | "(" "ite" " " StartBool " " Start " " Start ")"
-StartBool ::= "(" "and" " " StartBool " " StartBool ")" | "(" "or" " " StartBool " " StartBool ")" | "(" "not" " " StartBool ")" | "(" "<=" " " Start " " Start ")" | "(" "=" " " Start " " Start ")" | "(" ">=" " " Start " " Start ")"
-

@@ -153,7 +153,7 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
         return (self.accepted_tokens_history, self.accepted_indices_history,
                 self.acceptance_raw_scores_history, self.acceptance_logits_history, self.acceptance_details_history)
 
-    def acceptance_details_history(self):
+    def get_acceptance_details_history(self):
         return self.acceptance_details_history
 
 

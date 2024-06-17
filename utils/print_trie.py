@@ -14,10 +14,10 @@ def main(trie_file):
 
     trie.print_all_nodes()
 
-    # graph = visualize_trie(trie.root)
-    # graph.format = 'png'
+    graph = visualize_trie(trie.root)
+    graph.format = 'png'
 
-    # graph.render(directory='trie-graph').replace('\\', '/')
+    graph.render(directory='trie_graph').replace('\\', '/')
 
 
 if __name__ == "__main__":
