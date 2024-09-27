@@ -99,23 +99,8 @@ def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
     adjusted_acceptance_details_history = gad_oracle_processor.adjusted_acceptance_details_history
     generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
 
-    transition_scores = model.compute_transition_scores(
-        output.sequences, output.scores, normalize_logits=True
-    )
-
-    metas = []
-    sum_log_prob = 0
-    for tok, score in zip(generated_tokens[0], transition_scores[0]):
-        meta = {
-            "token_id": int(tok),
-            "token_str": tokenizer.decode(tok),
-            "norm_score": float(score.cpu().numpy()),
-            "prob": float(np.exp(score.cpu().numpy()))
-        }
-        metas.append(meta)
-        sum_log_prob += float(score.cpu().numpy())
     # print(f"grammar constrained generations: {generations}")
-    return generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations, metas, sum_log_prob
+    return generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations
 
 @torch.inference_mode()
 def initial_search_gad(args, model, tokenizer, prompt, grammar_str, trie):
@@ -170,23 +155,8 @@ def initial_search_gad(args, model, tokenizer, prompt, grammar_str, trie):
     adjusted_acceptance_details_history = gad_oracle_processor.adjusted_acceptance_details_history
     generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
 
-    transition_scores = model.compute_transition_scores(
-        output.sequences, output.scores, normalize_logits=True
-    )
-
-    metas = []
-    sum_log_prob = 0
-    for tok, score in zip(generated_tokens[0], transition_scores[0]):
-        meta = {
-            "token_id": int(tok),
-            "token_str": tokenizer.decode(tok),
-            "norm_score": float(score.cpu().numpy()),
-            "prob": float(np.exp(score.cpu().numpy()))
-        }
-        metas.append(meta)
-        sum_log_prob += float(score.cpu().numpy())
     # print(f"grammar constrained generations: {generations}")
-    return generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations, metas, sum_log_prob
+    return generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations
 
 @torch.inference_mode()
 def run_inference_gad_loading_trie(args, test_filename, model, tokenizer):
@@ -216,11 +186,25 @@ def run_inference_gad_loading_trie(args, test_filename, model, tokenizer):
         adjusted_trie_before = Trie()
         adjusted_trie_after = Trie()
         for _ in tqdm(range(args.initial_search), desc="Initial Search"):
-            generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations, metas, sum_log_prob = initial_search_gad(args, model, tokenizer, prompt, grammar_str, adjusted_trie_before)
+            generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations = initial_search_gad(args, model, tokenizer, prompt, grammar_str, adjusted_trie_before)
             # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
             _, updated_rate = update_oracle_trie(adjusted_trie_before, generated_tokens, acceptance_details_history)
             # update_oracle_trie(adjusted_trie_before, generated_tokens, adjusted_acceptance_details_history)
             update_oracle_trie(adjusted_trie_after, generated_tokens, adjusted_acceptance_details_history)
+
+            likelihoods = adjusted_trie_before.prefix_likelihoods(generated_tokens)
+            likelihoods = torch.Tensor(likelihoods).to(model.device)
+
+            metas = []
+            sum_log_prob = 0
+            for tok, likelihood in zip(generated_tokens[0], likelihoods):
+                meta = {
+                    "token_id": int(tok),
+                    "token_str": tokenizer.decode(tok),
+                    "prob": float(likelihood.cpu().numpy())
+                }
+                metas.append(meta)
+                sum_log_prob += float(np.log(likelihood.cpu().numpy()))
 
             result = {"answer": generations,
                       "sum_log_prob": sum_log_prob,
@@ -239,11 +223,25 @@ def run_inference_gad_loading_trie(args, test_filename, model, tokenizer):
             os.fsync(outfile.fileno())            
 
         for _ in tqdm(range(args.iter - args.initial_search), desc="Running Inference"):
-            generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations, metas, sum_log_prob = inference_gad(args, model, tokenizer, prompt, grammar_str, adjusted_trie_before)
+            generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations = inference_gad(args, model, tokenizer, prompt, grammar_str, adjusted_trie_before)
             # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
             _, updated_rate = update_oracle_trie(adjusted_trie_before, generated_tokens, acceptance_details_history)
             # update_oracle_trie(adjusted_trie_before, generated_tokens, adjusted_acceptance_details_history)
             update_oracle_trie(adjusted_trie_after, generated_tokens, adjusted_acceptance_details_history)
+
+            likelihoods = adjusted_trie_before.prefix_likelihoods(generated_tokens)
+            likelihoods = torch.Tensor(likelihoods).to(model.device)
+
+            metas = []
+            sum_log_prob = 0
+            for tok, likelihood in zip(generated_tokens[0], likelihoods):
+                meta = {
+                    "token_id": int(tok),
+                    "token_str": tokenizer.decode(tok),
+                    "prob": float(likelihood.cpu().numpy())
+                }
+                metas.append(meta)
+                sum_log_prob += float(np.log(likelihood.cpu().numpy()))
 
             result = {"answer": generations,
                       "sum_log_prob": sum_log_prob,
@@ -294,51 +292,6 @@ if __name__ == "__main__":
             run_inference_gad_loading_trie(args, test_filename, model, tokenizer)
     
     print("GAD Inference Done!")
-
-
-    # output, faithful, ideal, elapsed_time = run_inference_grammar_constrained_track_scores(args)
-    # result, non_inf_scores_with_index, output_sequences, elapsed_time = run_inference_grammar_constrained_track_scores(args)
-    # result, non_inf_scores_with_index, output_sequences, elapsed_time = run_inference_track_scores(args)
-    # model, tokenizer = load_model_tokenizer_hf(args)
-    # sequences, scores, generations = inference_track_scores(args, model, tokenizer)
-    # print(f"sequences: {sequences}")
-    # print(f"scores: {scores}")
-    # print(f"generations: {generations}")
-
-    ### run inference_gcd_get_logits_for_oracle ###
-    # (sequences,
-    #         scores,
-    #         generations,
-    #         generated_tokens,
-    #         acceptance_details_history) = inference_gcd_get_logits_for_oracle(args, model, tokenizer)
-
-    # print(f"sequences: {sequences}")
-    # print(f"scores: {scores}")
-    # print(f"generations: {generations}")
-    # print(f"generated_tokens: {generated_tokens}")
-    # print(f"acceptance_details_history: {acceptance_details_history}")
-
-
-    # ### run inference_grammar_aligned_track_full_history ###
-    # (sequences,
-    #  scores,
-    #  generations, accepted_tokens_history, accepted_indices_history, acceptance_raw_scores_history,
-    #  acceptance_logits_history,
-    #  acceptance_details_history, adjusted_acceptance_detailed_history) = inference_grammar_aligned_track_full_history(args, model, tokenizer, trie)
-    #
-    #
-    # print(f"sequences: {sequences}")
-    # print(f"scores: {scores}")
-    # print(f"generations: {generations}")
-    # print(f"accepted_tokens_history: {accepted_tokens_history}")
-    # print(f"accepted_indices_history: {accepted_indices_history}")
-    # print(f"acceptance_raw_scores_history: {acceptance_raw_scores_history}")
-    # print(f"acceptance_logits_history: {acceptance_logits_history}")
-    # print(f"acceptance_details_history: {acceptance_details_history}")
-    # print(f"adjusted_acceptance_detailed_history: {adjusted_acceptance_detailed_history}")
-
-    # ### run gad ###
-    # run_inference_gad_loading_trie(args)
 
 
 

@@ -67,6 +67,24 @@ class Trie:
 
         return best_prefix
 
+    def prefix_likelihoods(self, prefix: torch.LongTensor):
+        likelihoods = []
+        found_parent = []
+        current_parent = self.root
+
+        print(prefix)
+
+        for time_step, token_id in enumerate(prefix[0]): # assume one batch
+            token_id = token_id.item()
+            if token_id in current_parent.children.keys():
+                current_parent = current_parent.children[token_id]
+                found_parent.append(current_parent.token_id)
+                likelihoods.append(current_parent.raw_likelihood)
+            else:
+                print(f"last parent found is {found_parent}; current {token_id} not found in the trie at time step {time_step}")
+                return None
+        return likelihoods
+
     def insert(self, parent_node: TrieNode, child_node: TrieNode):
         # Insert child_node into parent_node's children dictionary
         if child_node.token_id not in parent_node.children:
@@ -248,10 +266,7 @@ def insert_nodes_by_generated_tokens(trie, generated_tokens, nodes):
             for node in batch:
                 # Insert node only if it doesn't already exist as a child of the current parent.
                 if node.token_id not in current_parent.children.keys():
-                    # print(f"current_parent={current_parent} at time step {time_step}")
-                    # print(f"Inserting node {node.token_id} at time step {time_step}")
                     updated_total += trie.insert(current_parent, node)
-
                 else:
                     pass
 
@@ -262,7 +277,6 @@ def insert_nodes_by_generated_tokens(trie, generated_tokens, nodes):
 
         if found_parent_for_next_step:
             current_parent = next_parent_candidate
-            # print(f"current_parent_token_id={current_parent.token_id} at time step {time_step}")
         else:
             print(f"No matching child found for next parent at time step {time_step}")
 

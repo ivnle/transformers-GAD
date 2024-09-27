@@ -8,28 +8,31 @@ import os
 from transformers_gad.oracle.oracle_trie import Trie, TrieNode
 from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser, FileType
 
-MODEL = "Mistral-7B-Instruct-v0.2"
+# MODEL = "Mistral-7B-Instruct-v0.2"
 # MODEL = "Mistral-7B-Instruct-v0.2-gad-cp8-merged"
 # MODEL = "Mistral-7B-Instruct-v0.2-gad-slianogram3-merged"
 # MODEL = "Mistral-7B-Instruct-v0.2-gad-bv4nogram3-merged"
 # MODEL = "Llama-2-7b-hf"
-NUM_ITER = 2000
+MODEL = "TinyLlama_v1.1"
+NUM_ITER = 10
+DEVICE = "cpu"
+DTYPE = "bfloat16"
 
 def make_dir(dir_path):
     if not os.path.exists(dir_path):
         os.makedirs(dir_path)
 
 def get_gad_answer_path(args, prob_name):
-    return f"{args.answer_path}/{prob_name}/gad_{MODEL}_i{NUM_ITER}_cuda_sd42_float16.jsonl"
+    return f"{args.answer_path}/{prob_name}/gad_{MODEL}_i{NUM_ITER}_{DEVICE}_sd42_{DTYPE}.jsonl"
 
 def get_gcd_answer_path(args, prob_name):
-    return f"{args.answer_path}/{prob_name}/gcd_{MODEL}_i{NUM_ITER}_cuda_sd42_float16.jsonl"
+    return f"{args.answer_path}/{prob_name}/gcd_{MODEL}_i{NUM_ITER}_{DEVICE}_sd42_{DTYPE}.jsonl"
 
 def get_gad_trie_path(args, prob_name):
-    return f"{args.trie_path}/{prob_name}/trie_{MODEL}_i{NUM_ITER}_cuda_gad_before_sd42_float16.pkl"
+    return f"{args.trie_path}/{prob_name}/trie_{MODEL}_i{NUM_ITER}_{DEVICE}_gad_before_sd42_{DTYPE}.pkl"
 
 def get_gcd_trie_path(args, prob_name):
-    return f"{args.trie_path}/{prob_name}/trie_{MODEL}_i{NUM_ITER}_cuda_sd42_float16.pkl"
+    return f"{args.trie_path}/{prob_name}/trie_{MODEL}_i{NUM_ITER}_{DEVICE}_sd42_{DTYPE}.pkl"
 
 def get_out_prob_path(args, prob_name):
     return f"{args.plot_path}/prob/{prob_name}.png"
@@ -217,16 +220,6 @@ def save_fig(args, prob_name):
     # Estimate correct distribution
     total_tokens_count, gad_tokens_count, gcd_tokens_count = estimate_orig_dist(args, prob_name)
 
-    # if "lastname" in prob_name:
-    #     l = [(v[0], v[2]) for k, v in gad_tokens_count.items()]
-    #     l.sort(key=lambda x: x[1], reverse=True)
-    #     for p in l[:5]:
-    #         metas = p[0]
-    #         s = ""
-    #         for token in metas:
-    #             s += token["token_str"]
-    #         print(s, p[1])
-
     # Compute KL divergence for last N samples
     gad_answer_path = get_gad_answer_path(args, prob_name)
     gad_trie_path = get_gad_trie_path(args, prob_name)
@@ -305,14 +298,14 @@ def main(args):
     gcd_lasts = []
 
     for prob_name in prob_names:
-        try:
-            ideal, gad_last, gcd_last = save_fig(args, prob_name)
+        # try:
+        ideal, gad_last, gcd_last = save_fig(args, prob_name)
 
-            ideals.append(ideal)
-            gad_lasts.append(gad_last)
-            gcd_lasts.append(gcd_last)
-        except:
-            pass
+        ideals.append(ideal)
+        gad_lasts.append(gad_last)
+        gcd_lasts.append(gcd_last)
+        # except:
+        #     pass
 
     # GCD Scatter
     plt.cla()

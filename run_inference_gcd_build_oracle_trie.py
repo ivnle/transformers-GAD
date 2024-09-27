@@ -119,7 +119,7 @@ def inference_gcd(args, model, tokenizer):
     return generated_tokens, acceptance_details_history, generations
 
 @torch.inference_mode()
-def inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str):
+def inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str, trie):
     """
     latest version of gcd test function
     """
@@ -160,23 +160,7 @@ def inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
     acceptance_details_history = grammar_processor.acceptance_details_history
     generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
 
-    transition_scores = model.compute_transition_scores(
-        output.sequences, output.scores, normalize_logits=True
-    )
-
-    metas = []
-    sum_log_prob = 0
-    for tok, score in zip(generated_tokens[0], transition_scores[0]):
-        meta = {
-            "token_id": int(tok),
-            "token_str": tokenizer.decode(tok),
-            "norm_score": float(score.cpu().numpy()),
-            "prob": float(np.exp(score.cpu().numpy()))
-        }
-        metas.append(meta)
-        sum_log_prob += float(score.cpu().numpy())
-    # print(f"grammar constrained generations: {generations}")
-    return generated_tokens, acceptance_details_history, generations, metas, sum_log_prob
+    return generated_tokens, acceptance_details_history, generations
 
 @torch.inference_mode()
 def run_inference_gcd_construct_oracle_trie(args, test_filename, model, tokenizer):
@@ -190,20 +174,6 @@ def run_inference_gcd_construct_oracle_trie(args, test_filename, model, tokenize
     # model, tokenizer = load_model_tokenizer_hf(args)
     trie_file = construct_trie_file_from_folder(args, test_filename)
     trie = Trie()
-    # if "binary" in args.prompt_type:
-    #     prompt = get_prompt(args, args.prompt_type)
-    #     test_file = get_file(args)
-    #     grammar_constr_name = test_file.split("/")[-1]
-    #     grammar_prompt_file = None
-    # else:
-    #     prompt = construct_sygus_prompt(args, args.prompt_type)
-    #     test_file = get_grammar_file_path_by_prompt_type(args)
-    #     grammar_constr_name = test_file.split("/")[-1]
-    #     grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
-
-    # #### only for test purpose ####
-    # prompt = args.prompt
-    # test_file = get_file(args)
 
     # Load grammar
     test_file = os.path.join(args.grammar_folder, f"{test_filename}.ebnf")
@@ -218,7 +188,24 @@ def run_inference_gcd_construct_oracle_trie(args, test_filename, model, tokenize
 
     with open(output_file_path, 'w', encoding='utf-8') as outfile:
         for i in tqdm(range(args.iter), desc="Running Inference"):
-            generated_tokens, acceptance_details_history, generations, metas, sum_log_prob = inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str)
+            generated_tokens, acceptance_details_history, generations = inference_gcd_build_oracle_trie(args, model, tokenizer, prompt, grammar_str, trie)
+            
+            update_oracle_trie(trie, generated_tokens, acceptance_details_history)
+
+            likelihoods = trie.prefix_likelihoods(generated_tokens)
+            likelihoods = torch.Tensor(likelihoods).to(model.device)
+
+            metas = []
+            sum_log_prob = 0
+            for tok, likelihood in zip(generated_tokens[0], likelihoods):
+                meta = {
+                    "token_id": int(tok),
+                    "token_str": tokenizer.decode(tok),
+                    "prob": float(likelihood.cpu().numpy())
+                }
+                metas.append(meta)
+                sum_log_prob += float(np.log(likelihood.cpu().numpy()))
+            
             result = {"answer": generations,
                       "sum_log_prob": sum_log_prob,
                       "metas": metas,
@@ -228,7 +215,7 @@ def run_inference_gcd_construct_oracle_trie(args, test_filename, model, tokenize
                       "grammar_constr": grammar_constr_name}
             print(f"result: {result}")
             # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
-            update_oracle_trie(trie, generated_tokens, acceptance_details_history)
+
             json_record = json.dumps(result)
             outfile.write(json_record + '\n')
             outfile.flush()

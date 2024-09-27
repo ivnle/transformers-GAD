@@ -23,7 +23,7 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
         self.accepted_indices_history = []  # To store indices of accepted tokens
         self.accepted_tokens_history = []
         self.acceptance_raw_scores_history = []
-        self.acceptance_logits_history = []
+        self.acceptance_likelihoods_history = []
         self.acceptance_details_history = []
 
     def mask_scores(self, scores, device):
@@ -40,15 +40,15 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
 
         # store raw scores and logits for acceptance tokens before applying the mask
         # First, calculate the logits for the entire scores tensor
-        logits = F.softmax(scores, dim=-1)
+        likelihoods = F.softmax(scores, dim=-1)
 
         # For raw scores of accepted tokens
         accepted_raw_scores = scores[acceptance].clone().detach()
         self.acceptance_raw_scores_history.append(accepted_raw_scores.cpu())
 
         # For logits of accepted tokens
-        accepted_logits = logits[acceptance].clone().detach()
-        self.acceptance_logits_history.append(accepted_logits.cpu())
+        accepted_likelihoods = likelihoods[acceptance].clone().detach()
+        self.acceptance_likelihoods_history.append(accepted_likelihoods.cpu())
 
         # Scores to -inf where False
         scores[~acceptance] = float('-inf')
@@ -121,7 +121,7 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
         - acceptance (torch.Tensor): A boolean tensor indicating accepted tokens for each item in the batch.
         - scores (torch.Tensor): The raw scores from the model output.
         """
-        logits = F.softmax(scores, dim=-1)
+        likelihoods = F.softmax(scores, dim=-1)
 
         # Initializing the list to store detailed information for each step
         detailed_accepted_info = []
@@ -133,7 +133,7 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
             for idx in accepted_indices:
                 token_id = idx.item()
                 raw_score = scores[batch_index, idx].item()
-                logit = logits[batch_index, idx].item()
+                likelihood = likelihoods[batch_index, idx].item()
                 token = self.grammar_constraint.tokenizer.decode([token_id])
 
                 # Store detailed information as a dictionary
@@ -141,7 +141,7 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
                     "token_id": token_id,
                     "token": str(token),
                     "raw_score": raw_score,
-                    "raw_logit": logit
+                    "raw_likelihood": likelihood
                 })
 
             detailed_accepted_info.append(accepted_info)
@@ -151,7 +151,7 @@ class GrammarConstrainedLogitsProcessor(LogitsProcessor):
 
     def get_history(self):
         return (self.accepted_tokens_history, self.accepted_indices_history,
-                self.acceptance_raw_scores_history, self.acceptance_logits_history, self.acceptance_details_history)
+                self.acceptance_raw_scores_history, self.acceptance_likelihoods_history, self.acceptance_details_history)
 
     def get_acceptance_details_history(self):
         return self.acceptance_details_history
