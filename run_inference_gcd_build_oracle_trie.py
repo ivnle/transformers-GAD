@@ -1,7 +1,7 @@
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
 from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor
 from transformers.generation.logits_process import LogitsProcessorList, InfNanRemoveLogitsProcessor
-from transformers_gad.build_oracle.build_oracle_trie import Trie, update_oracle_trie
+from transformers_gad.oracle.oracle_trie import Trie, update_oracle_trie
 from run_inference_gad import inference_gad, load_oracle_trie, construct_gad_output_file_path, construct_gad_output_file_path_from_folder
 import torch
 import os

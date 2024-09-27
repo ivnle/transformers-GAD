@@ -13,6 +13,8 @@ TMP_PATH = TMP_DIR + "/temp.sl"
 CVC5_PATH = "tools/cvc5-macOS"
 
 MODEL = "Mistral-7B-Instruct-v0.2"
+# MODEL = "Mistral-7B-Instruct-v0.2-gad-bv4nogram3-merged"
+# MODEL = "Mistral-7B-Instruct-v0.2-gad-slianogram3-merged"
 NUM_ITER = 2000
 
 def get_input_path(args, prob_name):
@@ -22,7 +24,7 @@ def get_unconstrained_answer_path(args, prob_name):
     return f"{args.answer_path}/{prob_name}/bare_{MODEL}_i{NUM_ITER}_cuda_sd42_float16.jsonl"
 
 def get_gad_answer_path(args, prob_name):
-    return f"{args.answer_path}/{prob_name}/gad_{MODEL}_i{NUM_ITER}_cuda_sd42_float16.jsonl"
+    return f"{args.answer_path}/{prob_name}/gad_{MODEL}_i{NUM_ITER}_cuda_sd42_bfloat16.jsonl"
 
 def get_gcd_answer_path(args, prob_name):
     return f"{args.answer_path}/{prob_name}/gcd_{MODEL}_i{NUM_ITER}_cuda_sd42_float16.jsonl"
@@ -105,7 +107,7 @@ def test_answer_file(args, sym_table, constraints, others, answer_path):
         lines = f.readlines()
     
     num_correct = 0
-    for line in lines[-500:]:
+    for line in lines:
         line_json = json.loads(line)
         # print(line_json)
         answer = line_json["answer"][0]

@@ -9,9 +9,7 @@ from transformers_gad.oracle.oracle_trie import Trie, TrieNode
 from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser, FileType
 
 MODEL = "Mistral-7B-Instruct-v0.2"
-# MODEL = "Mistral-7B-Instruct-v0.2-gad-cp8-merged"
-# MODEL = "Mistral-7B-Instruct-v0.2-gad-slianogram3-merged"
-# MODEL = "Mistral-7B-Instruct-v0.2-gad-bv4nogram3-merged"
+FT_MODEL = "Mistral-7B-Instruct-v0.2-gad-cp8-merged"
 # MODEL = "Llama-2-7b-hf"
 NUM_ITER = 2000
 
@@ -19,23 +17,27 @@ def make_dir(dir_path):
     if not os.path.exists(dir_path):
         os.makedirs(dir_path)
 
-def get_gad_answer_path(args, prob_name):
-    return f"{args.answer_path}/{prob_name}/gad_{MODEL}_i{NUM_ITER}_cuda_sd42_float16.jsonl"
+def get_gad_answer_path(args, prob_name, fine_tune = False):
+    model = FT_MODEL if fine_tune else MODEL
+    return f"{args.answer_path}/{prob_name}/gad_{model}_i{NUM_ITER}_cuda_sd42_float16.jsonl"
 
-def get_gcd_answer_path(args, prob_name):
-    return f"{args.answer_path}/{prob_name}/gcd_{MODEL}_i{NUM_ITER}_cuda_sd42_float16.jsonl"
+def get_gcd_answer_path(args, prob_name, fine_tune = False):
+    model = FT_MODEL if fine_tune else MODEL
+    return f"{args.answer_path}/{prob_name}/gcd_{model}_i{NUM_ITER}_cuda_sd42_float16.jsonl"
 
-def get_gad_trie_path(args, prob_name):
-    return f"{args.trie_path}/{prob_name}/trie_{MODEL}_i{NUM_ITER}_cuda_gad_before_sd42_float16.pkl"
+def get_gad_trie_path(args, prob_name, fine_tune = False):
+    model = FT_MODEL if fine_tune else MODEL
+    return f"{args.trie_path}/{prob_name}/trie_{model}_i{NUM_ITER}_cuda_gad_before_sd42_float16.pkl"
 
-def get_gcd_trie_path(args, prob_name):
-    return f"{args.trie_path}/{prob_name}/trie_{MODEL}_i{NUM_ITER}_cuda_sd42_float16.pkl"
+def get_gcd_trie_path(args, prob_name, fine_tune = False):
+    model = FT_MODEL if fine_tune else MODEL
+    return f"{args.trie_path}/{prob_name}/trie_{model}_i{NUM_ITER}_cuda_sd42_float16.pkl"
 
-def get_out_prob_path(args, prob_name):
-    return f"{args.plot_path}/prob/{prob_name}.png"
+def get_out_prob_path(args, prob_name, fine_tune = False):
+    return f"{args.plot_path}/prob/{prob_name}-ft.png" if fine_tune else f"{args.plot_path}/prob/{prob_name}.png"
 
-def get_out_kl_path(args, prob_name):
-    return f"{args.plot_path}/kl/{prob_name}.png"
+def get_out_kl_path(args, prob_name, fine_tune = False):
+    return f"{args.plot_path}/kl/{prob_name}-ft.png" if fine_tune else f"{args.plot_path}/kl/{prob_name}.png"
 
 def normalize(l):
     val_sum = sum(l)
@@ -52,6 +54,31 @@ def KL_dict(d):
     orig_probs = normalize(orig_probs)
 
     return KL(counts, orig_probs)
+
+def KL_orig_ft(orig_d, ft_d):
+    ft_probs = [v[2] for v in ft_d.values()]
+    orig_probs = []
+
+    # print(ft_probs)
+    # print(orig_d, ft_d)
+
+    for v1 in ft_d.values():
+        duplicate = False
+        for v2 in orig_d.values():
+            if is_same_tokens(v1[0], v2[0]):
+                orig_probs.append(v2[2])
+                duplicate = True
+                break
+        
+        if not duplicate:
+            orig_probs.append(0)
+
+    # print(orig_probs)
+
+    ft_probs = normalize(ft_probs)
+    orig_probs = normalize(orig_probs)
+
+    return KL(ft_probs, orig_probs)
 
 def prob_explored(d):
     return sum([v[2] for v in d.values()])
@@ -88,24 +115,19 @@ def restore_orig_prob(tokens, trie):
     parent = trie.root
     for token in tokens:
         node = trie.search_token_from_parent(parent, token['token_id'])
-        try:
-            sum_of_log += math.log(node.raw_likelihood)
-        except:
-            sum_of_log += math.log(node.raw_logit)
+        sum_of_log += math.log(node.raw_logit)
         parent = node
 
     return math.exp(sum_of_log)
 
-def estimate_orig_dist(args, prob_name):
-    gad_answer_path = get_gad_answer_path(args, prob_name)
-    gad_trie_path = get_gad_trie_path(args, prob_name)
+def estimate_orig_dist(args, prob_name, fine_tune = False):
+    gad_answer_path = get_gad_answer_path(args, prob_name, fine_tune)
+    gad_trie_path = get_gad_trie_path(args, prob_name, fine_tune)
     _, tokens_count, prob_explored = count_appearance(gad_answer_path, gad_trie_path, dict(), 0)
     gad_tokens_count = dict(tokens_count)
 
-    print(prob_name, len(gad_tokens_count))
-
-    gcd_answer_path = get_gcd_answer_path(args, prob_name)
-    gcd_trie_path = get_gcd_trie_path(args, prob_name)
+    gcd_answer_path = get_gcd_answer_path(args, prob_name, fine_tune)
+    gcd_trie_path = get_gcd_trie_path(args, prob_name, fine_tune)
     _, total_tokens_count, prob_explored = count_appearance(gcd_answer_path, gcd_trie_path, tokens_count, prob_explored)
     
     gcd_tokens_count = dict_sub(total_tokens_count, gad_tokens_count)
@@ -216,6 +238,7 @@ def dist_to_line(x, y):
 def save_fig(args, prob_name):
     # Estimate correct distribution
     total_tokens_count, gad_tokens_count, gcd_tokens_count = estimate_orig_dist(args, prob_name)
+    ft_total_tokens_count, ft_gad_tokens_count, ft_gcd_tokens_count = estimate_orig_dist(args, prob_name, True)
 
     # if "lastname" in prob_name:
     #     l = [(v[0], v[2]) for k, v in gad_tokens_count.items()]
@@ -235,6 +258,14 @@ def save_fig(args, prob_name):
     gcd_answer_path = get_gcd_answer_path(args, prob_name)
     gcd_trie_path = get_gcd_trie_path(args, prob_name)
     gcd_probs, gcd_kls = count_appearance_all(gcd_answer_path, gcd_trie_path, gcd_tokens_count)
+
+    ft_gad_answer_path = get_gad_answer_path(args, prob_name, True)
+    ft_gad_trie_path = get_gad_trie_path(args, prob_name, True)
+    ft_gad_probs, ft_gad_kls = count_appearance_all(gad_answer_path, gad_trie_path, gad_tokens_count)
+
+    ft_gcd_answer_path = get_gcd_answer_path(args, prob_name, True)
+    ft_gcd_trie_path = get_gcd_trie_path(args, prob_name, True)
+    ft_gcd_probs, ft_gcd_kls = count_appearance_all(gcd_answer_path, gcd_trie_path, gcd_tokens_count)
 
     MARKER_SIZE = 5
 
@@ -284,9 +315,15 @@ def save_fig(args, prob_name):
     ideal = expectation_from_count(gad_tokens_count)
     plt.plot(xs, [ideal for _ in xs] , '--k', label='LLM')
 
+    ft_ideal = expectation_from_count(ft_gad_tokens_count)
+    plt.plot(xs, [ft_ideal for _ in xs] , '--m', label='LLM-fine-tuned')
+
     plt.legend()
     plt.savefig(out_prob_path)
     plt.close()
+
+    kl_ft_orig = KL_orig_ft(total_tokens_count, ft_total_tokens_count)
+    print(prob_name, kl_ft_orig)
 
     return ideal, gad_ys[-1], gcd_ys[-1]
 
@@ -305,14 +342,14 @@ def main(args):
     gcd_lasts = []
 
     for prob_name in prob_names:
-        try:
-            ideal, gad_last, gcd_last = save_fig(args, prob_name)
+        # try:
+        ideal, gad_last, gcd_last = save_fig(args, prob_name)
 
-            ideals.append(ideal)
-            gad_lasts.append(gad_last)
-            gcd_lasts.append(gcd_last)
-        except:
-            pass
+        ideals.append(ideal)
+        gad_lasts.append(gad_last)
+        gcd_lasts.append(gcd_last)
+        # except:
+        #     pass
 
     # GCD Scatter
     plt.cla()

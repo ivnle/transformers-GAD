@@ -1,15 +1,10 @@
 import torch
 import json
 import pickle
-import jsonlines
-from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation.logits_process import LogitsProcessorList, InfNanRemoveLogitsProcessor
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
-from transformers_gad.generation.logits_process import GrammarConstrainedLogitsProcessor
-from transformers_gad.generation.gad_logits_processor import GrammarAlignedGroundTruthLogitsProcessor
-from transformers_gad.build_oracle.build_oracle_trie import run_demo_trie_string_01_len_3
-from transformers_gad.generation.gad_logits_processor_oracle import GrammarAlignedOracleLogitsProcessor
-from transformers_gad.build_oracle.build_oracle_trie import Trie, TrieNode, update_oracle_trie
+from transformers_gad.generation.gad_logits_processor import GrammarAlignedOracleLogitsProcessor
+from transformers_gad.oracle.oracle_trie import Trie, TrieNode, update_oracle_trie
 import os
 from inference_utils import get_file, load_model_tokenizer_hf
 import matplotlib.pyplot as plt
@@ -73,13 +68,13 @@ def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
         gad_oracle_processor,
     ])
 
-    # Generate
+    # Tokenize prompt into ids
     input_ids = tokenizer(
         [prompt], add_special_tokens=False, return_tensors="pt", padding=True
     )["input_ids"]
-
     input_ids = input_ids.to(model.device)
 
+    # Generate sequences
     output = model.generate(
         input_ids,
         do_sample=True,
@@ -120,7 +115,78 @@ def inference_gad(args, model, tokenizer, prompt, grammar_str, trie):
         metas.append(meta)
         sum_log_prob += float(score.cpu().numpy())
     # print(f"grammar constrained generations: {generations}")
-    return generated_tokens, acceptance_details_history,adjusted_acceptance_details_history, generations, metas, sum_log_prob
+    return generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations, metas, sum_log_prob
+
+@torch.inference_mode()
+def initial_search_gad(args, model, tokenizer, prompt, grammar_str, trie):
+    """
+    latest version of gad test function prepared for run inference for iterations
+    """
+
+    # Tokenize prompt into ids
+    input_ids = tokenizer(
+        [prompt], add_special_tokens=False, return_tensors="pt", padding=True
+    )["input_ids"]
+    input_ids = input_ids.to(model.device)
+    orig_input_ids = input_ids
+
+    grammar = IncrementalGrammarConstraint(grammar_str, "root", tokenizer)
+    gad_oracle_processor = GrammarAlignedOracleLogitsProcessor(grammar, trie, input_ids.size(1))
+    inf_nan_remove_processor = InfNanRemoveLogitsProcessor()
+    logits_processors = LogitsProcessorList([
+        inf_nan_remove_processor,
+        gad_oracle_processor,
+    ])
+
+    best_prefix = trie.find_best_prefix()
+    if (best_prefix is not None):
+        prefix = torch.Tensor(best_prefix.prefix)
+        prefix = prefix.reshape([1, prefix.size(0)]).to(torch.int64).to(model.device)
+
+        input_ids = torch.cat((input_ids, prefix), dim=1)
+
+    # Generate sequences
+    output = model.generate(
+        input_ids,
+        do_sample=True,
+        pad_token_id=tokenizer.eos_token_id,
+        eos_token_id=tokenizer.eos_token_id,
+        # num_beams=args.num_beams,
+        max_new_tokens=args.max_new_tokens,
+        top_p=args.top_p,
+        top_k=args.top_k,
+        temperature=args.temperature,
+        logits_processor=logits_processors,
+        repetition_penalty=args.repetition_penalty,
+        # early_stopping=True,
+        num_return_sequences=args.num_return_sequences,
+        return_dict_in_generate=True,
+        output_scores=True,
+    )
+
+    input_length = 1 if model.config.is_encoder_decoder else orig_input_ids.shape[1]
+    generated_tokens = output.sequences[:, input_length:]
+    acceptance_details_history = gad_oracle_processor.acceptance_details_history
+    adjusted_acceptance_details_history = gad_oracle_processor.adjusted_acceptance_details_history
+    generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
+
+    transition_scores = model.compute_transition_scores(
+        output.sequences, output.scores, normalize_logits=True
+    )
+
+    metas = []
+    sum_log_prob = 0
+    for tok, score in zip(generated_tokens[0], transition_scores[0]):
+        meta = {
+            "token_id": int(tok),
+            "token_str": tokenizer.decode(tok),
+            "norm_score": float(score.cpu().numpy()),
+            "prob": float(np.exp(score.cpu().numpy()))
+        }
+        metas.append(meta)
+        sum_log_prob += float(score.cpu().numpy())
+    # print(f"grammar constrained generations: {generations}")
+    return generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations, metas, sum_log_prob
 
 @torch.inference_mode()
 def run_inference_gad_loading_trie(args, test_filename, model, tokenizer):
@@ -129,27 +195,10 @@ def run_inference_gad_loading_trie(args, test_filename, model, tokenizer):
         with open(gad_output_file_path, 'r', encoding='utf-8') as file:
             lines = file.readlines()
             if len(lines) >= args.iter:
-                print(f"Skipping {gad_output_file_path} as it already contains 100 or more lines.")
+                print(f"Skipping {gad_output_file_path} as it already contains {args.iter} or more lines.")
                 return
-    # model, tokenizer = load_model_tokenizer_hf(args)
-    # trie_file = construct_trie_file_from_folder(args, test_filename)
 
-    # if "binary" in args.prompt_type:
-    #     prompt = get_prompt(args, args.prompt_type)
-    #     test_file = get_file(args)
-    #     grammar_constr_name = test_file.split("/")[-1]
-    #     grammar_prompt_file = None
-    # else:
-    #     prompt = construct_sygus_prompt(args, args.prompt_type)
-    #     test_file = get_grammar_file_path_by_prompt_type(args)
-    #     grammar_constr_name = test_file.split("/")[-1]
-    #     grammar_prompt_file = args.grammar_prompt_file.split("/")[-1]
-
-    # #### only for test purpose ####
-    # prompt = args.prompt
-    # test_file = get_file(args)
-
-    # Load grammar
+    # Load prompt and grammar
     test_file = os.path.join(args.grammar_folder, f"{test_filename}.ebnf")
     with open(test_file, "r") as file:
         grammar_str = file.read()
@@ -166,11 +215,34 @@ def run_inference_gad_loading_trie(args, test_filename, model, tokenizer):
         after_trie_status = "gad_after"
         adjusted_trie_before = Trie()
         adjusted_trie_after = Trie()
-        for i in tqdm(range(args.iter), desc="Running Inference"):
+        for _ in tqdm(range(args.initial_search), desc="Initial Search"):
+            generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations, metas, sum_log_prob = initial_search_gad(args, model, tokenizer, prompt, grammar_str, adjusted_trie_before)
+            # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
+            _, updated_rate = update_oracle_trie(adjusted_trie_before, generated_tokens, acceptance_details_history)
+            # update_oracle_trie(adjusted_trie_before, generated_tokens, adjusted_acceptance_details_history)
+            update_oracle_trie(adjusted_trie_after, generated_tokens, adjusted_acceptance_details_history)
+
+            result = {"answer": generations,
+                      "sum_log_prob": sum_log_prob,
+                      "metas": metas,
+                      "updated_rate": updated_rate,
+                      "prompt": prompt,
+                      # "prompt_type": args.prompt_type,
+                      "grammar_prompt": grammar_prompt_file,
+                      "grammar_constr": grammar_constr_name,
+                      }
+            print(f"result: {result}")
+
+            json_record = json.dumps(result)
+            outfile.write(json_record + '\n')
+            outfile.flush()
+            os.fsync(outfile.fileno())            
+
+        for _ in tqdm(range(args.iter - args.initial_search), desc="Running Inference"):
             generated_tokens, acceptance_details_history, adjusted_acceptance_details_history, generations, metas, sum_log_prob = inference_gad(args, model, tokenizer, prompt, grammar_str, adjusted_trie_before)
             # print(f"generated_tokens: {generated_tokens}, acceptance_details_history: {acceptance_details_history}")
             _, updated_rate = update_oracle_trie(adjusted_trie_before, generated_tokens, acceptance_details_history)
-            update_oracle_trie(adjusted_trie_before, generated_tokens, adjusted_acceptance_details_history)
+            # update_oracle_trie(adjusted_trie_before, generated_tokens, adjusted_acceptance_details_history)
             update_oracle_trie(adjusted_trie_after, generated_tokens, adjusted_acceptance_details_history)
 
             result = {"answer": generations,
@@ -210,6 +282,7 @@ if __name__ == "__main__":
     print(f"temperature: {args.temperature}")
     print(f"top_p: {args.top_p}")
     print(f"max_new_tokens: {args.max_new_tokens}")
+    print(f"initial_search: {args.initial_search}")
 
     model, tokenizer = load_model_tokenizer_hf(args)
     directory = args.test_folder
@@ -219,6 +292,7 @@ if __name__ == "__main__":
             print(f"test_filename: {test_filename}")
             fix_seed(args.seed)
             run_inference_gad_loading_trie(args, test_filename, model, tokenizer)
+    
     print("GAD Inference Done!")
 
 

@@ -7,10 +7,10 @@ MODEL_IDS=("mistralai/Mistral-7B-Instruct-v0.2" "meta-llama/Llama-2-7b-chat-hf" 
 ITER=100
 MAX_NEW_TOKENS=512
 CACHE_DIR="/path/to/where/you/store/hf/models"
-OUTPUT_FOLDER="results/SLIA_0506"
+OUTPUT_FOLDER="results/SLIA_0927"
 TEST_FOLDER="correct/SLIA"
 PROMPT_FOLDER="prompts/SLIA"
-TRIE_FOLDER="tries/SLIA_0506"
+TRIE_FOLDER="tries/SLIA_0927"
 GRAMMAR_FOLDER="examples/sygus/SLIA"
 
 
@@ -49,6 +49,7 @@ for MODEL_ID in "${MODEL_IDS[@]}"; do
                 --grammar_folder "$GRAMMAR_FOLDER" \
                 --seed 42 \
                 --dtype "bfloat16" \
+                --initial_search 200 \
                 --device "cuda" &
 		sleep 60
                 found_free_gpu=true

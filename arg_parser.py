@@ -50,6 +50,8 @@ class ArgumentParser:
                                  help="Directory of test files.")
         self.parser.add_argument("--verbose", action="store_true",
                                  help="Print more information.")
+        self.parser.add_argument("--initial_search", type=int, default=0,
+                                 help="Number of iterations for initial search.")
         # self.parser.add_argument("--log_file", type=str, default='log_GAD/track_scores_prob2.log',
         #                     help="Where to store log file.")
         # self.parser.add_argument("--max_length", type=int, default=50,
