@@ -72,8 +72,6 @@ class Trie:
         found_parent = []
         current_parent = self.root
 
-        print(prefix)
-
         for time_step, token_id in enumerate(prefix[0]): # assume one batch
             token_id = token_id.item()
             if token_id in current_parent.children.keys():
