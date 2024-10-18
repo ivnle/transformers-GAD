@@ -5,17 +5,7 @@ from collections import deque
 
 from transformers_gad.mapping import get_mapping
 
-# from transformers_gad.parser import parse_ebnf
-# from transformers_gad.recognizer import GrammarRecognizer
-# from transformers_gad.token_grammar_recognizer import IncrementalTokenGrammarRecognizer
-
 logger = logging.getLogger(__name__)
-
-# def check_token_acceptance_in_trie(trie, stacks, grammar, partial_utf8, accept_eos=True, eos_token_id=None) -> List[bool]:
-#     accept_f = lambda x: grammar._probe_bytes_partial_match(x, stack=stacks, partial_utf8=partial_utf8)
-#     accepts = trie.get_token_acceptance(accept=accept_f, accept_eos=accept_eos, eos_token_id=eos_token_id)
-#     return accepts
-
 
 class TrieNode:
     def __init__(self):

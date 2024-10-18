@@ -29,9 +29,10 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         self.generated_tokens = None
 
     def mask_scores(self, input_ids, scores, device):
-        # resolve each stack to a tensor of True/False for each token
-        # indicating acceptance
-        # acceptance = self.grammar_acceptor.filter_vocab(self.stacks, device)
+        """
+        resolve each stack to a tensor of True/False for each token
+        indicating acceptance
+        """
         acceptance = self.grammar_constraint.batch_filter_vocab(
             self.batch_accept_states, device
         )
@@ -54,6 +55,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         current_parent = self.oracle_trie.search_last_parent(self.generated_tokens)
         self.apply_oracle_adjustments(acceptance, scores, current_parent)
         self.get_detailed_history(acceptance, scores, self.adjusted_acceptance_details_history)
+        
         # Scores to -inf where False
         scores[~acceptance] = float('-inf')
 

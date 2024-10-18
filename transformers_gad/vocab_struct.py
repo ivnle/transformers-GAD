@@ -81,36 +81,3 @@ class TokenTrie:
                 current[byte] = {}
             current = current[byte]
         current[LEAF] = token_id
-
-
-if __name__ == "__main__":
-    from transformers import AutoTokenizer
-
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", cache_dir="/nobackup2/yf/mila/GD_caches")
-    token_trie = TokenTrie(tokenizer)
-    print(f"tokens: {token_trie.tokens}")
-    print(f"trie: {token_trie.trie}")
-    # Encode the string "00"
-    encoded_input = tokenizer.encode("00", add_special_tokens=False)  # Returns a list of token IDs
-    # encoded_input = tokenizer.encode("0 0", add_special_tokens=False)
-
-    # "00"
-    # token id: [29871, 29900, 29900]
-    # token: ['▁', '0', '0']
-    # Decoded string: 00
-
-    # "0 0"
-    # token id: [29871, 29900, 29871, 29900]
-    # token: ['▁', '0', '▁', '0']
-    # Decoded string: 0 0
-
-    tokens = tokenizer.convert_ids_to_tokens(encoded_input)
-    decoded_string = tokenizer.decode(encoded_input)
-
-    # Print the results
-    print("Token IDs:", encoded_input)
-    print("Tokens:", tokens)
-    print("Decoded string:", decoded_string)
-
-    # print(separate_zero, attached_zero)
-    # print(f"token_trie.tokens: {token_trie.tokens}")
