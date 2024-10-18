@@ -1,1 +1,0 @@
-Leon G. Cooperman

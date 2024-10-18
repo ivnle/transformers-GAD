@@ -1,1 +1,0 @@
-The amount of income divvied up for each man woman and child was 16,489 in 1988 up 6.6 % from 15,472 in 1987

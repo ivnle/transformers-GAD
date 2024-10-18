@@ -1,1 +1,0 @@
-Unlike 1987 the dollar has been strong

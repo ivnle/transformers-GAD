@@ -1,1 +1,0 @@
-He recommends that investors sell takeover-related stocks but hang on to some other stocks especially utilities which often do well during periods of economic weakness

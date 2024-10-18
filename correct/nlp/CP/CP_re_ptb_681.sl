@@ -1,1 +1,0 @@
-I just think it 's nonproductive at this point to get into a debate if index arbitrage would have helped or hurt things

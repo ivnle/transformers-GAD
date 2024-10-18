@@ -1,1 +1,0 @@
-Robert White Canadian Auto Workers union president used the impending Scarborough shutdown to criticize the U.S.-Canada free trade agreement and its champion Prime Minister Brian Mulroney

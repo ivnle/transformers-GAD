@@ -1,1 +1,0 @@
-143 million of parkway revenue bonds Series 1989 via a PaineWebber group

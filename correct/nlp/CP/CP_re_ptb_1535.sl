@@ -1,1 +1,0 @@
-It has plunged 13 % since July to around 26 cents a pound

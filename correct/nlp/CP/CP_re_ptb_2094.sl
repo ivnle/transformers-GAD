@@ -1,1 +1,0 @@
-Joseph Riccardo an analyst with Bear Stearns & Co. said that over the past few years most drug makers have shed their slow-growing businesses and instituted other cost savings such as consolidating manufacturing plants and administrative staffs

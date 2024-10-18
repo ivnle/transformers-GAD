@@ -1,1 +1,0 @@
-I think what bothered me most about the piece was that there seemed to be an underlying attitude to tell your readers all is well if you 're getting laid off do n't worry and if you 're unemployed it 's a seller 's market

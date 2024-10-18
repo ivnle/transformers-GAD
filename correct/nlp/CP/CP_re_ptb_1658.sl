@@ -1,1 +1,0 @@
-I have every intention of making this the best possible show and having it run one hour is the best way to it said Rod Perth who was named vice president of late night entertainment in August

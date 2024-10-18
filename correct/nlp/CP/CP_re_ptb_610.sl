@@ -1,1 +1,0 @@
-Other major issues hitting highs included American Telephone & Telegraph Co. Westinghouse Electric Corp. Exxon Corp. and Cigna Corp. the big insurer

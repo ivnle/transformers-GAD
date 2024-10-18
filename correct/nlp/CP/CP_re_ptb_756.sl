@@ -1,1 +1,0 @@
-Bridget O'Brian contributed to this article

@@ -1,1 +1,0 @@
-Windsor Fund 's John Neff and Mutual Series ' Michael Price said they had raised their cash levels to more than 20 % and 30 % respectively this year

@@ -1,1 +1,0 @@
-But grateful traders said the sell orders generally ranged from 20,000 shares to 50,000 shares compared with blocks of 500,000 shares or more two years ago

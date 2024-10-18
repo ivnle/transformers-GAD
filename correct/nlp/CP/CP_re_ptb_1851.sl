@@ -1,1 +1,0 @@
-Under terms of the plan independent generators would be able to compete for 15 % of customers until 1994 and for another 10 % between 1994 and 1998

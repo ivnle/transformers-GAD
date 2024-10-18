@@ -1,1 +1,0 @@
-French state-owned Rhone-Poulenc S.A. holds 51 % of Merieux

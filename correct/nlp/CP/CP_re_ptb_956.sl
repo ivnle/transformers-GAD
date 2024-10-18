@@ -1,1 +1,0 @@
-But her main thrust was to promote the importance of world-wide free trade and open competition

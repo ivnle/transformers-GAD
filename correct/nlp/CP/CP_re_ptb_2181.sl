@@ -1,1 +1,0 @@
-The White House Office of Management and Budget whose calculations determine whether the Gramm-Rudman targets are met estimated that the House-passed deficit-reduction measure would cut the fiscal 1990 shortfall by 6.2 billion almost half of the Congressional Budget Office 's estimate of 11.0 billion

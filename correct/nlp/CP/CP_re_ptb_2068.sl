@@ -1,1 +1,0 @@
-Net fell to 28.8 million or 29 cents a share from 32 million or 33 cents a share

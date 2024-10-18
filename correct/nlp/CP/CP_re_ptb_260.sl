@@ -1,1 +1,0 @@
-No one can predict exactly what will happen on the House side said Senate Minority Leader Robert Dole R. Kan

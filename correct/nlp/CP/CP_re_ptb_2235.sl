@@ -1,1 +1,0 @@
-There also are recurring reports that the Soviet Union is having difficulties with its oil exports and that Nigeria has about reached its production limit and ca n't produce as much as it could sell

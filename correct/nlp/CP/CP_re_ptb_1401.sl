@@ -1,1 +1,0 @@
-The base rate on corporate loans at large U.S. money center commercial banks

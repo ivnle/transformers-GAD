@@ -1,1 +1,0 @@
-Mr. Cecin of Piper Jaffray says some action from government policy makers would allay investor fears

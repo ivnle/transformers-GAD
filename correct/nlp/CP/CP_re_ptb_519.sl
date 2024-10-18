@@ -1,1 +1,0 @@
-Speaking through its Dutch lawyers ASKO also disclosed it holds a 15 % stake in Ahold

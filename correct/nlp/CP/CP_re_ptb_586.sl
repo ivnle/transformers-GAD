@@ -1,1 +1,0 @@
-But despite the recent softening for many of these retailers there 's still been too big a jump from the rental rates of the late 1970s when their leases were signed

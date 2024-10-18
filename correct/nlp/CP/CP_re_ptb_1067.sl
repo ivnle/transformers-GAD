@@ -1,1 +1,0 @@
-One week later Leonard H. Roberts president and chief executive officer of Arby 's was fired in a dispute with Mr. Posner

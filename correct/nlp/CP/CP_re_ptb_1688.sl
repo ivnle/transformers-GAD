@@ -1,1 +1,0 @@
-Laptops generally anything under 15 pounds have become the fastest-growing personal computer segment with sales doubling this year

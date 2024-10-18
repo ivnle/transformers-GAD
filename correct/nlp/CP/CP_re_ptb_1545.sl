@@ -1,1 +1,0 @@
-In addition crude oil prices were up some from a year earlier further pressuring profitability

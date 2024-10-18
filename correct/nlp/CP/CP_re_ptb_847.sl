@@ -1,1 +1,0 @@
-Most British programming is more of an acquired taste

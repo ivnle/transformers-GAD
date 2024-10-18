@@ -1,1 +1,0 @@
-I would say this is not bad news this is a blip he said

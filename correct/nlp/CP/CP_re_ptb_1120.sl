@@ -1,1 +1,0 @@
-A new Census Bureau study of the noninstitutionalized population shows that 64 % of people aged 65 to 74 were living with a spouse in 1988 up from 59 % in 1970

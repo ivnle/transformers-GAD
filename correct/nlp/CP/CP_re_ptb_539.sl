@@ -1,1 +1,0 @@
-Secretary of State Baker emphasized Friday that the new policy would n't be invoked by the Bush administration without full consideration of foreign-policy implications

@@ -1,1 +1,0 @@
-At 4 1\/2 pounds it may be too ambitiously named but it nevertheless opens up the kind of marketing possibilities that make analysts froth

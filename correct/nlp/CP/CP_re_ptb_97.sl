@@ -1,1 +1,0 @@
-Analysts had expected that the climb in oil prices last month would lead to a substantial rise in the producer price index but the 0.9 % climb was higher than most anticipated

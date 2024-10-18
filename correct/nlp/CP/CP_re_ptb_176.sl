@@ -1,1 +1,0 @@
-We could n't get dealers to answer their phones said Robert King senior vice president of OTC trading at Robinson-Humphrey Co. in Atlanta

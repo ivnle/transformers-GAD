@@ -1,1 +1,0 @@
-The American Stock Exchange listed shares of two companies

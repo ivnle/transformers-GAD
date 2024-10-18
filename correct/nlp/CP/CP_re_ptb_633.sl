@@ -1,1 +1,0 @@
-Seven Big Board stocks UAL AMR BankAmerica Walt Disney Capital Cities\/ABC Philip Morris and Pacific Telesis Group stopped trading and never resumed

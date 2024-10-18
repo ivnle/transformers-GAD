@@ -1,1 +1,0 @@
-Mr. Lichtblau stressed that the delay of Interprovincial 's proposed expansion wo n't by itself increase U.S. dependence on offshore crude however since Canadian imports are limited in any case by Canada 's falling output

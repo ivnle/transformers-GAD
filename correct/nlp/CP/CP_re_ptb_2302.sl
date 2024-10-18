@@ -1,1 +1,0 @@
-But wielded by a pro like Jackie Mason it is a constructive form of mischief

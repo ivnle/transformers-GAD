@@ -1,1 +1,0 @@
-The problem Compaq is going to have is that they wo n't be able to make enough of them

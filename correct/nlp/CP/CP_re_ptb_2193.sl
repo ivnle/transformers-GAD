@@ -1,1 +1,0 @@
-By next May 31 stocks of U.S. wheat to be carried over into the next season before the winter wheat now being planted is harvested are projected to drop to 443 million bushels

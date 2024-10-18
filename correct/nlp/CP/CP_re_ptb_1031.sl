@@ -1,1 +1,0 @@
-Harry is now a 57-year-old writer whose continuing flirtation with drugs and marginal types in Hollywood and New York seems quaintly out-of-synch

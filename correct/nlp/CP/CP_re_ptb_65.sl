@@ -1,1 +1,0 @@
-The largest Suburban Propane was already owned by Quantum

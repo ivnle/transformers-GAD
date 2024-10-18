@@ -1,1 +1,0 @@
-This time I do n't think we 'll get a panic reaction

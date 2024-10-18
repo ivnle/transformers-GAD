@@ -1,1 +1,0 @@
-That increase rises to slightly more than 2 % of the U.S. market if a joint Korean-U.S. steel project is included

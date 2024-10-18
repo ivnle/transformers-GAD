@@ -1,1 +1,0 @@
-For instance Michael dislikes Jackie not because he 's a shrewd Jewish businessman but because he quits his well-paying job as a salesman in order to become a social worker

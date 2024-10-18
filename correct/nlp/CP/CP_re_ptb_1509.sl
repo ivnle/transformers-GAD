@@ -1,1 +1,0 @@
-IBM is backing one type of bus called microchannel while the nine other leading computer makers including H-P and Compaq Computer Corp. have chosen another method

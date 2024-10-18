@@ -1,1 +1,0 @@
-The union is continuing to work through its expired contract however

@@ -1,1 +1,0 @@
-Or is this an extraordinary buying opportunity just like Oct. 19 1987 eventually turned out to be

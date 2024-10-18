@@ -1,1 +1,0 @@
-Maxtor said its results were boosted by 2 million in payments received from a supplier for a certain line of products that Maxtor is n't going to sell anymore

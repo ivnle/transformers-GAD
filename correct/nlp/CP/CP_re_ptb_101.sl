@@ -1,1 +1,0 @@
-If you examine the data carefully the increase is concentrated in energy and motor vehicle prices rather than being a broad-based advance in the prices of consumer and industrial goods he explained

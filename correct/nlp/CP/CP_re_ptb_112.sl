@@ -1,1 +1,0 @@
-Here are the Labor Department 's producer price indexes 1982 = 100 for September before seasonal adjustment and the percentage changes from September 1988

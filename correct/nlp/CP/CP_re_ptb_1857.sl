@@ -1,1 +1,0 @@
-Mr. Stram said Enron is considering building gas-fired power plants in the U.K. capable of producing about 500 megawatts of power at a cost of about 300 million to 400 million

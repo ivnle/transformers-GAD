@@ -1,1 +1,0 @@
-While far more restrained than the pace at the beginning of the year that is still a steeper rise than the 4.0 % increase for all of 1988

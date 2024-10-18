@@ -1,1 +1,0 @@
-California Health Facilities Financing Authority

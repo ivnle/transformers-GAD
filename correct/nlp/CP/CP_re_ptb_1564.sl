@@ -1,1 +1,0 @@
-Information International said it believes that the complaints filed in federal court in Georgia are without merit

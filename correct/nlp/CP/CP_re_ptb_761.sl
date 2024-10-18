@@ -1,1 +1,0 @@
-If a hostile predator emerges for Saatchi & Saatchi Co. co-founders Charles and Maurice Saatchi will lead a management buy-out attempt an official close to the company said

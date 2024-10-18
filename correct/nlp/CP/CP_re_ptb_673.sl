@@ -1,1 +1,0 @@
-In a stock-index arbitrage sell program traders buy or sell big baskets of stocks and offset the trade in futures to lock in a price difference

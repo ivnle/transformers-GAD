@@ -1,1 +1,0 @@
-But the experience of the 1987 crash suggests the Fed is likely to bring down short-term interest rates in its effort to calm markets

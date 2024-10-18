@@ -1,1 +1,0 @@
-Two years ago faced with the possibility of heavy losses on the stocks in their inventories market makers themselves began dumping shares exacerbating the slide in OTC stock prices

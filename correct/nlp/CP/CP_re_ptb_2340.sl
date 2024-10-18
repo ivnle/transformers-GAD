@@ -1,1 +1,0 @@
-It fell 1.875 a share Friday to 6.25 a new low in over-the-counter trading

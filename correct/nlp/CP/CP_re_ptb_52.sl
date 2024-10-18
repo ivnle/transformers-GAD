@@ -1,1 +1,0 @@
-A prolonged production halt at the plant could introduce another imponderable into Quantum 's financial future

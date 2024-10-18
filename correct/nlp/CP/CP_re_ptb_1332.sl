@@ -1,1 +1,0 @@
-Renaissance which manages about 1.8 billion drew stiff criticism from many clients earlier this year because it pulled entirely out of stocks at the beginning of the year and thus missed a strong rally

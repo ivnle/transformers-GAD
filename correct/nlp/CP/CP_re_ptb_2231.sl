@@ -1,1 +1,0 @@
-This market still wants to go higher said Nauman Barakat a first vice president at Shearson Lehman Hutton Inc

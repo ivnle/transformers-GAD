@@ -1,1 +1,0 @@
-Two years ago unlike today the dollar was weak interest rates were rising and the market was very overvalued they say

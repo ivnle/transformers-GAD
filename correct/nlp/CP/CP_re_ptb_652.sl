@@ -1,1 +1,0 @@
-Several traders could be seen shaking their heads when the news flashed

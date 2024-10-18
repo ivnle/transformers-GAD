@@ -1,1 +1,0 @@
-While twothirds feel some guilt about being affluent only 25 % give 2,500 or more to charity each year

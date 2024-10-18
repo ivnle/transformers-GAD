@@ -1,1 +1,0 @@
-Although they represent only 2 % of the population they control nearly one-third of discretionary income

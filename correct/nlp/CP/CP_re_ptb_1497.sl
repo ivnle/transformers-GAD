@@ -1,1 +1,0 @@
-Now the two firms are collaborating on an alternative to Adobe 's approach and analysts say they are likely to carry IBM the biggest seller of personal computers along with them

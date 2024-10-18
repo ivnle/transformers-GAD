@@ -1,1 +1,0 @@
-Mr. Paul said the regulators should instead move ahead with approving CenTrust 's request to sell 63 of its 71 branches to Great Western Bank a unit of Great Western Financial Corp. based in Beverly Hills Calif

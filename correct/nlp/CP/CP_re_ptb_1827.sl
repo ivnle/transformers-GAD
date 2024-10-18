@@ -1,1 +1,0 @@
-It will also purchase 845 million of the thrift 's assets with 1.9 billion in RTC assistance

@@ -1,1 +1,0 @@
-Asked about a bid for Quantum a BP spokesman says We pretty much have a policy of not commenting on rumors and I think that falls in that category

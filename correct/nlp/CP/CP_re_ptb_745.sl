@@ -1,1 +1,0 @@
-He added that the company miscalculated the union 's resolve and the workers ' disgust with being forced to work many hours overtime

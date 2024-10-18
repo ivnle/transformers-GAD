@@ -1,1 +1,0 @@
-Mr. Andre issued the ruling based on a recommendation by Investment Canada

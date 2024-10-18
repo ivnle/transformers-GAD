@@ -1,1 +1,0 @@
-For some of these companies this will be the first quarter with year-to-year negative comparisons says Leonard Bogner a chemical industry analyst at Prudential Bache Research

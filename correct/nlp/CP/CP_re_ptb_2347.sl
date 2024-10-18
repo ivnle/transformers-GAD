@@ -1,1 +1,0 @@
-This could be the first of five or six down quarters

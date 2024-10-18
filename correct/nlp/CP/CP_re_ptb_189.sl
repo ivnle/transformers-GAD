@@ -1,1 +1,0 @@
-Peter DaPuzzo head of retail equity trading at Shearson Lehman Hutton declared It was the last hour of trading on a Friday

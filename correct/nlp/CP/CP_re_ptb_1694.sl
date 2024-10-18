@@ -1,1 +1,0 @@
-A Poquet spokesman for example criticizes the Atari Portfolio because it requires three batteries while the Poquet needs only two

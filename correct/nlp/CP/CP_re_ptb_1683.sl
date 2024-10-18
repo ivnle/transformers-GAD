@@ -1,1 +1,0 @@
-The market is so new nobody knows yet how big it can be

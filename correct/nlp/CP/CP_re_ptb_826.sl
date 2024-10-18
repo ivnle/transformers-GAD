@@ -1,1 +1,0 @@
-But much of what the Europeans want to protect seems every bit as cheesy as what they are trying to keep out

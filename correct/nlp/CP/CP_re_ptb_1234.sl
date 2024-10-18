@@ -1,1 +1,0 @@
-Neither Vitarine nor any of the Springfield Gardens N.Y. company 's officials or employees have been charged with any crimes

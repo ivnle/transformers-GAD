@@ -1,1 +1,0 @@
-For example the New York state counsel for the NAACP said that Mr. Mason is like a dinosaur

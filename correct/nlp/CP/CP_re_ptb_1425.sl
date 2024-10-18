@@ -1,1 +1,0 @@
-Negotiable bank-backed business credit instruments typically financing an import order

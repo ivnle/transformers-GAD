@@ -1,1 +1,0 @@
-Without official knowledge of sex or death we flirted with both she writes

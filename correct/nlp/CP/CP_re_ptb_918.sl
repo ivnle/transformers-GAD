@@ -1,1 +1,0 @@
-South Korea which had 1.9 % under the previous quotas is set to get a small increase to about 1.95 %

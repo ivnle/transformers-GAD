@@ -1,1 +1,0 @@
-MANY AFFLUENT people place personal success and money above family

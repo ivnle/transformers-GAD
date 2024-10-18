@@ -1,1 +1,0 @@
-The Second U.S. Circuit Court of Appeals opinion in the Arcadian Phosphate case did not repudiate the position Pennzoil Co. took in its dispute with Texaco contrary to your Sept. 8 article Court Backs Texaco 's View in Pennzoil Case Too Late

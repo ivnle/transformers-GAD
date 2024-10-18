@@ -1,1 +1,0 @@
-Refiners say margins picked up in September and many industry officials believe gasoline profits will rebound this quarter though still not to the level of 1988 's fourth quarter

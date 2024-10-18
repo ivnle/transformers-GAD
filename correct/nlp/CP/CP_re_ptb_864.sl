@@ -1,1 +1,0 @@
-Since production costs were guaranteed it did n't matter that a program could n't be sold abroad or put into syndication as most American programs are

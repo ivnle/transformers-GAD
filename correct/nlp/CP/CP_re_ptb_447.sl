@@ -1,1 +1,0 @@
-In the end the 1987 collapse suggested the economy does n't move in lockstep with stock prices

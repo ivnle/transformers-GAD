@@ -1,1 +1,0 @@
-Stock prices would still have to go down some additional amount before we become positive on stocks says Mr. Terrizzi president and managing director of Renaissance Investment Management Inc. in Cincinnati

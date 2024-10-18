@@ -1,1 +1,0 @@
-(define-fun f ((col1 String) (col2 String)) String (ite (str.contains col2 "USA") col2 (str.++ col2 (str.++ "," (str.++ " " "USA")))))

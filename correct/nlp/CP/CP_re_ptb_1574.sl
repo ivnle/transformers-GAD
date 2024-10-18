@@ -1,1 +1,0 @@
-The number of active drilling rigs in Canada is down 30 % from a year ago and the number of completed oil wells is down more than that due to the increasing focus on gas exploration said Robert Feick manager of crude oil with Calgary 's Independent Petroleum Association of Canada an industry group

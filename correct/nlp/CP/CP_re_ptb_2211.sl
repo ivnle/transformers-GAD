@@ -1,1 +1,0 @@
-Wheat prices will increasingly pivot off of Soviet demand in coming weeks predicted Richard Feltes vice president research for Refco Inc. in Chicago

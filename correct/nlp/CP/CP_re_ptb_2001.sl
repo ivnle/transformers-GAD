@@ -1,1 +1,0 @@
-City Federal operates 105 banking offices in New Jersey and Florida

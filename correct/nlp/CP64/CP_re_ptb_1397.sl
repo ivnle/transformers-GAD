@@ -1,1 +1,0 @@
-Friday October 13 1989

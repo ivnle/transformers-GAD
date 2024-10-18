@@ -1,1 +1,0 @@
-The company is trying to carry out a three-year 1.3 billion plant-expansion program started this year

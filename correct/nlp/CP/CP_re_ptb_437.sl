@@ -1,1 +1,0 @@
-The effects were much less severe and less prolonged than some had feared or expected

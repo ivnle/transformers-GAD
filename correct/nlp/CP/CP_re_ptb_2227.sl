@@ -1,1 +1,0 @@
-I would continue to look for a stable crude market at least in futures trading said William Hinton an energy futures broker with Stotler & Co

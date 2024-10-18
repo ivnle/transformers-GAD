@@ -1,1 +1,0 @@
-Whether a cash crunch might eventually force the company to cut its quarterly dividend raised 36 % to 75 cents a share only a year ago has become a topic of intense speculation on Wall Street since Mr. Stookey deflected dividend questions in a Sept. 29 meeting with analysts

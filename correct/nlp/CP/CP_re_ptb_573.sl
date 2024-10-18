@@ -1,1 +1,0 @@
-A handful of hot retail locations such as the 57th Street and Madison and Fifth Avenue areas have been able to sustain what many see as astronomical rents

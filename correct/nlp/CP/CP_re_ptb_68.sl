@@ -1,1 +1,0 @@
-The name surfacing in rumors is British Petroleum Co. which is looking to expand its polyethylene business in the U.S.

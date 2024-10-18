@@ -1,1 +1,0 @@
-As I watched him on C-Span I heard him speak those lovely words about the Bill of Rights which he quotes from the transcript of the hearings

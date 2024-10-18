@@ -1,1 +1,0 @@
-In the recent talks the EC had its quota increased about 300,000 tons to 7 % of the U.S. market from 6.7 % in 1988

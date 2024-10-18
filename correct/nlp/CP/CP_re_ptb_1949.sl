@@ -1,1 +1,0 @@
-And I think institutions are going to come in and buy

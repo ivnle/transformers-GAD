@@ -1,1 +1,0 @@
-To the delight of some doctors the bill dropped a plan passed by the Finance Committee that would have overhauled the entire physician-reimbursement system under Medicare

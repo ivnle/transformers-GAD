@@ -1,1 +1,0 @@
-That 's not a bad way to proceed just somewhat different from standard American practice

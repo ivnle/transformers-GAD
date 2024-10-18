@@ -1,1 +1,0 @@
-The revenue-raising provisions which affect mostly corporations would

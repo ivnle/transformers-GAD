@@ -1,1 +1,0 @@
-The turnover in both issues was roughly normal

@@ -1,1 +1,0 @@
-The Soviet Union reported that thousands of tons of goods needed to ease widespread shortages across the nation were piled up at ports and rail depots and food shipments were rotting because of a lack of people and equipment to move the cargo

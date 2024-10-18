@@ -1,1 +1,0 @@
-It is also no comfort to landlords and small New York retailers when the future of larger department stores which anchor retail neighborhoods are in doubt

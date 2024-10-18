@@ -1,1 +1,0 @@
-At those levels stocks are set up to be hammered by index arbitragers who lock in profits by buying futures when futures prices fall and simultaneously sell off stocks

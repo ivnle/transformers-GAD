@@ -1,1 +1,0 @@
-Although all the price data were adjusted for normal seasonal fluctuations car prices rose beyond the customary autumn increase

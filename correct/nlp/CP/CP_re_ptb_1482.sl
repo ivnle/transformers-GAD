@@ -1,1 +1,0 @@
-Microsoft 's surprising strength is one example of the difficulty facing investors looking for reassurances about the financial health of the computer firms

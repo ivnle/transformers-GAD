@@ -1,1 +1,0 @@
-These clean-bank transactions leave the bulk of bad assets mostly real estate with the government to be sold later

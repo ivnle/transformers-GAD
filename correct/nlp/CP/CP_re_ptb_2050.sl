@@ -1,1 +1,0 @@
-The company said the plan was n't adopted in response to any known offers for Quest a maker and marketer of hospital products

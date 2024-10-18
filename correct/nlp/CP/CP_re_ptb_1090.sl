@@ -1,1 +1,0 @@
-Workers at plants in Van Nuys Calif. Oklahoma City and Pontiac Mich. were told their facilities are no longer being considered to build the next generation of the Pontiac Firebird and Chevrolet Camaro muscle cars

@@ -1,1 +1,0 @@
-Traders said most of their major institutional investors on the other hand sat tight

@@ -1,1 +1,0 @@
-This was an October massacre like those that occurred in 1978 and 1979

@@ -1,1 +1,0 @@
-Shearson 's Mr. DaPuzzo said retail investors nervously sold stock Friday and never returned to bargain-hunt

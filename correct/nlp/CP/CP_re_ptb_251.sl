@@ -1,1 +1,0 @@
-He said Schwab had increased margin requirements so customers have more of a cushion

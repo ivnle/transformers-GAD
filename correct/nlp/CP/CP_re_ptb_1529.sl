@@ -1,1 +1,0 @@
-The industry is seeing a softening somewhat in volume and certainly in price in petrochemicals Glenn Cox president of Phillips Petroleum Co. said in an interview

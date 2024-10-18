@@ -1,1 +1,0 @@
-Time magazine in a move to reduce the costs of wooing new subscribers is lowering its circulation guarantee to advertisers for the second consecutive year increasing its subscription rates and cutting back on merchandise giveaways

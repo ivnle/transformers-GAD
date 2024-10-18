@@ -1,1 +1,0 @@
-The 56 billion California Public Employees Retirement System for one added 1 billion to its stock portfolio two years ago

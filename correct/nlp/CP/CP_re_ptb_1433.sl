@@ -1,1 +1,0 @@
-These rate indications are n't directly comparable lending practices vary widely by location

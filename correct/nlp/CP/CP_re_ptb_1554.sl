@@ -1,1 +1,0 @@
-In the third quarter they averaged about 5 % less than they were in 1988

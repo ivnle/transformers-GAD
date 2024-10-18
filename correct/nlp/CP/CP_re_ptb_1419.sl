@@ -1,1 +1,0 @@
-Average of top rates paid by major New York banks on primary new issues of negotiable C.D.s usually on amounts of 1 million and more

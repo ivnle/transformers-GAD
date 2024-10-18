@@ -1,1 +1,0 @@
-Thus Europe has begun the recent crusade to produce more worthy shows of its own programs with broader appeal

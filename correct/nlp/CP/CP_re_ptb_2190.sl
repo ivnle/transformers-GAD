@@ -1,1 +1,0 @@
-For one thing even with many farmers planting more winter wheat this year than last tight wheat supplies are likely to support prices well into 1990 the analysts say

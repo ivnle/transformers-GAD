@@ -1,1 +1,0 @@
-Both Merieux and Connaught are biotechnology research and vaccine manufacturing concerns

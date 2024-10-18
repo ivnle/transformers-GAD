@@ -1,1 +1,0 @@
-We 're putting a deficit-reduction bill back in the category of being a deficit-reduction bill said Senate Budget Committee Chairman James Sasser D. Tenn

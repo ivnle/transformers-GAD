@@ -1,1 +1,0 @@
-In a statement Miami-based CenTrust said the regulators cited the thrift 's operating losses and apparent losses in its junk-bond portfolio in ordering the suspension of the dividends

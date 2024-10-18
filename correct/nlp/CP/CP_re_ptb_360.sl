@@ -1,1 +1,0 @@
-Ideal 's current operations will represent about 39.2 % of the combined company

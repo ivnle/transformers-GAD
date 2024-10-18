@@ -1,1 +1,0 @@
-General Motors Corp. said it had discussed the possibility of a joint venture with Jaguar before Ford began buying shares

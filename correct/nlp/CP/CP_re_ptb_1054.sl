@@ -1,1 +1,0 @@
-After its previous mayor committed suicide last year an investigation disclosed that town officials regularly voted on their own projects gave special favors to developer friends and dipped into the town 's coffers for trips and retreats

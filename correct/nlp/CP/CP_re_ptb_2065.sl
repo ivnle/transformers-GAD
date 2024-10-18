@@ -1,1 +1,0 @@
-In the nine months Gannett 's net rose 9.5 % to 270 million or 1.68 a share from 247 million or 1.52 a share

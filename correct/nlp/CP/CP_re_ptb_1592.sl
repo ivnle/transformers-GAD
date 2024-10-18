@@ -1,1 +1,0 @@
-He did repeat those nice platitudes several times as an indication of his support for the Constitution

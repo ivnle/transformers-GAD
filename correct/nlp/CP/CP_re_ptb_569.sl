@@ -1,1 +1,0 @@
-They wonder should they sign a lease if prices are still coming down

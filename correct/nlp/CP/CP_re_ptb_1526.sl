@@ -1,1 +1,0 @@
-The oil industry 's middling profits could persist through the rest of the year

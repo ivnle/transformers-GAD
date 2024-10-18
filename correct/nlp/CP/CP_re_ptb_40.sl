@@ -1,1 +1,0 @@
-Quantum described the payout at the time as a way for it to share the bonanza with its holders because its stock price was n't reflecting the huge profit increases

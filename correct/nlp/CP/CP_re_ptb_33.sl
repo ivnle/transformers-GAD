@@ -1,1 +1,0 @@
-Noting others ' estimates of when price increases can be sustained he remarks Some say October

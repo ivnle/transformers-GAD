@@ -1,1 +1,0 @@
-Ever-more powerful desk-top computers designed with one or more microprocessors as their brains are expected to increasingly take on functions carried out by more expensive minicomputers and mainframes

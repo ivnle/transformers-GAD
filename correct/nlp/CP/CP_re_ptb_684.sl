@@ -1,1 +1,0 @@
-At about 3:30 p.m. EDT S&P futures resumed trading and for a brief time the futures and stock markets started to come back in line

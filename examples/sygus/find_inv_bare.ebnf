@@ -1,4 +1,0 @@
-root ::= "(define-fun inv ((s (BitVec 4)) (t (BitVec 4))) (BitVec 4) " Start ")"
-Start ::= "s" | "t" | Constant | "(bvneg " Start ")" | "(bvnot " Start ")" | BinaryOp
-Constant ::= "#x0" | "#x8" | "#x7"
-BinaryOp ::= "(bvadd " Start " " Start ")" | "(bvsub " Start " " Start ")" | "(bvand " Start " " Start ")" | "(bvor " Start " " Start ")" | "(bvshl " Start " " Start ")" | "(bvlshr " Start " " Start ")"

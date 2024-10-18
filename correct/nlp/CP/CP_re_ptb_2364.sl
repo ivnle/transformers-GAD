@@ -1,1 +1,0 @@
-The St. Louis-based company is expected to report again that losses in its G.D. Searle & Co. pharmaceutical business are narrowing

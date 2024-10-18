@@ -1,1 +1,0 @@
-The last time I saw a similar congressional hearing was when Tail Gunner Joe McCarthy did his work

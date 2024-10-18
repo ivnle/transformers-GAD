@@ -1,1 +1,0 @@
-So CNN a unit of Atlanta-based Turner Broadcasting System Inc. is trying to reposition itself as a primary channel or what people in the television industry call a top of mind network

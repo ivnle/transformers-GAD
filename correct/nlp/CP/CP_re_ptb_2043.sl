@@ -1,1 +1,0 @@
-To top it off you captioned the graph showing the average number of months in a job search as Time Off

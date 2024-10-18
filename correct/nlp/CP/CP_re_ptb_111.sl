@@ -1,1 +1,0 @@
-Prices for crude goods an array of raw materials jumped 1.1 % after declining 1.9 % in August and edging up 0.2 % in July

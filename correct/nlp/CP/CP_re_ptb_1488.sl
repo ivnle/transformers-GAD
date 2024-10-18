@@ -1,1 +1,0 @@
-Apple Computer Inc. meanwhile is expected to show improved earnings for the period ended Sept

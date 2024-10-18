@@ -1,1 +1,0 @@
-The European defense industry is consolidating for instance West Germany 's Siemens AG recently joined GEC in a takeover of Britain 's Plessey Co. and Daimler-Benz agreed to buy Messerschmitt-Boelkow Blohm G.m.b H

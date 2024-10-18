@@ -1,1 +1,0 @@
-At Dow Jones & Co. third-quarter net income fell 9.9 % from the year-earlier period

@@ -1,1 +1,0 @@
-The accord expired yesterday

@@ -1,1 +1,0 @@
-But she expects prices to rebound soon and is telling investors she expects the stock market wo n't decline more than 10 % to 15 % from recent highs

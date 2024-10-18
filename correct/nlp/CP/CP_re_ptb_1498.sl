@@ -1,1 +1,0 @@
-The short-term outlook for Adobe 's business however appears strong

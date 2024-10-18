@@ -1,1 +1,0 @@
-It also takes money that CNN has been reluctant to spend to make programs and hire talent that viewers will tune in specially to see

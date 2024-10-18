@@ -1,1 +1,0 @@
-8.60 % 30 to 44 days 8.55 % 45 to 59 days 8.375 % 60 to 79 days 8.50 % 80 to 89 days 8.25 % 90 to 119 days 8.125 % 120 to 149 days 8 % 150 to 179 days 7.625 % 180 to 270 days

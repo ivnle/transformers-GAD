@@ -1,1 +1,0 @@
-The market has taken two views that the labor situation will get settled in the short term and that things look very rosy for Boeing in the long term said Howard Rubel an analyst at Cyrus J. Lawrence Inc

@@ -1,1 +1,0 @@
-In addition the companion deficit-reduction bill already passed by the House includes a capital-gains provision

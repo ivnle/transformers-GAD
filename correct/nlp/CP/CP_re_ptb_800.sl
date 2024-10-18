@@ -1,1 +1,0 @@
-It was Friday the 13th and the stock market plummeted nearly 200 points

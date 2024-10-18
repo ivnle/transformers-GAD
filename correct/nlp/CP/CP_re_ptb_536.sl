@@ -1,1 +1,0 @@
-The administration 's policy was stated in a friend-of-the-court brief urging the Supreme Court to give states more leeway to restrict abortions

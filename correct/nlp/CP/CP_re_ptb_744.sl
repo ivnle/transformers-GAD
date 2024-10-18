@@ -1,1 +1,0 @@
-But Mr. Baker called the letter and the company 's offer of a 10 % wage increase over the life of the pact plus bonuses very weak

@@ -1,1 +1,0 @@
-Another big question hovering over the debate is what President Bush thinks

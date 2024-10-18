@@ -1,1 +1,0 @@
-Mr. Burt nonetheless paid the penalty as if he had lost agreeing to spend a day with West German Foreign Minister Hans-Dietrich Genscher frying and selling their combined weight in potato pancakes

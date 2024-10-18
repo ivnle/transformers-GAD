@@ -1,1 +1,0 @@
-Mr. Stookey 59 years old declined to be interviewed for this article but he has consistently argued that over the long haul across both the peaks and the troughs of the plastics market Quantum will prosper through its new direction

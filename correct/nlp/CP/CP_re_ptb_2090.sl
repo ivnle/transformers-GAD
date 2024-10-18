@@ -1,1 +1,0 @@
-Earnings for most of the nation 's major pharmaceutical makers are believed to have moved ahead briskly in the third quarter as companies with newer big-selling prescription drugs fared especially well

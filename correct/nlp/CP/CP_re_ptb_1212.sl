@@ -1,1 +1,0 @@
-Mr. Paul said only about 150 million of the current holdings are tradeable securities registered with the Securities and Exchange Commission

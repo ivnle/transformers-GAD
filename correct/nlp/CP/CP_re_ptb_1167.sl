@@ -1,1 +1,0 @@
-Elcotel will provide a credit-card reader for the machines to collect store and forward billing data

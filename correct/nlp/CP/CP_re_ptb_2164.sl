@@ -1,1 +1,0 @@
-One of the biggest reasons that new talks are n't likely to come about is that as everyone learned in 1987 the economy and the market can survive a one-day 508-point tumble

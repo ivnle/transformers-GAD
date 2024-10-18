@@ -1,1 +1,0 @@
-It seems to me that this is the pin that has finally pricked the balloon says Mr. Rogers a professor of finance at Columbia University and former co-manager of one of the most successful hedge funds in history Quantum Fund

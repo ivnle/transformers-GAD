@@ -1,1 +1,0 @@
-There was a unique combination in 1987 he says

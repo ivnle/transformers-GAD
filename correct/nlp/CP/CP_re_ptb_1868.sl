@@ -1,1 +1,0 @@
-Institut Merieux S.A. of France said the Canadian government raised an obstacle to its proposed acquisition of Connaught BioSciences Inc. for 942 million Canadian dollars 801.6 million

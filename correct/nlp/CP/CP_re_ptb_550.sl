@@ -1,1 +1,0 @@
-Zaire 's President Mobutu met in southern France with Angolan rebel leader Savimbi and a senior U.S. envoy in a bid to revive an accord to end Angola 's civil war

@@ -1,1 +1,0 @@
-Seven states that grew in the early 1980s are now losing population West Virginia Mississippi Louisiana Oklahoma Montana Wyoming and Alaska

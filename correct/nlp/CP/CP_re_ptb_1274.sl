@@ -1,1 +1,0 @@
-The main thing was portfolio insurance a mechanical trading system intended to protect an investor against losses

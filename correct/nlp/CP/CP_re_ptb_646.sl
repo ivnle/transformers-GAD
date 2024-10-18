@@ -1,1 +1,0 @@
-In percentage terms however the Dow 's dive was the 12th-worst ever and the sharpest since the market fell 156.83 or 8 % a week after Black Monday

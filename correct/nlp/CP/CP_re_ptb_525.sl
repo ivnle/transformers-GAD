@@ -1,1 +1,0 @@
-Most of those freed had spent at least 25 years in prison

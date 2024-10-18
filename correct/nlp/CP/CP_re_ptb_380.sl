@@ -1,1 +1,0 @@
-In the first six months of the year it posted a net loss of 33.1 million

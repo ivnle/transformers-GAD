@@ -1,1 +1,0 @@
-And a senior aide to the House Ways and Means Committee where tax legislation originates said there are n't any plans to produce another tax bill that could carry a gains tax cut this year

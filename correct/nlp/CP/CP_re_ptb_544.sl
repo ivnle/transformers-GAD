@@ -1,1 +1,0 @@
-Roh who is facing calls for the reduction of U.S. military forces in South Korea is to meet with Bush tomorrow and is to address a joint session of Congress on Wednesday

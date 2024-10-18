@@ -1,1 +1,0 @@
-This has become a very politicized deal concerning Canada 's only large world-class bio-research or pharmaceutical company Mr. Mehta said

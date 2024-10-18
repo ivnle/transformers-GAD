@@ -1,1 +1,0 @@
-I see this as a reaction to the whole junk bond explosion he says

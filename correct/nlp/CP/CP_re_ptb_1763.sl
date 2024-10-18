@@ -1,1 +1,0 @@
-150 million of 9 % debentures due Oct. 15 2019 priced at 99.943 to yield 9.008 %

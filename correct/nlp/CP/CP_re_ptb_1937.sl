@@ -1,1 +1,0 @@
-They 've never shown any inclination to spend money on production says Michael Mosettig a senior producer with MacNeil-Lehrer NewsHour who notes that CNN is indispensable to his job

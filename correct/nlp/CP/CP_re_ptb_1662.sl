@@ -1,1 +1,0 @@
-The show despite a promising start has slipped badly in the weekly ratings as compiled by A.C. Nielsen Co. finishing far below Tonight on NBC a unit of General Electric Co. and Nightline on ABC-TV a unit of Capital Cities\/ABC Inc

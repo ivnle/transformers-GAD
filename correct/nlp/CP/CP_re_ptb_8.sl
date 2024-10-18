@@ -1,1 +1,0 @@
-Having just passed through one of the most profitable periods in their history these producers now see their prices eroding

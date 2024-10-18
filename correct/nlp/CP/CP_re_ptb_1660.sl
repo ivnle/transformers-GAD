@@ -1,1 +1,0 @@
-CBS will continue to program action-adventure shows to follow the Sajak hour

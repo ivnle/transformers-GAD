@@ -1,1 +1,0 @@
-But specialists complain privately that just as in the 1987 crash the upstairs firms big investment banks that support the market by trading big blocks of stock stayed on the sidelines during Friday 's blood-letting

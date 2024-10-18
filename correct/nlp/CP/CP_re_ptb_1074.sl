@@ -1,1 +1,0 @@
-In announcements to workers late last week GM effectively signed death notices for two full-sized van assembly plants and cast serious doubt on the futures of three U.S. car factories

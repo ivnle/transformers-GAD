@@ -1,1 +1,0 @@
-Under the agreement HOFI will own 87.2 % of the combined company

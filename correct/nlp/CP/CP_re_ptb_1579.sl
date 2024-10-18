@@ -1,1 +1,0 @@
-That ranks Canada as the fourth-largest source of imported crude behind Saudi Arabia Nigeria and Mexico

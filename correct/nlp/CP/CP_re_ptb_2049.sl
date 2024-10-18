@@ -1,1 +1,0 @@
-Quest Medical Inc. said it adopted a shareholders ' rights plan in which rights to purchase shares of common stock will be distributed as a dividend to shareholders of record as of Oct. 23

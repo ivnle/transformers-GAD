@@ -1,1 +1,0 @@
-Also persistent redemptions would force some fund managers to dump stocks to raise cash

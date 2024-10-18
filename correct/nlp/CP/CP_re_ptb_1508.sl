@@ -1,1 +1,0 @@
-A bus is the data highway within a computer

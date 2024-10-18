@@ -1,1 +1,0 @@
-Topping the cheese stunt on another typical evening of fun on Wetten Dass a contestant won a bet with the show 's host Thomas Gottschalk that he could identify 300 German dialects over the telephone

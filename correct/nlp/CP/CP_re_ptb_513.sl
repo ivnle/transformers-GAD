@@ -1,1 +1,0 @@
-51.1 million of Rapid City Regional Hospital bonds via a Dougherty Dawkins Strand & Yost Inc. group

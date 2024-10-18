@@ -1,1 +1,0 @@
-Mandela considered the most prominent leader of the ANC remains in prison

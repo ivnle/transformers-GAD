@@ -1,1 +1,0 @@
-In the year-earlier third quarter when the industry was in the midst of a boom the company had net of 61 million or 1.70 a share on sales of 1.02 billion

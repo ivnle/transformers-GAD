@@ -1,1 +1,0 @@
-The cream of the British crop the literary dramas that are shown on U.S. public television as Masterpiece Theater make up a relatively small part of British air time

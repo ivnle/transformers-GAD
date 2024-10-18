@@ -1,1 +1,0 @@
-But nobody knows at what level the futures and stocks will open today

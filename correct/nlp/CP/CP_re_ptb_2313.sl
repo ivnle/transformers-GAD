@@ -1,1 +1,0 @@
-At least they both speak with strong accents as do Jackie and Maddie

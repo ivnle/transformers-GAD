@@ -1,1 +1,0 @@
-And 10 minutes after the UAL trading halt came news that the UAL group could n't get financing for its bid

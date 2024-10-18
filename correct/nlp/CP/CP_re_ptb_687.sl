@@ -1,1 +1,0 @@
-At about 3:45 the S&P market careened to still another limit of 30 points down and trading was locked again

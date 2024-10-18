@@ -1,1 +1,0 @@
-Now at 3:07 one of the market 's post-crash reforms took hold as the S&P 500 futures contract had plunged 12 points equivalent to around a 100-point drop in the Dow industrials

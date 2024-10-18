@@ -1,1 +1,0 @@
-In last year 's third quarter Lilly earned 171.4 million or 1.20 a share

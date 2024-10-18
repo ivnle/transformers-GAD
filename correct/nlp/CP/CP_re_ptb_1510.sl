@@ -1,1 +1,0 @@
-Users do n't care about the bus said Daniel Benton an analyst at Goldman Sachs & Co

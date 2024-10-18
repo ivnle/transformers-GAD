@@ -1,1 +1,0 @@
-Alan Nymark executive vice president of Investment Canada which oversees foreign takeovers said it marked the first time in its four-year history that the agency has made an adverse net-benefit decision about the acquisition of a publicly traded company

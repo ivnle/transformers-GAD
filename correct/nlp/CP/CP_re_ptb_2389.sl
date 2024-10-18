@@ -1,1 +1,0 @@
-Already British Aerospace and French government-controlled Thomson-CSF collaborate on a British missile contract and on an air-traffic control radar system

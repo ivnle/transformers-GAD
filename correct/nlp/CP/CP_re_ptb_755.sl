@@ -1,1 +1,0 @@
-A Boeing spokeswoman said a delivery date for the planes is still being worked out for a variety of reasons but not because of the strike

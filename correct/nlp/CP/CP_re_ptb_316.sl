@@ -1,1 +1,0 @@
-The plan would impose a brief freeze on physician fees next year

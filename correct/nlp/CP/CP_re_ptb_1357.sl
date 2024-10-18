@@ -1,1 +1,0 @@
-They could still panic and bail out of the market

@@ -1,1 +1,0 @@
-Sara Albert a 34-year-old Dallas law student says she 's generally skittish about the stock market and the takeover activity that seems to fuel it

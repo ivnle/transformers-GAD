@@ -1,1 +1,0 @@
-He said he discerns many parallels with 1987 including the emphasis on takeover stocks and the re-emergence of computerized program trading

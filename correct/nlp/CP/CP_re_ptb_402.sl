@@ -1,1 +1,0 @@
-The resulting decline in interest rates and the value of the dollar could reinvigorate American business indeed the entire economy

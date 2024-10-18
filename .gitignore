@@ -20,4 +20,5 @@ post_process/
 
 results/
 results_trie/
+trie/
 plots/

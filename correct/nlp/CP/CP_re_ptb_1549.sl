@@ -1,1 +1,0 @@
-Prices averaging roughly 2 a barrel higher in the third quarter than a year earlier have stayed well above most companies ' expectations

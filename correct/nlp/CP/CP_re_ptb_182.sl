@@ -1,1 +1,0 @@
-On Oct. 16 1987 the Nasdaq Composite fell 16.18 points or 3.8 % followed by its devastating 46.12-point or 11 % slide three days later

@@ -1,1 +1,0 @@
-The maker of computer-data-storage products said net income rose to 4.8 million or 23 cents a share from year-earlier net of 1.1 million or five cents a share

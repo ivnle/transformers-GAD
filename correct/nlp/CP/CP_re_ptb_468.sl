@@ -1,1 +1,0 @@
-Connecticut Light & Power Co.

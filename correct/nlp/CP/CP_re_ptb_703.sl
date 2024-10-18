@@ -1,1 +1,0 @@
-Stock-index futures contracts settled at much lower prices than indexes of the stock market itself

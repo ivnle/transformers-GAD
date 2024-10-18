@@ -1,1 +1,0 @@
-Small investors have tiptoed back into the market following Black Monday but mostly through mutual funds

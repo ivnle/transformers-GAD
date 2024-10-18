@@ -1,1 +1,0 @@
-The competitive sniping can get pretty petty at times

@@ -1,1 +1,0 @@
-Weatherford International Inc. said it canceled plans for a preferred-stock swap but may resume payment of dividends on the stock and added that it expects to publicly offer about 10 million common shares

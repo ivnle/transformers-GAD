@@ -1,1 +1,0 @@
-By contrast rentals in the best retail locations in Boston San Francisco and Chicago rarely top 100 a square foot

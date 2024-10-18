@@ -1,1 +1,0 @@
-The move closely follows a similar offer by Salomon of warrants for shares of Hongkong & Shanghai Banking Corp

@@ -1,1 +1,0 @@
-Bankers said warrants for Hong Kong stocks are attractive because they give foreign investors wary of volatility in the colony 's stock market an opportunity to buy shares without taking too great a risk

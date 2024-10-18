@@ -1,1 +1,0 @@
-GM is under intense pressure to close factories that became unprofitable as the giant auto maker 's U.S. market share skidded during the past decade

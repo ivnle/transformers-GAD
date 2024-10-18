@@ -1,1 +1,0 @@
-Market makers keep supplies of stock on hand to maintain orderly trading when imbalances occur

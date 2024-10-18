@@ -1,1 +1,0 @@
-The energy-services concern said however that in January 1990 it may resume payments of dividends on the preferred stock

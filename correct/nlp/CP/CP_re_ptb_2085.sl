@@ -1,1 +1,0 @@
-The news-weekly has faced heightened competition from rival Time magazine and a relatively flat magazine advertising market

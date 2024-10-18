@@ -1,1 +1,0 @@
-In Madison N.J. a spokesman for Schering-Plough said the company has no problems with the average estimate by a analysts that third-quarter earnings per share rose by about 19 % to 1

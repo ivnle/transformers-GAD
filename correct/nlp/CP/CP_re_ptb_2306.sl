@@ -1,1 +1,0 @@
-As Elizabeth Kristol wrote in the New York Times just before the Mason donnybrook Perhaps intolerance would not boil over with such intensity if honest differences were allowed to simmer

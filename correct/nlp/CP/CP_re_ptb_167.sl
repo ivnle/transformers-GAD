@@ -1,1 +1,0 @@
-This is not a major crash she said

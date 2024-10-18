@@ -1,1 +1,0 @@
-Whether unanswered phone calls had any effect or not Nasdaq stocks sank far less than those on the New York and American exchanges

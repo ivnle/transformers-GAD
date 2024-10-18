@@ -1,1 +1,0 @@
-The OTC market has only a handful of takeover-related stocks

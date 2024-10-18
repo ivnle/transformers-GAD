@@ -1,1 +1,0 @@
-It said analysts had been expecting a small profit for the period

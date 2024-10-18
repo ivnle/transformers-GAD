@@ -1,1 +1,0 @@
-There have been many preposterous reasons advanced to support a capital-gains tax cut Sen. Mitchell said during his television appearance but I suggest that is perhaps more than any of the others

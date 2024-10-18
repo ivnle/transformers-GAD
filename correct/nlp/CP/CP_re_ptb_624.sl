@@ -1,1 +1,0 @@
-The rating concern said Franklin 's troubled diversification record in the securities business was one reason for the downgrade citing the troubles at its L.F. Rothschild subsidiary and the possible sale of other subsidiaries

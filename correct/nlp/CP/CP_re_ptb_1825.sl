@@ -1,1 +1,0 @@
-Meridian Bancorp Inc. Reading Pa. will acquire Hill Financial Savings Association Red Hill Pa. which had 2.3 billion in assets

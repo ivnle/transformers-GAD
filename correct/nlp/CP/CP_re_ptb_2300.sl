@@ -1,1 +1,0 @@
-The latter typically is the humor of the underdog and it was perfected by both blacks and Jews on the minstrel and vaudeville stage as a means of mocking their white and gentile audiences along with themselves

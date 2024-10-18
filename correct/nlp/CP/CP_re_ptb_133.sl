@@ -1,1 +1,0 @@
-Not all funds have raised cash levels of course

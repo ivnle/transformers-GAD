@@ -1,1 +1,0 @@
-NCNB also acquired Freedom Savings & Loan Association Tampa Fla. which had total assets of 900 million

@@ -1,1 +1,0 @@
-This time he 's ready to buy in when the panic wears off

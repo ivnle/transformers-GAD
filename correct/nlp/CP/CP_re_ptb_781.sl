@@ -1,1 +1,0 @@
-Executives at Backer Spielvogel client Avis Inc. as well as at Saatchi client Philips Lighting Co. also said they saw no effect

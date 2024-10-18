@@ -1,1 +1,0 @@
-Surveys suggested that consumer confidence was high before Friday

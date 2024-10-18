@@ -1,1 +1,0 @@
-THE NUMBER of women and minorities who hold jobs in top management in the nation 's largest banks has more than doubled since 1978

@@ -1,1 +1,0 @@
-I expect the market to open weaker Monday but then it should find some stability

@@ -1,1 +1,0 @@
-Elaine Garzarelli who runs Shearson Lehman Hutton Inc. 's 335 million Sector Analysis Portfolio predicts the market will open down at least 50 points on technical factors and some panic selling

@@ -1,1 +1,0 @@
-At one of her news conferences Mrs. Hills said I believe we can do much better than 20 %

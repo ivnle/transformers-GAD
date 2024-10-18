@@ -1,1 +1,0 @@
-Its high for the past year was 16.375 a share

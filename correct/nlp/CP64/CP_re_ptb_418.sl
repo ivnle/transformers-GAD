@@ -1,1 +1,0 @@
-Debt burdens are heavier

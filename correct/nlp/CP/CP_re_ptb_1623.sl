@@ -1,1 +1,0 @@
-I do not by any means defend HUD management

@@ -1,1 +1,0 @@
-The results which are in line with analysts ' estimates reflect a continued improvement in our U.S. business said James Treybig Tandem 's chief executive officer

@@ -1,1 +1,0 @@
-The branch sale is the centerpiece of CenTrust 's strategy to transform itself into a traditional S&L from a high-flying institution that relied heavily on securities trading for profits according to Mr. Paul

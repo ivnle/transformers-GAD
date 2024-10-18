@@ -1,1 +1,0 @@
-The assets are good but they require more money and management than can be provided in L.J. Hooker 's current situation said Mr. Simpson in an interview

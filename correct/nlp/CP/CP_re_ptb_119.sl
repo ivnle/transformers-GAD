@@ -1,1 +1,0 @@
-Two years ago there were massive redemption levels over the weekend and a lot of fear around said C. Bruce Johnstone who runs Fidelity Investments ' 5 billion Equity-Income Fund

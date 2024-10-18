@@ -1,1 +1,0 @@
-When the price of plastics took off in 1987 Quantum Chemical Corp. went along for the ride

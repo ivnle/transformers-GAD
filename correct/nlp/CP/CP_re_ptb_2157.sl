@@ -1,1 +1,0 @@
-In many ways the backdrop to Friday 's stock decline is eerily similar to that of October 1987 's 508-point crash

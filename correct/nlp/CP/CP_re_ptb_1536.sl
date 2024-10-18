@@ -1,1 +1,0 @@
-A year ago ethylene sold for 33 cents peaking at about 34 cents last December

@@ -1,1 +1,0 @@
-That certainly is not the supposed distorted reading indicated by Mr. Lantos

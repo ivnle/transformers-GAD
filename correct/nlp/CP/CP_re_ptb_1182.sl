@@ -1,1 +1,0 @@
-President Bush called his attention to the matter during the Italian leader 's visit here last week

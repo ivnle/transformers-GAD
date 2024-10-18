@@ -1,1 +1,0 @@
-Both magazines are expected to announce their ad rates and circulation levels for 1990 within a month

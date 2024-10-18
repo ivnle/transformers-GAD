@@ -1,1 +1,0 @@
-The economy he added remains well-balanced and the outlook is for continued moderate growth

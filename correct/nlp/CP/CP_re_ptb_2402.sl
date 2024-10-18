@@ -1,1 +1,0 @@
-We have nothing to say about this affair which does n't concern us a Matra official said Sunday

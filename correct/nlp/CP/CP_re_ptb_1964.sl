@@ -1,1 +1,0 @@
-Mr. Perkins believes however that the market could be stabilized if California investor Marvin Davis steps back in to the United bidding with an offer of 275 a share

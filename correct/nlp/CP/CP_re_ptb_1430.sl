@@ -1,1 +1,0 @@
-The average of interbank offered rates for dollar deposits in the London market based on quotations at five major banks

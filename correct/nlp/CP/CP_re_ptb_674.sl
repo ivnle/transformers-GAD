@@ -1,1 +1,0 @@
-When the airline information came through it cracked every model we had for the marketplace said a managing director at one of the largest program-trading firms

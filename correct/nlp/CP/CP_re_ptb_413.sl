@@ -1,1 +1,0 @@
-Sharply falling stock prices do reduce consumer wealth damage business confidence and discourage the foreign investors upon whom the U.S. now relies for financial sustenance

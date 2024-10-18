@@ -1,1 +1,0 @@
-It was front-page news in Italy earlier this year when the fictional inspector was gunned down in the series

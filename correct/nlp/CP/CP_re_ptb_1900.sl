@@ -1,1 +1,0 @@
-Tonight to kick off the effort CNN will premiere its first prime-time newscast in years an hourlong show at 6 p.m Eastern time to air head-to-head against the network newscasts

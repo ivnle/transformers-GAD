@@ -1,1 +1,0 @@
-I do n't know of anyone carrying big inventories now said Mr. King of Robinson-Humphrey

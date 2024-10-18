@@ -1,1 +1,0 @@
-Last time we got rewarded for going out and buying stocks when the panic was the worst said John W. Rogers president of Chicago-based Ariel Capital Management Inc. which manages 1.1 billion of stocks

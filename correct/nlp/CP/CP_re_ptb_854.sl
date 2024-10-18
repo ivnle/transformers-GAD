@@ -1,1 +1,0 @@
-Italy 's most popular series is a drama called La Piovra or The Octopus which chronicles the fight of an idealistic young investigator in Palermo against the Mafia

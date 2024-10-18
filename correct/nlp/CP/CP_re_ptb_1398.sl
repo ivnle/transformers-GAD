@@ -1,1 +1,0 @@
-The key U.S. and foreign annual interest rates below are a guide to general levels but do n't always represent actual transactions

@@ -1,1 +1,0 @@
-Oh I bet it 'll be up 50 points on Monday said Lucy Crump a 78-year-old retired housewife in Lexington Ky

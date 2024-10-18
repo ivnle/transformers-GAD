@@ -1,1 +1,0 @@
-And I think a lot of people will harp on program trading

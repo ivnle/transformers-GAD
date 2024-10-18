@@ -1,1 +1,0 @@
-MedChem Products Inc. said a U.S. District Court in Boston ruled that a challenge by MedChem to the validity of a U.S. patent held by Pharmacia Inc. was without merit

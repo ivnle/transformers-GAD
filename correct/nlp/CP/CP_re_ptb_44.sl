@@ -1,1 +1,0 @@
-But others came away thinking he had given something less than his usual straight-from-the-shoulder performance

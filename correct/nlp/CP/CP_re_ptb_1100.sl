@@ -1,1 +1,0 @@
-Dissident UAW members have used the Fiero plant as a symbol of labor-management cooperation 's failure

@@ -1,1 +1,0 @@
-Allowing the defendant to take the Fifth in a civil matter is not based on a constitutional right to refuse to testify where one 's testimony harms him in the civil matter but because the testimony in the civil matter could be unconstitutionally used against him in a subsequent criminal prosecution

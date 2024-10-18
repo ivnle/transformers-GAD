@@ -1,1 +1,0 @@
-The company expects to achieve the 20 % increase in full-year earnings per share as it projected in the spring the spokesman said

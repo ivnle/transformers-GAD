@@ -1,1 +1,0 @@
-Now kindred spirits on Addison 's town council have barred the town 's fanciest hotel the Grand Kempinski from installing three free pool tables in its new lounge

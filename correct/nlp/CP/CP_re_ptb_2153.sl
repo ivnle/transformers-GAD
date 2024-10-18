@@ -1,1 +1,0 @@
-Last month Transportation Secretary Sam Skinner forced Northwest Airlines to reduce a stake held by KLM Royal Dutch Airlines

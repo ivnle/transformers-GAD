@@ -1,1 +1,0 @@
-Time is following the course of some other mass-circulation magazines that in recent years have challenged the publishing myth that maintaining artificially high and expensive circulations is the way to draw advertisers

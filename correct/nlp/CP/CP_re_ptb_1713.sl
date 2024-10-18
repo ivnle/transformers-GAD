@@ -1,1 +1,0 @@
-Toshiba 's line of portables for example features the T-1000 which is in the same weight class but is much slower and has less memory and the T-1600 which also uses a 286 microprocessor but which weighs almost twice as much and is three times the size

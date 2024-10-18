@@ -1,1 +1,0 @@
-Honeywell 's contract totaled 69.7 million and IBM 's 68.8 million

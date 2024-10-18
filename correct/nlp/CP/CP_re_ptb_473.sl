@@ -1,1 +1,0 @@
-2.6 million Class A shares via Smith Barney Harris Upham & Co

@@ -1,1 +1,0 @@
-Now producers hope prices have hit bottom

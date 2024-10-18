@@ -1,1 +1,0 @@
-The Bush administration earlier this year said it would extend steel quotas known as voluntary restraint agreements until March 31 1992

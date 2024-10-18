@@ -1,1 +1,0 @@
-The patent is related to hyaluronic acid a rooster-comb extract used in eye surgery

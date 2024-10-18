@@ -1,1 +1,0 @@
-Once the chief beneficiaries of the industry 's now fading boom these producers also will be reporting against exceptionally strong performances in the 1988 third quarter

@@ -1,1 +1,0 @@
-Mr. Tarantino of Hambrecht & Quist said some prices fell without trades taking place as market makers kept dropping the prices at which they would buy shares

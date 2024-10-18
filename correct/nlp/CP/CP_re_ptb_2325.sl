@@ -1,1 +1,0 @@
-But too often these routines lack spark because this sitcom like all sitcoms is timid about confronting Mr. Mason 's stock in trade ethnic differences

@@ -1,1 +1,0 @@
-When the price of polyethylene moves a mere penny a pound Quantum 's annual profit fluctuates by about 85 cents a share provided no other variables are changing

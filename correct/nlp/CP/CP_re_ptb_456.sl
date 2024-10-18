@@ -1,1 +1,0 @@
-The doomsayers had a receptive audience

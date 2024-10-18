@@ -1,1 +1,0 @@
-Then as now the budget debate was behind schedule and automatic spending cuts were within days of taking hold

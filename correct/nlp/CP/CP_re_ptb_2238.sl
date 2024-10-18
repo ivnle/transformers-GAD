@@ -1,1 +1,0 @@
-American Cyanamid Co. offering of 1,250,000 common shares via Merrill Lynch Capital Markets

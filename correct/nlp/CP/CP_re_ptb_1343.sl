@@ -1,1 +1,0 @@
-The executives were remarkably unperturbed by the plunge even though it lopped billions of dollars off the value of their companies and millions off their personal fortunes

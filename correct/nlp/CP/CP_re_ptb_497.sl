@@ -1,1 +1,0 @@
-68,230,000 of various bonds including 32 million hotel occupancy tax revenue bonds Series 1989A and 36.23 million convention center revenue bonds Series 1989B via a Morgan Stanley & Co. group

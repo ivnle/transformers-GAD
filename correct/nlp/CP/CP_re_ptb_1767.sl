@@ -1,1 +1,0 @@
-500 million of Remic mortgage securities offered in 13 classes by Prudential-Bache Securities Inc

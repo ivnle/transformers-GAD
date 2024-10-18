@@ -1,1 +1,0 @@
-By any reasonable man criterion Mr. Lantos and his colleagues have a whole bunch of people tried and convicted

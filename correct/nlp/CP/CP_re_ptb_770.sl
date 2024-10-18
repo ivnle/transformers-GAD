@@ -1,1 +1,0 @@
-Mr. Spielvogel is n't part of the board nor are any of the other heads of Saatchi 's big U.S.-based ad agencies

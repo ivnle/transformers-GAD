@@ -1,1 +1,0 @@
-Trans World Airlines Inc. offering of 150 million senior notes via Drexel Burnham

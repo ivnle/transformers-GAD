@@ -1,1 +1,0 @@
-But administration officials privately agree with Mr. Panetta who said a precipitous drop this week is going to force the president and Congress to take a much harder look at fiscal policy

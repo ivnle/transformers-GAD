@@ -1,1 +1,0 @@
-Mr. Bentsen said he hopes the Senate will consider that measure soon

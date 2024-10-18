@@ -1,1 +1,0 @@
-Negotiators from the White House trade office will repeat these quota negotiations next year when they will have another 1 % of the U.S. steel market to allocate

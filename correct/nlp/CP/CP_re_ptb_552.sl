@@ -1,1 +1,0 @@
-PLO leader Arafat insisted on guarantees that any elections in the Israeli-occupied territories would be impartial

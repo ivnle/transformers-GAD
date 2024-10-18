@@ -1,1 +1,0 @@
-A State Department spokesman acknowledged that the U.S. is discussing the allegations with the Italian government and Cocom but declined to confirm any details

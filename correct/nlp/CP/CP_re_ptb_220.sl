@@ -1,1 +1,0 @@
-The sellers on Friday came from all corners of the OTC market big and small institutional investors as well as individual investors and market makers

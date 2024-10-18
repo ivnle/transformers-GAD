@@ -1,1 +1,0 @@
-The real estate slump that 's pushing down the price of New York office space and housing is also affecting the city 's retail real estate market

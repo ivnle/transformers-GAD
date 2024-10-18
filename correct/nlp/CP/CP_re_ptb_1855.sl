@@ -1,1 +1,0 @@
-Canadian Utilities is n't alone in exploring power generation opportunities in Britain in anticipation of the privatization program

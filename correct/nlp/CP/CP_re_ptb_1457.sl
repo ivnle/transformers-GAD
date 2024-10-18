@@ -1,1 +1,0 @@
-Gulf Resources & Chemical Corp. said it agreed to pay 1.5 million as part of an accord with the Environmental Protection Agency regarding an environmental cleanup of a defunct smelter the company formerly operated in Idaho

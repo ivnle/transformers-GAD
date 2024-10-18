@@ -1,1 +1,0 @@
-In American Stock Exchange composite trading Friday CenTrust common shares closed at 3 down 12.5 cents

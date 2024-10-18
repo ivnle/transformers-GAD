@@ -1,1 +1,0 @@
-Mrs. Hills ' first trip to Japan as America 's chief trade negotiator had a completely different tone from last month 's visit by Commerce Secretary Robert A. Mosbacher

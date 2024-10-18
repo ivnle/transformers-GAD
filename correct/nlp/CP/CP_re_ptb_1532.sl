@@ -1,1 +1,0 @@
-But securities analysts say Phillips will be among the companies hard-hit by weak chemical prices and will probably post a drop in third-quarter earnings

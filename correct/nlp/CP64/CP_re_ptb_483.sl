@@ -1,1 +1,0 @@
-1.5 million common shares via PaineWebber Inc

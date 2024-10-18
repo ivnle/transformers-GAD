@@ -1,1 +1,0 @@
-Sharp-witted and funny but never mean she 's a memorialist a bit like Truman Capote if he 'd been Jewish and female and less bitchy

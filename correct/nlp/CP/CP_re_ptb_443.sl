@@ -1,1 +1,0 @@
-The Fed of course knows that very well hence its readiness to pump credit into the economy this morning

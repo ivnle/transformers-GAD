@@ -1,1 +1,0 @@
-The spokesman said the broadcast unit will be disbanded Dec. 1 and the move wo n't affect RJR 's print radio and spot-television buying practices

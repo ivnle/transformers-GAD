@@ -1,1 +1,0 @@
-Mr. Louis-Dreyfus formerly chief executive of the pharmaceutical research firm IMS International Inc. has a reputation as a savvy financial manager and will be charged largely with repairing Saatchi 's poor financial state

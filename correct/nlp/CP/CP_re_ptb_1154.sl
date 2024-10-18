@@ -1,1 +1,0 @@
-There are 13.1 million students in college this fall up 2 % from 1988 the National Center for Education Statistics estimates

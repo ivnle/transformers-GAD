@@ -1,1 +1,0 @@
-The system currently has a capacity of 1.55 million barrels a day

@@ -1,1 +1,0 @@
-Centel Capital Corp.

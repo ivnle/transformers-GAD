@@ -1,1 +1,0 @@
-When it comes to money Once bitten 2,000 times shy

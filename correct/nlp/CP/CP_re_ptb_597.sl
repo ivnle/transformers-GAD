@@ -1,1 +1,0 @@
-It will continue to trade on the International Stock Exchange London

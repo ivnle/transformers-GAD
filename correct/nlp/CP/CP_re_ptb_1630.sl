@@ -1,1 +1,0 @@
-This privilege against self-incrimination precludes the drawing of an adverse inference against a criminal defendant who chooses not to testify

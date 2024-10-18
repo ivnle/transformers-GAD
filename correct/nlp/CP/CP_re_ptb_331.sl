@@ -1,1 +1,0 @@
-A P&G spokeswoman confirmed that shipments to Phoenix started late last month

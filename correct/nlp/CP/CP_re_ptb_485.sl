@@ -1,1 +1,0 @@
-Two million common shares via Dean Witter Capital Markets

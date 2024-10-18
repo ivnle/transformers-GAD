@@ -1,1 +1,0 @@
-Apparently their verdict is in

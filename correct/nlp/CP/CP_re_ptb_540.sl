@@ -1,1 +1,0 @@
-NASA pronounced the space shuttle Atlantis ready for launch tomorrow following a five-day postponement of the flight because of a faulty engine computer

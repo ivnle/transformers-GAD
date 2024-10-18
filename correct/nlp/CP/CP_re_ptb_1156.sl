@@ -1,1 +1,0 @@
-Kenneth J. Thygerson who was named president of this thrift holding company in August resigned citing personal reasons

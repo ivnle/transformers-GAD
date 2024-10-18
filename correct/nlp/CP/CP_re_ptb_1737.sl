@@ -1,1 +1,0 @@
-He has said that he now knows how Justice John Harlan felt a reference to the late conservative justice who was the most frequent dissenter from the Warren Court 's opinions

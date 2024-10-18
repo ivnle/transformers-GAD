@@ -1,1 +1,0 @@
-And the mayor in an admonition that bears a rhythmic resemblance to Prof. Hill 's warned that alcohol leads to betting which leads to fights

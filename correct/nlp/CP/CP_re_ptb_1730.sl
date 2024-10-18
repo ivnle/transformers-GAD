@@ -1,1 +1,0 @@
-Now however as the court 's new five-member conservative majority continues to solidify victories for the liberals are rare

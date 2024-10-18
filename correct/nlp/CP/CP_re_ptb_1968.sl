@@ -1,1 +1,0 @@
-Partly because of concern about the economy and partly because she recently quit her job as a legal assistant to go to school I think at this point we want to be a lot more liquid

@@ -1,1 +1,0 @@
-Other countries that do n't have formal steel quotas with the U.S. such as Taiwan Sweden and Argentina also have supplied steel

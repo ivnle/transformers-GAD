@@ -1,1 +1,0 @@
-People are fast leaving the place where he is stuck

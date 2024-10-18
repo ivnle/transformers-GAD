@@ -1,1 +1,0 @@
-The fact that this happened two years ago and there was a recovery gives people some comfort that this wo n't be a problem

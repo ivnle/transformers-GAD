@@ -1,1 +1,0 @@
-Other money managers also opened their wallets

@@ -1,1 +1,0 @@
-Bozell Cheil Corp. as the new agency will be called will be based in Seoul and is 70 % owned by Samsung and 30 % owned by Bozell

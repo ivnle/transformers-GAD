@@ -1,1 +1,0 @@
-Japan however has agreed to cut its quota to about 5 % from 5.9 % previously

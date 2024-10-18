@@ -1,1 +1,0 @@
-A celebrity guest U.S. Ambassador to West Germany Richard Burt also won a bet that someone could pile up 150 worth of quarters on a slanted coin

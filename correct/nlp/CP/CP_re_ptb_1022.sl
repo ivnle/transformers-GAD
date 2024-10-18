@@ -1,1 +1,0 @@
-They painted the apartment orange pink and white according to her instructions

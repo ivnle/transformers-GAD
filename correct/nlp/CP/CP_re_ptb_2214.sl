@@ -1,1 +1,0 @@
-Late Thursday after the close of trading the market received what would normally have been a bullish U.S. Department of Agriculture estimate of the 1989-90 Florida orange crop

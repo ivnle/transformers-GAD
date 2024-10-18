@@ -1,1 +1,0 @@
-However because the guaranteed circulation base is being lowered ad rates will be effectively 7.5 % higher per subscriber according to Richard Heinemann Time associate publisher

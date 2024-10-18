@@ -1,1 +1,0 @@
-All these actions Mr. Atherton said will result in a loss of 125 million to 150 million for the third quarter

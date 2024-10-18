@@ -1,1 +1,0 @@
-Poquet Computer Corp. meanwhile has introduced a much more sophisticated palmtop that can run Lotus 1-2-3 and other sophisticated software programs but costs five times as much

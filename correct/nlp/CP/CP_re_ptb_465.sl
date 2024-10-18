@@ -1,1 +1,0 @@
-15.2 billion of three-month and six-month bills

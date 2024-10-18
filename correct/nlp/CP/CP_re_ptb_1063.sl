@@ -1,1 +1,0 @@
-A group of Arby 's franchisees said they formed an association to oppose Miami Beach financier Victor Posner 's control of the restaurant chain

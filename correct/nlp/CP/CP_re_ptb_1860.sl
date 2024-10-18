@@ -1,1 +1,0 @@
-The year-to-date total was 12,006,883 tons up 7.8 % from 11,141,711 tons a year earlier

@@ -1,1 +1,0 @@
-Or so it must seem to Jackie Mason the veteran Jewish comedian appearing in a new ABC sitcom airing on Tuesday nights 9:30-10 p.m. EDT

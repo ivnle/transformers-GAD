@@ -1,1 +1,0 @@
-And retailers are expected to embrace the product in part because it will take up less shelf space

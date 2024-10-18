@@ -1,1 +1,0 @@
-In the seven Supreme Court terms from the fall of 1962 through the spring of 1967 the height of the Warren Court 's power Justice Brennan cast only 25 dissenting votes in 555 cases decided by the court

@@ -1,1 +1,0 @@
-But some saw it as a classic negotiating tactic

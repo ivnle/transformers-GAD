@@ -1,1 +1,0 @@
-But Mr. Davis whose views are widely respected by money managers says he expects no 1987-style crash

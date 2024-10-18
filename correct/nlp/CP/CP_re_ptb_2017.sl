@@ -1,1 +1,0 @@
-However the agreement was canceled in June 1984

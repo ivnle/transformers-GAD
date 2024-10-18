@@ -1,1 +1,0 @@
-Compaq 's announcement also spells trouble for Zenith which last year had 28 % of the U.S. laptop market but recently agreed to sell its computer business to Cie. des Machines Bull the French government-owned computer maker

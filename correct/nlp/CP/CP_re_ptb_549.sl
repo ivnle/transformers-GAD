@@ -1,1 +1,0 @@
-In Leipzig activists vowed to continue street protests to demand internal change

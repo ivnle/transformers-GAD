@@ -1,1 +1,0 @@
-The drop in profit reflected in part continued softness in financial advertising at The Wall Street Journal and Barron 's magazine

@@ -1,1 +1,0 @@
-Treasury Secretary Nicholas Brady said in a statement Friday that the stock-market decline does n't signal any fundamental change in the condition of the economy

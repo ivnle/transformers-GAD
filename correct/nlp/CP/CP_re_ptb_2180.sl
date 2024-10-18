@@ -1,1 +1,0 @@
-The market needs a strong signal that we 're serious about deficit reduction and the best way to do that is for the House of Representatives to strip their bill of similar provisions Sen. Warren Rudman R. N.H said yesterday

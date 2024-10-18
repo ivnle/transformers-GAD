@@ -1,1 +1,0 @@
-But neither Matra nor GEC unrelated to Stamford Conn.-based General Electric Co. are sitting quietly by as their competitors join forces

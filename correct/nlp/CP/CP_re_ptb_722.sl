@@ -1,1 +1,0 @@
-I just do n't feel that the company can really stand or would want a prolonged walkout Tom Baker president of Machinists ' District 751 said in an interview yesterday

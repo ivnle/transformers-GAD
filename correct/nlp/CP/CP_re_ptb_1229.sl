@@ -1,1 +1,0 @@
-CenTrust said the branch sale would also reduce the company 's large amount of good will by about 180 million

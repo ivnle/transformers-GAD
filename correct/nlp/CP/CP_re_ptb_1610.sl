@@ -1,1 +1,0 @@
-He 's right about his subcommittee 's responsibilities when it comes to obtaining information from prior HUD officials

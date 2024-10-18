@@ -1,1 +1,0 @@
-Bids must be received by 1 p.m. EDT Thursday at the Treasury or at Federal Reserve banks or branches

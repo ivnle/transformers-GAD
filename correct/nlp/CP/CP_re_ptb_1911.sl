@@ -1,1 +1,0 @@
-The repositioning bid is aimed at CNN 's unsteady viewership and what may happen to it as the cable-TV news market grows more competitive

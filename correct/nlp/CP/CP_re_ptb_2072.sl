@@ -1,1 +1,0 @@
-Ad linage at the Journal fell 6.1 % in the third quarter

@@ -1,1 +1,0 @@
-Rightly or wrongly many giant institutional investors appear to be fighting the latest war by applying the lesson they learned in the October 1987 crash Buying at the bottom pays off

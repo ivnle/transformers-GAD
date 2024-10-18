@@ -1,1 +1,0 @@
-Mr. Cooperman sees this as a good time to pick up bargains but he does n't think there 's any need to rush

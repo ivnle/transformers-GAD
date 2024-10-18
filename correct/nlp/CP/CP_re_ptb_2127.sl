@@ -1,1 +1,0 @@
-Also the company 's hair-growing drug Rogaine is selling well at about 125 million for the year but the company 's profit from the drug has been reduced by Upjohn 's expensive print and television campaigns for advertising analysts said

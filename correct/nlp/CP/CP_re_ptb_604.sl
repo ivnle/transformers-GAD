@@ -1,1 +1,0 @@
-Employee Benefit Plans Inc. a Minneapolis health-care services company was listed with the symbol EBPI

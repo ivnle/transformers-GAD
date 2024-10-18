@@ -1,1 +1,0 @@
-Two years ago about the only point of comparison was the 1929 crash and the subsequent Depression

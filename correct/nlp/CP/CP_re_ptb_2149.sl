@@ -1,1 +1,0 @@
-For the last two weeks the Bush administration and the Federal Reserve have been engaged in a semi-public battle over international economic policy

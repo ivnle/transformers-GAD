@@ -1,1 +1,0 @@
-Three billion of power bonds via First Boston Corp

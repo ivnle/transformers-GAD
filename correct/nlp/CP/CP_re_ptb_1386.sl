@@ -1,1 +1,0 @@
-Neil Weisman whose New York-based Chilmark Capital Partners had converted 85 % of its 220 million investment pool to cash in recent months said he was besieged by Wall Street firms Friday asking him to take stock off their hands

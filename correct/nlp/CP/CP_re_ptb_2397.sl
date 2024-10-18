@@ -1,1 +1,0 @@
-GEC plans first to study Ferranti 's financial accounts which auditors recently said included 215 million in fictitious contracts at a U.S. unit International Signal & Control Group with which Ferranti merged last year

@@ -1,1 +1,0 @@
-Now however commercial channels are coming to most European countries and at the same time satellite and cable technology is spreading rapidly

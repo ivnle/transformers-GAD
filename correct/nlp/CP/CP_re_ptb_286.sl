@@ -1,1 +1,0 @@
-To the detriment of many low-income people efforts to boost Medicaid funding especially in rural areas also were stricken

@@ -1,1 +1,0 @@
-With superconcentrates however it is n't always easy to persuade consumers that less is more many people tend to dump too much detergent into the washing machine believing that it takes a cup of powder to really clean the laundry

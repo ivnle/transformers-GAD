@@ -1,1 +1,0 @@
-The question is how much are we getting from each reader said Mr. Heinemann

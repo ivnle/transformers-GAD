@@ -1,1 +1,0 @@
-But Mr. Treybig questions whether that will be enough to stop Tandem 's first mainframe from taking on some of the functions that large organizations previously sought from Big Blue 's machines

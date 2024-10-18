@@ -1,1 +1,0 @@
-That 's because their brokers can require them to sell some shares or put up more cash to enhance the collateral backing their loans

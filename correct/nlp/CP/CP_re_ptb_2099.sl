@@ -1,1 +1,0 @@
-Profit climbed even though Merck 's sales were reduced by one to three percentage points as a result of the strong dollar Mr. Sweig said

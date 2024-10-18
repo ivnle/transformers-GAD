@@ -1,1 +1,0 @@
-These are n't mature assets but they have the potential to be so said Mr. Shidler

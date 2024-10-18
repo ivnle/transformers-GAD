@@ -1,1 +1,0 @@
-COMMERCIAL PAPER placed directly by General Motors Acceptance Corp.

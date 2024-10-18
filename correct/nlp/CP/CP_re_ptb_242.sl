@@ -1,1 +1,0 @@
-Investors who bought stock with borrowed money that is on margin may be more worried than most following Friday 's market drop

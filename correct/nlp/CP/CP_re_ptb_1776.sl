@@ -1,1 +1,0 @@
-The agency 's first strips issue collateralized by Freddie Mac 8 % securities pooled into a single security called a Giant will be divided into interest-only and principal-only securities

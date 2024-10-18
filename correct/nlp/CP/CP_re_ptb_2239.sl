@@ -1,1 +1,0 @@
-Limited Inc. offering of up to 300 million of debt securities and warrants

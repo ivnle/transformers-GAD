@@ -1,1 +1,0 @@
-These high rollers took a big bath today he said in his showroom which is within a few miles of the multi-million dollar homes of some of Houston 's richest citizens

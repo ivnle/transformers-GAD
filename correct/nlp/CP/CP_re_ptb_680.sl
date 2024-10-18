@@ -1,1 +1,0 @@
-Big Board Chairman John J. Phelan said yesterday the circuit breaker worked well mechanically

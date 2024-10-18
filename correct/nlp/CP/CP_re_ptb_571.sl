@@ -1,1 +1,0 @@
-Who is going to be in the space next door

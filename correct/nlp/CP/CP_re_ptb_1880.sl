@@ -1,1 +1,0 @@
-Viren Mehta a partner with Mehta & Isaly a New York-based pharmaceutical industry research firm said the government 's ruling was n't unexpected

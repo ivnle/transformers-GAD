@@ -1,1 +1,0 @@
-Analysts say they 're faster and carry more memory than anything else of their size on the market and they 're priced aggressively at 2,400 to 5,000

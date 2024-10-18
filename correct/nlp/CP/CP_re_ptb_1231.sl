@@ -1,1 +1,0 @@
-Mr. Paul counters that he intends to further pare the size of CenTrust by not renewing more than 1 billion of brokered certificates of deposit when they come due

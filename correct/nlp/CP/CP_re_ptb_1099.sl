@@ -1,1 +1,0 @@
-Union officials have taken a beating politically as a result

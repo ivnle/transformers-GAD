@@ -1,1 +1,0 @@
-But these are not the differences that make headlines

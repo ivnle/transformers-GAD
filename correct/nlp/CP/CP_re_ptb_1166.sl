@@ -1,1 +1,0 @@
-Within the next year Elcotel expects to place 10,000 fax machines made by Minolta in Japan in hotels municipal buildings drugstores and other public settings around the country

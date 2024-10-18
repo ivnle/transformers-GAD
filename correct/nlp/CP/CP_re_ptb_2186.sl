@@ -1,1 +1,0 @@
-Investors who had been holding assets in anticipation of a more favorable time to sell were spooked he said

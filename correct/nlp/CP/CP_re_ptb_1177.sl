@@ -1,1 +1,0 @@
-To make its point it is challenging the Italian government to explain reports that Olivetti may have supplied the Soviet Union with sophisticated computer-driven devices that could be used to build parts for combat aircraft

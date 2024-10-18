@@ -1,1 +1,0 @@
-By setting up the joint venture Kaufman & Broad can take the more aggressive approach of buying raw land while avoiding the negative impacts to its own balance sheet Mr. Karatz said

@@ -1,1 +1,0 @@
-Friday 's fall marks the start of a bear market says Mr. Davis president of Ned Davis Research Inc

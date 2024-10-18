@@ -1,1 +1,0 @@
-Not everyone is reacting so calmly however and many wonder about the long-term implications of what is widely viewed as the cause of Friday 's slide reluctance by banks to provide financing for a buy-out of UAL Corp. parent of United Airlines

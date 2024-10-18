@@ -1,1 +1,0 @@
-But it 's not only the stock market that has some small investors worried

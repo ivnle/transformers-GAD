@@ -1,1 +1,0 @@
-Both palmtops are dismissed by notebook makers who argue that they 're too small a problem Poquet also encountered in focus groups admits Gerry Purdy director of marketing

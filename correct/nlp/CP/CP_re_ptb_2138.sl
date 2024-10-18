@@ -1,1 +1,0 @@
-Chase Manhattan Bank Chairman Willard Butcher is a conservative banker and a loyal Republican but on Friday morning he had few kind words for President Bush 's economic policy-making

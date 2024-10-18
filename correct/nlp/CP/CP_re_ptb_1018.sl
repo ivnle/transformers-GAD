@@ -1,1 +1,0 @@
-Her friend Susan whose parents kept reminding her she was unwanted slept on a narrow bed wedged into her parents ' bedroom as though she were a temporary visitor

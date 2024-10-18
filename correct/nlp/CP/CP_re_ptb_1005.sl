@@ -1,1 +1,0 @@
-In a lovely novelistic memoir Sleeping Arrangements Knopf 195 pages 18.95 she remembers an exotic playground peopled mainly by Jewish eccentrics and the occasional Catholic real oddballs like her sexpot friend the hell-kitten Diana age five

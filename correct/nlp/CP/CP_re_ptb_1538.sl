@@ -1,1 +1,0 @@
-Beginning in mid-1987 prices began accelerating as a growing U.S. economy and the weak dollar spurred demand

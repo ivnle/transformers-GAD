@@ -1,1 +1,0 @@
-Analysts and competitors however doubt the numbers were that high

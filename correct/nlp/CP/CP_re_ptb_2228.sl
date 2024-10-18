@@ -1,1 +1,0 @@
-Friday capped a week of steadily rising crude oil prices in both futures and spot markets

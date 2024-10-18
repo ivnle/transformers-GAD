@@ -1,1 +1,0 @@
-Newport Corp. said it expects to report fiscal-first-quarter earnings of between 15 cents and 19 cents a share somewhat below analysts ' estimates of 19 cents to 23 cents

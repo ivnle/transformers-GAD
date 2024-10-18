@@ -1,1 +1,0 @@
-Other new lows included Navistar International Corp. Union Carbide Corp. and Bethlehem Steel Corp. all of which are included in the industrial average

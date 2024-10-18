@@ -1,1 +1,0 @@
-He termed ASKO 's legal actions as unproductive to international cooperation among European retailers

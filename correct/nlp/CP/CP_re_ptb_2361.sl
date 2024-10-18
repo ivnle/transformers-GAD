@@ -1,1 +1,0 @@
-In the 1988 third quarter the company earned 461 million or 1.91 a share on sales of 7.99 billion

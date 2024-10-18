@@ -1,1 +1,0 @@
-From the investors ' standpoint institutions and individuals learned a painful lesson by selling at the lows on Black Monday said Stephen Boesel manager of the 580 million T. Rowe Price Growth and Income Fund

@@ -1,1 +1,0 @@
-National also participates in the Northwest frequent-flier program along with four other airlines including Delta and USAir Group Inc. 's USAir unit

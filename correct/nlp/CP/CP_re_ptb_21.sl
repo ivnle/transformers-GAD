@@ -1,1 +1,0 @@
-Benchmark grades which still sold for as much as 50 cents a pound last spring have skidded to between 35 cents and 40 cents

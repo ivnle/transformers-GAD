@@ -1,1 +1,0 @@
-Perhaps most prominent Dow Chemical Co. which as of midyear had racked up eight consecutive record quarters is expected to report that profit decreased in the latest quarter from a year earlier if only by a shade

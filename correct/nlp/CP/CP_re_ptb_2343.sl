@@ -1,1 +1,0 @@
-The chemical industry is expected to report that profits eroded in the third quarter because of skidding prices in the commodity end of the business

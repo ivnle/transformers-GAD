@@ -1,1 +1,0 @@
-The Senate 's decision to approve a bare-bones deficit-reduction bill without a capital-gains tax cut still leaves open the possibility of enacting a gains tax reduction this year

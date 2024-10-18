@@ -1,1 +1,0 @@
-At this point the Dow was down about 35 points

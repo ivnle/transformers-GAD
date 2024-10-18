@@ -1,1 +1,0 @@
-Right now they 're telling me to get the hell out and stay out

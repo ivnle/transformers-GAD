@@ -1,1 +1,0 @@
-The terms of that agreement only become effective the date of Gulf 's reorganization which we anticipate will occur sometime in early 1990 said Lawrence R. Mehl Gulf 's general counsel

@@ -1,1 +1,0 @@
-In the first RTC transaction with a foreign buyer Royal Trustco Ltd. Toronto will acquire Pacific Savings Bank Costa Mesa Calif. which had 949 million in assets

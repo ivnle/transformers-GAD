@@ -1,1 +1,0 @@
-There was tremendous public enthusiasm for stock mutual funds

@@ -1,1 +1,0 @@
-White House Budget Director Richard Darman told reporters yesterday that the administration would n't push to keep the capital-gains cut in the final version of the bill

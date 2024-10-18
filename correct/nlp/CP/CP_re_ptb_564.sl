@@ -1,1 +1,0 @@
-In Manhattan once-desirable store sites sit vacant and newly constructed space has been slow to fill

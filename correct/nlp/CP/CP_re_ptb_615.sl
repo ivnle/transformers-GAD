@@ -1,1 +1,0 @@
-Meanwhile two initial public offerings braved the cascading market in their maiden day of national over-the-counter trading Friday

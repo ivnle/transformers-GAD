@@ -1,1 +1,0 @@
-There 's nothing rational about this kind of action

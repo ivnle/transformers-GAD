@@ -1,1 +1,0 @@
-Small investors matched their big institutional brethren in anxiety over the weekend but most seemed to be taking a philosophical approach and said they were resigned to riding out the latest storm in the stock market

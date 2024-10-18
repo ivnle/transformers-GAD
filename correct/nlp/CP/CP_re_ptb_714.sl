@@ -1,1 +1,0 @@
-Peter Otradovec vice president for planning at the Phoenix Ariz. carrier said in an interview that the work stoppage at Boeing now entering its 13th day has caused some turmoil in our scheduling and that more than 500 passengers who were booked to fly out of Houston on America West would now be put on other airlines

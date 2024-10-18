@@ -1,1 +1,0 @@
-55,730,000 of school financing bonds 1989 Series B 1987 resolution via competitive bid

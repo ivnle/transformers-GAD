@@ -1,1 +1,0 @@
-Southmark Corp. said that it filed part of its 10-K report with the Securities and Exchange Commission but that the filing does n't include its audited financial statements and related information

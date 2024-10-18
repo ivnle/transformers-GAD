@@ -1,1 +1,0 @@
-A spokesman added that sales in the current quarter will about equal the yearearlier quarter 's figure when Newport reported net income of 1.7 million or 21 cents a share on 14.1 million in sales

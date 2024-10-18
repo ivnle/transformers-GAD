@@ -1,1 +1,0 @@
-reminiscent of those during the 1987 crash that as stock prices plummeted and trading activity escalated some phone calls to market makers in over-the-counter stocks went unanswered

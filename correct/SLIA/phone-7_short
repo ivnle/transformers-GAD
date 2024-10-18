@@ -1,1 +1,0 @@
-(define-fun f ((name String)) String (let ((_let_1 (str.indexof name "-" 0))) (str.++ (str.++ (str.at name (+ 1 _let_1)) (str.at name (+ 2 _let_1))) (str.at name (+ 3 _let_1)))))

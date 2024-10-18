@@ -1,1 +1,0 @@
-And the financial decline of some looks steep only in comparison with the heady period that is just behind them

@@ -1,1 +1,0 @@
-We believe they could siphon perhaps two to three billion dollars from IBM over the next few years said George Weiss an analyst at the Gartner group

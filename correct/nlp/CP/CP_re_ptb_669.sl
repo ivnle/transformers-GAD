@@ -1,1 +1,0 @@
-Without the guidepost of stock-index futures the barometer of where traders think the overall stock market is headed many traders were afraid to trust stock prices quoted on the Big Board

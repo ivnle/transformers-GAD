@@ -1,1 +1,0 @@
-In the U.S. polyethylene market Quantum has claimed the largest share about 20 %

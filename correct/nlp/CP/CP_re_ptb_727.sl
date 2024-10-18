@@ -1,1 +1,0 @@
-Southwest Airlines has a Boeing 737-300 set for delivery at the end of this month and expects to have the plane on time

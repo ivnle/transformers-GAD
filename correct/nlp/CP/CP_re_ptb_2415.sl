@@ -1,1 +1,0 @@
-The company said the improvement is related to additional cogeneration facilities that have been put into operation

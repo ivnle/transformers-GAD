@@ -1,1 +1,0 @@
-In the Pennzoil\/Texaco litigation the courts found Pennzoil and Getty Oil intended to be bound in Arcadian Phosphates they found there was no intention to be bound

@@ -1,1 +1,0 @@
-In these four for instance the RTC is stuck with 4.51 billion in bad assets

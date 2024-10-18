@@ -1,1 +1,0 @@
-These included International Business Machines Corp. which during Friday 's session traded below 100 a share for the first time since June 1984

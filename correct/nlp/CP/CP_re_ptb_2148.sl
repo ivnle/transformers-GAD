@@ -1,1 +1,0 @@
-We simply do n't have strong leadership to try to reduce the deficit and make tough choices House Budget Committee Chairman Leon Panetta D. Calif said yesterday on NBC News 's Meet the Press

@@ -1,1 +1,0 @@
-This summer on the other hand had milder weather than usual

@@ -1,1 +1,0 @@
-With loving detail she recalls her Uncle Gabe an Orthodox Jew and song lyricist who rhymed river with liver in a love song and Uncle Len a mysterious part-time investigator who looked like Lincoln and carried a change of clothing in a Manila envelope like an undercover President on a good-will mission

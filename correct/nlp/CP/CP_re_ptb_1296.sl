@@ -1,1 +1,0 @@
-Thus he concludes This is not a good environment to be fully invested in stocks

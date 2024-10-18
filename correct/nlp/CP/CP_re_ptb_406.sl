@@ -1,1 +1,0 @@
-That has changed partly because the two years following the worst stock-market plunge in history have been reasonably comfortable

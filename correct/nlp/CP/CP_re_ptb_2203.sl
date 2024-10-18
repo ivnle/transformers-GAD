@@ -1,1 +1,0 @@
-Such a situation can wreak havoc as was shown by the emergency that developed in soybean futures trading this summer on the Chicago Board of Trade

@@ -1,1 +1,0 @@
-Ideal 's directors rejected that offer although they said they endorsed the merger proposal

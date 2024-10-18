@@ -1,1 +1,0 @@
-LIN Broadcasting dropped 5 1\/2 or 5 % to 107 1\/2

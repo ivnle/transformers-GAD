@@ -1,1 +1,0 @@
-Mr. Riccardo of Bear Stearns said that Schering-Plough Corp. 's expected profit rise of about 18 % to 20 % and Bristol-Meyers 's expected profit increase of about 13 % are largely because those companies are really managed well

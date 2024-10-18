@@ -1,1 +1,0 @@
-Many papers throughout the country are also faced with a slowdown in classified-ad spending a booming category for newspapers in recent years

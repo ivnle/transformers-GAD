@@ -1,1 +1,0 @@
-Though Boeing 's stock price was battered along with the rest of the market Friday it actually has risen over the last two weeks on the strength of new orders

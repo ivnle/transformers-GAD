@@ -1,1 +1,0 @@
-It is true that the best sitcoms do allow group differences to simmer yuppies vs. blue-collar Bostonians in Cheers children vs. adults in The Cosby Show

@@ -1,1 +1,0 @@
-Still some industry giants are expected to report continuing gains largely because so much of their business is outside commodity chemicals

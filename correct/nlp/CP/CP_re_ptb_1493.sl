@@ -1,1 +1,0 @@
-While the earnings picture confuses observers say the major forces expected to shape the industry in the coming year are clearer

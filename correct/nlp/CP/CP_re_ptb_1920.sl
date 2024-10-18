@@ -1,1 +1,0 @@
-It focused on building up its news bureaus around the world so as events took place it could go live quicker and longer than other networks

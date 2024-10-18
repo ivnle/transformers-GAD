@@ -1,1 +1,0 @@
-We are n't going to change agencies because of a change in London

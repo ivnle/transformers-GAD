@@ -1,1 +1,0 @@
-The companies hope for a final agreement by year-end

@@ -1,1 +1,0 @@
-Compaq 's new machines are considered a direct threat to start-up firms like Dynabook Inc. which introduced in June a computer that like Compaq 's uses an Intel 286 microprocessor and has a hard disk drive

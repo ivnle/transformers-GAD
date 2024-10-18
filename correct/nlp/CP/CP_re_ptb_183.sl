@@ -1,1 +1,0 @@
-Nasdaq volume Friday totaled 167.7 million shares which was only the fifth busiest day so far this year

@@ -1,1 +1,0 @@
-Even before Friday 's events Harvard University economist Benjamin Friedman was arguing that the Fed wo n't be able to live up to its tough words on eliminating inflation because of its responsibility to protect fragile financial markets banks and highly leveraged corporations

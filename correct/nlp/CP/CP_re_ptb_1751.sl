@@ -1,1 +1,0 @@
-If the role these four dissenters are assuming is a familiar one in modern Supreme Court history it also differs in an important way from recent history court watchers say

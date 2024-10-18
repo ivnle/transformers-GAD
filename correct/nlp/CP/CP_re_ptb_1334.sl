@@ -1,1 +1,0 @@
-T-bills probably are the right place to be he says

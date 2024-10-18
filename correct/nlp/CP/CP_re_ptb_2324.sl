@@ -1,1 +1,0 @@
-The best moments in the show occur at the beginning and the end and occasionally in the middle when Mr. Mason slips into his standup mode and starts meting out that old-fashioned Jewish mischief to other people as well as to himself

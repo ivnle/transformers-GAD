@@ -1,1 +1,0 @@
-A U.S.-made imitation under the title Almost Anything Goes flopped fast

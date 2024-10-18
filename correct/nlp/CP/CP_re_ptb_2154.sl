@@ -1,1 +1,0 @@
-But he has since run into opposition from the Treasury and the White House over that decision

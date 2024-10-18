@@ -1,1 +1,0 @@
-At Pontiac however the Camaro-Firebird decision appears to erase UAW hopes that GM would reopen the shuttered assembly plant that last built the plastic-bodied two-seater Pontiac Fiero model

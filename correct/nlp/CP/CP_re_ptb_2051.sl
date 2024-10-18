@@ -1,1 +1,0 @@
-The rights allow shareholders to purchase Quest stock at a discount if any person or group acquires more than 15 % of the company 's common stock or announces a tender offer

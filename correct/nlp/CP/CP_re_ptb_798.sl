@@ -1,1 +1,0 @@
-Samsung already owns Korea First Advertising Co. that country 's largest agency

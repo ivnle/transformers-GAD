@@ -1,1 +1,0 @@
-DWG is a holding company controlled by Mr. Posner

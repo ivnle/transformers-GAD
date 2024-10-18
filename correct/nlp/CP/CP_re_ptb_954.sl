@@ -1,1 +1,0 @@
-When she met the local press for the first time on Friday Mrs. Hills firmly reiterated the need for progress in removing barriers to trade in forest products satellites and supercomputers three areas targeted under the Super 301 provision of the 1988 trade bill

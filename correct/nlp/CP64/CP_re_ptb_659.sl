@@ -1,1 +1,0 @@
-These stocks eventually reopened

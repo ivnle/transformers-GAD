@@ -1,1 +1,0 @@
-Britain 's government plans to raise about 20 billion 31.05 billion from the sale of most of its giant water and electric utilities beginning next month

@@ -1,1 +1,0 @@
-Increases in Nuclear Regulatory Commission fees totaling 54 million

@@ -1,1 +1,0 @@
-Additionally the company said it filed with the Securities and Exchange Commission for the proposed offering of 10 million shares of common stock expected to be offered in November

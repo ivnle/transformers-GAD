@@ -1,1 +1,0 @@
-There are some very significant issues out there such as the fiscal deficit the trade deficit our relations with Japan that have to be the subject of major initiatives he said in an interview

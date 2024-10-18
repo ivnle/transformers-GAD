@@ -1,1 +1,0 @@
-Japan has been shipping steel to total about 4.5 % of the U.S. market compared with a quota of 5.9 %

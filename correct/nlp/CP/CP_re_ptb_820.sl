@@ -1,1 +1,0 @@
-Proceeds will be used to eliminate and restructure bank debt

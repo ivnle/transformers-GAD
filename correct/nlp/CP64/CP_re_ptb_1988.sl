@@ -1,1 +1,0 @@
-I got out in 1987

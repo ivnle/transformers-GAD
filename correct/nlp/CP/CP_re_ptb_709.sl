@@ -1,1 +1,0 @@
-Obviously we 'll take a close look at any situation in which we think the dealer-community obligations were n't met he said

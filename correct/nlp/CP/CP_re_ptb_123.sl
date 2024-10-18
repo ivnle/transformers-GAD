@@ -1,1 +1,0 @@
-Friday 's stock market sell-off came too late for many investors to act

@@ -1,1 +1,0 @@
-McCaw Cellular Communications for instance has offered to buy LIN Broadcasting as well as Metromedia 's New York City cellular telephone interests and in a separate transaction sell certain McCaw properties to Contel Cellular

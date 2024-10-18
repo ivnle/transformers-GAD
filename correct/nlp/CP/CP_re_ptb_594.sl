@@ -1,1 +1,0 @@
-Precision Castparts Corp. Portland Ore. will begin trading with the symbol PCP

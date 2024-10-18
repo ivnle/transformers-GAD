@@ -1,1 +1,0 @@
-There has been a swing of the pendulum back to the gas side he said

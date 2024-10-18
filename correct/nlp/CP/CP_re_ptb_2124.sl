@@ -1,1 +1,0 @@
-Analysts said they expected Upjohn 's profit to be flat or rise by only about 2 % to 4 % as compared with 89.6 million or 49 cents a share it earned a year ago

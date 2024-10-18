@@ -1,1 +1,0 @@
-Pennsylvania Higher Education Facilities Authority

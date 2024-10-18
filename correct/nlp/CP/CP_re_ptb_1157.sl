@@ -1,1 +1,0 @@
-Mr. Thygerson said he had planned to travel between the job in Denver and his San Diego home but has found the commute too difficult to continue

@@ -1,1 +1,0 @@
-Although the report which was released before the stock market opened did n't trigger the 190.58-point drop in the Dow Jones Industrial Average analysts said it did play a role in the market 's decline

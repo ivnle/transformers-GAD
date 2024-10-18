@@ -1,1 +1,0 @@
-It is forcing the Federal Reserve to ease its grip on credit and it took the wind out of a previously irrepressible dollar

@@ -1,1 +1,0 @@
-Especially gleeful were the short sellers who have been pounded by this year 's market climb

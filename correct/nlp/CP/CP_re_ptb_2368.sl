@@ -1,1 +1,0 @@
-Monsanto declined to comment

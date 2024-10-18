@@ -1,1 +1,0 @@
-Looking for a job was one of the most anxious periods of my life and is for most people

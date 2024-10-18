@@ -1,1 +1,0 @@
-This is n't quite a notebook I call it a phonebook he says

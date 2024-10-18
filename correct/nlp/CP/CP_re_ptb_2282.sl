@@ -1,1 +1,0 @@
-Avco Corp. received an 11.8 million Army contract for helicopter engines

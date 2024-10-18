@@ -1,1 +1,0 @@
-International Business Machines Corp. analysts say has been burned twice in trying to enter the laptop market and shows no signs of trying to get into notebooks anytime soon

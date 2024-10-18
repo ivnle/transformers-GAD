@@ -1,1 +1,0 @@
-Per capita personal income ranged from 11,116 in Mississippi to 23,059 in Connecticut

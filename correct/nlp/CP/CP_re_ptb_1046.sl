@@ -1,1 +1,0 @@
-Pool is hot in New York and Chicago he insists where upscale suit-and-tie places are adding tables

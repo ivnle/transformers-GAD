@@ -1,1 +1,0 @@
-Unlike the weekend before Black Monday the funds were n't swamped with heavy withdrawal requests

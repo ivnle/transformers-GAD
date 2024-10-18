@@ -1,1 +1,0 @@
-The eventual court decision could become a landmark in Dutch corporate law because the lawsuit ASKO plans to file would be the first to challenge the entire principle and practice of companies issuing voting preferred shares to management-controlled trusts to dilute voting power of common stockholders

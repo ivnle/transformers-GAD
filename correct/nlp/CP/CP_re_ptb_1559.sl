@@ -1,1 +1,0 @@
-The lagging gas price is not going to assist fourth quarter performance as many had expected

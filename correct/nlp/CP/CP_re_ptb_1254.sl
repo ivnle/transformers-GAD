@@ -1,1 +1,0 @@
-Mr. Granville says he would n't even think of buying until at least 600 to 700 stocks have hit 52-week lows about 100 stocks hit new lows Friday

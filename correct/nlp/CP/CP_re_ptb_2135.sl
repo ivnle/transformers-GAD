@@ -1,1 +1,0 @@
-The well flowed at a rate of 2.016 million cubic feet of gas a day through a 16 64-inch opening at depths between 5,782 and 5,824 feet

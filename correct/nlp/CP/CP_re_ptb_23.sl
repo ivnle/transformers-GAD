@@ -1,1 +1,0 @@
-That discrepancy hurts Quantum badly because its own plants cover only about half of its ethylene needs

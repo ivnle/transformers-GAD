@@ -1,1 +1,0 @@
-Mr. Spielvogel said he would n't launch a hostile bid

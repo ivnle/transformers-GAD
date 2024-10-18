@@ -1,1 +1,0 @@
-Moody 's Investors Service Inc. said it downgraded its rating to B-2 from Ba-3 on less than 20 million of this thrift 's senior subordinated notes

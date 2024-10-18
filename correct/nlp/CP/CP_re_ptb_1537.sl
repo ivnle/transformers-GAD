@@ -1,1 +1,0 @@
-A big reason for the chemical price retreat is overexpansion

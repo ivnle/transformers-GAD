@@ -1,1 +1,0 @@
-Retailers are just in disarray

@@ -1,1 +1,0 @@
-Professor Kolb says the original study titled Friday the 13th Part VII was published tongue-in-cheek

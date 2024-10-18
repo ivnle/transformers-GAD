@@ -1,1 +1,0 @@
-The privilege however has been limited in accordance with its plain language to protect the defendant in criminal matters only

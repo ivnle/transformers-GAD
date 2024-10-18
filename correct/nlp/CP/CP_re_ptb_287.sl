@@ -1,1 +1,0 @@
-Asked why senators were giving up so much New Mexico Sen. Pete Domenici the ranking Republican on the Senate Budget Committee said We 're looking like idiots

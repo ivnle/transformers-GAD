@@ -1,1 +1,0 @@
-I ca n't imagine that you 'll talk to anyone who wo n't tell you this is dynamite for Compaq and a stopper for everyone else says Gene Talsky president of Professional Marketing Management Inc

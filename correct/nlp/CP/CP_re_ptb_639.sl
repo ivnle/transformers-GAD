@@ -1,1 +1,0 @@
-Speculators are calling for a degree of liquidity that is not there in the market

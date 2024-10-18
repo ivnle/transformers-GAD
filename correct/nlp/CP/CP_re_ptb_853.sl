@@ -1,1 +1,0 @@
-Schwarzwaldklinik Black Forest Clinic a kind of German St Elsewhere set in a health spa is popular in Germany and has spread into France

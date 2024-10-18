@@ -1,1 +1,0 @@
-We want to make sure they know what they want before they come back said Doug Hammond the federal mediator who has been in contact with both sides since the strike began

@@ -1,1 +1,0 @@
-But the outcome of a legal dispute almost always turns on the facts

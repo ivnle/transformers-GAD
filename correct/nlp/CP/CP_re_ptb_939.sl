@@ -1,1 +1,0 @@
-But Mrs. Hills speaking at a breakfast meeting of the American Chamber of Commerce in Japan on Saturday stressed that the objective is not to get definitive action by spring or summer it is rather to have a blueprint for action

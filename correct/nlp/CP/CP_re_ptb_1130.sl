@@ -1,1 +1,0 @@
-More people are remaining independent longer presumably because they are better off physically and financially

@@ -1,1 +1,0 @@
-At the same time second-tier firms will continue to lose ground

@@ -1,1 +1,0 @@
-The company introduced a superconcentrated Lemon Cheer in Japan after watching the success of Attack

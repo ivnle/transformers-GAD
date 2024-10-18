@@ -1,1 +1,0 @@
-He expects Aldus to report earnings of 21 cents a share on revenues of 19.5 million for its third quarter compared with earnings of 30 cents a share on revenue of 20.4 million in the year-earlier period

@@ -1,1 +1,0 @@
-The Hong Kong Telecommunications warrants should be attractive to buyers in Europe the bankers added because the group is one of a handful of blue-chip stocks on the Hong Kong market that has international appeal

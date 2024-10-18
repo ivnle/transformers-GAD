@@ -1,1 +1,0 @@
-But I am relieved to see that you are beautiful and gentle and intelligent and a person of integrity

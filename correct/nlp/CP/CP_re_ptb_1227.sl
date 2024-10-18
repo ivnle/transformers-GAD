@@ -1,1 +1,0 @@
-CenTrust however touts the branch sale saying it would bring in 150 million and reduce the thrift 's assets to 6.7 billion from 9 billion

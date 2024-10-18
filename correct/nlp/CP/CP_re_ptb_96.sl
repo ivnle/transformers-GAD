@@ -1,1 +1,0 @@
-Some analysts expect oil prices to remain relatively stable in the months ahead leaving the future pace of inflation uncertain

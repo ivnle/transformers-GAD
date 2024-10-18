@@ -1,1 +1,0 @@
-A British Aerospace spokeswoman appeared unperturbed by the prospect of a fight with GEC for Ferranti Competition is the name of the game she said

@@ -1,1 +1,0 @@
-Though Dow has aggressively diversified into specialty chemicals and pharmaceuticals the company still has a big stake in polyethylene which is used in packaging and housewares

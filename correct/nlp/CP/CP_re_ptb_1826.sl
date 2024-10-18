@@ -1,1 +1,0 @@
-Meridian will pay a premium of 30.5 million to assume 2 billion in deposits

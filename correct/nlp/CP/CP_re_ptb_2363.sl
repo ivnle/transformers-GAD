@@ -1,1 +1,0 @@
-Monsanto Co. too is expected to continue reporting higher profit even though its sales of crop chemicals were hurt in the latest quarter by drought in northern Europe and the western U.S.

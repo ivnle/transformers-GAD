@@ -1,1 +1,0 @@
-A spokesman for Ahold said his company is confident of its own position and the propriety of the preferred-share issue

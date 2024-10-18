@@ -1,1 +1,0 @@
-The company may have chosen to market the product under the Cheer name since it 's already expanded its best-selling Tide into 16 different varieties including this year 's big hit Tide with Bleach

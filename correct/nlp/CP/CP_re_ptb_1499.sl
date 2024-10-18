@@ -1,1 +1,0 @@
-The company is beginning to ship a new software program that 's being heralded as a boon for owners of low-end printers sold by Apple

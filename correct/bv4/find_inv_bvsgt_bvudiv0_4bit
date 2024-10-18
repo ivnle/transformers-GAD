@@ -1,1 +1,0 @@
-(define-fun inv ((s (BitVec 4)) (t (BitVec 4))) (BitVec 4) (bvnot (bvshl s (bvor s (bvadd s s)))))

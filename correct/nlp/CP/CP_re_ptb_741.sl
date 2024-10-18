@@ -1,1 +1,0 @@
-Still he said it 's possible that the strike could last considerably longer

@@ -1,1 +1,0 @@
-It said it is considering all of its options in light of the decision including a possible appeal

@@ -1,1 +1,0 @@
-The interest-only securities were priced at 35 1\/2 to yield 10.72 %

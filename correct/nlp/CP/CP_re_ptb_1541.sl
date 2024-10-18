@@ -1,1 +1,0 @@
-Third-quarter profits from gasoline were weaker

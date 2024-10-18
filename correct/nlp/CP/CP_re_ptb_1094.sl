@@ -1,1 +1,0 @@
-Jerry Shrieves UAW local president said the facility was asked to draw up plans to continue working as a flex plant which could build several different types of products on short notice to satisfy demand

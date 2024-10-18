@@ -1,1 +1,0 @@
-9.86 % standard conventional fixed-rate mortgages 8.85 % 6\/2 rate capped one-year adjustable rate mortgages

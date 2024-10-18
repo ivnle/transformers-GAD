@@ -1,1 +1,0 @@
-It will also purchase 473 million in assets and receive 550 million in assistance from the RTC

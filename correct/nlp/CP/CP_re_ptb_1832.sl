@@ -1,1 +1,0 @@
-Pharmacia based in Upsala Sweden had charged in a lawsuit against MedChem that MedChem 's AMVISC product line infringes on the Pharmacia patent

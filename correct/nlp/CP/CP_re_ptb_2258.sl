@@ -1,1 +1,0 @@
-Analysts expect the new computer to wrest a hefty slice of business away from IBM the longtime leader in mainframes

@@ -1,1 +1,0 @@
-But at least part of the increase could have come from higher prices analysts said

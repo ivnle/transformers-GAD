@@ -1,1 +1,0 @@
-Spokesmen for Merieux and Connaught said they had n't been informed of specific areas of concern by either the government or Investment Canada but added they hope to have more information early this week

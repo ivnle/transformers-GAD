@@ -1,1 +1,0 @@
-No date has yet been set to get back to the bargaining table

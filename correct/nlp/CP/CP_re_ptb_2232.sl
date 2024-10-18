@@ -1,1 +1,0 @@
-He predicted that the November contract will reach 21.50 a barrel or more on the New York Mercantile Exchange

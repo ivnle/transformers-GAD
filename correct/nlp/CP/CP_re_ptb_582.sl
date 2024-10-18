@@ -1,1 +1,0 @@
-Weakness in the restaurant industry which is leaving retail space vacant exacerbates the problem for landlords

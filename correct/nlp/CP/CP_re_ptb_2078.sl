@@ -1,1 +1,0 @@
-Companies with daily newspapers in the Northeast will need the stable newsprint prices to ease damage from weak ad linage

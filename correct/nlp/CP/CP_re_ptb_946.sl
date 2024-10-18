@@ -1,1 +1,0 @@
-And some said it reflected the growing debate in Washington over pursuing free trade with Japan versus some kind of managed trade

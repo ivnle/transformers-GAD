@@ -1,1 +1,0 @@
-MedChem said the court 's ruling was issued as part of a first-phase trial in the patent-infringement proceedings and concerns only one of its defenses in the case

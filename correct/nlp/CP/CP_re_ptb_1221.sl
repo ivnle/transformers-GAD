@@ -1,1 +1,0 @@
-In the third quarter for instance CenTrust added 22.5 million to its general reserves

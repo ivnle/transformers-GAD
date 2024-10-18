@@ -1,1 +1,0 @@
-Boeing 's shares fell 4 Friday to close at 57.375 in composite trading on the New York Stock Exchange

@@ -1,1 +1,0 @@
-The Big Board 's Mr. Grasso said Our systemic performance was good

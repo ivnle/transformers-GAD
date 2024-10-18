@@ -1,1 +1,0 @@
-Everything said Pascal Antori an Akron Ohio plumbing contractor who was visiting Chicago and stopped by Fidelity Investments ' LaSalle Street office

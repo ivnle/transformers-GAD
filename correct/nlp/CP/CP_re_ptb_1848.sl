@@ -1,1 +1,0 @@
-Mr. Richardson would n't offer specifics regarding Atco 's proposed British project but he said it would compete for customers with two huge British power generating companies that would be formed under the country 's plan to privatize its massive water and electric utilities

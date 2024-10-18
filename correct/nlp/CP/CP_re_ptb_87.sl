@@ -1,1 +1,0 @@
-But Sung Won Sohn chief economist at Norwest Corp. in Minneapolis blamed rising energy prices and the annual autumn increase in car prices for most of the September jump

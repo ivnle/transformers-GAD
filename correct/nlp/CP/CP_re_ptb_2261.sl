@@ -1,1 +1,0 @@
-I 'd be disappointed if the company grew by less than 20 % next year said John Levinson an analyst at Goldman Sachs & Co

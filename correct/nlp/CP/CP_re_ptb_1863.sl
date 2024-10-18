@@ -1,1 +1,0 @@
-Richard Chamberlain dresses as a Mainland haole tucking in a Hawaiian shirt and rolling up its long sleeves

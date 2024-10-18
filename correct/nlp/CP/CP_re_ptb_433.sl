@@ -1,1 +1,0 @@
-The plunge in stock prices is happening at a time when the economy has already slowed down says economist Lawrence Chimerine of WEFA Group a Bala Cynwyd Pa. forecasting company

@@ -1,1 +1,0 @@
-Under these deals the RTC sells just the deposits and the healthy assets

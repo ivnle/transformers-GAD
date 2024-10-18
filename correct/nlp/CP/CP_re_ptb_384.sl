@@ -1,1 +1,0 @@
-Though the argument may have a common-sense ring to it even the S&L lawyers concede there 's little precedent to back their position

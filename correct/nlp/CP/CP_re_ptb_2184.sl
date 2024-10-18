@@ -1,1 +1,0 @@
-But some players were quick to seize the moment

@@ -1,1 +1,0 @@
-It probably would because few or none of the people upset by Mr. Mason 's remarks have bothered to distinguish between the substance of his comments and the fact that he used insulting language

@@ -1,1 +1,0 @@
-The main reason remains weather

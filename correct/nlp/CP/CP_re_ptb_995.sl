@@ -1,1 +1,0 @@
-Eventually Mr. Simpson and Mr. Herscu had a falling out over the direction of the company and Mr. Simpson said he resigned in 1988

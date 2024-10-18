@@ -1,1 +1,0 @@
-Nevertheless it clearly will take more than Friday 's 190-point decline to overcome the bitter feelings that have developed between lawmakers and White House Budget Director Richard Darman over the capital-gains fight

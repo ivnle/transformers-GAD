@@ -1,1 +1,0 @@
-Spain 's most popular mini-series this year was Juncal the story of an aging bullfighter

@@ -1,1 +1,0 @@
-We could sweep it under the rug and hide it but I 'm not going to do it he said in a speech last month

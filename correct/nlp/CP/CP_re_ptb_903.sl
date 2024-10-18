@@ -1,1 +1,0 @@
-And the facts as found by the various courts in these two lawsuits were different

@@ -1,1 +1,0 @@
-On European markets meanwhile spot prices of North Sea crudes were up 35 to 75 cents a barrel

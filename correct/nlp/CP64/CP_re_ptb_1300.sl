@@ -1,1 +1,0 @@
-John Kenneth Galbraith

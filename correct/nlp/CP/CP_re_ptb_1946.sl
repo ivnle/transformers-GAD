@@ -1,1 +1,0 @@
-I 'm not losing faith in the market said Boston lawyer Christopher Sullivan as he watched the market plunge on a big screen in front of a brokerage firm

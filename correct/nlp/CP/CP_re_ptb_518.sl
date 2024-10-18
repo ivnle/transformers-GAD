@@ -1,1 +1,0 @@
-ASKO says the Dutch-based international food retailer had n't reasonable grounds to issue preferred stock to a friendly trust and thus dilute the worth and voting power of ASKO and other shareholders

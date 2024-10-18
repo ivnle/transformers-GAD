@@ -1,1 +1,0 @@
-Of course the health of the economy will be threatened if the market continues to dive this week

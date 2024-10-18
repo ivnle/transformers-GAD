@@ -1,1 +1,0 @@
-You say you could have sold X percent of this product and Y percent of that recalls Theodore Semegran an analyst at Shearson Lehman Hutton who went through this exercise during his former career as a chemical engineer

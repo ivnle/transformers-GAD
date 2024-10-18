@@ -1,1 +1,0 @@
-On a day when negative takeover-related news did n't sit well with investors Commercial Intertech a maker of engineered metal parts said Haas & Partners advised it that it does n't plan to pursue its previously reported 27.50-a-share bid to buy the company

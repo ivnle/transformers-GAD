@@ -1,1 +1,0 @@
-Passenger car prices jumped 3.8 % in September after climbing 0.5 % in August and declining in the late spring and summer

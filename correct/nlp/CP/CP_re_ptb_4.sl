@@ -1,1 +1,0 @@
-But now prices have nose-dived and Quantum 's profit is plummeting

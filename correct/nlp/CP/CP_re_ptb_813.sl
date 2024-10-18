@@ -1,1 +1,0 @@
-The company said it planned to offer an undetermined number of common shares in exchange for the 585,000 shares of its preferred stock outstanding

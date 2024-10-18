@@ -1,1 +1,0 @@
-It also has a product-testing facility in California

@@ -1,1 +1,0 @@
-But a lawyer for Triland Investment Group the developer of Valley Ranch dismisses such arguments as a defense du jour

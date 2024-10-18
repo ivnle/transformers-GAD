@@ -1,1 +1,0 @@
-Revenue gained 5.3 % to 404.1 million from 383.8 million

@@ -1,1 +1,0 @@
-Mrs. Hills ' remarks did raise questions at least among some U.S. officials about what exactly her stance is on U.S. access to the Japanese semiconductor market

@@ -1,1 +1,0 @@
-Harvard Law School Professor Laurence Tribe says there is a generation-skipping flavor to current dissents

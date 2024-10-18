@@ -1,1 +1,0 @@
-That issue like racial tensions in New York City will have to cool down not heat up before it can simmer

@@ -1,1 +1,0 @@
-Charles Haworth a lawyer for Sunbelt says he plans to file a brief this week urging the district judge to dismiss the suits because Sunbelt 's liabilities exceeded its assets by about 2 billion when federal regulators closed it in August 1988

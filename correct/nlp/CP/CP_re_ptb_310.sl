@@ -1,1 +1,0 @@
-Change the collection of gasoline excise taxes to weekly from semimonthly effective next year

@@ -1,1 +1,0 @@
-In March regulators labeled CenTrust a troubled institution largely because of its big junk-bond holdings and its operating losses

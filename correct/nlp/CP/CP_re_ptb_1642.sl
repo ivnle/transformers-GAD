@@ -1,1 +1,0 @@
-Clark S. Spalsbury Jr

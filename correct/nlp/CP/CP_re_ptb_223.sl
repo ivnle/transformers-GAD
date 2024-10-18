@@ -1,1 +1,0 @@
-Institutional investors which had been selling stock throughout last week to lock in handsome gains made through the third quarter were calmer

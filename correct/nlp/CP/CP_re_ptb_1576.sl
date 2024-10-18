@@ -1,1 +1,0 @@
-Interprovincial transports about 75 % of all crude produced in western Canada and almost 60 % of Interprovincial 's total volume consists of light crude

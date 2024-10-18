@@ -1,1 +1,0 @@
-George Pierce chairman and chief executive officer said in an interview that earnings in the most recent quarter will be about two cents a share on revenue of just under 4 million

@@ -1,1 +1,0 @@
-The more a company relies on borrowed money the greater its sensitivity to an economic slowdown

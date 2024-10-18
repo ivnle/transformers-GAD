@@ -1,1 +1,0 @@
-Another Jeux Sans Frontieres where villagers from assorted European countries make fools of themselves performing pointless tasks is a hit in France

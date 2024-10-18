@@ -1,1 +1,0 @@
-Individual investors are still angry about program trading Mr. Quackenbush says

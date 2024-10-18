@@ -1,1 +1,0 @@
-Some early selling is likely to stem from investors and portfolio managers who want to lock in this year 's fat profits

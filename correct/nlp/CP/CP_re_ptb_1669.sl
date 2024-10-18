@@ -1,1 +1,0 @@
-Compaq 's notebooks by contrast may be the first in their weight class not to skimp on features found in much bigger machines

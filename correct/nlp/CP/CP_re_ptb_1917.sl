@@ -1,1 +1,0 @@
-The brief attention viewers give CNN could put it at a disadvantage as ratings data and advertising become more important to cable-TV channels

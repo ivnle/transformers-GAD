@@ -1,1 +1,0 @@
-Among classes for which details were available yields ranged from 8.78 % or 75 basis points over two-year Treasury securities to 10.05 % or 200 basis points over 10-year Treasurys

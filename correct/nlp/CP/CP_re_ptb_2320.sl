@@ -1,1 +1,0 @@
-Part of the problem is the tendency of all sitcoms ever since the didactic days of Norman Lear to preach about social issues

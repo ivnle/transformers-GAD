@@ -1,1 +1,0 @@
-However most people having been subjected to news footage of the devastated South Bronx look at the borough the way Tom Wolfe 's Sherman McCoy did in Bonfire of the Vanities as a wrong turn into hell

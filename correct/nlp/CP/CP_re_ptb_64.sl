@@ -1,1 +1,0 @@
-Petrolane is the second-largest propane distributor in the U.S.

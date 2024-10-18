@@ -1,1 +1,0 @@
-Margin debt was at a record high

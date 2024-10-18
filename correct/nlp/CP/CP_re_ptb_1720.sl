@@ -1,1 +1,0 @@
-A spokeswoman said Sulka operates a total of seven stores in the U.S. and overseas

@@ -1,1 +1,0 @@
-On the only other Friday the 13th this year the Dow Jones Industrial Average rose about four points

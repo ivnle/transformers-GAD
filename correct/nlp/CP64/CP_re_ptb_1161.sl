@@ -1,1 +1,0 @@
-Revenue totaled 5 million

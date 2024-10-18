@@ -1,1 +1,0 @@
-She said the trade imbalance was mainly due to macroeconomic factors and should n't be tackled by setting quantitative targets

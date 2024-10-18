@@ -1,1 +1,0 @@
-Tandem makes fault-tolerant computers machines with built-in backup systems that run stock exchanges networks of automatic tellers and other complex computer systems

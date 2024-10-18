@@ -1,1 +1,0 @@
-She added If they all were bullish I 'd really be upset

@@ -1,1 +1,0 @@
-Mr. Stookey said of the boom It 's going to last a whole lot longer than anybody thinks

@@ -1,1 +1,0 @@
-But for all its success CNN has hit a plateau

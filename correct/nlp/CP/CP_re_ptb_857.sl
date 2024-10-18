@@ -1,1 +1,0 @@
-The trend is pretty well established now that local programs are the most popular with American programs second says Brian Wenham a former director of programs for the British Broadcasting Corp

@@ -1,1 +1,0 @@
-He said that many black voters feel bitter about racial discrimination so they too support black candidates uncritically

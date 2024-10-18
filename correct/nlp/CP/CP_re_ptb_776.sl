@@ -1,1 +1,0 @@
-He was brought in to turn around the company

@@ -1,1 +1,0 @@
-While oil prices have been better than expected natural gas prices have been worse

@@ -1,1 +1,0 @@
-1 That your Sept. 28 editorial Kangaroo Committees was factually inaccurate and deliberately misleading

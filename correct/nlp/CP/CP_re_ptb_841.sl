@@ -1,1 +1,0 @@
-Attempts to produce pan-European programs have generally resulted in disappointment

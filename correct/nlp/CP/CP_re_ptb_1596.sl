@@ -1,1 +1,0 @@
-As your editorial rightly pointed out Samuel Pierce former HUD secretary and Lance Wilson Mr. Pierce 's former aide are currently being held up to scorn for taking the Fifth Amendment

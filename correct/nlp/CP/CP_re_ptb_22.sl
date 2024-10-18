@@ -1,1 +1,0 @@
-Meanwhile the price of ethylene the chemical building block of polyethylene has n't dropped nearly so fast

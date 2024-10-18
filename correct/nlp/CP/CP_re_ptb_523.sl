@@ -1,1 +1,0 @@
-SOUTH AFRICA FREED the ANC 's Sisulu and seven other political prisoners

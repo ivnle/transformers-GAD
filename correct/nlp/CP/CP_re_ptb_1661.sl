@@ -1,1 +1,0 @@
-But CBS News will extend its four-hour Nightwatch by 30 minutes and begin at 1:30 a.m

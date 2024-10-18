@@ -1,1 +1,0 @@
-8 3\/4 % one month 8 3\/4 % three months 8 9\/16 % six months 8 9\/16 % one year

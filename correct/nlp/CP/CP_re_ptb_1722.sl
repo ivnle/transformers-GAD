@@ -1,1 +1,0 @@
-When Justice William Brennan marks the start of his 34th year on the Supreme Court today the occasion will differ sharply from previous anniversaries of his tenure

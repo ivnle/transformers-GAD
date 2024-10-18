@@ -1,1 +1,0 @@
-They perhaps had concern that we were getting out of all these said Franklin President Duane H. Hall

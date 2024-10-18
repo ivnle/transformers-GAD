@@ -1,1 +1,0 @@
-When shelf space was cheap bigger was better says Hugh Zurkuhlen an analyst at Salomon Bros

@@ -1,1 +1,0 @@
-It can happen before you can turn around

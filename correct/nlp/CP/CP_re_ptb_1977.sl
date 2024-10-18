@@ -1,1 +1,0 @@
-Merrill Lynch ca n't survive without the little guy

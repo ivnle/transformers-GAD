@@ -1,1 +1,0 @@
-Certainly the recent drop in prices does n't mean Manhattan comes cheap

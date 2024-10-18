@@ -1,1 +1,0 @@
-A month ago Hertz of Park Ridge N.J. said that it would drop its marketing agreements at year end with Delta America West and Texas Air Corp. 's Continental Airlines and Eastern Airlines and that pacts with American Airlines UAL Inc 's United Airlines and USAir also would be ended sometime after Dec. 31

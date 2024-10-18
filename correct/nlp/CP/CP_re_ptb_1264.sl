@@ -1,1 +1,0 @@
-Thus she says if the Dow Jones Industrial Average dropped below 2450 It would just be a fluke

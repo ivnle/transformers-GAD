@@ -1,1 +1,0 @@
-Du Pont Co. is thought to have had steady profit growth in white pigments fibers and polymers

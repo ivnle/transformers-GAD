@@ -1,1 +1,0 @@
-A French knock-off of Dallas called Chateauvallon and set in a French vineyard had a good run in France which ended after the female lead was injured in a real-life auto accident

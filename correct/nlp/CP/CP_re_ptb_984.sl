@@ -1,1 +1,0 @@
-Not included in the bid are Bonwit Teller or B. Altman & Co. L.J. Hooker 's department-store chains

@@ -1,1 +1,0 @@
-2 That Mr. Lantos supported the rights of the witnesses to take the Fifth Amendment

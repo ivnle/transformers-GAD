@@ -1,1 +1,0 @@
-As of yesterday afternoon the redemptions represented less than 15 % of the total cash position of about 2 billion of Fidelity 's stock funds

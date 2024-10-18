@@ -1,1 +1,0 @@
-Everybody was trying to do the same thing at the same time

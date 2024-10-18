@@ -1,1 +1,0 @@
-Renaissance is keeping its money entirely in cash equivalents primarily U.S. Treasury bills

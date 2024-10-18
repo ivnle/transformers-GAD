@@ -1,1 +1,0 @@
-Sunbelt foreclosed on the ranch

@@ -1,1 +1,0 @@
-Syms Corp. completed the sale of its A. Sulka & Co. subsidiary a men 's luxury haberdashery to Luxco Investments

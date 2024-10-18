@@ -1,1 +1,0 @@
-Because the legislation has n't been completed President Bush has until midnight tonight to enact across-the-board spending cuts mandated by the Gramm-Rudman deficit-reduction law

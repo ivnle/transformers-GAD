@@ -1,1 +1,0 @@
-Adding to unsteadiness in the industry seasonal retail ad spending patterns in newspapers have been upset by shifts in ownership and general hardships within the retail industry

@@ -1,1 +1,0 @@
-Hooker Corp. parent of Bonwit Teller and B. Altman 's is mired in bankruptcy proceedings and Bloomingdale 's is for sale by its owner Campeau Corp

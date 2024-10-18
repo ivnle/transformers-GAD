@@ -1,1 +1,0 @@
-In a suit filed in federal court Thursday the S&L alleged that a disproportionate number of the bonds it purchased in 1984 declined in value

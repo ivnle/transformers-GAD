@@ -1,1 +1,0 @@
-The Bronx also figures in Bruce Jay Friedman 's latest novel which flashes back to the New York of the '50s

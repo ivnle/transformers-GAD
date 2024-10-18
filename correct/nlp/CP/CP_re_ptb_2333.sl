@@ -1,1 +1,0 @@
-Revenue is expected to be up modestly from the 26.5 million reported a year ago

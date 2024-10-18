@@ -1,1 +1,0 @@
-It said the sale would give it positive tangible capital of 82 million or about 1.2 % of assets from a negative 33 million as of Sept. 30 thus bringing CenTrust close to regulatory standards

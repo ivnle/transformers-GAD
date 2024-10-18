@@ -1,1 +1,0 @@
-If Mr. Mason had used less derogatory language to articulate his amateur analysis of the voting behavior of his fellow New Yorkers would the water be quite so hot

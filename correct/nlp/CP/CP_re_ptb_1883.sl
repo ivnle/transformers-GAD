@@ -1,1 +1,0 @@
-The University is seeking to block the acquisition of Connaught by foreign interests citing concerns about the amount of research that would be done in Canada

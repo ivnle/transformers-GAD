@@ -1,1 +1,0 @@
-In New York the company declined comment

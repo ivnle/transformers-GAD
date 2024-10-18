@@ -1,1 +1,0 @@
-The market seems increasingly disconnected from the rest of the nation

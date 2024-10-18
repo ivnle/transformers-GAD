@@ -1,1 +1,0 @@
-That share has remained at about 24 % since 1970

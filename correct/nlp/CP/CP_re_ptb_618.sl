@@ -1,1 +1,0 @@
-The agency said it reduced its rating on the thrift 's subordinated debt to B-2 from Ba-2 and will keep the debt under review for possible further downgrade

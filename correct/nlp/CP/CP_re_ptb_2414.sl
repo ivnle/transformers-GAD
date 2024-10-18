@@ -1,1 +1,0 @@
-In the year-ago quarter the designer and operator of cogeneration and waste heat recovery plants had net income of 326,000 or four cents a share on revenue of about 41.4 million

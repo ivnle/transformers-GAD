@@ -1,1 +1,0 @@
-Nevertheless the company 's reaction underscores the domino effect that a huge manufacturer such as Boeing can have on other parts of the economy

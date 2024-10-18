@@ -1,1 +1,0 @@
-The company said Mr. Wilson 's resignation was n't related to the sales shortfall

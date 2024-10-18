@@ -1,1 +1,0 @@
-The change is most dramatic for Justice Brennan the last survivor of the mid-1960s liberal majority under Chief Justice Earl Warren

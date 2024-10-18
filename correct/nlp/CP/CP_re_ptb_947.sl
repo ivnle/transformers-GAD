@@ -1,1 +1,0 @@
-Asked to compare her visit to Mr. Mosbacher 's Mrs. Hills replied I did n't hear every word he spoke but as a general proposition I think we have a very consistent trade strategy in the Bush administration

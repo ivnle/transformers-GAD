@@ -1,1 +1,0 @@
-Prevent companies that have made leveraged buy-outs from getting federal tax refunds resulting from losses caused by interest payments on debt issued to finance the buy-outs effective Aug. 2 1989

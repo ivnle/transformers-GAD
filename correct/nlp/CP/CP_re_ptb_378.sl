@@ -1,1 +1,0 @@
-Valley Federal with assets of 3.3 billion is based in Van Nuys

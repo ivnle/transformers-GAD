@@ -1,1 +1,0 @@
-Nevertheless he says a depression does n't appear likely

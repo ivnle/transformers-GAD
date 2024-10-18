@@ -1,1 +1,0 @@
-People were even hoarding bags he says

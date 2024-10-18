@@ -1,1 +1,0 @@
-The estimates for Du Pont range from 2.25 to 2.45 a share

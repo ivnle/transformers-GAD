@@ -1,1 +1,0 @@
-The consensus among economists is that it grew a much more sluggish 2.3 % in the third quarter of 1989 which ended two weeks ago

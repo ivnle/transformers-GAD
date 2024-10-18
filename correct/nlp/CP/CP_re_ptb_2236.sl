@@ -1,1 +1,0 @@
-Many traders foresee a tightening of near-term supplies particularly of high-quality crudes such as those produced in the North Sea and in Nigeria

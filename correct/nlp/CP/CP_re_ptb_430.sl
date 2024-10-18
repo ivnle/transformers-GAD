@@ -1,1 +1,0 @@
-Another big difference between 1987 and 1989 is n't so comforting

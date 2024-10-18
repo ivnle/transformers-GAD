@@ -1,1 +1,0 @@
-The missile venture the British Aerospace spokeswoman said is a needed response to the new environment in defense contracting

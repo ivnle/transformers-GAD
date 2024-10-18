@@ -1,1 +1,0 @@
-For his sixth novel Mr. Friedman tried to resuscitate the protagonist of his 1972 work About Harry Towns

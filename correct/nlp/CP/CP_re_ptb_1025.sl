@@ -1,1 +1,0 @@
-Lily 's grandmother no cookie baker excised the heads of disliked relatives from the family album and lugged around her perennial work-in-progress Philosophy for Women

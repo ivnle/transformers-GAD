@@ -1,1 +1,0 @@
-Some believe P&G 's interest in a superconcentrated detergent goes beyond the concern for the Japanese

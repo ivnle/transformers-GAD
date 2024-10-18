@@ -1,1 +1,0 @@
-As the 1992 economic integration approaches Europe 's cultural curators have taken to the ramparts against American cultural imperialism threatening to impose quotas against such pop invaders as Dallas Miami Vice and L.A. Law

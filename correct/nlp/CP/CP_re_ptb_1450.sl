@@ -1,1 +1,0 @@
-Traditional declined to estimate the amount of the loss and would n't say if it expects to show a profit for the year

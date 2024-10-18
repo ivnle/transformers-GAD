@@ -1,1 +1,0 @@
-When selling is so frenzied prices fall steeply and fast

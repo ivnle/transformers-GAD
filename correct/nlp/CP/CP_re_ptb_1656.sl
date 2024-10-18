@@ -1,1 +1,0 @@
-CBS Inc. is cutting The Pat Sajak Show down to one hour from its current 90 minutes

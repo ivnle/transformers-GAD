@@ -1,1 +1,0 @@
-This confusion effectively halted one form of program trading stock index arbitrage that closely links the futures and stock markets and has been blamed by some for the market 's big swings

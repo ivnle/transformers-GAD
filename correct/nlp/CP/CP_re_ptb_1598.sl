@@ -1,1 +1,0 @@
-3 That his committee does not deal with any possible criminal activity at HUD

@@ -1,1 +1,0 @@
-The financial-services industry was battered by the 1987 crash

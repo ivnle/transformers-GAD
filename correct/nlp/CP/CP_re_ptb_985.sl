@@ -1,1 +1,0 @@
-The offer covers the massive 1.8 million-square-foot Forest Fair Mall in Cincinnati the 800,000 square-foot Richland Fashion Mall in Columbia S.C. and the 700,000 square-foot Thornton Town Center mall in Thornton Colo

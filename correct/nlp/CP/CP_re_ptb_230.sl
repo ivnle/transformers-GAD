@@ -1,1 +1,0 @@
-The Nasdaq Financial Index of giant insurance and banking stocks dropped 2 % or 9.31 to 462.98

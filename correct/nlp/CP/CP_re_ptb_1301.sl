@@ -1,1 +1,0 @@
-This is the latest manifestation of the capacity of the financial community for recurrent insanity says Mr. Galbraith an economist

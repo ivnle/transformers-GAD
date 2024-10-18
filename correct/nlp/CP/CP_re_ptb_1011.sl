@@ -1,1 +1,0 @@
-Little Lily as Ms. Cunningham calls herself in the book really was n't ordinary

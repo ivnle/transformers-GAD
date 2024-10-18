@@ -1,1 +1,0 @@
-Under the latest offer 62.5 million 8 million of three-year warrants will be issued in London each giving buyers the right to buy one Hong Kong Telecommunications share at a price to be determined Friday

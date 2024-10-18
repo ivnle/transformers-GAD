@@ -1,1 +1,0 @@
-(define-fun f ((name String)) String (str.substr name 4 3))

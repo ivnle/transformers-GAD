@@ -1,1 +1,0 @@
-As small investors peppered their mutual funds with phone calls over the weekend big fund managers said they have a strong defense against any wave of withdrawals cash

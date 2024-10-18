@@ -1,1 +1,0 @@
-(define-fun f ((firstname String) (lastname String)) String (str.++ lastname (str.++ "," (str.++ " " (str.++ (str.at firstname 0) ".")))))

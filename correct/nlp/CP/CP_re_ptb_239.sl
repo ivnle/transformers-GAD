@@ -1,1 +1,0 @@
-The issues of companies with ties to the junk bond market also tumbled Friday

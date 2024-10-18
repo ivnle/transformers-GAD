@@ -1,1 +1,0 @@
-Margin calls since Friday have been higher than usual but reasonable a spokesman for Shearson Lehman Hutton Inc. said

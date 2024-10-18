@@ -1,1 +1,0 @@
-Some viewed his response that company directors review the dividend regularly as nothing more than the standard line from executives

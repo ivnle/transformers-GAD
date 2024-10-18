@@ -1,1 +1,0 @@
-Adds Bill Lempesis senior industry analyst for DataQuest a high-technology market research firm We basically think that these are very hot products

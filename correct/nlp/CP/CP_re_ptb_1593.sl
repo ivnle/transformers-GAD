@@ -1,1 +1,0 @@
-He used about 56 words defending the witnesses ' constitutional rights

@@ -1,1 +1,0 @@
-Vincent Bajakian manager of the 1.8 billion Wellington Fund added to his positions in Bristol-Myers Squibb Woolworth and Dun & Bradstreet Friday

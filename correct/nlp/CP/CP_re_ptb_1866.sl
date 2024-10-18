@@ -1,1 +1,0 @@
-Sorry the show does not even have the one redeeming quality of genuine local color

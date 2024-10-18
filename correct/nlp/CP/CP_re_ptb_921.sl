@@ -1,1 +1,0 @@
-The EC and Japan the U.S. 's largest steel suppliers have n't been filling their quotas to the full extent

@@ -1,1 +1,0 @@
-In a Madrid hotel room recently a viewer caught the end of a badly acted series about a fishing boat on Australia 's Great Barrier Reef only to be urged by the British announcer to stay tuned for the further adventures of Skippy the Kangaroo

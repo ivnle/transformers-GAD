@@ -1,1 +1,0 @@
-He may take the Fifth in a civil matter only if he has a good faith and justifiable belief that his testimony may subject him to criminal prosecution

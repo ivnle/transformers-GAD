@@ -1,1 +1,0 @@
-Gulf 's net worth after those transaction must be at least 150 million

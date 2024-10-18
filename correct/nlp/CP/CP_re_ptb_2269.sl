@@ -1,1 +1,0 @@
-Inland Steel Industries Inc. expects to report that third-quarter earnings dropped more than 50 % from the previous quarter as a result of reduced sales volume and increased costs

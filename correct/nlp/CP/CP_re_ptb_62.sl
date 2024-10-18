@@ -1,1 +1,0 @@
-Quantum is also tightening its grip on its one large business outside chemicals propane marketing

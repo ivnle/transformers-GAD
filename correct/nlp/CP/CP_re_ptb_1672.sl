@@ -1,1 +1,0 @@
-In recent months Compaq 's competition including Zenith Toshiba Corp. Tandy Corp. and NEC Corp. all have introduced portables that weigh approximately the same and that are called notebooks perhaps misleadingly

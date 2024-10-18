@@ -1,1 +1,0 @@
-Indeed a random check Friday did n't seem to indicate that the strike was having much of an effect on other airline operations

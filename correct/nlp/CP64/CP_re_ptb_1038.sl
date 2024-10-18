@@ -1,1 +1,0 @@
-This small Dallas suburb 's got trouble

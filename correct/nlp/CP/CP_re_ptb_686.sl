@@ -1,1 +1,0 @@
-But the build-up of S&P futures sell orders weighed on the market and the link with stocks began to fray again

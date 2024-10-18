@@ -1,1 +1,0 @@
-Until recently industry analysts believed decreases in retail ad spending had bottomed out and would in fact increase in this year 's third and fourth quarters

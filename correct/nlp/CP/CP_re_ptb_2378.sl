@@ -1,1 +1,0 @@
-Some analysts hedge their estimates for Quantum because it is n't known when the company will book certain one-time charges

@@ -1,1 +1,0 @@
-Source Fulton Prebon U.S.A Inc

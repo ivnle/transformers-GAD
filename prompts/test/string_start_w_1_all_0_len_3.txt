@@ -1,1 +1,0 @@
-Be a helpful assistant. Generate a random binary string of length 3? Directly show the generated string without explanation.

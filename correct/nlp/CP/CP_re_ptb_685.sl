@@ -1,1 +1,0 @@
-Buyers stepped in to the futures pit

@@ -1,1 +1,0 @@
-Moreover this year 's good inflation news may have ended last month when energy prices zoomed up 6.5 % after plunging 7.3 % in August

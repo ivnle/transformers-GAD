@@ -1,1 +1,0 @@
-The 77-year-old Sisulu sentenced to life in 1964 along with black nationalist Nelson Mandela for plotting to overthrow the government said equality for blacks in South Africa was in reach

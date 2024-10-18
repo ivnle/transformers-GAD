@@ -1,1 +1,0 @@
-But 70 % of the cable-television-equipped households that watch news do so between 6:30 p.m. and 7 p.m. the network discovered so CNN wants in

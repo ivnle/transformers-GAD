@@ -1,1 +1,0 @@
-While some in the U.S. contend that advertising is the bane of television here many believe that its absence is to blame for the European TV industry 's sluggish development

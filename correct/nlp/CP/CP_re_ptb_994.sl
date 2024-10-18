@@ -1,1 +1,0 @@
-Mr. Herscu proceeded to launch an ambitious but ill-fated 1 billion acquisition binge that included Bonwit Teller and B. Altman & Co. as well as majority positions in Merksamer Jewelers a Sacramento chain Sakowitz Inc. the Houston-based retailer and Parisian Inc. the Southeast department-store chain

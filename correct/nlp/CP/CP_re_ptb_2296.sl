@@ -1,1 +1,0 @@
-In addition some of Mr. Mason 's critics have implied that his type of ethnic humor is itself a form of racism

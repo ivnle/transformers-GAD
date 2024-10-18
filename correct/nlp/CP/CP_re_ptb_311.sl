@@ -1,1 +1,0 @@
-Restrict the ability of real estate owners to escape taxes by swapping one piece of property for another instead of selling it for cash

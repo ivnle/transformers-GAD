@@ -1,1 +1,0 @@
-Prices for the machine which can come in various configurations are 2 million to 10 million

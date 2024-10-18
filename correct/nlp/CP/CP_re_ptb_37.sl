@@ -1,1 +1,0 @@
-A quick turnaround is crucial to Quantum because its cash requirements remain heavy

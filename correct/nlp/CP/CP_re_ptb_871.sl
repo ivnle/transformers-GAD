@@ -1,1 +1,0 @@
-The financially struggling station offers programs obviously made available cheaply from its boss 's other ventures

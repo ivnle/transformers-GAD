@@ -1,1 +1,0 @@
-Sunbelt and the FSLIC argued to the Fifth U.S. Circuit Court of Appeals that there will never be any assets with which to satisfy a judgment against Sunbelt Savings nor any means to collect from any other party including FSLIC

@@ -1,1 +1,0 @@
-During this time small investors began ringing their brokers wondering whether another crash had begun

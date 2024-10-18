@@ -1,1 +1,0 @@
-Of the remaining 20 % needed the steel-quota negotiations allocate about 15 % to foreign suppliers with the difference supplied mainly by Canada which is n't included in the quota program

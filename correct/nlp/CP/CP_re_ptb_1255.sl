@@ -1,1 +1,0 @@
-Most people he says have no idea what a massacre pattern looks like

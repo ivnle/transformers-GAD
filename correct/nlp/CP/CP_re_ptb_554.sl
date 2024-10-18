@@ -1,1 +1,0 @@
-In the occupied lands underground leaders of the Arab uprising rejected a U.S. plan to arrange Israeli-Palestinian talks as Shamir opposed holding such discussions in Cairo

@@ -1,1 +1,0 @@
-He said that Jews have contributed more to black causes over the years than vice versa

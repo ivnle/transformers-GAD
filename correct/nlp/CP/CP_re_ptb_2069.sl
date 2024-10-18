@@ -1,1 +1,0 @@
-The year-earlier period included a one-time gain of 3.5 million or four cents a share

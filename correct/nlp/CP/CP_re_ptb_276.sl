@@ -1,1 +1,0 @@
-Although I am encouraged by the Senate action said Chairman Dan Rostenkowski D. Ill of the House Ways and Means Committee it is uncertain whether a clean bill can be achieved in the upcoming conference with the Senate

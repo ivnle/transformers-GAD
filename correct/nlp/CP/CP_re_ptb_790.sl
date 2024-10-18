@@ -1,1 +1,0 @@
-The account had billed about 6 million in 1988 according to Leading National Advertisers

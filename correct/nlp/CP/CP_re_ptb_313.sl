@@ -1,1 +1,0 @@
-The measure also includes spending cuts and increases in federal fees

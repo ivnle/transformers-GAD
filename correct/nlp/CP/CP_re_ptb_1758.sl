@@ -1,1 +1,0 @@
-Dow Chemical Co.

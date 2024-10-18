@@ -1,1 +1,0 @@
-Sanford Sigoloff chief executive of L.J. Hooker said yesterday in a statement that he has not yet seen the bid but that he would review it and bring it to the attention of the creditors committee

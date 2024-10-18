@@ -1,1 +1,0 @@
-Searle continued to operate in the red through the first half of the year but Monsanto has said it expects Searle to post a profit for all of 1989

@@ -1,1 +1,0 @@
-I disagree with the statement by Mr. Lantos that one should not draw an adverse inference against former HUD officials who assert their Fifth Amendment privilege against self-incrimination in congressional hearings

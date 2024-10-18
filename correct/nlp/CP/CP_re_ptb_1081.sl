@@ -1,1 +1,0 @@
-GM officials want to get their strategy to reduce capacity and the work force in place before those talks begin

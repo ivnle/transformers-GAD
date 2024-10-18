@@ -1,1 +1,0 @@
-Nasdaq 's Small Order Execution System worked beautifully as did the automated system for larger trades according to Mr. Hardiman

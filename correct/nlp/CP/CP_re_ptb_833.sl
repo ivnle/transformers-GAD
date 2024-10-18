@@ -1,1 +1,0 @@
-A Flemish game show has as its host a Belgian pretending to be Italian

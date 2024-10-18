@@ -1,1 +1,0 @@
-But those machines are still considered novelties with keyboards only a munchkin could love and screens to match

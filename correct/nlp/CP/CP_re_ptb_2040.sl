@@ -1,1 +1,0 @@
-My unemployment insurance ran out before I found a job I found cutbacks and layoffs in many companies

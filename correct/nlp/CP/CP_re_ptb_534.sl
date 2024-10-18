@@ -1,1 +1,0 @@
-The president at a news conference Friday also renewed a call for the ouster of Panama 's Noriega

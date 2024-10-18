@@ -1,1 +1,0 @@
-The stock having lost nearly a quarter of its value since Sept. 1 closed at 34.375 share down 1.125 in New York Stock Exchange composite trading Friday

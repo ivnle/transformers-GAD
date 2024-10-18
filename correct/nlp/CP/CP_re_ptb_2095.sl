@@ -1,1 +1,0 @@
-As a result major new products are having significant impact even on a company with very large revenues Mr. Riccardo said

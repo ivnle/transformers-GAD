@@ -1,1 +1,0 @@
-It seems to me that a story like this breaks just before every important Cocom meeting said a Washington lobbyist for a number of U.S. computer companies

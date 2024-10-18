@@ -1,1 +1,0 @@
-Compaq 's machines include the 3 1\/2-inch floppy disk drive a backlit screen that is only 1\/4-inch thick and an internal expansion slot for a modem in other words almost all the capabilities of a typical office machine

@@ -1,1 +1,0 @@
-The EC steel industry which has been coping with strong European demand has been supplying about 5 % of the U.S. market compared with recent quotas of about 6.7 %

@@ -1,1 +1,0 @@
-Ten points of the drop occurred during the last 45 minutes of trading

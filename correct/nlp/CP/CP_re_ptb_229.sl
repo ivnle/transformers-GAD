@@ -1,1 +1,0 @@
-The Nasdaq 100 Index of the largest nonfinancial issues including the big OTC technology issues tumbled 4.2 % or 19.76 to 449.33

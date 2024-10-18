@@ -1,1 +1,0 @@
-Looking ahead to other commodity markets this week

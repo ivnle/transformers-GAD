@@ -1,1 +1,0 @@
-Columbia Laboratories Inc. Miami began trading with the symbol COB

@@ -1,1 +1,0 @@
-The releases announced last week by President de Klerk were viewed as Pretoria 's tacit legalization of the ANC

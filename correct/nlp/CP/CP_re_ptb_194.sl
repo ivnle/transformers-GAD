@@ -1,1 +1,0 @@
-Jeremiah Mullins the OTC trading chief at Dean Witter Reynolds in New York said proudly that his company executed every order it received by the close of trading

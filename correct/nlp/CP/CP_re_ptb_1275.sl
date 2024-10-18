@@ -1,1 +1,0 @@
-A hundred billion dollars in stock was subject to it

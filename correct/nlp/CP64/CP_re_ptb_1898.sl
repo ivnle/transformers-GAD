@@ -1,1 +1,0 @@
-You ca n't live on that

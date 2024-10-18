@@ -1,1 +1,0 @@
-So far the bubbles have been few and far between

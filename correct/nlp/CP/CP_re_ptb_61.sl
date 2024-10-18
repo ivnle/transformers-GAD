@@ -1,1 +1,0 @@
-By lifting ethylene production the expansion will also lower the company 's raw material costs

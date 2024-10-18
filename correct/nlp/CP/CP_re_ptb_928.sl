@@ -1,1 +1,0 @@
-The balance is supplied by a host of smaller exporters such as Australia and Venezuela

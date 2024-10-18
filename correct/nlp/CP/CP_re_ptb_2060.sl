@@ -1,1 +1,0 @@
-For instance Gannett Co. posted an 11 % gain in net income as total ad pages dropped at USA Today but advertising revenue rose because of a higher circulation rate base and increased rates

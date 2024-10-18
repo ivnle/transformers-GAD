@@ -1,1 +1,0 @@
-Terms were n't disclosed

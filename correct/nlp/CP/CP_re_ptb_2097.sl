@@ -1,1 +1,0 @@
-While that 's not spectacular Neil Sweig an analyst with Prudential Bache said that the rate of growth will look especially good as compared to other companies if the economy turns downward

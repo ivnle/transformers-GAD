@@ -1,1 +1,0 @@
-The Miami market is coming back strong after a tough couple of years when Knight-Ridder was starting up a Hispanic edition and circulation was falling said Bruce Thorp an analyst for Provident National Bank

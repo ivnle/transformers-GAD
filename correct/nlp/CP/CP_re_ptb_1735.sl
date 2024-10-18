@@ -1,1 +1,0 @@
-Each time the court revisits an issue the justices will be forced by a dissent to reconsider the fundamental questions and to rethink the result he said

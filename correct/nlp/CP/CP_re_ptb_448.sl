@@ -1,1 +1,0 @@
-The economy does however depend on the confidence of businesses consumers and foreign investors

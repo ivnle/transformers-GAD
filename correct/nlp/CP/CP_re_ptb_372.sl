@@ -1,1 +1,0 @@
-Valley Federal Savings & Loan Association said Imperial Corp. of America withdrew from regulators its application to buy five Valley Federal branches leaving the transaction in limbo

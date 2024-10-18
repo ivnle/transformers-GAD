@@ -1,1 +1,0 @@
-The planned electric utility sale scheduled for next year is alone expected to raise 13 billion making it the world 's largest public offering

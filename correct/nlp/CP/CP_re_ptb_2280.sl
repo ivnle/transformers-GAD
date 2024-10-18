@@ -1,1 +1,0 @@
-General Dynamics Corp. received a 29 million Air Force contract for electronic-warfare training sets

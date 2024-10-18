@@ -1,1 +1,0 @@
-Weatherford currently has approximately 11.1 million common shares outstanding

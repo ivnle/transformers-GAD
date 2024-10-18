@@ -1,1 +1,0 @@
-The U.S. had about an extra 2 % of the domestic steel market to give to foreign suppliers in its quota talks

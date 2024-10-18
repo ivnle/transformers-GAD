@@ -1,1 +1,0 @@
-The problem which the Journal so rightly pointed out in a number of articles is not the likes of Mr. Lantos who after all is really a bit player on the stage but the attempt by Congress to enhance itself into a quasi-parliamentary\/judicial body

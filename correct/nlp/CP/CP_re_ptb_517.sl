@@ -1,1 +1,0 @@
-Should the courts uphold the validity of this type of defense ASKO will then ask the court to overturn such a vote-diluting maneuver recently deployed by Koninklijke Ahold NV

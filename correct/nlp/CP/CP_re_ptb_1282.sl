@@ -1,1 +1,0 @@
-He expects the downturn to carry the Dow Jones Industrial Average down to around 2000 sometime next year

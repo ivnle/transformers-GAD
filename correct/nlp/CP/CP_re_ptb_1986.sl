@@ -1,1 +1,0 @@
-And I can tell you that a high roller is n't going to come in tomorrow and buy a Chrysler TC by Maserati

@@ -1,1 +1,0 @@
-Strikes and mismanagement were cited and Premier Ryzhkov warned of tough measures

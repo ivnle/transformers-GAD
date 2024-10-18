@@ -1,1 +1,0 @@
-Unfortunately by my rough guess he used better than 5,000 words heaping scorn on the witnesses for exercising the Fifth

@@ -1,1 +1,0 @@
-I will not enter into an agreement that stipulates to a percentage of the market

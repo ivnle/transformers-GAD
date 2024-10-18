@@ -1,1 +1,0 @@
-Curb junk bonds by ending tax benefits for certain securities such as zero-coupon bonds that postpone cash interest payments

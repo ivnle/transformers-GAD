@@ -1,1 +1,0 @@
-In the fiscal first half net was 7 million or 34 cents a share up from the year-earlier 3.1 million or 15 cents a share

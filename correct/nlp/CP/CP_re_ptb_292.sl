@@ -1,1 +1,0 @@
-In addition the bill dropped a plan to make permanent a 3 % excise tax on long-distance telephone calls

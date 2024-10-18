@@ -1,1 +1,0 @@
-Mr. Awad however worries that the market could go down 800 or 900 points in the next few days

@@ -1,1 +1,0 @@
-One annual co-production the three-hour-long Eurovision Song Contest featuring soft-rock songs from each of 20 European countries has been described as the world 's most boring TV show

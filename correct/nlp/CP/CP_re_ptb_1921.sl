@@ -1,1 +1,0 @@
-It filled its daily schedule with newscasts called Daybreak Daywatch Newsday and Newsnight but the shows varied little in content personality or look

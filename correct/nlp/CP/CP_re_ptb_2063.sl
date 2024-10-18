@@ -1,1 +1,0 @@
-At USA Today ad pages totaled 785 for the quarter down 9.2 % from the 1988 period which was helped by increased ad spending from the Summer Olympics

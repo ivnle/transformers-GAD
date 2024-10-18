@@ -1,1 +1,0 @@
-Also supporting prices are expectations that the Soviet Union will place substantial buying orders over the next few months

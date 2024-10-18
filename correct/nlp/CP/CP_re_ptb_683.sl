@@ -1,1 +1,0 @@
-He camped out at a high-tech nerve center on the floor of the Big Board where he could watch updates on prices and pending stock orders

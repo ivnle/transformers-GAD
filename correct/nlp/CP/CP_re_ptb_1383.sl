@@ -1,1 +1,0 @@
-Not really insurance this tactic was designed to soften the blow of declining stock prices and generate an offsetting profit by selling waves of S&P futures contracts

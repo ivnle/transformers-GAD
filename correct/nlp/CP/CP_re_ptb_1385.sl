@@ -1,1 +1,0 @@
-Even without portfolio insurance market conditions were grim Friday money managers said

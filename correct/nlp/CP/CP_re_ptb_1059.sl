@@ -1,1 +1,0 @@
-The Treasury plans to raise 175 million in new cash Thursday by selling about 9.75 billion of 52-week bills and redeeming 9.58 billion of maturing bills

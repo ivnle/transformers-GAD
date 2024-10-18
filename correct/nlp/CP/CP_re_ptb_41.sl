@@ -1,1 +1,0 @@
-Some analysts saw the payment as an effort also to dispel takeover speculation

@@ -1,1 +1,0 @@
-The company said that as part of its agreement with the EPA it made certain voluntary undertakings with respect to intercorporate transactions entered into after the reorganization

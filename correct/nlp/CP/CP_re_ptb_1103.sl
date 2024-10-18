@@ -1,1 +1,0 @@
-So are Indiana Ohio and Michigan

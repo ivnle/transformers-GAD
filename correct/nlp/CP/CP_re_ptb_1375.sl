@@ -1,1 +1,0 @@
-Stocks as measured by the Standard & Poor 's 500-stock index have been stellar performers this year rising 27.97 % before Friday 's plunge excluding dividends

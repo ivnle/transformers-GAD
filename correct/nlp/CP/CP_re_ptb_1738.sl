@@ -1,1 +1,0 @@
-Associates of 81-year-old Justice Marshall say he was depressed about the court 's direction last spring but is feisty about his role and determined to speak out against the court 's cutbacks in civil rights

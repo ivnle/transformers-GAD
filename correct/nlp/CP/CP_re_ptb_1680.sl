@@ -1,1 +1,0 @@
-Some critics however say its ability to run commonplace programs is restricted by a limited memory

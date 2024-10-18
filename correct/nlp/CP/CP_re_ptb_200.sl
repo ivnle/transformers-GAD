@@ -1,1 +1,0 @@
-On Friday some market makers were selling again traders said

@@ -1,1 +1,0 @@
-It is bigger faster and more profitable than the news divisions of any of the three major broadcast networks

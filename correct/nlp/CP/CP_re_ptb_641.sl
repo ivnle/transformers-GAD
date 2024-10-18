@@ -1,1 +1,0 @@
-Then in a lightning plunge the Dow Jones industrials in barely an hour surrendered about a third of their gains this year chalking up a 190.58-point or 6.9 % loss on the day in gargantuan trading volume

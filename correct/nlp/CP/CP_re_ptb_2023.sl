@@ -1,1 +1,0 @@
-The partnership runs the risk that it may not get the approvals for development but in return it can buy land at wholesale rather than retail prices which can result in sizable savings said Bruce Karatz president and chief executive officer of Kaufman & Broad

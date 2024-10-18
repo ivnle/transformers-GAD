@@ -1,1 +1,0 @@
-In July the company stunned Wall Street with the prediction that growth in the personal computer business overall would be only 10 % in 1990 a modest increase when compared with the sizzling expansion of years past

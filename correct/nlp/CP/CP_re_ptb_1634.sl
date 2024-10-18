@@ -1,1 +1,0 @@
-Baxter v. Palmingiano 425 U.S. 308 1976

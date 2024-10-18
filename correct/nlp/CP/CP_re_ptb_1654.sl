@@ -1,1 +1,0 @@
-The studies on closing the unit could n't be completed until now he said

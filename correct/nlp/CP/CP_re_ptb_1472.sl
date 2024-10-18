@@ -1,1 +1,0 @@
-The monthly increase is the highest recorded in the past four years

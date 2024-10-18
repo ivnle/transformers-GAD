@@ -1,1 +1,0 @@
-A 190-point drop is n't likely to make much of a dent multiply that a few times over though and it will

@@ -1,1 +1,0 @@
-A new president was n't named

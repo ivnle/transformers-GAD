@@ -1,1 +1,0 @@
-Commenting on the results for the quarter Mr. Treybig said the strength of the company 's domestic business came as a surprise to him noting that sales in every region of the U.S. exceeded our plan

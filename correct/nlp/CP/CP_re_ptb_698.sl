@@ -1,1 +1,0 @@
-It 's going to bring the debate right back to the forefront

@@ -1,1 +1,0 @@
-The following U.S. Treasury corporate and municipal offerings are tentatively scheduled for sale this week according to Dow Jones Capital Markets Report

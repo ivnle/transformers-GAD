@@ -1,1 +1,0 @@
-Individuals can always have their hands slapped

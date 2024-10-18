@@ -1,1 +1,0 @@
-The core rate is not really out of line

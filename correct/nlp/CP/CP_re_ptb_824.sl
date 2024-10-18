@@ -1,1 +1,0 @@
-But perhaps even more remarkable the three-hour-show Wetten Dass Make a Bet regularly wins the top slot in the country 's TV ratings sometimes drawing as many as 50 % of West German households

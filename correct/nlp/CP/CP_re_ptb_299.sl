@@ -1,1 +1,0 @@
-The deficit reduction bill contains 5.3 billion in tax increases in fiscal 1990 and 26 billion over five years

@@ -1,1 +1,0 @@
-They expected a new barrage of demands that Japan do something quickly to reduce its trade surplus with the U.S.

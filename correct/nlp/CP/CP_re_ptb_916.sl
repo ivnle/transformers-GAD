@@ -1,1 +1,0 @@
-The U.S. termed its plan a trade liberalization program despite the fact that it is merely an extension

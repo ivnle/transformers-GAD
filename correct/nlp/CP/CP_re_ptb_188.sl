@@ -1,1 +1,0 @@
-The subject is a sore one for Nasdaq and its market-making companies which were widely criticized two years ago following complaints from investors who could n't reach their brokers or trade in the chaos of the crash

@@ -1,1 +1,0 @@
-Mr. Pierce said Elcotel should realize a minimum of 10 of recurring net earnings for each machine each month

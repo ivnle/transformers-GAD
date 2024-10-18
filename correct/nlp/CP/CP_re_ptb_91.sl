@@ -1,1 +1,0 @@
-Inflation unquestionably has fallen back from its torrid pace last winter when a steep run-up in world oil prices sent the index surging at double-digit annual rates

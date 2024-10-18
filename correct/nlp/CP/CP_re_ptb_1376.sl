@@ -1,1 +1,0 @@
-Even Friday 's slump leaves investors ahead more than 20 % well above the annual average for stocks over several decades

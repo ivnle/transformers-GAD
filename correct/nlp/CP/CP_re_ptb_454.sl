@@ -1,1 +1,0 @@
-On the bottom line the most comforting fact for the economic outlook is that we 've been through this before

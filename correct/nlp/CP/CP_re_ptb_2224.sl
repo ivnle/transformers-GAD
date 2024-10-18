@@ -1,1 +1,0 @@
-Barring a cold snap or other crop problems in the growing areas downward pressure on prices is likely to continue into January when harvesting and processing of oranges in Florida reach their peak the analyst said
