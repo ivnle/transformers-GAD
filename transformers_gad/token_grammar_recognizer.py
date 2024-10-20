@@ -237,6 +237,8 @@ class IncrementalTokenRecognizer(AbsTokenRecognizer):
                     logging.debug(f"The decoded string is {decoded_string}")
         return accept_state
 
+    def reset(self):
+        self.last_size = 0
 
 def check_token_acceptance_in_trie(trie, stacks, grammar, eos_token_id, accepts):
 

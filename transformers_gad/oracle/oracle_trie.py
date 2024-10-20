@@ -1,6 +1,6 @@
 from graphviz import Digraph
 import torch
-import pickle
+import torch.nn.functional as F
 
 class TrieNode:
     def __init__(self, token_id=None, token=None, raw_likelihood=None, raw_score=None, tokenizer=None):
@@ -10,15 +10,71 @@ class TrieNode:
         self.token = token
         self.raw_likelihood = raw_likelihood
         self.raw_score = raw_score
+        
+        # The default approximation of EFG
         self.success_rate = 1
 
-        if tokenizer is None:
-            self.eos_token_id = 2
-        else:
-            self.eos_token_id = tokenizer.eos_token_id
-
+        self.eos_token_id = tokenizer.eos_token_id if tokenizer else 2
         self.is_end_of_sequence = False
         self.is_start_of_sequence = False
+
+    def insert(self, child_node):
+        """
+        Insert child_node into the children dictionary        
+        """
+        if child_node.token_id not in self.children:
+            self.children[child_node.token_id] = child_node
+            child_node.parent = self 
+            
+            if child_node.token_id == self.eos_token_id:
+                child_node.is_end_of_sequence = True
+            
+            # update the success rate of the parent node
+            return self.update_success_rate(self)
+        else:
+            return 0
+
+    def insert_accepted_tokens(self, scores, acceptance):
+        """
+        Create node from acceptance and scores and 
+        insert as children of self node 
+        """
+        likelihoods = F.softmax(scores, dim=-1)
+
+        for batch_index in range(acceptance.size(0)):
+            accepted_tokens = acceptance[batch_index].nonzero().squeeze(-1)
+        
+            for token_id in accepted_tokens:
+                if token_id not in self.children:
+                    token = self.grammar_constraint.tokenizer.decode([token_id])
+                    raw_likelihood = likelihoods[batch_index, token_id].item()
+                    raw_score = scores[batch_index, token_id].item()
+
+                    child_node = TrieNode(
+                        token_id=token_id, token=token, 
+                        raw_likelihood=raw_likelihood, 
+                        raw_score=raw_score)
+
+                    self.insert(child_node)
+
+    def get_success_rate(self, token_id):
+        """
+        Return Approximated Expected Future Grammaticality of the token_id
+        """
+        if token_id in self.children.keys():
+            return self.children[token_id].success_rate
+        else:
+            return 1
+
+    def search_token(self, token_id):
+        """
+        Check if the self node has a children with token_id
+        Return the children node if it exists, return None otherwise
+        """
+        if token_id in self.children.keys():
+            return self.children[token_id]
+        else:
+            return None
 
     def __repr__(self):
         parent_token_id = 'None (Root Node)' if self.parent is None else self.parent.token_id
@@ -30,22 +86,6 @@ class Trie:
     def __init__(self):
         self.root = TrieNode()
         self.root.is_start_of_sequence = True
-
-    def insert(self, parent_node: TrieNode, child_node: TrieNode):
-        """
-        Insert child_node into parent_node's children dictionary        
-        """
-        if child_node.token_id not in parent_node.children:
-            parent_node.children[child_node.token_id] = child_node
-            child_node.parent = parent_node 
-            
-            if child_node.token_id == self.eos_token_id:
-                child_node.is_end_of_sequence = True
-            
-            # update the success rate of the parent node
-            return self.update_success_rate(parent_node)
-        else:
-            return 0
 
     def update_success_rate(self, node: TrieNode):
         """
@@ -82,30 +122,6 @@ class Trie:
                     f"last parent found is {found_parent}; current {token_id} not found in the trie at time step {time_step}")
                 return None
         return current_parent
-
-    def search_token_from_parent(self, parent_node, candidate_token_id):
-        """
-        Check if the parent_node has a children with candidate_token_id
-        Return the children node if it exists, return None otherwise
-        """
-        if parent_node is None:
-            return None
-        if candidate_token_id in parent_node.children.keys():
-            return parent_node.children[candidate_token_id]
-        else:
-            return None
-
-    def get_success_rate_for_candidate_token(self, parent_node, candidate_token_id):
-        """
-        Return Approximated Expected Future Grammaticality 
-        of the candidate_token_id from the parent_node
-        """
-        if parent_node is None:
-            return 1
-        if candidate_token_id in parent_node.children.keys():
-            return parent_node.children[candidate_token_id].success_rate
-        else:
-            return 1
 
     def search(self, sequence):
         """
@@ -170,64 +186,3 @@ class Trie:
         # Recursively call print_all_nodes for all children
         for child_node in node.children.values():
             self.print_all_nodes(child_node, depth + 1)
-
-def create_nodes_from_history(detailed_history):
-    nested_nodes = []
-    for time_step in detailed_history:
-        step_nodes = []
-        for batch in time_step:
-            batch_nodes = []
-            for node_info in batch:
-                node = TrieNode(token_id=node_info['token_id'], token=node_info['token'], raw_likelihood=node_info['raw_likelihood'], raw_score=node_info['raw_score'])
-                batch_nodes.append(node)
-            step_nodes.append(batch_nodes)
-        nested_nodes.append(step_nodes)
-    return nested_nodes
-
-def get_selected_token_id_at_time_step(tokens, time_step):
-    # Assuming there is only one batch TODO: handle multiple batches
-    if time_step < len(tokens[0]):
-        return tokens[0][time_step].item()
-    else:
-        raise ValueError(f"Time step {time_step} is out of range for the given tokens")
-
-def insert_nodes_by_generated_tokens(trie, generated_tokens, nodes):
-    current_parent = trie.root
-
-    updated_total = 0
-
-    for time_step, candidate_list in enumerate(nodes):
-        selected_token_id = get_selected_token_id_at_time_step(generated_tokens, time_step)
-        found_parent_for_next_step = False
-
-        for batch in candidate_list:
-            for node in batch:
-                # Insert node only if it doesn't already exist as a child of the current parent.
-                if node.token_id not in current_parent.children.keys():
-                    # print(f"current_parent={current_parent} at time step {time_step}")
-                    # print(f"Inserting node {node.token_id} at time step {time_step}")
-                    updated_total += trie.insert(current_parent, node)
-
-                else:
-                    # if args.verbose:
-                        # print(f"Node {node.token_id} already exists as a child of the current parent at time step {time_step}")
-                    pass
-
-                # Check if this node matches the next token ID and should be the next parent.
-                if node.token_id == selected_token_id:
-                    next_parent_candidate = current_parent.children[node.token_id]
-                    found_parent_for_next_step = True
-
-        if found_parent_for_next_step:
-            current_parent = next_parent_candidate
-            # print(f"current_parent_token_id={current_parent.token_id} at time step {time_step}")
-        else:
-            print(f"No matching child found for next parent at time step {time_step}")
-
-    return updated_total
-
-def update_oracle_trie(trie, generated_tokens, detailed_history):
-    nodes = create_nodes_from_history(detailed_history)
-    updated_rate = insert_nodes_by_generated_tokens(trie, generated_tokens, nodes)
-
-    return trie, updated_rate

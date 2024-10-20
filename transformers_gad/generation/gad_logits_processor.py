@@ -9,7 +9,7 @@ from transformers.generation.logits_process import (
     LOGITS_PROCESSOR_INPUTS_DOCSTRING,
 )
 from transformers.utils import add_start_docstrings
-from transformers_gad.oracle.oracle_trie import Trie, update_oracle_trie
+from transformers_gad.oracle.oracle_trie import Trie
 from transformers_gad.token_grammar_recognizer import IncrementalGrammarConstraint
 
 class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
@@ -40,8 +40,9 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         )
 
         current_parent = self.oracle_trie.search_last_parent(self.generated_tokens)
+        current_parent.insert_accepted_tokens(scores, acceptance)
         adjusted_scores = self.apply_oracle_adjustments(acceptance, scores, current_parent)
-        
+
         if self.save_log:
             self.store_detailed_history(acceptance, scores, adjusted_scores)
         
@@ -108,6 +109,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         )
 
         adjusted_scores = self.adjust_scores(scores, scores.device)
+
         return adjusted_scores
 
     @add_start_docstrings(LOGITS_PROCESSOR_INPUTS_DOCSTRING)
