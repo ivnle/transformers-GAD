@@ -1,25 +1,17 @@
 import torch
 import json
 import pickle
+import os
+import numpy as np
+import json
+import time
+from tqdm import tqdm
 from transformers.generation.logits_process import LogitsProcessorList, InfNanRemoveLogitsProcessor
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
 from transformers_gad.generation.gad_logits_processor import GrammarAlignedOracleLogitsProcessor
-from transformers_gad.oracle.oracle_trie import Trie, TrieNode, update_oracle_trie
-import os
-from inference_utils import get_file, load_model_tokenizer_hf
-import matplotlib.pyplot as plt
-import numpy as np
-import json
-from tqdm import tqdm
-import time
-from datetime import datetime
-from inference_utils import (get_file,
-                             load_model_tokenizer_hf,
-                             get_prompt,
-                             get_grammar_file_path_by_prompt_type,
+from transformers_gad.oracle.oracle_trie import Trie, update_oracle_trie
+from inference_utils import (load_model_tokenizer_hf,
                              save_trie_to_pkl,
-                             construct_trie_file,
-                             construct_sygus_prompt,
                              construct_trie_file_from_folder,
                              get_prompt_in_test_folder,
                              fix_seed)

@@ -17,9 +17,9 @@ log/
 debug/
 prev/
 post_process/
-tools/
 
 results/
 results_trie/
 trie/
 plots/
+tools/

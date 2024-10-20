@@ -22,7 +22,7 @@ from inference_utils import get_prompt_in_test_folder, fix_seed
 from arg_parser import ArgumentParser
 
 def get_sygus_prompt(filename, prompt_type):
-    """depreciated, only works for prompt store in jsonl file."""
+    """deprecated, only works for prompt store in jsonl file."""
     with open(filename, 'r') as file:
         for line in file:
             data = json.loads(line)

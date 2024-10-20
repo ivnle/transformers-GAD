@@ -1,8 +1,6 @@
 import copy
 import math
-import pprint
 import torch.nn.functional as F
-import os
 
 import torch
 import logging
@@ -11,24 +9,28 @@ from transformers.generation.logits_process import (
     LOGITS_PROCESSOR_INPUTS_DOCSTRING,
 )
 from transformers.utils import add_start_docstrings
+from transformers_gad.oracle.oracle_trie import Trie, update_oracle_trie
+from transformers_gad.token_grammar_recognizer import IncrementalGrammarConstraint
 
 class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
-    def __init__(self, grammar_constraint, oracle_trie, parse_start_index=None):
+    def __init__(self, grammar_constraint, oracle_trie=Trie(), parse_start_index=None, save_log=False):
+        # Parser variables
         self.grammar_constraint = grammar_constraint
-        self.oracle_trie = oracle_trie
-        self.last_size = None
         self.batch_accept_states = None
         self.parse_start_index = parse_start_index
+
+        # ASAp oracle trie
+        self.oracle_trie = oracle_trie
+
+        # To start with a longer prefix in enumerative search
         self.generate_start_index = None
-        self.accepted_indices_history = []  # To store indices of accepted tokens
-        self.accepted_tokens_history = []
-        self.acceptance_raw_scores_history = []
-        self.acceptance_likelihoods_history = []
-        self.acceptance_details_history = [] # history for building oracle tree
-        self.adjusted_acceptance_details_history = [] # record after applying score adjustment to unbiased distribution
         self.generated_tokens = None
 
-    def mask_scores(self, input_ids, scores, device):
+        # Generation Log
+        self.save_log = save_log
+        self.history = []
+
+    def adjust_scores(self, scores, device):
         """
         resolve each stack to a tensor of True/False for each token
         indicating acceptance
@@ -37,30 +39,30 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
             self.batch_accept_states, device
         )
 
-        self.get_accepted_tokens(acceptance)
-        self.get_detailed_history(acceptance, scores, self.acceptance_details_history)
-
-        # store raw scores and logits for acceptance tokens before applying the mask
-        # First, calculate the logits for the entire scores tensor
-        likelihoods = F.softmax(scores, dim=-1)
-
-        # For raw scores of accepted tokens
-        accepted_raw_scores = scores[acceptance].clone().detach()
-        self.acceptance_raw_scores_history.append(accepted_raw_scores.cpu())
-
-        # For logits of accepted tokens
-        accepted_likelihoods = likelihoods[acceptance].clone().detach()
-        self.acceptance_likelihoods_history.append(accepted_likelihoods.cpu())
-
         current_parent = self.oracle_trie.search_last_parent(self.generated_tokens)
-        self.apply_oracle_adjustments(acceptance, scores, current_parent)
-        self.get_detailed_history(acceptance, scores, self.adjusted_acceptance_details_history)
+        adjusted_scores = self.apply_oracle_adjustments(acceptance, scores, current_parent)
+        
+        if self.save_log:
+            self.store_detailed_history(acceptance, scores, adjusted_scores)
         
         # Scores to -inf where False
-        scores[~acceptance] = float('-inf')
+        adjusted_scores[~acceptance] = -math.inf
+
+        return adjusted_scores
 
     def apply_oracle_adjustments(self, acceptance, scores, current_parent):
-        likelihoods = F.softmax(scores, dim=-1)
+        """
+        Multiply expected future grammarticality
+        Use the normalized (and unmasked) probabiltiy
+
+        Parameters:
+        - acceptance (torch.Tensor): A characteristic vector of valid tokens
+                                     used to updated only valid tokens 
+        - scores (torch.Tensor): Unnormalized logits from language model
+        - current_parent (TrieNode): The trie node for the current prefix
+        """
+        adjusted_scores = scores.clone()
+        likelihoods = F.softmax(adjusted_scores, dim=-1)
         log_likelihoods = torch.log(likelihoods)
 
         for batch_index in range(acceptance.size(0)):
@@ -68,7 +70,6 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
 
             for idx in accepted_indices:
                 token_id = idx.item()
-                likelihood = likelihoods[batch_index, idx].item()
                 log_likelihood = log_likelihoods[batch_index, idx].item()
                 
                 # Get theta (log of expected future grammaticality) for this specific token
@@ -82,10 +83,9 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
                 adjusted_score = log_likelihood + log_theta
 
                 # Here you could either adjust the score in-place or store this information for later use
-                scores[batch_index, idx] = adjusted_score
+                adjusted_scores[batch_index, idx] = adjusted_score
 
-    # TODO: batching
-    def process_gad_scores(self, input_ids, scores):
+    def process_scores(self, input_ids, scores):
         # we dynamically create stacks at the first call, so that we know the batch size and beam size
         if self.batch_accept_states is None:
             self.batch_accept_states = [
@@ -95,26 +95,38 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
                 for _ in range(len(input_ids))
             ]
 
+        # assume the generation starts from the same index
         if self.generate_start_index is None:
+            # the default is the end of input sequence of tokens
             self.generate_start_index = self.parse_start_index \
                 if self.parse_start_index else input_ids.size(1)
         self.generated_tokens = input_ids[:, self.generate_start_index:]
 
+        # Advance parser states
         self.batch_accept_states = self.grammar_constraint.advance_token_ids(
             input_ids, self.batch_accept_states, self.parse_start_index
         )
-        self.mask_scores(input_ids, scores, scores.device)
-        return scores
+
+        adjusted_scores = self.adjust_scores(scores, scores.device)
+        return adjusted_scores
 
     @add_start_docstrings(LOGITS_PROCESSOR_INPUTS_DOCSTRING)
     def __call__(
             self, input_ids: torch.LongTensor, scores: torch.FloatTensor
     ) -> torch.FloatTensor:
-        return self.process_gad_scores(input_ids, scores)
+        return self.process_scores(input_ids, scores)
+
+    def reset_parser(self):
+        self.batch_parsing_states = None
+        if isinstance(self.grammar_constraint, IncrementalGrammarConstraint):
+            self.grammar_constraint.reset()
+
+    def reset_trie(self):
+        self.oracle_trie = Trie()
 
     def get_accepted_tokens(self, acceptance):
         """
-        Stores the indices of accepted tokens and their corresponding string values for each item in the batch.
+        Get the indices of accepted tokens and their corresponding string values for each item in the batch.
 
         Parameters:
         - acceptance (torch.Tensor): A boolean tensor indicating accepted tokens for each item in the batch.
@@ -128,19 +140,15 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         for x, y in zip(accepted_x, accepted_y):
             accepted_token_indices[x].append(y)
 
-        # Store accepted indices for history
-        self.accepted_indices_history.append(accepted_token_indices)
-
         # Convert token IDs to tokens
         accepted_tokens = {
             i: [self.grammar_constraint.tokenizer.decode([token_id]) for token_id in token_ids]
             for i, token_ids in accepted_token_indices.items()
         }
 
-        # Store accepted tokens for history
-        self.accepted_tokens_history.append(accepted_tokens)
+        return accepted_tokens
 
-    def get_detailed_history(self, acceptance, scores, history):
+    def store_detailed_history(self, acceptance, scores, adjusted_scores):
         """
         Processes and stores information for accepted tokens including their IDs, tokens,
         raw scores, and logits.
@@ -148,11 +156,13 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         Parameters:
         - acceptance (torch.Tensor): A boolean tensor indicating accepted tokens for each item in the batch.
         - scores (torch.Tensor): The raw scores from the model output.
+        - adjusted_scores (torch.Tensor): The adjusted scores after applying expected future grammaticality.
         """
         likelihoods = F.softmax(scores, dim=-1)
+        adjusted_likelihoods = F.softmax(adjusted_scores, dim=-1)
 
         # Initializing the list to store detailed information for each step
-        detailed_accepted_info = []
+        batch_accepted_info = []
 
         for batch_index in range(acceptance.size(0)):  # Iterate over batch items
             accepted_info = []
@@ -162,6 +172,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
                 token_id = idx.item()
                 raw_score = scores[batch_index, idx].item()
                 likelihood = likelihoods[batch_index, idx].item()
+                adjusted_likelihood = adjusted_likelihoods[batch_index, idx].item()
                 token = self.grammar_constraint.tokenizer.decode([token_id])
 
                 # Store detailed information as a dictionary
@@ -169,20 +180,14 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
                     "token_id": token_id,
                     "token": str(token),
                     "raw_score": raw_score,
-                    "raw_likelihood": likelihood
+                    "raw_likelihood": likelihood,
+                    "adjusted_likelihood": adjusted_likelihood
                 })
 
-            detailed_accepted_info.append(accepted_info)
+            batch_accepted_info.append(accepted_info)
 
         # Store this detailed information in the history
-        history.append(detailed_accepted_info)
+        self.history.append(batch_accepted_info)
 
-    def get_history(self):
-        return (self.accepted_tokens_history, self.accepted_indices_history,
-                self.acceptance_raw_scores_history, self.acceptance_likelihoods_history, self.acceptance_details_history, self.adjusted_acceptance_details_history)
-
-    def acceptance_details_history(self):
-        return self.acceptance_details_history
-
-    def adjusted_acceptance_details_history(self):
-        return self.adjusted_acceptance_details_history
+    def acceptance_detailed_history(self):
+        return self.history
