@@ -1,9 +1,12 @@
-from graphviz import Digraph
 import torch
 import torch.nn.functional as F
 
 class TrieNode:
-    def __init__(self, token_id=None, token=None, raw_likelihood=None, raw_score=None, tokenizer=None):
+    def __init__(self, 
+                 token_id=None, token=None, raw_likelihood=None, raw_score=None, 
+                 success_rate=1, 
+                 is_start_of_sequence=False, is_end_of_sequence=False,
+                 eos_token_id=2):
         self.children = {}
         self.parent = None
         self.token_id = token_id
@@ -12,11 +15,11 @@ class TrieNode:
         self.raw_score = raw_score
         
         # The default approximation of EFG
-        self.success_rate = 1
+        self.success_rate = success_rate
 
-        self.eos_token_id = tokenizer.eos_token_id if tokenizer else 2
-        self.is_end_of_sequence = False
-        self.is_start_of_sequence = False
+        self.eos_token_id = eos_token_id
+        self.is_start_of_sequence = is_start_of_sequence
+        self.is_end_of_sequence = is_end_of_sequence
 
     def insert(self, child_node):
         """
@@ -76,11 +79,45 @@ class TrieNode:
         else:
             return None
 
+    def to_dict(self):
+        """
+        Convert a trie into a dictionary by removing the pointer to the parent
+        """
+        return {
+            "token_id": self.token_id,
+            "token": self.token,
+            "raw_likelihood": self.raw_likelihood,
+            "raw_score": self.raw_score,
+            "success_ate": self.success_rate,
+            "eos_token_id": self.eos_token_id,
+            "is_start_of_sequence": self.is_start_of_sequence,
+            "is_end_of_sequence": self.is_end_of_sequence,
+            "children": [child.to_dict() for child in self.children]
+        }
+
+    @staticmethod
+    def from_dict(d):
+        """
+        Recursively (re)construct trie from dictionary
+        """
+        node = TrieNode(
+                 token_id=d['token_id'], 
+                 token=d['token'], 
+                 raw_likelihood=d['raw_likelihood'], 
+                 raw_score=d['raw_score'], 
+                 success_rate=d['success_rate'], 
+                 is_start_of_sequence=d['is_start_of_sequence'], 
+                 is_end_of_sequence=d['is_end_of_sequence'],
+                 eos_token_id=d['eos_token_id'])
+
+        node.children = [TrieNode.from_dict(child) for child in node.children]
+        return node
+
     def __repr__(self):
         parent_token_id = 'None (Root Node)' if self.parent is None else self.parent.token_id
         return (f"TrieNode(token_id={self.token_id}, token='{self.token}', "
                 f"raw_likelihood={self.raw_likelihood}, raw_score={self.raw_score}, children={list(self.children.keys())}, "
-                f"parent={parent_token_id}, success rate={self.success_rate})") # TODO: add prefix
+                f"parent={parent_token_id}, success rate={self.success_rate})")
 
 class Trie:
     def __init__(self):

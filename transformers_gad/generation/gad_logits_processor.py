@@ -133,7 +133,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         Parameters:
         - acceptance (torch.Tensor): A boolean tensor indicating accepted tokens for each item in the batch.
         """
-        batch_size, vocab_size = acceptance.shape
+        batch_size, _ = acceptance.shape
         acceptance_np = acceptance.cpu().numpy()
         accepted_x, accepted_y = acceptance_np.nonzero()
 
