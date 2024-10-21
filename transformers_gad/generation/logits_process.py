@@ -9,18 +9,14 @@ from transformers.generation.logits_process import (
     LOGITS_PROCESSOR_INPUTS_DOCSTRING,
 )
 from transformers.utils import add_start_docstrings
-from transformers_gad.oracle.oracle_trie import Trie, update_oracle_trie
-from transformers_gad.token_grammar_recognizer import IncrementalGrammarConstraint
+from transformers_gad.grammar_utils import IncrementalGrammarConstraint
 
-class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
-    def __init__(self, grammar_constraint, oracle_trie=Trie(), parse_start_index=None, save_log=False):
+class GrammarConstrainedLogitsProcessor(LogitsProcessor):
+    def __init__(self, grammar_constraint, parse_start_index=None, save_log=False):
         # Parser variables
         self.grammar_constraint = grammar_constraint
         self.batch_accept_states = None
         self.parse_start_index = parse_start_index
-
-        # ASAp oracle trie
-        self.oracle_trie = oracle_trie
 
         # To start with a longer prefix in enumerative search
         self.generate_start_index = None
@@ -91,7 +87,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         Parameters:
         - acceptance (torch.Tensor): A boolean tensor indicating accepted tokens for each item in the batch.
         """
-        batch_size, vocab_size = acceptance.shape
+        batch_size, _ = acceptance.shape
         acceptance_np = acceptance.cpu().numpy()
         accepted_x, accepted_y = acceptance_np.nonzero()
 

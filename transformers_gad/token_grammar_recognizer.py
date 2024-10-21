@@ -169,6 +169,7 @@ class IncrementalTokenRecognizer(AbsTokenRecognizer):
     def __init__(self, grammar_str, start_rule_name, tokenizer, unicode=False):
         super().__init__(grammar_str, tokenizer, start_rule_name, unicode)
         self.last_size = None
+        self.is_incremental = True
 
         # if self.last_size is not set (which would be the case when processing the first token).
         # In this case, do nothing.
@@ -213,7 +214,8 @@ class IncrementalTokenRecognizer(AbsTokenRecognizer):
                 "Input ID's length is inconsistent with the current state of "
                 "the GrammarConstrainedLogitsProcessor. If you want to process "
                 "another input sequence, please instantiate a new "
-                "GrammarConstrainedLogitsProcessor."
+                "GrammarConstrainedLogitsProcessor " 
+                "or call reset_parser method of GrammarAlignedOracleLogitsProcessor"
             )
         self.last_size = len(input_ids[0])
 
@@ -238,7 +240,7 @@ class IncrementalTokenRecognizer(AbsTokenRecognizer):
         return accept_state
 
     def reset(self):
-        self.last_size = 0
+        self.last_size = None
 
 def check_token_acceptance_in_trie(trie, stacks, grammar, eos_token_id, accepts):
 

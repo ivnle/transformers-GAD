@@ -19,7 +19,6 @@ prev/
 post_process/
 
 results/
-results_trie/
-trie/
+tries/
 plots/
 tools/

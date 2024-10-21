@@ -10,13 +10,13 @@ from transformers.generation.logits_process import (
 )
 from transformers.utils import add_start_docstrings
 from transformers_gad.oracle.oracle_trie import Trie
-from transformers_gad.token_grammar_recognizer import IncrementalGrammarConstraint
+from transformers_gad.grammar_utils import IncrementalGrammarConstraint
 
 class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
     def __init__(self, grammar_constraint, oracle_trie=Trie(), parse_start_index=None, save_log=False):
         # Parser variables
         self.grammar_constraint = grammar_constraint
-        self.batch_accept_states = None
+        self.batch_parsing_states = None
         self.parse_start_index = parse_start_index
 
         # ASAp oracle trie
@@ -36,7 +36,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         indicating acceptance
         """
         acceptance = self.grammar_constraint.batch_filter_vocab(
-            self.batch_accept_states, device
+            self.batch_parsing_states, device
         )
 
         current_parent = self.oracle_trie.search_last_parent(self.generated_tokens)
@@ -74,7 +74,7 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
                 log_likelihood = log_likelihoods[batch_index, idx].item()
                 
                 # Get theta (log of expected future grammaticality) for this specific token
-                success_rate = self.oracle_trie.get_success_rate_for_candidate_token(current_parent, token_id)
+                success_rate = current_parent.get_success_rate(token_id)
 
                 if not isinstance(success_rate, torch.Tensor):
                     success_rate = torch.tensor(success_rate, dtype=torch.float)
@@ -82,14 +82,14 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
                 
                 # Calculate adjusted score
                 adjusted_score = log_likelihood + log_theta
-
-                # Here you could either adjust the score in-place or store this information for later use
                 adjusted_scores[batch_index, idx] = adjusted_score
+
+        return adjusted_scores
 
     def process_scores(self, input_ids, scores):
         # we dynamically create stacks at the first call, so that we know the batch size and beam size
-        if self.batch_accept_states is None:
-            self.batch_accept_states = [
+        if self.batch_parsing_states is None:
+            self.batch_parsing_states = [
                 copy.deepcopy(
                     self.grammar_constraint.string_recognizer.get_initial_accept_state()
                 )
@@ -104,8 +104,8 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         self.generated_tokens = input_ids[:, self.generate_start_index:]
 
         # Advance parser states
-        self.batch_accept_states = self.grammar_constraint.advance_token_ids(
-            input_ids, self.batch_accept_states, self.parse_start_index
+        self.batch_parsing_states = self.grammar_constraint.advance_token_ids(
+            input_ids, self.batch_parsing_states, self.parse_start_index
         )
 
         adjusted_scores = self.adjust_scores(scores, scores.device)
@@ -120,8 +120,11 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
 
     def reset_parser(self):
         self.batch_parsing_states = None
-        if isinstance(self.grammar_constraint, IncrementalGrammarConstraint):
+        if self.grammar_constraint.is_incremental:
             self.grammar_constraint.reset()
+
+        self.generate_start_index = None
+        self.generated_tokens = None
 
     def reset_trie(self):
         self.oracle_trie = Trie()
