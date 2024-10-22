@@ -86,6 +86,12 @@ class TrieNode:
             
             return updated_rate
 
+    def prefix_raw_likelihood(self):
+        if self.parent:
+            return self.raw_likelihood * self.parent.prefix_raw_likelihood()
+        else:
+            return self.raw_likelihood
+
     def search_token(self, token_id):
         """
         Check if the self node has a children with token_id

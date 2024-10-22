@@ -1,9 +1,11 @@
-# GD
+# Grammar-Aligned Decoding
 
+## About
 
+This repository extends the [transformers-CFG](https://github.com/epfl-dlab/transformers-CFG) repository by incorporating support for the **A**daptive **S**ampling with **Ap**proximate expected futures (ASAp) algorithm, which is introduced in the paper [Grammar-Aligned Decoding](https://arxiv.org/abs/2405.21047).
 
-## Inference
-### Step 0: clone this repo and create environment
+## Installation
+
 Clone the repository:
 ```
 git clone git@github.com:jiayuww/GD.git
@@ -17,24 +19,53 @@ Activate the environment:
 ```
 conda activate /path/to/your/env/gd
 ```
-### Step 1: modify configs
-Update the configurations in `run_bare.sh` and `run_gcd_build_oracle.sh` to specify: 
-- `ITER`: Number of outputs to generate for each example. Set this to `50` to obtain some results before Monday, although typically `100` samples are generated.
-- `CACHE_DIR`: Replace `/path/to/where/you/store/hf/models` with the actual path where you store the HuggingFace models. Ensure that there is sufficient storage space. If there are issues, set the global environment variable:
-    ```
-    export HF_HOME=/path/to/where/you/store/hf/models
-    ```
-- `GPUS`: modify this to specify the GPU to use. For example, `0` for GPU 0, `GPUS=(0 1)` for GPUs 0 and 1.
-- `dtype`: Default is `float32`. Only change this if you encounter model loading issues. Changing it to `float16` should help resolve space issues.
 
-### Step 2: run the script
-Execute the scripts in the following order:
-```
-sh run_gcd_build_oracle.sh
-sh run_bare.sh
-```
-Start with `run_gcd_build_oracle.sh`, then run `run_bare.sh` if time permits.
-You can execute these scripts simultaneously in separate terminal windows or sessions (but start with `run_gcd_build_oracle.sh` first!). Both scripts automatically check idle GPUs and automatically start if it's free.
+## Examples
 
-### Step 3: Collect the results
-Collect the outputs stored in `OUTPUT_FOLDER` (`results/SLIA`) and tries in `TRIE_FOLDER` (`tries/SLIA`).
+### Inference
+
+```python
+from transformers.generation.logits_process import LogitsProcessorList, InfNanRemoveLogitsProcessor
+from transformers_gad.grammar_utils import IncrementalGrammarConstraint
+from transformers_gad.generation.gad_logits_processor import GrammarAlignedOracleLogitsProcessor
+
+grammar = IncrementalGrammarConstraint(grammar_str, "root", tokenizer)
+gad_oracle_processor = GrammarAlignedOracleLogitsProcessor(grammar)
+inf_nan_remove_processor = InfNanRemoveLogitsProcessor()
+logits_processors = LogitsProcessorList([
+    inf_nan_remove_processor,
+    gad_oracle_processor,
+])
+
+...
+
+for i in range(NUM_ITER):
+    output = model.generate(
+        input_ids,
+        ...,
+        logits_processor=logits_processors,
+        ...
+    )
+
+    gad_oracle_processor.reset()
+```
+
+The ASAp algorithm is implemented as a logit processor. Users can initialize a new `GrammarAlignedOracleLogitsProcessor` for an EBNF grammar and pass it as an argument during generation.
+
+### Using Trained ASAp Trie
+
+
+## Citation
+
+```
+@misc{park2024grammaraligneddecoding,
+      title={Grammar-Aligned Decoding}, 
+      author={Kanghee Park and Jiayu Wang and Taylor Berg-Kirkpatrick and Nadia Polikarpova and Loris D'Antoni},
+      year={2024},
+      eprint={2405.21047},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2405.21047}, 
+}
+```
+

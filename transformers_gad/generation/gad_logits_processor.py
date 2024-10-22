@@ -118,6 +118,10 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
     ) -> torch.FloatTensor:
         return self.process_scores(input_ids, scores)
 
+    def reset(self):
+        self.reset_parser()
+        self.reset_history()
+
     def reset_parser(self):
         self.batch_parsing_states = None
         if self.grammar_constraint.is_incremental:
@@ -125,6 +129,9 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
 
         self.generate_start_index = None
         self.generated_tokens = None
+
+    def reset_history(self):
+        self.history = []
 
     def reset_trie(self):
         self.oracle_trie = Trie()
@@ -194,5 +201,5 @@ class GrammarAlignedOracleLogitsProcessor(LogitsProcessor):
         # Store this detailed information in the history
         self.history.append(batch_accepted_info)
 
-    def acceptance_detailed_history(self):
+    def history(self):
         return self.history

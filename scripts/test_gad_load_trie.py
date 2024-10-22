@@ -73,7 +73,7 @@ for _ in tqdm(range(10), desc="Running Inference"):
     )
 
     # Incremental parser state must be reset after each generation
-    gad_oracle_processor.reset_parser()
+    gad_oracle_processor.reset()
 
     input_length = 1 if model.config.is_encoder_decoder else input_ids.shape[1]
     generated_tokens = output.sequences[:, input_length:]

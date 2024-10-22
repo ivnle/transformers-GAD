@@ -1,4 +1,5 @@
 import torch
+import json
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers.generation.logits_process import LogitsProcessorList, InfNanRemoveLogitsProcessor
@@ -34,7 +35,7 @@ model.to(dtype=DTYPE)
 model.resize_token_embeddings(len(tokenizer))
 
 grammar = IncrementalGrammarConstraint(grammar_str, "root", tokenizer)
-gad_oracle_processor = GrammarAlignedOracleLogitsProcessor(grammar)
+gad_oracle_processor = GrammarAlignedOracleLogitsProcessor(grammar, save_log=True)
 inf_nan_remove_processor = InfNanRemoveLogitsProcessor()
 logits_processors = LogitsProcessorList([
     inf_nan_remove_processor,
@@ -49,6 +50,7 @@ input_ids = tokenizer(
 )["input_ids"]
 input_ids = input_ids.to(model.device)
 
+history = []
 outputs = []
 for _ in tqdm(range(10), desc="Running Inference"):
         # Generate sequences
@@ -68,21 +70,20 @@ for _ in tqdm(range(10), desc="Running Inference"):
         output_scores=True,
     )
 
-    # Incremental parser state must be reset after each generation
-    gad_oracle_processor.reset()
-
     input_length = 1 if model.config.is_encoder_decoder else input_ids.shape[1]
     generated_tokens = output.sequences[:, input_length:]
     generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
 
     outputs.append(generations[0])
+    history.append(gad_oracle_processor.history)
 
-print(outputs)
+    # Incremental parser state must be reset after each generation
+    gad_oracle_processor.reset()
 
-# Store the trie as JSON
+# Save the history as JSON
 import os
-if not os.path.isdir("tries"):
-    os.mkdir("tries")
+if not os.path.isdir("results"):
+    os.mkdir("results")
 
-with open(TRIE_PATH, "w") as f:
-    f.write(gad_oracle_processor.oracle_trie.json())
+with open("results/binary_len_5_0_results.json", "w") as f:
+    f.write(json.dumps(history))
