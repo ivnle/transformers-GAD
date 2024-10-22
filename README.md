@@ -2,7 +2,7 @@
 
 ## About
 
-This repository extends the [transformers-CFG](https://github.com/epfl-dlab/transformers-CFG) repository by incorporating support for the **A**daptive **S**ampling with **Ap**proximate expected futures (ASAp) algorithm, which is introduced in the paper [Grammar-Aligned Decoding](https://arxiv.org/abs/2405.21047).
+This repository implements the **A**daptive **S**ampling with **Ap**proximate expected futures (ASAp) algorithm, introduced in the paper [Grammar-Aligned Decoding](https://arxiv.org/abs/2405.21047). The ASAP algorithm addresses the issue with GCD techniques (and constrained decoding methods in general), which can distort the LLM's probability distribution. 
 
 ## Installation
 
@@ -25,11 +25,27 @@ conda activate /path/to/your/env/gd
 ### Inference
 
 ```python
+import torch
+from tqdm import tqdm
+from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers.generation.logits_process import LogitsProcessorList, InfNanRemoveLogitsProcessor
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
 from transformers_gad.generation.gad_logits_processor import GrammarAlignedOracleLogitsProcessor
 
+MODEL_ID = "TinyLlama/TinyLlama_v1.1"
+GRAMMAR_PATH = "examples/test/binary_len_5_0.ebnf"
+MAX_NEW_TOKENS = 512
+
+# Load tokenizer and model
+tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
+model = AutoModelForCausalLM.from_pretrained(MODEL_ID)
+
+# Load EBNF grammar
+with open(GRAMMAR_PATH, "r") as f:
+    grammar_str = f.read()
 grammar = IncrementalGrammarConstraint(grammar_str, "root", tokenizer)
+
+# Initialize logits processor for the grammar
 gad_oracle_processor = GrammarAlignedOracleLogitsProcessor(grammar)
 inf_nan_remove_processor = InfNanRemoveLogitsProcessor()
 logits_processors = LogitsProcessorList([
@@ -37,21 +53,36 @@ logits_processors = LogitsProcessorList([
     gad_oracle_processor,
 ])
 
-...
+# Tokenize prompt into ids
+prompt = "Generate a binary string of length 5"
+input_ids = tokenizer([prompt], add_special_tokens=False, return_tensors="pt")["input_ids"]
 
-for i in range(NUM_ITER):
+# Inference Loop
+outputs = []
+for _ in tqdm(range(10), desc="Running Inference"):
+    # Generate sequences
     output = model.generate(
         input_ids,
-        ...,
-        logits_processor=logits_processors,
-        ...
+        do_sample=True,
+        max_new_tokens=MAX_NEW_TOKENS,
+        logits_processor=logits_processors
     )
 
-    # Logit processor must be reset after each generation
+    # Incremental parser state must be reset after each generation
     gad_oracle_processor.reset()
+
+    # Detokenize generate output
+    input_length = 1 if model.config.is_encoder_decoder else input_ids.shape[1]
+    generated_tokens = output.sequences[:, input_length:]
+    generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
+    outputs.append(generations[0])
+
+print(outputs)
 ```
 
 The ASAp algorithm is implemented as a logit processor. Users can initialize a new `GrammarAlignedOracleLogitsProcessor` for an EBNF grammar and pass it as an argument during generation. Since the logit processor uses an incremental parser internally, users must manually reset the parser state ahead of the next generation the generation.
+
+You can try running `scripts/test_gad.py`. 
 
 ### Using Trained ASAp Trie
 
@@ -62,7 +93,7 @@ with open(TRIE_PATH, "w") as f:
     f.write(gad_oracle_processor.oracle_trie.json())
 ```
 
-Saved ASAp tries can be reloaded from a previously saved JSON file and passed during the initialization of the`GrammarAlignedOracleLogitsProcessor`.
+Saved ASAp tries can be reloaded from a previously saved JSON file and passed during the initialization of the`GrammarAlignedOracleLogitsProcessor`. The full example can be checked in `scripts/test_gad.py`.
 
 ```python
 from transformers_gad.oracle.oracle_trie import Trie
@@ -74,7 +105,7 @@ grammar = IncrementalGrammarConstraint(grammar_str, "root", tokenizer)
 gad_oracle_processor = GrammarAlignedOracleLogitsProcessor(grammar, trie)
 ```
 
-Check `scripts/` for more examples.
+The full example can be checked in `scripts/test_gad_load_trie.py`.
 
 ## Citation
 
@@ -90,3 +121,6 @@ Check `scripts/` for more examples.
 }
 ```
 
+## Acknowledgement
+
+This project is built upon the [transformers-CFG](https://github.com/epfl-dlab/transformers-CFG) project.
