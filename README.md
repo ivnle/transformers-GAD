@@ -47,18 +47,39 @@ for i in range(NUM_ITER):
         ...
     )
 
+    # Logit processor must be reset after each generation
     gad_oracle_processor.reset()
 ```
 
-The ASAp algorithm is implemented as a logit processor. Users can initialize a new `GrammarAlignedOracleLogitsProcessor` for an EBNF grammar and pass it as an argument during generation.
+The ASAp algorithm is implemented as a logit processor. Users can initialize a new `GrammarAlignedOracleLogitsProcessor` for an EBNF grammar and pass it as an argument during generation. Since the logit processor uses an incremental parser internally, users must manually reset the parser state ahead of the next generation the generation.
 
 ### Using Trained ASAp Trie
 
+Trained ASAp tries can be saved as a JSON file.
+
+```python
+with open(TRIE_PATH, "w") as f:
+    f.write(gad_oracle_processor.oracle_trie.json())
+```
+
+Saved ASAp tries can be reloaded from a previously saved JSON file and passed during the initialization of the`GrammarAlignedOracleLogitsProcessor`.
+
+```python
+from transformers_gad.oracle.oracle_trie import Trie
+
+with open(TRIE_PATH, "r") as f:
+    trie = Trie.loads(f.read())
+
+grammar = IncrementalGrammarConstraint(grammar_str, "root", tokenizer)
+gad_oracle_processor = GrammarAlignedOracleLogitsProcessor(grammar, trie)
+```
+
+Check `scripts/` for more examples.
 
 ## Citation
 
 ```
-@misc{park2024grammaraligneddecoding,
+@misc{grammaraligneddecoding,
       title={Grammar-Aligned Decoding}, 
       author={Kanghee Park and Jiayu Wang and Taylor Berg-Kirkpatrick and Nadia Polikarpova and Loris D'Antoni},
       year={2024},
