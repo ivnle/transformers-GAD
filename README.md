@@ -8,7 +8,7 @@ This repository implements the **A**daptive **S**ampling with **Ap**proximate ex
 
 Clone the repository:
 ```
-git clone git@github.com:jiayuww/GD.git
+git clone git@github.com:ebmoon/transformers-GAD.git
 ```
 Create a new Conda environment using the provided requirements file. Replace `/path/to/your/env/gd` with the actual path where you want to store your environment:
 ```
