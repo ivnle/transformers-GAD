@@ -12,7 +12,7 @@ git clone git@github.com:ebmoon/transformers-GAD.git
 ```
 Create a new Conda environment using the provided requirements file. Replace `/path/to/your/env/gd` with the actual path where you want to store your environment:
 ```
-conda env create -f environment.yml --prefix /path/to/your/env/gd
+conda env create -r requirements.txt --prefix /path/to/your/env/gd
 ```
 
 Activate the environment:
@@ -123,7 +123,7 @@ The full example can be checked in `scripts/test_gad_load_trie.py`.
 Running scripts in `scripts/eval` collects data required for plot. 
 
 * `eval_binary_gad.py` and `eval_binary_gcd.py` collect data for the skewed binary grammar example.
-* `eval_gad.py` and `eval_gcd,py` collect data for `SLIA`, `BV` and `CP` dataset. To specify which dataset to use, you must manually set the `SPLIT` variable to either `"SLIA"`, `"BV"` or `"CP"`.
+* `eval_gad.py` and `eval_gcd.py` collect data for `SLIA`, `BV` and `CP` dataset. To specify which dataset to use, you must manually set the `SPLIT` variable to either `"SLIA"`, `"BV"` or `"CP"`.
 
 
 Running scripts in `scripts/plot` will generate plots from collected data.
