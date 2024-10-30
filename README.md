@@ -10,9 +10,9 @@ Clone the repository:
 ```
 git clone git@github.com:ebmoon/transformers-GAD.git
 ```
-Create a new Conda environment using the provided requirements file. Replace `/path/to/your/env/gd` with the actual path where you want to store your environment:
+Create a new Conda environment using the provided requirements file. Replace `/path/to/your/env/gad` with the actual path where you want to store your environment:
 ```
-conda env create -r requirements.txt --prefix /path/to/your/env/gd
+conda env create -r requirements.txt --prefix /path/to/your/env/gad
 ```
 
 Activate the environment:
