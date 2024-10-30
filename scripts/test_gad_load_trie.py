@@ -3,7 +3,7 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers.generation.logits_process import LogitsProcessorList, InfNanRemoveLogitsProcessor
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
-from transformers_gad.generation.gad_logits_processor import GrammarAlignedOracleLogitsProcessor
+from transformers_gad.generation.logits_process import GrammarAlignedOracleLogitsProcessor
 from transformers_gad.oracle.oracle_trie import Trie
 
 NUM_ITER = 10
@@ -56,7 +56,7 @@ input_ids = input_ids.to(model.device)
 
 # Inference Loop
 outputs = []
-for _ in tqdm(range(10), desc="Running Inference"):
+for _ in tqdm(range(NUM_ITER), desc="Running Inference"):
     # Generate sequences
     output = model.generate(
         input_ids,

@@ -173,11 +173,29 @@ class Trie:
         Return the sequence of nodes that exactly matches with the input
         """
         node = self.root
+        nodes = []
         for token_id in sequence:
             if token_id not in node.children:
-                return False
+                return None
             node = node.children[token_id]
-        return node.is_end_of_sequence
+            nodes.append(node)
+        return nodes
+
+    def raw_likelihood(self, sequence):
+        """
+        Return the raw likelihood (before the adjustment) of sequence
+        """
+        if isinstance(sequence, torch.Tensor):
+            sequence = sequence.tolist()
+
+        nodes = self.search(sequence)
+        if nodes is None:
+            return None
+
+        likelihood = 1
+        for node in nodes:
+            likelihood *= node.raw_likelihood
+        return likelihood
 
     def json(self):
         return json.dumps(self.root.to_dict(), indent=2)

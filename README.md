@@ -30,7 +30,7 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers.generation.logits_process import LogitsProcessorList, InfNanRemoveLogitsProcessor
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
-from transformers_gad.generation.gad_logits_processor import GrammarAlignedOracleLogitsProcessor
+from transformers_gad.generation.logits_process import GrammarAlignedOracleLogitsProcessor
 
 MODEL_ID = "TinyLlama/TinyLlama_v1.1"
 GRAMMAR_PATH = "examples/test/binary_len_5_0.ebnf"
@@ -71,7 +71,7 @@ for _ in tqdm(range(10), desc="Running Inference"):
     # Incremental parser state must be reset after each generation
     gad_oracle_processor.reset()
 
-    # Detokenize generate output
+    # Detokenize generated output
     input_length = 1 if model.config.is_encoder_decoder else input_ids.shape[1]
     generated_tokens = output.sequences[:, input_length:]
     generations = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
@@ -107,10 +107,36 @@ gad_oracle_processor = GrammarAlignedOracleLogitsProcessor(grammar, trie)
 
 The full example can be checked in `scripts/test_gad_load_trie.py`.
 
+## Evaluation
+
+
+### Dataset and Checkpoints
+
+* [Evaluation dataset](https://huggingface.co/datasets/ebmoon/GAD-dataset)
+* Fine-tuning
+    * [SLIA checkpoints](https://huggingface.co/MilaWang/Mistral-7B-Instruct-v0.2-gad-slianogram3-merged)
+    * [BV4 checkpoints](https://huggingface.co/MilaWang/Mistral-7B-Instruct-v0.2-gad-bv4nogram3-merged)
+    * [CP checkpoints](https://huggingface.co/MilaWang/Mistral-7B-Instruct-v0.2-gad-cp8-merged)
+
+### Scripts
+
+Running scripts in `scripts/eval` collects data required for plot. 
+
+* `eval_binary_gad.py` and `eval_binary_gcd.py` collect data for the skewed binary grammar example.
+* `eval_gad.py` and `eval_gcd,py` collect data for `SLIA`, `BV` and `CP` dataset. To specify which dataset to use, you must manually set the `SPLIT` variable to either `"SLIA"`, `"BV"` or `"CP"`.
+
+
+Running scripts in `scripts/plot` will generate plots from collected data.
+
+* Again, to specify which dataset to use, you must manually set the `SPLIT` variable to either `"binary"`, `"SLIA"`, `"BV"` or `"CP"`.
+* `plots/{SPLIT}/prob` contains plots for expectations
+* `plots/{SPLIT}/kl` contains plots for the KL divergence
+* `plots/{SPLIT}` contains all the scatter plots
+
 ## Citation
 
 ```
-@misc{grammaraligneddecoding,
+@misc{gad2024,
       title={Grammar-Aligned Decoding}, 
       author={Kanghee Park and Jiayu Wang and Taylor Berg-Kirkpatrick and Nadia Polikarpova and Loris D'Antoni},
       year={2024},
