@@ -22,7 +22,7 @@ conda activate /path/to/your/env/gd
 
 ## Examples
 
-### Inference
+### Quick Start
 
 ```python
 import torch
