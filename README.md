@@ -12,12 +12,9 @@ git clone git@github.com:ebmoon/transformers-GAD.git
 ```
 Create a new Conda environment using the provided requirements file. Replace `<env>` with the actual name of your environment:
 ```
-conda create --name <env> --file requirements.txt
-```
-
-Activate the environment:
-```
+conda create --name <env> python=3.11
 conda activate <env>
+pip install -r requirements.txt
 ```
 
 ## Examples
