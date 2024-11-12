@@ -1,0 +1,32 @@
+command:
+  - python
+  - ${program}
+  - ${args_no_boolean_flags}
+entity: ivnle
+method: grid
+program: eval_gcd.py
+project: gcd-profile
+
+parameters: 
+  num_iter:
+    value: 1000
+  min_new_tokens:
+    value: 1
+  max_new_tokens:
+    value: 256
+  mask:
+    values: ["gcd", "asap", "none"]
+  compile:
+    values: [True, False]
+  use_prefix_cache:
+    values: [True, False]
+  model_id_assist:
+    values:
+      - null
+      - "meta-llama/Llama-3.2-1B-Instruct"  
+  tc:
+    values:
+      - null
+      - medium
+      
+ 

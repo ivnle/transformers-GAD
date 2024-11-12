@@ -38,13 +38,19 @@ def parse_arguments():
         help="Dataset id (of split) to use.",
     )
     parser.add_argument(
-        "--num_iter", type=int, default=10, help="Number of iterations for inference."
+        "--num_iter", type=int, default=50, help="Number of iterations for inference."
     )
     parser.add_argument(
         "--model_id",
         type=str,
         default="meta-llama/Llama-3.1-8B-Instruct",
-        help="Model ID to use.",
+        help="Huggingface model id.",
+    )
+    parser.add_argument(
+        "--model_id_assist",
+        type=str,
+        default=None,
+        help="Huggingface model id for speculative decoding.",
     )
     parser.add_argument(
         "--device", type=str, default="cuda", help="Device to run the model on."
@@ -52,12 +58,12 @@ def parse_arguments():
     parser.add_argument(
         "--dtype", type=str, default="bfloat16", help="Data type for model."
     )
-    parser.add_argument(
-        "--max_new_tokens",
-        type=int,
-        default=512,
-        help="Maximum number of new tokens to generate.",
-    )
+    # parser.add_argument(
+    #     "--max_new_tokens",
+    #     type=int,
+    #     default=512,
+    #     help="Maximum number of new tokens to generate.",
+    # )
     parser.add_argument(
         "--temperature", type=float, default=1.0, help="Temperature for sampling."
     )
@@ -73,12 +79,11 @@ def parse_arguments():
     parser.add_argument(
         "--top_k", type=int, default=0, help="Top-k sampling parameter."
     )
-    parser.add_argument(
-        "--do_sample",
-        type=bool,
-        default=True,
-        help="Whether to use sampling for generation.",
-    )
+    # parser.add_argument(
+    #     "--do_sample",
+    #     action="store_true",
+    #     help="Whether to use sampling for generation.",
+    # )
     parser.add_argument(
         "--num_beams",
         type=int,
@@ -115,6 +120,16 @@ def parse_arguments():
         "--use_prefix_cache",
         action="store_true",
         help="Whether to share KV cache for prompt across generations.",
+    )
+    parser.add_argument(
+        "--max_new_tokens",
+        default=256,
+        type=int,
+    )
+    parser.add_argument(
+        "--min_new_tokens",
+        default=1,
+        type=int,
     )
     return parser.parse_args()
 
@@ -347,9 +362,24 @@ def main():
             layer_count += 1
     print()
 
+    # Speculative decoding
+    # https://huggingface.co/docs/transformers/v4.46.0/llm_optims?spec-decoding=sampling&static-kv=advanced+usage%3A+control+Static+Cache#speculative-decoding
+    # https://huggingface.co/blog/assisted-generation
+    if args.model_id_assist is not None:
+        assistant_model = AutoModelForCausalLM.from_pretrained(
+            args.model_id_assist,
+            device_map="auto",
+            cache_dir=args.model_cache_dir,
+            torch_dtype="auto",
+        )
+        # TODO support caching
+        # TODO suport compile
+
     # TODO figure out what mode and fullgraph do
+    # fullgraph checks for breaks in the computation graph
     if args.compile:
         if not args.use_prefix_cache:
+            # see "basic usage" in https://huggingface.co/docs/transformers/v4.46.0/llm_optims?spec-decoding=sampling&static-kv=basic+usage%3A+generation_config#static-kv-cache-and-torchcompile
             model.generation_config.cache_implementation = "static"
         model.forward = torch.compile(
             model.forward, mode="reduce-overhead", fullgraph=True
@@ -361,6 +391,14 @@ def main():
         # model = torch.compile(
         #     model, mode="reduce-overhead", fullgraph=True
         # )
+
+        # TODO spec decode + compile might not be supported. currently breaks
+        if args.model_id_assist is not None:
+            if not args.use_prefix_cache:
+                assistant_model.generation_config.cache_implementation = "static"
+            assistant_model.forward = torch.compile(
+                assistant_model.forward, mode="reduce-overhead", fullgraph=True
+            )
 
     # Prepare prompt
     dataset = load_dataset(args.dataset, split=args.split)
@@ -374,7 +412,11 @@ def main():
     input_text = tokenizer.apply_chat_template(
         messages, tokenize=False, add_generation_prompt=True
     )
-    
+
+    if args.mask in ["gcd", "asap"]:
+        grammar = IncrementalGrammarConstraint(grammar, "root", tokenizer)
+
+    # Padding prompts to multiples of 8 might improve tensor core usage
     # https://huggingface.co/docs/transformers/v4.46.0/llm_optims?spec-decoding=sampling&static-kv=advanced+usage%3A+control+Static+Cache#static-kv-cache-and-torchcompile
     # https://github.com/huggingface/tokenizers/issues/991
     # tokenizer.add_special_tokens({'pad_token': tokenizer.eos_token})
@@ -397,6 +439,8 @@ def main():
     print(f"{prompt_length=}")
 
     if args.use_prefix_cache:
+        # https://huggingface.co/docs/transformers/v4.46.0/kv_cache#re-use-cache-to-continue-generation
+        # https://huggingface.co/docs/transformers/v4.46.0/llm_optims?spec-decoding=sampling&static-kv=advanced+usage%3A+control+Static+Cache#static-kv-cache-and-torchcompile
         prompt_cache = StaticCache(
             config=model.config,
             batch_size=1,
@@ -412,25 +456,41 @@ def main():
 
     n_tokens = 0
     warmup_iters = 5
+    logits_processors = None
     # past_key_values = prompt_cache
     for iter in tqdm(range(args.num_iter)):
-        
         # warm up GPUs before profiling
         if iter == warmup_iters:
-            t0 = time.time()             
-
+            t0 = time.time()
         if args.use_prefix_cache:
             past_key_values = copy.deepcopy(prompt_cache)
-        # input_ids = tokenizer(input_text, return_tensors="pt").to(model.device)
-        # print(f"{past_key_values.get_seq_length()=}")
+
+        if (args.mask == "gcd") or (iter == 0 and args.mask == "asap"):
+            gad_oracle_processor = GrammarAlignedOracleLogitsProcessor(grammar)
+            inf_nan_remove_processor = InfNanRemoveLogitsProcessor()
+            logits_processors = LogitsProcessorList(
+                [
+                    inf_nan_remove_processor,
+                    gad_oracle_processor,
+                ]
+            )
+
         outputs = model.generate(
             ids_copy,
-            max_new_tokens=64,
-            min_new_tokens=64, # TODO for profiling only, comment out
+            max_new_tokens=args.max_new_tokens,
+            min_new_tokens=args.min_new_tokens if (args.min_new_tokens > 1) else 1,
             use_cache=True,
             pad_token_id=tokenizer.eos_token_id,
             attention_mask=mask_copy,
-            past_key_values=past_key_values if args.use_prefix_cache else None,            
+            past_key_values=past_key_values if args.use_prefix_cache else None,
+            assistant_model=assistant_model
+            if (args.model_id_assist is not None)
+            else None,
+            do_sample=True,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            top_k=args.top_k,
+            logits_processor=logits_processors,
         )
         # print(f"{past_key_values.get_seq_length()=}")
         # for layer_idx in range(len(past_key_values.key_cache)):
@@ -438,13 +498,13 @@ def main():
         #     past_key_values.key_cache[layer_idx][0, 0, prompt_length:].zero_()
         #     past_key_values.value_cache[layer_idx][0, 0, prompt_length:].zero_()
         # print(f"{past_key_values.get_seq_length()=}")
-        
+
         # foo
         if iter >= warmup_iters:
             n_tokens += outputs.shape[1] - ids_copy.shape[-1]
-        # print(f"{n_tokens=}")
-        # print(f"{outputs.shape=}")
-        # print(repr(tokenizer.batch_decode(outputs[:, 1500:], skip_special_tokens=False)[0]))
+        if args.mask in ["gcd", "asap"]:
+            gad_oracle_processor.reset()
+
     tok_per_sec = compute_tokens_per_second(t0, n_tokens)
     print(f"{n_tokens=}")
     print(f"{tok_per_sec=}")
