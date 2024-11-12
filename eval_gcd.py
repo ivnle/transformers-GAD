@@ -22,6 +22,10 @@ from transformers_gad.generation.logits_process import (
 )
 from transformers_gad.grammar_utils import IncrementalGrammarConstraint
 
+def none_or_str(value):
+    if value == 'None':
+        return None
+    return value
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
@@ -48,8 +52,8 @@ def parse_arguments():
     )
     parser.add_argument(
         "--model_id_assist",
-        type=str,
         default=None,
+        type=none_or_str,
         help="Huggingface model id for speculative decoding.",
     )
     parser.add_argument(
@@ -108,7 +112,8 @@ def parse_arguments():
     parser.add_argument(
         "--tc",
         default=None,
-        choices=["none", "medium", "high", "highest"],
+        type=none_or_str,
+        choices=[None, "medium", "high", "highest"],
         help="Tensor core precision.",
     )
     parser.add_argument(
@@ -550,4 +555,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(f"Finished with Error: {e}")
