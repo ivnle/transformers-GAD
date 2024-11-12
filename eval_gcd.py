@@ -349,13 +349,14 @@ def main():
 
     # TODO figure out what mode and fullgraph do
     if args.compile:
-        model.generation_config.cache_implementation = "static"
-        # model.forward = torch.compile(
-        #     model.forward, mode="reduce-overhead", fullgraph=True
-        # )
+        if not args.use_prefix_cache:
+            model.generation_config.cache_implementation = "static"
         model.forward = torch.compile(
-            model.forward, mode="max-autotune"
+            model.forward, mode="reduce-overhead", fullgraph=True
         )
+        # model.forward = torch.compile(
+        #     model.forward, mode="max-autotune"
+        # )
         # compiling just fwd instead of whole model is faster
         # model = torch.compile(
         #     model, mode="reduce-overhead", fullgraph=True
